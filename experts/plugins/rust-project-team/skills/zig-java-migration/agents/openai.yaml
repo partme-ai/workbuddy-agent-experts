@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zig Java Migration"
+  short_description: "Migrate Java to Zig with lossless parity"
+  default_prompt: "Use $zig-java-migration with the Zig skill pack to migrate the complete Java contract, tests, assets, and observable behavior into idiomatic Zig without reducing source semantics."

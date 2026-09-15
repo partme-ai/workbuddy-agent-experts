@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swift Stable"
+  short_description: "Swift language semantics and compiler-safe implementation"
+  default_prompt: "Use $swift-stable to complete this task with repository evidence and executable validation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ProcessOn 图表生成器"
+  short_description: "通过 ProcessOn API 生成可编辑图表 DSL 与可选渲染图片"
+  default_prompt: "使用 $processon-diagram-generator 生成一张可编辑的 ProcessOn 图表。"

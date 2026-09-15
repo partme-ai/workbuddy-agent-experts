@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Java Migration"
+  short_description: "Migrate Java to Rust with lossless parity"
+  default_prompt: "Use $rust-java-migration to preserve the complete Java contract and behavior in a project-shaped Rust workspace, review .rs files above 500 lines, block those above 800, organize unit and integration tests idiomatically, and require full Java/Rust differential parity."

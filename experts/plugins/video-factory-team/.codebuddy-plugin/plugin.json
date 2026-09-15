@@ -1,6 +1,6 @@
 {
   "name": "video-factory-team",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Video Factory Team: a multi-agent team with verified, closed-loop delivery.",
   "author": {
     "name": "partme-ai"
@@ -19,9 +19,7 @@
     "./skills/video-factory-plan",
     "./skills/video-factory-recover",
     "./skills/video-factory-run",
-    "./skills/video-factory-use",
-    "./skills/video-shots",
-    "./skills/video-sync"
+    "./skills/video-factory-use"
   ],
   "expertType": "team",
   "agentName": "video-factory-lead",

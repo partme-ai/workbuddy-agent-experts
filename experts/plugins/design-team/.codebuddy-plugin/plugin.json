@@ -90,11 +90,11 @@
       "id": "design-ux-architect",
       "name": {
         "en": "design-ux-architect",
-        "zh": "UX 架构师"
+        "zh": "design-ux-architect"
       },
       "profession": {
-        "en": "design-ux-architect",
-        "zh": "UX 架构师"
+        "en": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。 (auto-vendored by compose_team.py)",
+        "zh": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。"
       },
       "avatar": "avatars/design-ux-architect.png",
       "role": "member"
@@ -103,11 +103,11 @@
       "id": "design-ui-designer",
       "name": {
         "en": "design-ui-designer",
-        "zh": "UI 设计师"
+        "zh": "design-ui-designer"
       },
       "profession": {
-        "en": "design-ui-designer",
-        "zh": "UI 设计师"
+        "en": "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象 (auto-vendored by compose_team.py)",
+        "zh": "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象"
       },
       "avatar": "avatars/design-ui-designer.png",
       "role": "member"
@@ -116,11 +116,11 @@
       "id": "design-ux-researcher",
       "name": {
         "en": "design-ux-researcher",
-        "zh": "UX 研究员"
+        "zh": "design-ux-researcher"
       },
       "profession": {
-        "en": "design-ux-researcher",
-        "zh": "UX 研究员"
+        "en": "专精用户行为分析、可用性测试和数据驱动设计洞察的用户体验研究专家。提供可落地的研究发现，提升产品可用性和用户满意度 (auto-vendored by compose_team.py)",
+        "zh": "专精用户行为分析、可用性测试和数据驱动设计洞察的用户体验研究专家。提供可落地的研究发现，提升产品可用性和用户满意度"
       },
       "avatar": "avatars/design-ux-researcher.png",
       "role": "member"
@@ -129,11 +129,11 @@
       "id": "design-brand-guardian",
       "name": {
         "en": "design-brand-guardian",
-        "zh": "品牌守护者"
+        "zh": "design-brand-guardian"
       },
       "profession": {
-        "en": "design-brand-guardian",
-        "zh": "品牌守护者"
+        "en": "专精品牌形象开发、一致性维护和战略品牌定位的品牌策略师和品牌守护专家 (auto-vendored by compose_team.py)",
+        "zh": "专精品牌形象开发、一致性维护和战略品牌定位的品牌策略师和品牌守护专家"
       },
       "avatar": "avatars/design-brand-guardian.png",
       "role": "member"
@@ -142,11 +142,11 @@
       "id": "design-visual-storyteller",
       "name": {
         "en": "design-visual-storyteller",
-        "zh": "视觉叙事师"
+        "zh": "design-visual-storyteller"
       },
       "profession": {
-        "en": "design-visual-storyteller",
-        "zh": "视觉叙事师"
+        "en": "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。 (auto-vendored by compose_team.py)",
+        "zh": "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。"
       },
       "avatar": "avatars/design-visual-storyteller.png",
       "role": "member"

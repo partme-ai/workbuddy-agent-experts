@@ -8,27 +8,27 @@
     "./agents/engineering-code-style-checker.md"
   ],
   "displayName": {
-    "en": "engineering-code-style-checker",
-    "zh": "code-style-checker"
+    "en": "Engineering Code Style Checker",
+    "zh": "engineering-code-style-checker"
   },
   "profession": {
-    "en": "engineering-code-style-checker",
-    "zh": "code-style-checker"
+    "en": "\"Java 项目规范检查与修复\" (auto-vendored by compose_team.py)",
+    "zh": "\"Java 项目规范检查与修复\""
   },
   "displayDescription": {
     "en": "Java 项目规范检查与修复",
     "zh": "Java 项目规范检查与修复"
   },
   "avatar": "avatars/expert.png",
-  "categoryId": "02-Engineering",
+  "categoryId": "12-IndustryConsultant",
   "defaultInitPrompt": {
-    "zh": "我是code-style-checker，请介绍你的专业能力并开始协助我。",
-    "en": "I am engineering-code-style-checker. Introduce your expertise and help me."
+    "zh": "我是engineering-code-style-checker，请介绍你的专业能力并开始协助我。",
+    "en": "I am Engineering Code Style Checker. Introduce your expertise and help me."
   },
   "tags": [
     {
-      "en": "engineering",
-      "zh": "engineering"
+      "en": "agent",
+      "zh": "agent"
     }
   ]
 }

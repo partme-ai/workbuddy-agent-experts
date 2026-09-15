@@ -1,0 +1,4 @@
+interface:
+  display_name: "LinuxMirrors 指南"
+  short_description: "查询 LinuxMirrors 能力、边界与最新权威资料"
+  default_prompt: "使用 $linuxmirrors-awesome 介绍 LinuxMirrors，并核验官网与 GitHub 的最新信息。"

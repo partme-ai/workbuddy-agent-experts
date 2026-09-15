@@ -1,0 +1,18 @@
+#!/bin/sh
+# Golden Example: hotplug script (序号50，不挂载，只做补充动作)
+# This is a golden example for skill verification, not production code.
+# Demonstrates: 序号>10 遵守 block-mount 协作规则，不执行挂载。
+# See SKILL.md §hotplug-flow.md (not covered by block-mount 10-mount)
+
+[ "$ACTION" = "add" ] || exit 0
+case "$DEVNAME" in sd[a-z]|mmcblk[0-9]) : ;; *) exit 0 ;; esac
+
+# 判断是否机械盘（补充动作，非挂载）
+ROTATIONAL=$(cat "/sys/block/$DEVNAME/queue/rotational" 2>/dev/null)
+if [ "$ROTATIONAL" = "1" ]; then
+    logger -t ge-storage "new HDD $DEVNAME detected — scheduling health scan"
+    # 实际扫描由 tinynas-disk-check（P1）承担；此处仅记录
+fi
+
+# 热插拔脚本同步执行，耗时操作用 & 后台化
+exit 0

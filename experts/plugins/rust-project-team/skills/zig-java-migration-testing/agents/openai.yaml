@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zig Java Migration Testing"
+  short_description: "Prove Java and Zig migration parity"
+  default_prompt: "Use $zig-java-migration-testing with the Zig testing skill to migrate every Java test and asset, run complete Java/Zig differential verification, and add Zig-specific ownership, allocator, error, target, and concurrency tests."

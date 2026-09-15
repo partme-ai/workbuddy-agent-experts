@@ -1,32 +1,23 @@
-"""Build an installable Connector zip with the shared Harness core."""
+"""Copy the pinned PartMe Blender MCP Add-on release artifact."""
 
 from __future__ import annotations
 
-import zipfile
+import shutil
+import sys
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
-CONNECTOR = ROOT / "connector" / "codex_blender_connector"
-HARNESS = ROOT / "scripts" / "harness"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-
-def _source_files(root: Path):
-    return sorted(path for path in root.rglob("*.py") if "__pycache__" not in path.parts)
+from scripts.partme_runtime import locked_artifact
 
 
 def package_connector(target: Path) -> Path:
+    source, _lock = locked_artifact(ROOT, "addon")
     target = Path(target)
     target.parent.mkdir(parents=True, exist_ok=True)
-    with zipfile.ZipFile(target, "w", compression=zipfile.ZIP_DEFLATED) as archive:
-        for path in _source_files(CONNECTOR):
-            archive.write(path, "codex_blender_connector/" + str(path.relative_to(CONNECTOR)))
-        for path in _source_files(HARNESS):
-            archive.write(path, "codex_blender_connector/harness/" + str(path.relative_to(HARNESS)))
-        archive.write(
-            ROOT / "scripts" / "validate_model_in_blender.py",
-            "codex_blender_connector/validate_model_in_blender.py",
-        )
+    shutil.copyfile(source, target)
     return target
 
 

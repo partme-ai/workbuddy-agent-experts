@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Stable"
+  short_description: "Write correct stable Rust with explicit MSRV checks"
+  default_prompt: "Use $rust-stable to implement and verify this stable Rust language or standard-library task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Embedded"
+  short_description: "Build portable and verifiable embedded Rust firmware"
+  default_prompt: "Use $rust-embedded to design and validate this embedded Rust firmware or driver."

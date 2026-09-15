@@ -133,23 +133,6 @@ FIELDS = {
     'resolution': {'type': 'string', 'description': 'Official uploader resolution label; default 720p'},
     'stage': {'type': 'string', 'minLength': 1, 'maxLength': 80},
     'progress': {'type': ['number', 'null'], 'minimum': 0, 'maximum': 1},
-    'metrics': {'type': 'object', 'description': 'Per-metric toggle dict for simulation.validate'},
-    'easing': {'type': 'string', 'enum': ['LINEAR', 'EASE_IN', 'EASE_OUT', 'EASE_IN_OUT', 'BOUNCE', 'ELASTIC']},
-    'sizes': {'type': 'array', 'items': {'type': 'integer', 'enum': [25, 50, 75, 100]}, 'minItems': 1},
-    'directory': {'type': 'string'},
-    'modifierType': {'type': 'string'},
-    'lift': {'type': 'array', 'minItems': 3, 'maxItems': 3, 'items': {'type': 'number'}},
-    'gamma': {'type': 'array', 'minItems': 3, 'maxItems': 3, 'items': {'type': 'number'}},
-    'gain': {'type': 'array', 'minItems': 3, 'maxItems': 3, 'items': {'type': 'number'}},
-    'offset_x': {'type': 'number'}, 'offset_y': {'type': 'number'},
-    'scale_x': {'type': 'number'}, 'scale_y': {'type': 'number'},
-    'rotation': {'type': 'number'},
-    'min_x': {'type': 'integer', 'minimum': 0}, 'max_x': {'type': 'integer', 'minimum': 0},
-    'min_y': {'type': 'integer', 'minimum': 0}, 'max_y': {'type': 'integer', 'minimum': 0},
-    'targetDirectory': {'type': 'string', 'minLength': 1},
-    'includePacked': {'type': 'boolean'},
-    'includeCaches': {'type': 'boolean'},
-    'includeProxies': {'type': 'boolean'},
 }
 
 TESTS = {
@@ -161,9 +144,6 @@ TESTS = {
     'rig':'runtime/p2_character_acceptance.py','constraint':'runtime/p2_character_acceptance.py',
     'validation':'runtime/p3_animation_validation_smoke.py',
     'job':'runtime/p3_job_smoke.py',
-    'job.estimate': 'test_job_scheduler.py',
-    'job.list': 'test_job_scheduler.py',
-    'job.events': 'test_job_scheduler.py',
     'geometry_nodes':'runtime/p4_courtyard_acceptance.py',
     'sculpt':'runtime/p5_surface_simulation_acceptance.py','hair':'runtime/p5_surface_simulation_acceptance.py',
     'simulation':'runtime/p5_surface_simulation_acceptance.py',
@@ -216,37 +196,6 @@ P8_VERIFIED = {'job.submit','job.resume','sequence.set_speed','sequence.keyframe
  'sequence.add_compositor_modifier','compositor.add_file_output','compositor.create_strip_group'}
 P9_L4_VERIFIED = {'job.resume','rig.rigify_install','rig.rigify_generate'}
 
-# Task 9: surface-motion commands verified by surface_motion_acceptance.py.
-# These are new commands with acceptance evidence from the Task 9 acceptance.
-SURFACE_MOTION_VERIFIED = {
-    'hair.groom', 'hair.validate',
-    'simulation.bake', 'simulation.validate',
-    'grease_pencil.add_modifier', 'grease_pencil.interpolate',
-}
-
-# Task 10: post-production commands verified by postproduction_acceptance.py.
-POSTPRODUCTION_VERIFIED = {
-    'material.add_node', 'material.connect_nodes',
-    'sequence.split', 'sequence.configure_proxy',
-    'sequence.add_modifier', 'sequence.color_grade',
-    'sequence.set_transform', 'sequence.set_crop',
-    'compositor.add_node',
-}
-
-# Task 11: project portability commands verified by project_portability_acceptance.py.
-PORTABILITY_VERIFIED = {
-    'asset.dependencies',
-    'asset.validate_portability',
-    'asset.package_project',
-}
-
-# Task 12: scheduler, estimate, list, events verified by test_job_scheduler.py.
-SCHEDULER_VERIFIED = {
-    'job.estimate',
-    'job.list',
-    'job.events',
-}
-
 # Lifecycle commands graduated to L3 with runtime acceptance evidence.
 LIFECYCLE_VERIFIED = {
     'capability.list', 'capability.describe',
@@ -276,63 +225,60 @@ NON_SCENE = {'capability', 'session', 'view', 'playback', 'preview', 'export', '
 NON_SCENE.add('job')
 
 DOMAIN_SKILLS = {
-    'scene': ['codex-blender-scene-assembly'],
-    'collection': ['codex-blender-scene-assembly'],
-    'asset': ['codex-blender-scene-assembly'],
-    'object': ['codex-blender-scene-assembly'],
-    'mesh': ['codex-blender-hard-surface'],
-    'modifier': ['codex-blender-hard-surface'],
-    'curve': ['codex-blender-curves'],
-    'uv': ['codex-blender-uv-material'],
-    'material': ['codex-blender-uv-material'],
-    'rig': ['codex-blender-character-rigging'],
-    'constraint': ['codex-blender-character-rigging'],
-    'animation': ['codex-blender-character-animation'],
-    'camera': ['codex-blender-cinematography'],
-    'light': ['codex-blender-render-compositing'],
-    'geometry_nodes': ['codex-blender-procedural-modeling'],
-    'sculpt': ['codex-blender-sculpt-surface'],
-    'hair': ['codex-blender-hair'],
-    'simulation': ['codex-blender-simulation'],
-    'render': ['codex-blender-render-compositing'],
-    'compositor': ['codex-blender-render-compositing'],
-    'grease_pencil': ['codex-blender-grease-pencil'],
-    'tracking': ['codex-blender-tracking'],
-    'sequence': ['codex-blender-sequence-editing'],
-    'validation': ['codex-blender-quality-validation'],
-    'job': ['codex-blender-background-jobs'],
-    'preview': ['codex-blender-preview'],
-    'export': ['codex-blender-export'],
+    'scene': ['blender-scene-assembly'],
+    'collection': ['blender-scene-assembly'],
+    'asset': ['blender-scene-assembly'],
+    'object': ['blender-scene-assembly'],
+    'mesh': ['blender-hard-surface'],
+    'modifier': ['blender-hard-surface'],
+    'curve': ['blender-curves'],
+    'uv': ['blender-uv-material'],
+    'material': ['blender-uv-material'],
+    'rig': ['blender-character-rigging'],
+    'constraint': ['blender-character-rigging'],
+    'animation': ['blender-character-animation'],
+    'camera': ['blender-cinematography'],
+    'light': ['blender-render-compositing'],
+    'geometry_nodes': ['blender-procedural-modeling'],
+    'sculpt': ['blender-sculpt-surface'],
+    'hair': ['blender-hair'],
+    'simulation': ['blender-simulation'],
+    'render': ['blender-render-compositing'],
+    'compositor': ['blender-render-compositing'],
+    'grease_pencil': ['blender-grease-pencil'],
+    'tracking': ['blender-tracking'],
+    'sequence': ['blender-sequence-editing'],
+    'validation': ['blender-quality-validation'],
+    'job': ['blender-background-jobs'],
+    'preview': ['blender-preview'],
+    'export': ['blender-export'],
     'official_uploader': ['codex-blender-jimeng-web'],
     'advanced': ['codex-blender-use'],
     'capability': ['codex-blender-use'],
     'session': ['codex-blender-use'],
     'view': ['codex-blender-use'],
     'playback': ['codex-blender-use'],
-    'retopo': ['codex-blender-retopology'],
+    'retopo': ['blender-retopology'],
 }
 
 COMMAND_SKILLS = {
-    'scene.inspect': ['codex-blender-inspect'],
-    'object.describe': ['codex-blender-inspect', 'codex-blender-scene-assembly'],
-    'object.create_mesh': ['codex-blender-hard-surface'],
-    'object.create_curve': ['codex-blender-curves'],
-    'object.join': ['codex-blender-hard-surface'],
-    'object.separate': ['codex-blender-hard-surface'],
-    'object.apply_transform': ['codex-blender-hard-surface'],
-    'object.set_origin': ['codex-blender-hard-surface'],
-    'asset.pack_resources': ['codex-blender-render-compositing'],
-    'asset.make_paths_relative': ['codex-blender-render-compositing'],
-    'asset.dependencies': ['codex-blender-scene-assembly'],
-    'asset.validate_portability': ['codex-blender-scene-assembly'],
-    'asset.package_project': ['codex-blender-scene-assembly', 'codex-blender-export'],
-    'export.extended': ['codex-blender-export', 'codex-blender-render-compositing'],
-    'validation.camera_visibility': ['codex-blender-quality-validation', 'codex-blender-cinematography'],
-    'validation.floor_penetration': ['codex-blender-quality-validation', 'codex-blender-character-animation'],
-    'validation.foot_drift': ['codex-blender-quality-validation', 'codex-blender-character-animation'],
-    'validation.limb_length': ['codex-blender-quality-validation', 'codex-blender-character-animation'],
-    'validation.motion_discontinuity': ['codex-blender-quality-validation', 'codex-blender-character-animation'],
-    'validation.prop_handoff': ['codex-blender-quality-validation', 'codex-blender-character-animation'],
+    'scene.inspect': ['blender-inspect'],
+    'object.describe': ['blender-inspect', 'blender-scene-assembly'],
+    'object.create_mesh': ['blender-hard-surface'],
+    'object.create_curve': ['blender-curves'],
+    'object.join': ['blender-hard-surface'],
+    'object.separate': ['blender-hard-surface'],
+    'object.apply_transform': ['blender-hard-surface'],
+    'object.set_origin': ['blender-hard-surface'],
+    'asset.pack_resources': ['blender-render-compositing'],
+    'asset.make_paths_relative': ['blender-render-compositing'],
+    'export.extended': ['blender-export', 'blender-render-compositing'],
+    'validation.camera_visibility': ['blender-quality-validation', 'blender-cinematography'],
+    'validation.floor_penetration': ['blender-quality-validation', 'blender-character-animation'],
+    'validation.foot_drift': ['blender-quality-validation', 'blender-character-animation'],
+    'validation.limb_length': ['blender-quality-validation', 'blender-character-animation'],
+    'validation.motion_discontinuity': ['blender-quality-validation', 'blender-character-animation'],
+    'validation.prop_handoff': ['blender-quality-validation', 'blender-character-animation'],
 }
 
 
@@ -340,7 +286,7 @@ def command_skills(name, domain, metadata):
     explicit = (metadata or {}).get('skills')
     if explicit:
         return list(explicit)
-    return list(COMMAND_SKILLS.get(name, DOMAIN_SKILLS.get(domain, ['codex-blender-design'])))
+    return list(COMMAND_SKILLS.get(name, DOMAIN_SKILLS.get(domain, ['blender-design'])))
 
 
 def runtime_evidence(name):
@@ -355,8 +301,6 @@ def runtime_evidence(name):
                 'tests/runtime/p8_frame_pipeline_acceptance.py']
     if name == 'job.resume':
         return ['tests/runtime/p8_frame_pipeline_acceptance.py']
-    if name in SCHEDULER_VERIFIED:
-        return ['tests/test_job_scheduler.py']
     if name in {'sequence.set_speed','sequence.keyframe_volume'}:
         return ['tests/runtime/p8_vse_extended_acceptance.py']
     if name in {'sequence.add_compositor_modifier','compositor.add_file_output','compositor.create_strip_group'}:
@@ -367,13 +311,6 @@ def runtime_evidence(name):
         return ['tests/runtime/p7_tracking_foreground.py']
     if name == 'compositor.add_tracking_mask':
         return ['tests/runtime/p7_compositor_tracking_acceptance.py']
-    if name in {'hair.groom','hair.validate','simulation.bake','simulation.validate',
-                'grease_pencil.add_modifier','grease_pencil.interpolate'}:
-        return ['tests/runtime/surface_motion_acceptance.py']
-    if name in POSTPRODUCTION_VERIFIED:
-        return ['tests/runtime/postproduction_acceptance.py']
-    if name in PORTABILITY_VERIFIED:
-        return ['tests/runtime/project_portability_acceptance.py']
     if name in P7_VERIFIED:
         return ['tests/runtime/p7_gp_sequence_acceptance.py']
     if name in P6_VERIFIED:
@@ -459,24 +396,8 @@ class RuntimeCommandRegistry(CommandRegistry):
                 validate.schema['properties']['colorDepth']={'type':'string','enum':['8','16','32']}
             if name=='sequence.set_speed':
                 validate.schema['properties']['source']={'type':'string','minLength':1}
-            if name=='simulation.bake':
-                validate.schema['properties']['bakeType']={'type':'string','enum':['CLOTH','SOFT_BODY','FLUID','DYNAMIC_PAINT','RIGID_BODY','PARTICLE']}
-            if name=='hair.groom':
-                validate.schema['properties']['operation']={'type':'string','enum':['COMB','CUT','LENGTH','CLUMP','NOISE','SMOOTH']}
             if name=='sequence.add':
                 validate.schema['properties']['type']={'type':'string','enum':['MOVIE','SOUND','IMAGE','IMAGE_SEQUENCE','SCENE','TEXT']}
-            if name=='sequence.add_modifier':
-                validate.schema['properties']['modifierType']={'type':'string','enum':[
-                    'Color Balance','Brightness/Contrast','Hue Correct','Mask',
-                    'White Balance','Tonemap','Curves',
-                    'BRIGHT_CONTRAST','COLOR_BALANCE','COMPOSITOR','CURVES',
-                    'HUE_CORRECT','MASK','TONEMAP','WHITE_BALANCE']}
-            if name=='material.add_node':
-                validate.schema['properties']['nodeType']={'type':'string','enum':[
-                    'Principled','Image Texture','Normal Map','Mapping','Math','Mix','ColorRamp']}
-            if name=='compositor.add_node':
-                validate.schema['properties']['nodeType']={'type':'string','enum':[
-                    'Render Layers','File Output','Cryptomatte','Keying','Mask']}
         module = getattr(handler, '__module__', '')
         source = module.replace('.', '/') + '.py' if module.startswith('scripts.') else None
         requirements = ['Per-request argument checks and session policy still apply']
@@ -515,11 +436,11 @@ class RuntimeCommandRegistry(CommandRegistry):
         if name.startswith('rig.rigify_'):defaults['versions']['extensions']=['Rigify (bundled enable preferred; official download requires explicit authorization)']
         if name == 'job.submit':
             defaults['skillRouting'] = {'byArguments': {'kind': {
-                'EXPORT': ['codex-blender-render-compositing'],
-                'RENDER_STILL': ['codex-blender-render-compositing'],
-                'BAKE_POINT_CACHES': ['codex-blender-simulation'],
-                'RENDER_ANIMATION_FRAMES': ['codex-blender-render-compositing','codex-blender-background-jobs'],
-                'COMPOSE_VIDEO': ['codex-blender-sequence-editing','codex-blender-background-jobs'],
+                'EXPORT': ['blender-render-compositing'],
+                'RENDER_STILL': ['blender-render-compositing'],
+                'BAKE_POINT_CACHES': ['blender-simulation'],
+                'RENDER_ANIMATION_FRAMES': ['blender-render-compositing','blender-background-jobs'],
+                'COMPOSE_VIDEO': ['blender-sequence-editing','blender-background-jobs'],
             }}}
         defaults.update(metadata or {})
         if name in LIFECYCLE_VERIFIED:
@@ -546,7 +467,7 @@ class RuntimeCommandRegistry(CommandRegistry):
                 'delivery': ['tests/runtime/foreground_lifecycle_acceptance.py'],
                 'recoveryAndCompatibility': [],
             }
-        elif name in P1_VERIFIED or name in P2A_VERIFIED or name in P2B_VERIFIED or name in P3_VERIFIED or name in P4_VERIFIED or name in P5_VERIFIED or name in P6_VERIFIED or name in P7_VERIFIED or name in P8_VERIFIED or name in SURFACE_MOTION_VERIFIED or name in POSTPRODUCTION_VERIFIED or name in PORTABILITY_VERIFIED or name in SCHEDULER_VERIFIED:
+        elif name in P1_VERIFIED or name in P2A_VERIFIED or name in P2B_VERIFIED or name in P3_VERIFIED or name in P4_VERIFIED or name in P5_VERIFIED or name in P6_VERIFIED or name in P7_VERIFIED or name in P8_VERIFIED:
             defaults['maturity'] = 'L3'
             defaults['verification'] = {
                 'runtime': runtime_evidence(name),
@@ -558,13 +479,8 @@ class RuntimeCommandRegistry(CommandRegistry):
                            'docs/verification/p3-animation-jobs-acceptance.md' if name in P3_VERIFIED else
                            'docs/verification/p2-character-acceptance.md' if name in P2B_VERIFIED else
                            'docs/verification/p2-product-acceptance.md' if name in P2A_VERIFIED else
-                           'docs/verification/p5-surface-simulation-acceptance.md' if name in SURFACE_MOTION_VERIFIED else
-                           'docs/verification/postproduction-acceptance.md' if name in POSTPRODUCTION_VERIFIED else
-                           'docs/verification/project-portability-acceptance.md' if name in PORTABILITY_VERIFIED else
-                           'docs/verification/scheduler-policy.md' if name in SCHEDULER_VERIFIED else
                            'docs/verification/blender-domain-coverage-matrix.md#sceneobjectcollection'],
-                'delivery': [('tests/test_job_scheduler.py' if name in SCHEDULER_VERIFIED else
-                             'tests/runtime/p8_frame_pipeline_acceptance.py' if name.startswith('job.') else
+                'delivery': [('tests/runtime/p8_frame_pipeline_acceptance.py' if name.startswith('job.') else
                               'tests/runtime/p8_vse_extended_acceptance.py' if name in {'sequence.set_speed','sequence.keyframe_volume'} else
                               'tests/runtime/p8_compositor_delivery_acceptance.py') if name in P8_VERIFIED else
                              'tests/runtime/p7_extension_status.py' if name=='rig.rigify_status' else
@@ -578,9 +494,6 @@ class RuntimeCommandRegistry(CommandRegistry):
                              'tests/runtime/p3_animation_validation_smoke.py' if name in P3_VERIFIED else
                              'tests/runtime/p2_character_acceptance.py' if name in P2B_VERIFIED else
                              'tests/runtime/p2_product_acceptance.py' if name in P2A_VERIFIED else
-                             'tests/runtime/surface_motion_acceptance.py' if name in SURFACE_MOTION_VERIFIED else
-                             'tests/runtime/postproduction_acceptance.py' if name in POSTPRODUCTION_VERIFIED else
-                             'tests/runtime/project_portability_acceptance.py' if name in PORTABILITY_VERIFIED else
                              'tests/runtime/p1_delivery_acceptance.py'],
                 'recoveryAndCompatibility': [],
             }

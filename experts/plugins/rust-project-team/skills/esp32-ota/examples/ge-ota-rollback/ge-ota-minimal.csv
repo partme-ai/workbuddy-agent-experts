@@ -1,0 +1,12 @@
+# Golden Example: minimal dual-OTA partition table
+# Offset 留空=自动排布；Size 为示意值，按 flash 容量调整。
+# See SKILL.md §ota-state-machine.md
+# ⚠️ 禁止手填偏移值（基线红线：分区偏移不编造）
+
+# Name,     Type, SubType, Offset,  Size,    Flags
+nvs,        data, nvs,     ,        0x6000,
+otadata,    data, ota,     ,        0x2000,
+phy_init,   data, phy,     ,        0x1000,
+ota_0,      app,  ota_0,   ,        0x1F0000,
+ota_1,      app,  ota_1,   ,        0x1F0000,
+storage,    data, fat,     ,        0x400000,

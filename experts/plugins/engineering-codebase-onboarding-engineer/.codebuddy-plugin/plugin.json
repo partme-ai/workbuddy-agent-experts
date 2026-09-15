@@ -8,27 +8,27 @@
     "./agents/engineering-codebase-onboarding-engineer.md"
   ],
   "displayName": {
-    "en": "engineering-codebase-onboarding-engineer",
-    "zh": "代码库入职引导工程师"
+    "en": "Engineering Codebase Onboarding Engineer",
+    "zh": "engineering-codebase-onboarding-engineer"
   },
   "profession": {
-    "en": "engineering-codebase-onboarding-engineer",
-    "zh": "代码库入职引导工程师"
+    "en": "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。 (auto-vendored by compose_team.py)",
+    "zh": "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。"
   },
   "displayDescription": {
     "en": "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。",
     "zh": "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。"
   },
   "avatar": "avatars/expert.png",
-  "categoryId": "02-Engineering",
+  "categoryId": "12-IndustryConsultant",
   "defaultInitPrompt": {
-    "zh": "我是代码库入职引导工程师，请介绍你的专业能力并开始协助我。",
-    "en": "I am engineering-codebase-onboarding-engineer. Introduce your expertise and help me."
+    "zh": "我是engineering-codebase-onboarding-engineer，请介绍你的专业能力并开始协助我。",
+    "en": "I am Engineering Codebase Onboarding Engineer. Introduce your expertise and help me."
   },
   "tags": [
     {
-      "en": "engineering",
-      "zh": "engineering"
+      "en": "agent",
+      "zh": "agent"
     }
   ]
 }

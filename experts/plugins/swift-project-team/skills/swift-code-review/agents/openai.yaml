@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swift Code Review"
+  short_description: "evidence-backed Swift code review"
+  default_prompt: "Use $swift-code-review to complete this task with repository evidence and executable validation."

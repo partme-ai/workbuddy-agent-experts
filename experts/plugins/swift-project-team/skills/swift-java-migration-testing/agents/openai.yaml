@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swift Java Migration Testing"
+  short_description: "complete Java-to-Swift parity acceptance"
+  default_prompt: "Use $swift-java-migration-testing to complete this task with repository evidence and executable validation."

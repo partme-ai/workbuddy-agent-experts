@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>TRACE 评测报告 — linuxmirrors-awesome</title>
+<style>
+  @media print { body { background: white !important; } .no-print { display: none !important; } }
+</style>
+</head>
+<body class="bg-gray-50">
+<div class="pb-8 max-w-5xl mx-auto px-4 pt-6">
+
+  <!-- ====== Header ====== -->
+  <div class="mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+    <div>
+      <h1 class="text-2xl font-bold text-gray-900">linuxmirrors-awesome</h1>
+      <p class="text-sm text-gray-500 mt-0.5">/Users/wandl/workspaces/workspace-agent-skills/full-stack-skills-repositories/devops-skills/skills/linuxmirrors-awesome</p>
+    </div>
+    <div class="flex items-center gap-2 text-xs text-gray-400">
+      <span>评测时间：2026-07-11 07:05 UTC</span>
+      <span class="px-2 py-0.5 rounded bg-green-50 text-green-700 font-medium">Official: Pass</span>
+    </div>
+  </div>
+
+  <!-- ====== TRACE 维度说明卡 ====== -->
+  <div class="mb-6 rounded-2xl overflow-hidden border" style="border-color:rgba(63,94,255,0.16)">
+    <div class="h-1" style="background:linear-gradient(90deg,#3f5eff 0%,#af52de 100%)"></div>
+    <div class="p-5" style="background:linear-gradient(135deg,rgba(63,94,255,0.04) 0%,rgba(175,82,222,0.04) 100%)">
+      <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-[18px] h-[18px] text-white"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-1.5">TRACE 评测维度说明</h3>
+          <p class="text-[13px] leading-relaxed text-gray-600">
+            SkillHub TRACE 评测体系从 <span class="font-medium text-gray-800">可信任度（Trust）</span>、<span class="font-medium text-gray-800">可靠性（Reliability）</span>、<span class="font-medium text-gray-800">适用性（Adaptability）</span>、<span class="font-medium text-gray-800">规范性（Convention）</span>、<span class="font-medium text-gray-800">有效性（Effectiveness）</span> 五个维度全面评估 Skill 的质量。该体系基于 SkillHub 平台的长期运营实践及腾讯新闻团队的内容生产经验沉淀而成，旨在帮助用户快速识别高质量 Skill。
+          </p>
+          <p class="text-[12px] text-gray-500 mt-2 flex items-center gap-1">
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+            特别说明：本报告不是官方报告，而是 TRACE 评测体系的模拟检测，最终测评结果以 SkillHub 为准。
+          </p>
+          <p class="text-[12px] text-gray-400 mt-1">
+            等级阈值：≥4.7 优秀（Excellent） | ≥4.2 良好（Good） | ≥3.5 一般（Fair） | &lt;3.5 待改进（Needs improvement）
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== Overall Score + Radar ====== -->
+  <div class="mb-6 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
+    <div class="flex flex-col lg:flex-row items-center gap-8">
+      <!-- SVG Radar -->
+      <div class="w-full lg:w-[320px] h-[260px] flex-shrink-0">
+        <svg width="320" height="260" viewBox="0 0 320 260">
+          <!-- 五轴骨架线 -->
+          <line stroke="#e5e7eb" stroke-width="0.5" x1="160" y1="130" x2="160" y2="40"/>
+          <line stroke="#e5e7eb" stroke-width="0.5" x1="160" y1="130" x2="245.595" y2="102.188"/>
+          <line stroke="#e5e7eb" stroke-width="0.5" x1="160" y1="130" x2="212.901" y2="202.812"/>
+          <line stroke="#e5e7eb" stroke-width="0.5" x1="160" y1="130" x2="107.099" y2="202.812"/>
+          <line stroke="#e5e7eb" stroke-width="0.5" x1="160" y1="130" x2="74.405" y2="102.188"/>
+          <!-- 5层同心五边形网格 (20%/40%/60%/80%/100%) -->
+          <polygon points="160.00,112.00 177.12,124.44 170.58,144.56 149.42,144.56 142.88,124.44" fill="none" stroke="#e5e7eb" stroke-width="0.7"/><polygon points="160.00,94.00 194.24,118.88 181.16,159.12 138.84,159.12 125.76,118.88" fill="none" stroke="#e5e7eb" stroke-width="0.7"/><polygon points="160.00,76.00 211.36,113.31 191.74,173.69 128.26,173.69 108.64,113.31" fill="none" stroke="#e5e7eb" stroke-width="0.7"/><polygon points="160.00,58.00 228.48,107.75 202.32,188.25 117.68,188.25 91.52,107.75" fill="none" stroke="#e5e7eb" stroke-width="0.7"/><polygon points="160.00,40.00 245.60,102.19 212.90,202.81 107.10,202.81 74.40,102.19" fill="none" stroke="#e5e7eb" stroke-width="0.7"/>
+          <!-- 轴标签 -->
+          <text font-size="12" text-anchor="middle" fill="#4B5563" x="160" y="28">T 可信任度</text>
+          <text font-size="12" text-anchor="start" fill="#4B5563" x="257" y="98">R 可靠性</text>
+          <text font-size="12" text-anchor="start" fill="#4B5563" x="220" y="213">A 适用性</text>
+          <text font-size="12" text-anchor="end" fill="#4B5563" x="100" y="213">C 规范性</text>
+          <text font-size="12" text-anchor="end" fill="#4B5563" x="63" y="98">E 有效性</text>
+          <!-- 数据多边形 (T=pct_T, R=pct_R, A=pct_A, C=pct_C, E=pct_E) -->
+          <!-- 各轴坐标公式：T轴=(160, 130-(pct_T*90)), R轴=(160+(pct_R*85.595), 130-(pct_R*27.812)), A轴=(160+(pct_A*52.901), 130+(pct_A*72.812)), C轴=(160-(pct_C*52.901), 130+(pct_C*72.812)), E轴=(160-(pct_E*85.595), 130-(pct_E*27.812)) -->
+          <polygon points="160.00,40.90 242.17,103.30 210.57,199.61 107.63,202.08 76.97,103.02" fill="rgba(63,94,255,0.18)" stroke="#3f5eff" stroke-width="2"/>
+          <circle cx="160.00" cy="40.90" r="3" fill="#3f5eff"/><circle cx="242.17" cy="103.30" r="3" fill="#3f5eff"/><circle cx="210.57" cy="199.61" r="3" fill="#3f5eff"/><circle cx="107.63" cy="202.08" r="3" fill="#3f5eff"/><circle cx="76.97" cy="103.02" r="3" fill="#3f5eff"/>
+        </svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-baseline gap-3 mb-4">
+          <span class="text-[48px] font-bold text-gray-900 leading-none">4.87</span>
+          <span class="text-[16px] text-gray-400 font-medium">/ 5</span>
+        </div>
+        <div class="mb-3">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[13px] font-semibold bg-green-50 text-green-700">Excellent（优秀）</span>
+        </div>
+        <p class="text-[14px] leading-relaxed text-gray-600">权威资料核验、任务路由、安全边界和十个端到端场景形成完整的项目认知入口。</p>
+        <p class="text-[13px] text-gray-500 mt-2">相较 no-skill，增加权威来源核验、场景路由、变更门禁、验证和回滚。</p>
+        <div class="mt-4 grid grid-cols-5 gap-2">
+          <div class="rounded bg-gray-50 p-2 text-center"><div class="text-xs text-gray-500">T</div><div class="font-bold">4.95</div></div><div class="rounded bg-gray-50 p-2 text-center"><div class="text-xs text-gray-500">R</div><div class="font-bold">4.80</div></div><div class="rounded bg-gray-50 p-2 text-center"><div class="text-xs text-gray-500">A</div><div class="font-bold">4.78</div></div><div class="rounded bg-gray-50 p-2 text-center"><div class="text-xs text-gray-500">C</div><div class="font-bold">4.95</div></div><div class="rounded bg-gray-50 p-2 text-center"><div class="text-xs text-gray-500">E</div><div class="font-bold">4.85</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== Dimension Detail Cards ====== -->
+  <div class="space-y-4">
+    <h3 class="text-[16px] font-semibold text-gray-900">📊 五维度详析（20 子项评分）</h3>
+
+    <!-- T · Trust -->
+    <div class="p-5 rounded-xl border border-gray-100 bg-white">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(16,185,129,0.082)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" style="color:rgb(16,185,129)"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="flex-1">
+          <span class="text-[14px] font-semibold text-gray-900">T · Trust（可信任度）</span>
+          <span class="text-[12px] text-gray-500 ml-2">安全红线维度</span>
+          <span class="float-right text-[18px] font-bold" style="color:rgb(16,185,129)">4.95</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden"><div class="h-full rounded-full" style="width:99%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
+      </div>
+      <p class="text-[13px] text-gray-600 mb-2">无 scripts、无凭据；正文声明不收集或上传用户数据，并含三类边界。</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[13px]">
+          <tr class="bg-gray-50 text-gray-500 text-[12px]"><th class="text-left p-2">子项</th><th class="p-2 w-14">得分</th><th class="text-left p-2">证据</th><th class="text-left p-2">建议</th></tr>
+          <tr class="border-t"><td class="p-2">T1 安全性扫描</td><td class="p-2 text-center font-semibold">5.0</td><td class="p-2">基分 5.0；无 scripts、无凭据且有安全声明，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">T2 国内适配性</td><td class="p-2 text-center font-semibold">5.0</td><td class="p-2">基分 5.0；正文与示例为中文国内运维场景，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">T3 边界透明度</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.8；三分类边界每类 3 项且有明确使用时机，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">T4 数据隐私规范</td><td class="p-2 text-center font-semibold">5.0</td><td class="p-2">基分 5.0；明确不收集、上传或存储用户数据，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- R · Reliability -->
+    <div class="p-5 rounded-xl border border-gray-100 bg-white">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(59,130,246,0.082)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" style="color:rgb(59,130,246)"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+        </div>
+        <div class="flex-1">
+          <span class="text-[14px] font-semibold text-gray-900">R · Reliability（可靠性）</span>
+          <span class="text-[12px] text-gray-500 ml-2">稳定性与交付</span>
+          <span class="float-right text-[18px] font-bold" style="color:rgb(59,130,246)">4.80</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden"><div class="h-full rounded-full" style="width:96%;background:linear-gradient(90deg,#3b82f6,#60a5fa)"></div></div>
+      </div>
+      <p class="text-[13px] text-gray-600 mb-2">有 Step 工作流、信息不足安全假设模板、Rules、验证清单和替代路径。</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[13px]">
+          <tr class="bg-gray-50 text-gray-500 text-[12px]"><th class="text-left p-2">子项</th><th class="p-2 w-14">得分</th><th class="text-left p-2">证据</th><th class="text-left p-2">建议</th></tr>
+          <tr class="border-t"><td class="p-2">R1 异常处理</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.5；信息不足时先给安全假设再列缺失项，+0.3。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">R2 功能完善性</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.8；Step 工作流与端到端示例覆盖全部声明能力，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">R3 运行稳定性</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.5；Rules、验证清单和停止条件形成稳定门禁，+0.3。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">R4 降级兜底</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.5；超范围均给替代方案且模糊输入有降级路径，+0.3。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- A · Adaptability -->
+    <div class="p-5 rounded-xl border border-gray-100 bg-white">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(245,158,11,0.082)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" style="color:rgb(245,158,11)"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <div class="flex-1">
+          <span class="text-[14px] font-semibold text-gray-900">A · Adaptability（适用性）</span>
+          <span class="text-[12px] text-gray-500 ml-2">场景识别与触发</span>
+          <span class="float-right text-[18px] font-bold" style="color:rgb(245,158,11)">4.78</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden"><div class="h-full rounded-full" style="width:96%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div>
+      </div>
+      <p class="text-[13px] text-gray-600 mb-2">description 场景化路由；显式覆盖新手、运维、CI/CD/平台用户和参数化场景。</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[13px]">
+          <tr class="bg-gray-50 text-gray-500 text-[12px]"><th class="text-left p-2">子项</th><th class="p-2 w-14">得分</th><th class="text-left p-2">证据</th><th class="text-left p-2">建议</th></tr>
+          <tr class="border-t"><td class="p-2">A1 能力边界定义</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.5；什么时候使用与三类边界具有场景判断逻辑，+0.3。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">A2 触发方式</td><td class="p-2 text-center font-semibold">5.0</td><td class="p-2">基分 5.0；description 同时包含能力、触发与 near-miss，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">A3 受众广度</td><td class="p-2 text-center font-semibold">4.6</td><td class="p-2">基分 4.3；显式提供新手、运维和平台/CI 用户路径，+0.3。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">A4 定制化支持</td><td class="p-2 text-center font-semibold">4.7</td><td class="p-2">基分 4.5；参数选择、场景输入与示例提供定制机制，+0.2。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- C · Convention -->
+    <div class="p-5 rounded-xl border border-gray-100 bg-white">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(139,92,246,0.082)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" style="color:rgb(139,92,246)"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+        </div>
+        <div class="flex-1">
+          <span class="text-[14px] font-semibold text-gray-900">C · Convention（规范性）</span>
+          <span class="text-[12px] text-gray-500 ml-2">结构与可维护性</span>
+          <span class="float-right text-[18px] font-bold" style="color:rgb(139,92,246)">4.95</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden"><div class="h-full rounded-full" style="width:99%;background:linear-gradient(90deg,#8b5cf6,#c4b5fd)"></div></div>
+      </div>
+      <p class="text-[13px] text-gray-600 mb-2">SKILL.md 精简；references 含 8 文件和 2 子目录；examples 达类型阈值。</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[13px]">
+          <tr class="bg-gray-50 text-gray-500 text-[12px]"><th class="text-left p-2">子项</th><th class="p-2 w-14">得分</th><th class="text-left p-2">证据</th><th class="text-left p-2">建议</th></tr>
+          <tr class="border-t"><td class="p-2">C1 文档质量</td><td class="p-2 text-center font-semibold">5.0</td><td class="p-2">基分 5.0；示例数量达到类型阈值且包含验证与回滚，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">C2 渐进式披露</td><td class="p-2 text-center font-semibold">5.0</td><td class="p-2">基分 5.0；主文件低于阈值并有 8 份按需引用，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">C3 结构清晰</td><td class="p-2 text-center font-semibold">5.0</td><td class="p-2">基分 5.0；命名合规且 references 分为 2 个语义目录，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">C4 反模式与 FAQ</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.8；6 个 Gotchas 与 6 个实质 FAQ 覆盖核心陷阱，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- E · Effectiveness -->
+    <div class="p-5 rounded-xl border border-gray-100 bg-white">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(239,68,68,0.082)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" style="color:rgb(239,68,68)"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+        </div>
+        <div class="flex-1">
+          <span class="text-[14px] font-semibold text-gray-900">E · Effectiveness（有效性）</span>
+          <span class="text-[12px] text-gray-500 ml-2">任务增益与代价</span>
+          <span class="float-right text-[18px] font-bold" style="color:rgb(239,68,68)">4.85</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden"><div class="h-full rounded-full" style="width:97%;background:linear-gradient(90deg,#ef4444,#f87171)"></div></div>
+      </div>
+      <p class="text-[13px] text-gray-600 mb-2">端到端示例覆盖典型、异常、验证与回滚；决策框架显著减少裸模型混淆。</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[13px]">
+          <tr class="bg-gray-50 text-gray-500 text-[12px]"><th class="text-left p-2">子项</th><th class="p-2 w-14">得分</th><th class="text-left p-2">证据</th><th class="text-left p-2">建议</th></tr>
+          <tr class="border-t"><td class="p-2">E1 输出准确性</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.8；场景分流明确并禁止在不确定领域胡编，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">E2 内容完整度</td><td class="p-2 text-center font-semibold">5.0</td><td class="p-2">基分 5.0；端到端示例覆盖正常、异常、验证和回滚，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">E3 创造力与增值</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.5；包含决策路由、差异比较和安全评估框架，+0.3。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr><tr class="border-t"><td class="p-2">E4 开箱即用度</td><td class="p-2 text-center font-semibold">4.8</td><td class="p-2">基分 4.8/5.0；快速开始、开场白、工作流和验证齐备，保持。</td><td class="p-2">保持来源核验并随上游变化复评。</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== Baseline Comparison ====== -->
+  <div class="mt-4 p-5 rounded-xl border border-gray-100 bg-white">
+    <h3 class="text-[15px] font-semibold text-gray-900 mb-3">📊 no-skill 基线对比</h3>
+    <div class="overflow-x-auto">
+      <table class="w-full text-[13px]">
+        <tr class="bg-gray-50 text-gray-500 text-[12px]"><th class="text-left p-2">对比维度</th><th class="p-2">no-skill（裸模型）</th><th class="p-2">启用此 skill</th><th class="p-2 w-16">增益</th></tr>
+        <tr class="border-t"><td class="p-2">准确性与安全</td><td class="p-2">可能混淆源类型或遗漏回滚</td><td class="p-2">强制来源核验、预检、验证和回滚</td><td class="p-2 text-green-700">高</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ====== Official Compliance ====== -->
+  <div class="mt-4 p-5 rounded-xl border border-gray-100 bg-white">
+    <h3 class="text-[15px] font-semibold text-gray-900 mb-3">📋 官方规范合规（agentskills.io）</h3>
+    <div class="rounded-lg p-3 mb-3" style="background:rgba(16,185,129,0.06);border-left:3px solid rgb(16,185,129)">
+      <span class="text-[14px] font-semibold" style="color:rgb(16,185,129)">✅ 10/10 项通过</span>
+      <span class="text-[12px] text-gray-500 ml-2">基于 agentskills.io 官方规范</span>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-[13px]">
+        <tr class="bg-gray-50 text-gray-500 text-[12px]"><th class="text-left p-2 w-8">#</th><th class="text-left p-2">检查项</th><th class="p-2 w-16">结果</th><th class="text-left p-2">证据</th></tr>
+        <tr class="border-t"><td class="p-2">1</td><td class="p-2">SKILL.md 存在</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">2</td><td class="p-2">name 合规</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">3</td><td class="p-2">name 与目录一致</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">4</td><td class="p-2">description 有效</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">5</td><td class="p-2">frontmatter 精简</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">6</td><td class="p-2">渐进式披露</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">7</td><td class="p-2">相对引用有效</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">8</td><td class="p-2">示例充分</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">9</td><td class="p-2">无硬编码凭据</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr><tr class="border-t"><td class="p-2">10</td><td class="p-2">安全边界明确</td><td class="p-2 text-green-700">通过</td><td class="p-2">结构和内容已核验</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ====== Suggestions ====== -->
+  <div class="mt-4 p-5 rounded-xl border border-gray-100 bg-white">
+    <h3 class="text-[15px] font-semibold text-gray-900 mb-3">💡 优化建议（优先级排序）</h3>
+    <div class="space-y-2">
+      <div class="p-3 rounded bg-blue-50 text-sm">P3：LinuxMirrors 上游发生参数、兼容性或镜像列表变化后重新核验并复评。</div>
+    </div>
+  </div>
+
+  <!-- ====== Skill Profile ====== -->
+  <div class="mt-4 p-5 rounded-xl border border-gray-100 bg-white">
+    <h3 class="text-[15px] font-semibold text-gray-900 mb-3">📦 Skill 基础画像</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-[13px]">
+      <div>类型<br><b>Doc</b></div><div>引用<br><b>8</b></div><div>示例<br><b>10</b></div><div>脚本<br><b>0</b></div>
+    </div>
+  </div>
+
+  <!-- ====== Footer ====== -->
+  <div class="mt-6 text-center text-[12px] text-gray-400 pb-4">
+    <p>评估依据：<strong>SkillHub TRACE 评测体系</strong></p>
+    <p>合规检查：<strong>agentskills.io</strong> 官方规范 · Generated 2026-07-11 07:05 UTC</p>
+  </div>
+
+</div>
+</body>
+</html>

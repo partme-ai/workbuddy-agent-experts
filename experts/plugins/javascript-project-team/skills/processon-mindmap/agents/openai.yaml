@@ -1,0 +1,4 @@
+interface:
+  display_name: "ProcessOn 思维导图"
+  short_description: "把需求、知识和会议内容整理为可导入 ProcessOn 的层级思维导图"
+  default_prompt: "使用 $processon-mindmap 把这些内容整理为 ProcessOn 思维导图。"

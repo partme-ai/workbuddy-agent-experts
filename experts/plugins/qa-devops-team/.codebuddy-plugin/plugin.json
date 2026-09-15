@@ -1,0 +1,296 @@
+{
+  "name": "qa-devops-team",
+  "version": "1.0.0",
+  "description": "QA & DevOps Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/qa-devops-team-lead.md",
+    "./agents/engineering-devops-automator.md",
+    "./agents/engineering-incident-response-commander.md",
+    "./agents/engineering-sre.md",
+    "./agents/engineering-it-service-manager.md",
+    "./agents/testing-api-tester.md",
+    "./agents/testing-evidence-collector.md",
+    "./agents/testing-performance-benchmarker.md",
+    "./agents/testing-reality-checker.md",
+    "./agents/testing-workflow-optimizer.md",
+    "./agents/testing-tool-evaluator.md"
+  ],
+  "skills": [
+    "./skills/ansible",
+    "./skills/api-doc-generator",
+    "./skills/appium",
+    "./skills/cloudformation",
+    "./skills/cypress",
+    "./skills/dart-sass",
+    "./skills/detox",
+    "./skills/doc-coauthoring",
+    "./skills/docker-ai-ml",
+    "./skills/docker-basics",
+    "./skills/docker-build",
+    "./skills/docker-buildx",
+    "./skills/docker-cicd",
+    "./skills/docker-compose",
+    "./skills/docker-dockerfile",
+    "./skills/docker-hub",
+    "./skills/docker-networking",
+    "./skills/docker-production",
+    "./skills/docker-run",
+    "./skills/docker-scout",
+    "./skills/docker-security",
+    "./skills/docker-storage",
+    "./skills/docker-testcontainers",
+    "./skills/docker-troubleshooting",
+    "./skills/full-stack-doc",
+    "./skills/github-actions",
+    "./skills/gitlab-ci",
+    "./skills/hbuilderx-cli",
+    "./skills/jest",
+    "./skills/junit",
+    "./skills/kubernetes",
+    "./skills/linuxmirrors-awesome",
+    "./skills/linuxmirrors-docker",
+    "./skills/linuxmirrors-os",
+    "./skills/markitdown-awesome",
+    "./skills/markitdown-cli",
+    "./skills/markitdown-ocr",
+    "./skills/mermaid",
+    "./skills/openspec-apply",
+    "./skills/openspec-archive",
+    "./skills/openspec-bulk-archive",
+    "./skills/openspec-config",
+    "./skills/openspec-continue",
+    "./skills/openspec-explore",
+    "./skills/openspec-ff",
+    "./skills/openspec-initial",
+    "./skills/openspec-install",
+    "./skills/openspec-new",
+    "./skills/openspec-onboard",
+    "./skills/openspec-schema",
+    "./skills/openspec-sync",
+    "./skills/openspec-update",
+    "./skills/openspec-verify",
+    "./skills/parcel",
+    "./skills/plantuml",
+    "./skills/playwright",
+    "./skills/processon-diagram-generator",
+    "./skills/processon-mindmap",
+    "./skills/pytest",
+    "./skills/rollup",
+    "./skills/rspack",
+    "./skills/selenium",
+    "./skills/spark-optimization",
+    "./skills/technical-blog-doc",
+    "./skills/terraform",
+    "./skills/vite",
+    "./skills/vitest",
+    "./skills/webapp-testing",
+    "./skills/webpack"
+  ],
+  "expertType": "team",
+  "agentName": "qa-devops-team-lead",
+  "teamInfo": {
+    "leadAgent": "qa-devops-team-lead",
+    "memberAgents": [
+      "engineering-devops-automator",
+      "engineering-incident-response-commander",
+      "engineering-sre",
+      "engineering-it-service-manager",
+      "testing-api-tester",
+      "testing-evidence-collector",
+      "testing-performance-benchmarker",
+      "testing-reality-checker",
+      "testing-workflow-optimizer",
+      "testing-tool-evaluator"
+    ]
+  },
+  "displayName": {
+    "en": "QA & DevOps Team",
+    "zh": "QA & DevOps 专家团"
+  },
+  "profession": {
+    "en": "QA & DevOps Team",
+    "zh": "QA & DevOps 专家团"
+  },
+  "displayDescription": {
+    "en": "QA & DevOps Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "QA & DevOps 专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "03-Quality",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in qa-devops-team",
+    "zh": "用 qa-devops-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in qa-devops-team",
+      "zh": "用 qa-devops-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "qa-devops-team-lead",
+      "name": {
+        "en": "qa-devops-team-lead",
+        "zh": "qa-devops-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated qa-devops-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated qa-devops-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/qa-devops-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "engineering-devops-automator",
+      "name": {
+        "en": "engineering-devops-automator",
+        "zh": "engineering-devops-automator"
+      },
+      "profession": {
+        "en": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家 (auto-vendored by compose_team.py)",
+        "zh": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家"
+      },
+      "avatar": "avatars/engineering-devops-automator.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-incident-response-commander",
+      "name": {
+        "en": "engineering-incident-response-commander",
+        "zh": "engineering-incident-response-commander"
+      },
+      "profession": {
+        "en": "专精于生产环境故障管理、结构化响应协调、事后复盘、SLO/SLI 跟踪和 on-call 流程设计的事故指挥专家，为工程组织的可靠性保驾护航。 (auto-vendored by compose_team.py)",
+        "zh": "专精于生产环境故障管理、结构化响应协调、事后复盘、SLO/SLI 跟踪和 on-call 流程设计的事故指挥专家，为工程组织的可靠性保驾护航。"
+      },
+      "avatar": "avatars/engineering-incident-response-commander.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-sre",
+      "name": {
+        "en": "engineering-sre",
+        "zh": "engineering-sre"
+      },
+      "profession": {
+        "en": "站点可靠性工程专家，精通 SLO、错误预算、可观测性、混沌工程和减少重复劳动，守护大规模生产系统的稳定性。 (auto-vendored by compose_team.py)",
+        "zh": "站点可靠性工程专家，精通 SLO、错误预算、可观测性、混沌工程和减少重复劳动，守护大规模生产系统的稳定性。"
+      },
+      "avatar": "avatars/engineering-sre.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-it-service-manager",
+      "name": {
+        "en": "engineering-it-service-manager",
+        "zh": "engineering-it-service-manager"
+      },
+      "profession": {
+        "en": "资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA 治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值 (auto-vendored by compose_team.py)",
+        "zh": "资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA 治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值"
+      },
+      "avatar": "avatars/engineering-it-service-manager.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-api-tester",
+      "name": {
+        "en": "testing-api-tester",
+        "zh": "testing-api-tester"
+      },
+      "profession": {
+        "en": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成 (auto-vendored by compose_team.py)",
+        "zh": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成"
+      },
+      "avatar": "avatars/testing-api-tester.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-evidence-collector",
+      "name": {
+        "en": "testing-evidence-collector",
+        "zh": "testing-evidence-collector"
+      },
+      "profession": {
+        "en": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。 (auto-vendored by compose_team.py)",
+        "zh": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。"
+      },
+      "avatar": "avatars/testing-evidence-collector.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-performance-benchmarker",
+      "name": {
+        "en": "testing-performance-benchmarker",
+        "zh": "testing-performance-benchmarker"
+      },
+      "profession": {
+        "en": "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。 (auto-vendored by compose_team.py)",
+        "zh": "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。"
+      },
+      "avatar": "avatars/testing-performance-benchmarker.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-reality-checker",
+      "name": {
+        "en": "testing-reality-checker",
+        "zh": "testing-reality-checker"
+      },
+      "profession": {
+        "en": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪 (auto-vendored by compose_team.py)",
+        "zh": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪"
+      },
+      "avatar": "avatars/testing-reality-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-workflow-optimizer",
+      "name": {
+        "en": "testing-workflow-optimizer",
+        "zh": "testing-workflow-optimizer"
+      },
+      "profession": {
+        "en": "专注流程分析和优化的效率专家，通过消除瓶颈、精简流程和引入自动化，让团队干活更快、出错更少、人也更舒服。 (auto-vendored by compose_team.py)",
+        "zh": "专注流程分析和优化的效率专家，通过消除瓶颈、精简流程和引入自动化，让团队干活更快、出错更少、人也更舒服。"
+      },
+      "avatar": "avatars/testing-workflow-optimizer.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-tool-evaluator",
+      "name": {
+        "en": "testing-tool-evaluator",
+        "zh": "testing-tool-evaluator"
+      },
+      "profession": {
+        "en": "专注工具评测和选型的技术评估专家，通过全面的功能对比、性能测试和成本分析，帮团队选对工具、用好工具。 (auto-vendored by compose_team.py)",
+        "zh": "专注工具评测和选型的技术评估专家，通过全面的功能对比、性能测试和成本分析，帮团队选对工具、用好工具。"
+      },
+      "avatar": "avatars/testing-tool-evaluator.png",
+      "role": "member"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "LinuxMirrors 系统换源"
+  short_description: "安全规划 GNU/Linux 系统软件源更换与回滚"
+  default_prompt: "使用 $linuxmirrors-os 为这台 GNU/Linux 主机制定安全的换源、验证与回滚方案。"

@@ -17,13 +17,7 @@ def _rate(value: str) -> float:
     return float(numerator)
 
 
-def probe_video(path: Path, ffprobe: Path, *, runner=subprocess.run, timeout: float = 30.0,
-                 check_audio: bool = False) -> dict:
-    """Probe a video file for codec, resolution, framerate and optionally audio.
-
-    When *check_audio* is True, the result includes an ``audio`` key with
-    ``codec`` and ``sample_rate`` (or ``None`` if no audio stream is present).
-    """
+def probe_video(path: Path, ffprobe: Path, *, runner=subprocess.run, timeout: float = 30.0) -> dict:
     command = [
         str(ffprobe), "-v", "error", "-select_streams", "v:0",
         "-show_entries", "stream=codec_name,width,height,avg_frame_rate:format=duration",
@@ -50,26 +44,5 @@ def probe_video(path: Path, ffprobe: Path, *, runner=subprocess.run, timeout: fl
         raise HarnessError("MEDIA_INVALID", "video dimensions must be positive and even")
     if result["fps"] <= 0 or result["duration_seconds"] <= 0:
         raise HarnessError("MEDIA_INVALID", "video fps and duration must be positive")
-    # Audio stream probe (optional)
-    if check_audio:
-        audio_cmd = [
-            str(ffprobe), "-v", "error", "-select_streams", "a:0",
-            "-show_entries", "stream=codec_name,sample_rate",
-            "-of", "json", str(path),
-        ]
-        audio_proc = runner(audio_cmd, capture_output=True, text=True,
-                            timeout=timeout, check=False, shell=False)
-        try:
-            audio_payload = json.loads(audio_proc.stdout)
-            audio_streams = audio_payload.get("streams", [])
-            if audio_streams:
-                result["audio"] = {
-                    "codec": str(audio_streams[0].get("codec_name", "")).lower(),
-                    "sample_rate": int(audio_streams[0].get("sample_rate", 0)),
-                }
-            else:
-                result["audio"] = None
-        except (json.JSONDecodeError, KeyError, TypeError, ValueError):
-            result["audio"] = None
     return result
 

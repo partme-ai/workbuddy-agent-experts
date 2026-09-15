@@ -1,0 +1,20 @@
+{
+  "states": [
+    {"id": "unprovisioned", "description": "设备未配网，等待用户操作", "transitions": [
+      {"trigger": "user_starts_provisioning", "target": "provisioning", "action": "start_softap"},
+      {"trigger": "stored_credentials_found", "target": "provisioned", "action": "connect_wifi"}
+    ]},
+    {"id": "provisioning", "description": "SoftAP 已启动，等待手机 App 配网", "transitions": [
+      {"trigger": "credentials_received", "target": "verifying", "action": "save_to_nvs_and_try_connect"},
+      {"trigger": "timeout_10min", "target": "unprovisioned", "action": "stop_softap"}
+    ]},
+    {"id": "verifying", "description": "正在连接目标 Wi-Fi", "transitions": [
+      {"trigger": "wifi_connected", "target": "provisioned", "action": "stop_softap_and_report"},
+      {"trigger": "wifi_connect_failed", "target": "provisioning", "action": "report_error_and_restart"}
+    ]},
+    {"id": "provisioned", "description": "已配网，正常使用", "transitions": [
+      {"trigger": "user_resets", "target": "unprovisioned", "action": "clear_nvs_and_reboot"},
+      {"trigger": "wifi_disconnected_permanently", "target": "unprovisioned", "action": "auto_reset"}
+    ]}
+  ]
+}

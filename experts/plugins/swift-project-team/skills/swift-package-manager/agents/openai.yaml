@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swift Package Manager"
+  short_description: "SwiftPM package and target engineering"
+  default_prompt: "Use $swift-package-manager to complete this task with repository evidence and executable validation."

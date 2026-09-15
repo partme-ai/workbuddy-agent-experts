@@ -1,0 +1,4 @@
+interface:
+  display_name: "全栈产品文档"
+  short_description: "生成、适配并自动校验包含完整示例的全栈产品研发文档体系"
+  default_prompt: "使用 $full-stack-doc 根据当前项目证据生成并校验产品文档或完整项目 README。"

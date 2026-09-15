@@ -8,27 +8,27 @@
     "./agents/design-inclusive-visuals-specialist.md"
   ],
   "displayName": {
-    "en": "design-inclusive-visuals-specialist",
-    "zh": "包容性视觉专家"
+    "en": "Design Inclusive Visuals Specialist",
+    "zh": "design-inclusive-visuals-specialist"
   },
   "profession": {
-    "en": "design-inclusive-visuals-specialist",
-    "zh": "包容性视觉专家"
+    "en": "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。 (auto-vendored by compose_team.py)",
+    "zh": "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。"
   },
   "displayDescription": {
     "en": "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。",
     "zh": "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。"
   },
   "avatar": "avatars/expert.png",
-  "categoryId": "01-ProductDesign",
+  "categoryId": "12-IndustryConsultant",
   "defaultInitPrompt": {
-    "zh": "我是包容性视觉专家，请介绍你的专业能力并开始协助我。",
-    "en": "I am design-inclusive-visuals-specialist. Introduce your expertise and help me."
+    "zh": "我是design-inclusive-visuals-specialist，请介绍你的专业能力并开始协助我。",
+    "en": "I am Design Inclusive Visuals Specialist. Introduce your expertise and help me."
   },
   "tags": [
     {
-      "en": "design",
-      "zh": "design"
+      "en": "agent",
+      "zh": "agent"
     }
   ]
 }

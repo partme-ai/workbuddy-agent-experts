@@ -23,8 +23,6 @@ def write_status(path, payload):
     temporary = path.with_suffix(".tmp")
     with temporary.open("w", encoding="utf-8") as stream:
         json.dump(payload, stream, ensure_ascii=False, indent=2)
-        stream.flush()
-        os.fsync(stream.fileno())
     os.replace(temporary, path)
 
 

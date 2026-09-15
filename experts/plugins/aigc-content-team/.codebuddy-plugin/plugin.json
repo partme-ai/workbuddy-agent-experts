@@ -1,0 +1,319 @@
+{
+  "name": "aigc-content-team",
+  "version": "1.0.0",
+  "description": "AIGC Content Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/aigc-content-team-lead.md",
+    "./agents/design-image-prompt-engineer.md",
+    "./agents/engineering-ai-data-remediation-engineer.md",
+    "./agents/design-ux-architect.md",
+    "./agents/design-visual-storyteller.md",
+    "./agents/engineering-frontend-developer.md",
+    "./agents/testing-evidence-collector.md",
+    "./agents/testing-reality-checker.md"
+  ],
+  "skills": [
+    "./skills/adobe-xd",
+    "./skills/algorithmic-art",
+    "./skills/api-doc-generator",
+    "./skills/better-icons",
+    "./skills/blender-background-jobs",
+    "./skills/blender-character-animation",
+    "./skills/blender-character-rigging",
+    "./skills/blender-cinematography",
+    "./skills/blender-curves",
+    "./skills/blender-design",
+    "./skills/blender-export",
+    "./skills/blender-grease-pencil",
+    "./skills/blender-hair",
+    "./skills/blender-hard-surface",
+    "./skills/blender-inspect",
+    "./skills/blender-mcp-setup",
+    "./skills/blender-preview",
+    "./skills/blender-procedural-modeling",
+    "./skills/blender-quality-validation",
+    "./skills/blender-render-compositing",
+    "./skills/blender-retopology",
+    "./skills/blender-scene-assembly",
+    "./skills/blender-sculpt-surface",
+    "./skills/blender-sequence-editing",
+    "./skills/blender-simulation",
+    "./skills/blender-tracking",
+    "./skills/blender-uv-material",
+    "./skills/brand-guidelines",
+    "./skills/canvas-design",
+    "./skills/cross-platform-mvp-ui-alignment",
+    "./skills/doc-coauthoring",
+    "./skills/dreamina-3d-auto-seedance",
+    "./skills/dreamina-3d-from-blender",
+    "./skills/dreamina-3d-from-maya",
+    "./skills/dreamina-3d-jimeng-web",
+    "./skills/dreamina-3d-resume",
+    "./skills/dreamina-3d-use",
+    "./skills/dreamina-canvas-auth",
+    "./skills/dreamina-canvas-cli",
+    "./skills/dreamina-canvas-compose",
+    "./skills/dreamina-canvas-create",
+    "./skills/dreamina-canvas-discover-models",
+    "./skills/dreamina-canvas-download-assets",
+    "./skills/dreamina-canvas-generate-audio",
+    "./skills/dreamina-canvas-generate-image",
+    "./skills/dreamina-canvas-generate-video",
+    "./skills/dreamina-canvas-manage-timeline",
+    "./skills/dreamina-canvas-quote-and-run",
+    "./skills/dreamina-canvas-resume-operation",
+    "./skills/dreamina-canvas-use",
+    "./skills/dreamina-cli",
+    "./skills/dreamina-cli-image2image",
+    "./skills/dreamina-cli-image2video",
+    "./skills/dreamina-cli-text2image",
+    "./skills/dreamina-cli-text2video",
+    "./skills/dreamina-design-use",
+    "./skills/dreamina-opencli-image2image",
+    "./skills/dreamina-opencli-image2video",
+    "./skills/dreamina-opencli-text2image",
+    "./skills/dreamina-opencli-text2video",
+    "./skills/dreamina-prompt-image2image",
+    "./skills/dreamina-prompt-image2video",
+    "./skills/dreamina-prompt-text2image",
+    "./skills/dreamina-prompt-text2video",
+    "./skills/dreamina-shot-annotator",
+    "./skills/dreamina-video-evaluator",
+    "./skills/dreamina-video-production",
+    "./skills/full-stack-doc",
+    "./skills/huashu-design",
+    "./skills/image-factory-judge",
+    "./skills/image-factory-recover",
+    "./skills/image-factory-run",
+    "./skills/image-factory-use",
+    "./skills/markitdown-awesome",
+    "./skills/markitdown-cli",
+    "./skills/markitdown-ocr",
+    "./skills/mermaid",
+    "./skills/plantuml",
+    "./skills/processon-diagram",
+    "./skills/processon-diagram-generator",
+    "./skills/processon-infographic",
+    "./skills/processon-mindmap",
+    "./skills/processon-prompt",
+    "./skills/processon-review",
+    "./skills/processon-setup",
+    "./skills/processon-use",
+    "./skills/remotion",
+    "./skills/stitch-code-to-design",
+    "./skills/stitch-delete-project",
+    "./skills/stitch-delivery-harness",
+    "./skills/stitch-design-md",
+    "./skills/stitch-design-use",
+    "./skills/stitch-extract-design-md",
+    "./skills/stitch-extract-static-html",
+    "./skills/stitch-local-setup",
+    "./skills/stitch-loop",
+    "./skills/stitch-manage-design-system",
+    "./skills/stitch-mcp-create-project",
+    "./skills/stitch-mcp-generate-screen-from-text",
+    "./skills/stitch-mcp-get-project",
+    "./skills/stitch-mcp-get-screen",
+    "./skills/stitch-mcp-list-projects",
+    "./skills/stitch-mcp-list-screens",
+    "./skills/stitch-react-components",
+    "./skills/stitch-react-native",
+    "./skills/stitch-react-vite-dashboard",
+    "./skills/stitch-remotion",
+    "./skills/stitch-shadcn-ui",
+    "./skills/stitch-site-md",
+    "./skills/stitch-skill-creator",
+    "./skills/stitch-taste-design",
+    "./skills/stitch-ued-guide",
+    "./skills/stitch-ui-design-spec-bootstrap",
+    "./skills/stitch-ui-design-spec-element-plus",
+    "./skills/stitch-ui-design-spec-generator",
+    "./skills/stitch-ui-design-spec-layui",
+    "./skills/stitch-ui-design-spec-uview",
+    "./skills/stitch-ui-design-spec-uviewpro",
+    "./skills/stitch-ui-design-spec-vant",
+    "./skills/stitch-ui-design-variants",
+    "./skills/stitch-ui-designer",
+    "./skills/stitch-ui-prompt-architect",
+    "./skills/stitch-upload-to-stitch",
+    "./skills/stitch-uview-components",
+    "./skills/stitch-uview-plus-components",
+    "./skills/stitch-uviewpro-components",
+    "./skills/stitch-vue-bootstrap-components",
+    "./skills/stitch-vue-element-components",
+    "./skills/stitch-vue-layui-components",
+    "./skills/stitch-vue-vant-components",
+    "./skills/technical-blog-doc",
+    "./skills/theme-factory",
+    "./skills/video-factory-judge",
+    "./skills/video-factory-plan",
+    "./skills/video-factory-recover",
+    "./skills/video-factory-run",
+    "./skills/video-factory-use"
+  ],
+  "expertType": "team",
+  "agentName": "aigc-content-team-lead",
+  "teamInfo": {
+    "leadAgent": "aigc-content-team-lead",
+    "memberAgents": [
+      "design-image-prompt-engineer",
+      "engineering-ai-data-remediation-engineer",
+      "design-ux-architect",
+      "design-visual-storyteller",
+      "engineering-frontend-developer",
+      "testing-evidence-collector",
+      "testing-reality-checker"
+    ]
+  },
+  "displayName": {
+    "en": "AIGC Content Team",
+    "zh": "AIGC 内容生产专家团"
+  },
+  "profession": {
+    "en": "AIGC Content Team",
+    "zh": "AIGC 内容生产专家团"
+  },
+  "displayDescription": {
+    "en": "AIGC Content Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "AIGC 内容生产专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "06-ContentCreative",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in aigc-content-team",
+    "zh": "用 aigc-content-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in aigc-content-team",
+      "zh": "用 aigc-content-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "aigc-content-team-lead",
+      "name": {
+        "en": "aigc-content-team-lead",
+        "zh": "aigc-content-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated aigc-content-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated aigc-content-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/aigc-content-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "design-image-prompt-engineer",
+      "name": {
+        "en": "design-image-prompt-engineer",
+        "zh": "design-image-prompt-engineer"
+      },
+      "profession": {
+        "en": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。 (auto-vendored by compose_team.py)",
+        "zh": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。"
+      },
+      "avatar": "avatars/design-image-prompt-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-ai-data-remediation-engineer",
+      "name": {
+        "en": "engineering-ai-data-remediation-engineer",
+        "zh": "engineering-ai-data-remediation-engineer"
+      },
+      "profession": {
+        "en": "\"自愈数据管道专家——使用气隙隔离的本地 SLM 和语义聚类，自动检测、分类和修复大规模数据异常。专注于修复层：拦截坏数据、通过 Ollama 生成确定性修复逻辑，并保证零数据丢失。不是通用数据工程师——而是当你的数据出了问题且管道不能停的时候，出手的外科手术级专家。\" (auto-vendored by compose_team.py)",
+        "zh": "\"自愈数据管道专家——使用气隙隔离的本地 SLM 和语义聚类，自动检测、分类和修复大规模数据异常。专注于修复层：拦截坏数据、通过 Ollama 生成确定性修复逻辑，并保证零数据丢失。不是通用数据工程师——而是当你的数据出了问题且管道不能停的时候，出手的外科手术级专家。\""
+      },
+      "avatar": "avatars/engineering-ai-data-remediation-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ux-architect",
+      "name": {
+        "en": "design-ux-architect",
+        "zh": "design-ux-architect"
+      },
+      "profession": {
+        "en": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。 (auto-vendored by compose_team.py)",
+        "zh": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。"
+      },
+      "avatar": "avatars/design-ux-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "design-visual-storyteller",
+      "name": {
+        "en": "design-visual-storyteller",
+        "zh": "design-visual-storyteller"
+      },
+      "profession": {
+        "en": "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。 (auto-vendored by compose_team.py)",
+        "zh": "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。"
+      },
+      "avatar": "avatars/design-visual-storyteller.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-frontend-developer",
+      "name": {
+        "en": "engineering-frontend-developer",
+        "zh": "engineering-frontend-developer"
+      },
+      "profession": {
+        "en": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家 (auto-vendored by compose_team.py)",
+        "zh": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家"
+      },
+      "avatar": "avatars/engineering-frontend-developer.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-evidence-collector",
+      "name": {
+        "en": "testing-evidence-collector",
+        "zh": "testing-evidence-collector"
+      },
+      "profession": {
+        "en": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。 (auto-vendored by compose_team.py)",
+        "zh": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。"
+      },
+      "avatar": "avatars/testing-evidence-collector.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-reality-checker",
+      "name": {
+        "en": "testing-reality-checker",
+        "zh": "testing-reality-checker"
+      },
+      "profession": {
+        "en": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪 (auto-vendored by compose_team.py)",
+        "zh": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪"
+      },
+      "avatar": "avatars/testing-reality-checker.png",
+      "role": "member"
+    }
+  ]
+}

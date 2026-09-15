@@ -1,5 +1,5 @@
 id: short-drama-studio-team
-version: 1.0.0
+version: 1.1.0
 marketplace: my-experts
 category: 06-ContentCreative
 allowCodexReferences: true   # 上游技能/文档的事实性引用（付费门禁、互操作声明等）
@@ -22,16 +22,22 @@ skills:
   - skills/short-drama-pipeline
 
 sources:
+  # docsTo 按源分目录：多源同名文档（plans/implementation.md 等）会互相覆盖，不能共用 references
   - repo: https://github.com/partme-ai/codex-director-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references
+    docsTo: references/director
     licensePrefix: director-
   - repo: https://github.com/partme-ai/codex-script-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references
+    docsTo: references/script
     licensePrefix: script-
+  # 白模预演约定（镜头表 schema / 占位配色映射 / doesNotEncode 守卫 / 白模→Seedance 交接模板）
+  - repo: https://github.com/partme-ai/codex-blender-plugin.git
+    vendor: ["skills/codex-blender-previs"]
+    docsTo: references
+    licensePrefix: previs-
 quickPrompts:
   - {zh: "把这本小说做成 60 秒短剧，走完创作到成片全链路", en: "把这本小说做成 60 秒短剧，走完创作到成片全链路"}
   - {zh: "为这个品牌策划一支 3D 白模广告短片", en: "为这个品牌策划一支 3D 白模广告短片"}

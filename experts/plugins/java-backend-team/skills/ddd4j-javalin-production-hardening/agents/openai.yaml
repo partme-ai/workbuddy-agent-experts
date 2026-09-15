@@ -1,0 +1,4 @@
+interface:
+  display_name: "DDD4J Javalin Production Hardening"
+  short_description: "三分支 Javalin 加固、验证与私服发布"
+  default_prompt: "使用 $ddd4j-javalin-production-hardening 审计当前 ddd4j-javalin 计划，并安全推进已批准的三分支生产加固流程。"

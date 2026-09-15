@@ -5,27 +5,27 @@ description: Full command catalog of the Blender harness generated from the live
 
 # Blender 能力目录（构建时从真实 registry 生成）
 
-共 192 条命令、35 个领域。**交付物只能来自 L3+ 命令**；L1 仅可查询。
+共 164 条命令、35 个领域。**交付物只能来自 L3+ 命令**；L1 仅可查询。
 单命令详情用 `capability.describe` 查。
 
 | 领域 | 命令数 |
 |---|---|
 | advanced | 1 |
-| animation | 15 |
-| asset | 7 |
+| animation | 10 |
+| asset | 4 |
 | camera | 4 |
 | capability | 2 |
 | collection | 3 |
-| compositor | 6 |
+| compositor | 5 |
 | constraint | 3 |
 | curve | 3 |
 | export | 1 |
 | geometry_nodes | 6 |
-| grease_pencil | 6 |
-| hair | 4 |
-| job | 8 |
+| grease_pencil | 4 |
+| hair | 2 |
+| job | 5 |
 | light | 2 |
-| material | 9 |
+| material | 7 |
 | mesh | 3 |
 | modifier | 7 |
 | object | 16 |
@@ -35,12 +35,12 @@ description: Full command catalog of the Blender harness generated from the live
 | recipe | 6 |
 | render | 4 |
 | retopo | 4 |
-| rig | 10 |
+| rig | 8 |
 | scene | 2 |
 | sculpt | 6 |
-| sequence | 16 |
+| sequence | 10 |
 | session | 5 |
-| simulation | 9 |
+| simulation | 7 |
 | tracking | 5 |
 | uv | 6 |
 | validation | 6 |

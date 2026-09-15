@@ -2,13 +2,11 @@
 from pathlib import Path
 from ..errors import HarnessError
 from ..identity import ObjectResolver
-from ..dependencies import generate_manifest, package_project, validate_portability
 
 
 class AssetCommands:
-    def __init__(self, bpy_module, asset_policy=None, output_root=None):
+    def __init__(self, bpy_module, asset_policy=None):
         self.bpy=bpy_module; self.policy=asset_policy; self.objects=ObjectResolver(bpy_module)
-        self.output_root=output_root
 
     def _path(self, value):
         if self.policy is None: raise HarnessError('ASSET_NOT_AUTHORIZED','no asset root was approved')
@@ -62,71 +60,3 @@ class AssetCommands:
         result=self.bpy.ops.file.make_paths_relative()
         if result!={'FINISHED'}:raise HarnessError('OPERATION_FAILED','path conversion did not finish')
         return {'changedObjects':[],'result':{'relative':True}}
-
-    def dependencies(self, arguments):
-        """List all external file dependencies in the current project."""
-        include_packed = bool(arguments.get('includePacked', False))
-        # Determine project directory from the current blend file
-        blend_path = Path(self.bpy.data.filepath) if self.bpy.data.filepath else Path.cwd()
-        project_dir = blend_path.parent if blend_path.suffix == '.blend' else blend_path
-        manifest = generate_manifest(self.bpy, project_dir)
-        if not include_packed:
-            # Filter out packed files (they don't need to be listed as external deps)
-            manifest['dependencies'] = [
-                d for d in manifest['dependencies']
-                if d['accessible'] or d.get('warning')
-            ]
-            # Recompute summary
-            by_kind = {}
-            accessible = 0
-            inaccessible = 0
-            for dep in manifest['dependencies']:
-                kind = dep['kind']
-                by_kind[kind] = by_kind.get(kind, 0) + 1
-                if dep['accessible']:
-                    accessible += 1
-                else:
-                    inaccessible += 1
-            manifest['summary'] = {
-                'total': len(manifest['dependencies']),
-                'byKind': by_kind,
-                'accessible': accessible,
-                'inaccessible': inaccessible,
-            }
-        return {'changedObjects': [], 'result': manifest}
-
-    def validate_portability(self, arguments):
-        """Validate that the project can be packaged to the target directory."""
-        target_dir = arguments.get('targetDirectory')
-        if not target_dir or not isinstance(target_dir, str):
-            raise HarnessError('INVALID_ARGUMENT', 'targetDirectory must be a non-empty string')
-        target = Path(target_dir)
-        blend_path = Path(self.bpy.data.filepath) if self.bpy.data.filepath else Path.cwd()
-        project_dir = blend_path.parent if blend_path.suffix == '.blend' else blend_path
-        result = validate_portability(self.bpy, target, project_dir)
-        return {'changedObjects': [], 'result': result}
-
-    def package_project(self, arguments):
-        """Package the project into a self-contained directory.
-
-        Writes only into a new directory; never modifies the active project.
-        Refuses to overwrite an existing directory.
-        """
-        target_dir = arguments.get('targetDirectory')
-        if not target_dir or not isinstance(target_dir, str):
-            raise HarnessError('INVALID_ARGUMENT', 'targetDirectory must be a non-empty string')
-        include_caches = bool(arguments.get('includeCaches', False))
-        include_proxies = bool(arguments.get('includeProxies', False))
-        target = Path(target_dir)
-        blend_path = Path(self.bpy.data.filepath) if self.bpy.data.filepath else Path.cwd()
-        if blend_path.suffix != '.blend':
-            raise HarnessError('INVALID_ARGUMENT', 'project must be saved as a .blend file before packaging')
-        source_project = blend_path
-        receipt = package_project(
-            self.bpy,
-            source_project,
-            target,
-            include_caches=include_caches,
-            include_proxies=include_proxies,
-        )
-        return {'changedObjects': [], 'result': receipt}

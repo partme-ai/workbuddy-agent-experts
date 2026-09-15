@@ -25,6 +25,13 @@ description: Short-drama studio orchestration map - which execution team owns wh
 
 1. **故事板 → 生成**：每镜的提示词与时长口径随镜移交，生成团队按镜回报产物标识。
 2. **Blender → 3D**：白模预览必须带交接契约字段（见即梦3D视觉团队的 `dreamina-3d-harness` 技能）。
+   白模预演一律走 **`blender-previs` 约定**（全文见 `references/skills/codex-blender-previs/`）：
+   - 镜头表按 `previs-shot-table.schema.json`：帧精确、各镜时长之和=总帧数、镜号稳定不改号；
+   - 占位几何按固定配色映射角色（一角色一色，全片不换色），映射写入 `previs-map.schema.json`；
+   - **几何体只编码机位/景别/切镜/站位/运动方向，不编码肢体动作**（schema 强制 `encoding.doesNotEncode`）；
+   - 交 Seedance 前按 `seedance-handoff-prompt.md` 生成中英交接提示词：严格参考白模视频的
+     摄影机运动、景别、切镜时间、人物整体位置和空间关系；
+   - 迭代在 Blender 免费循环（单镜重渲），Seedance 只跑确认过的预演——**禁止用付费生成试运镜**。
 3. **素材 → 视频工厂**：shots.json + 素材路径齐套才允许 validate-plan；缺件先补齐再报计划。
 
 ## 3. 节奏（硬规则）

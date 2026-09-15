@@ -1,0 +1,4 @@
+interface:
+  display_name: "文档协作"
+  short_description: "协作收集上下文、起草文档、迭代内容并完成独立读者测试与质量检查"
+  default_prompt: "使用 $doc-coauthoring 与我协作起草并验证这份文档。"

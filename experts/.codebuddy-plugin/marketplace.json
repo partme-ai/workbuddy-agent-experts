@@ -8,9 +8,34 @@
       "description": "Structured Blender production team driving a managed harness session with closed-contract commands and receipt-verified delivery of models, animation, renders and video."
     },
     {
+      "name": "aigc-content-team",
+      "source": "./plugins/aigc-content-team",
+      "description": "AIGC Content Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "android-java-team",
+      "source": "./plugins/android-java-team",
+      "description": "Android Mobile Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "angular-frontend-team",
+      "source": "./plugins/angular-frontend-team",
+      "description": "Angular Frontend Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "design-product-team",
+      "source": "./plugins/design-product-team",
+      "description": "Design & Product Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
       "name": "design-team",
       "source": "./plugins/design-team",
       "description": "Design Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "docs-api-team",
+      "source": "./plugins/docs-api-team",
+      "description": "Docs & API Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
     },
     {
       "name": "dreamina-3d-team",
@@ -38,9 +63,24 @@
       "description": "Finance & Operations Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
     },
     {
+      "name": "firmware-embedded-team",
+      "source": "./plugins/firmware-embedded-team",
+      "description": "Firmware & Embedded Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "flutter-project-team",
+      "source": "./plugins/flutter-project-team",
+      "description": "Flutter Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
       "name": "gis-spatial-team",
       "source": "./plugins/gis-spatial-team",
       "description": "GIS & Spatial Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "go-project-team",
+      "source": "./plugins/go-project-team",
+      "description": "Go Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
     },
     {
       "name": "growth-marketing-team",
@@ -53,6 +93,16 @@
       "description": "Image Factory Team: a multi-agent team with verified, closed-loop delivery."
     },
     {
+      "name": "java-backend-team",
+      "source": "./plugins/java-backend-team",
+      "description": "Java Backend Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "javascript-project-team",
+      "source": "./plugins/javascript-project-team",
+      "description": "JavaScript Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
       "name": "processon-team",
       "source": "./plugins/processon-team",
       "description": "ProcessOn Team: a multi-agent expert team with verified, closed-loop delivery."
@@ -63,9 +113,29 @@
       "description": "Product & Strategy Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
     },
     {
+      "name": "python-project-team",
+      "source": "./plugins/python-project-team",
+      "description": "Python Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "qa-devops-team",
+      "source": "./plugins/qa-devops-team",
+      "description": "QA & DevOps Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
       "name": "quality-security-team",
       "source": "./plugins/quality-security-team",
       "description": "Quality & Security Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "react-frontend-team",
+      "source": "./plugins/react-frontend-team",
+      "description": "React Frontend Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "rust-project-team",
+      "source": "./plugins/rust-project-team",
+      "description": "Rust Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
     },
     {
       "name": "short-drama-studio-team",
@@ -78,9 +148,44 @@
       "description": "Google Stitch Design Team: a multi-agent team with verified, closed-loop delivery."
     },
     {
+      "name": "swift-project-team",
+      "source": "./plugins/swift-project-team",
+      "description": "Swift Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "tauri-desktop-team",
+      "source": "./plugins/tauri-desktop-team",
+      "description": "Tauri Desktop Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "typescript-project-team",
+      "source": "./plugins/typescript-project-team",
+      "description": "TypeScript Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "uniapp-mini-program-team",
+      "source": "./plugins/uniapp-mini-program-team",
+      "description": "uni-app Mini Program Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
       "name": "video-factory-team",
       "source": "./plugins/video-factory-team",
       "description": "Video Factory Team: a multi-agent team with verified, closed-loop delivery."
+    },
+    {
+      "name": "vue-frontend-team",
+      "source": "./plugins/vue-frontend-team",
+      "description": "Vue Frontend Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "web3d-game-team",
+      "source": "./plugins/web3d-game-team",
+      "description": "Web3D & Game Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
+    },
+    {
+      "name": "zig-systems-team",
+      "source": "./plugins/zig-systems-team",
+      "description": "Zig/C Systems Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
     },
     {
       "name": "engineering-ai-engineer",

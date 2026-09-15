@@ -1,0 +1,389 @@
+{
+  "name": "web3d-game-team",
+  "version": "1.0.0",
+  "description": "Web3D & Game Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/web3d-game-team-lead.md",
+    "./agents/engineering-frontend-developer.md",
+    "./agents/engineering-mobile-app-builder.md",
+    "./agents/engineering-code-reviewer.md",
+    "./agents/engineering-code-style-checker.md",
+    "./agents/engineering-software-architect.md",
+    "./agents/design-ux-architect.md",
+    "./agents/design-ui-designer.md",
+    "./agents/design-visual-storyteller.md",
+    "./agents/testing-reality-checker.md",
+    "./agents/testing-performance-benchmarker.md"
+  ],
+  "skills": [
+    "./skills/adobe-xd",
+    "./skills/algorithmic-art",
+    "./skills/ansible",
+    "./skills/appium",
+    "./skills/better-icons",
+    "./skills/brand-guidelines",
+    "./skills/canvas-design",
+    "./skills/cloudformation",
+    "./skills/cocos2d-x",
+    "./skills/cross-platform-mvp-ui-alignment",
+    "./skills/cypress",
+    "./skills/detox",
+    "./skills/github-actions",
+    "./skills/gitlab-ci",
+    "./skills/huashu-design",
+    "./skills/jest",
+    "./skills/junit",
+    "./skills/kubernetes",
+    "./skills/lime-echart",
+    "./skills/linuxmirrors-awesome",
+    "./skills/linuxmirrors-docker",
+    "./skills/linuxmirrors-os",
+    "./skills/openspec-apply",
+    "./skills/openspec-archive",
+    "./skills/openspec-bulk-archive",
+    "./skills/openspec-config",
+    "./skills/openspec-continue",
+    "./skills/openspec-explore",
+    "./skills/openspec-ff",
+    "./skills/openspec-initial",
+    "./skills/openspec-install",
+    "./skills/openspec-new",
+    "./skills/openspec-onboard",
+    "./skills/openspec-schema",
+    "./skills/openspec-sync",
+    "./skills/openspec-update",
+    "./skills/openspec-verify",
+    "./skills/playwright",
+    "./skills/pytest",
+    "./skills/remotion",
+    "./skills/selenium",
+    "./skills/spark-optimization",
+    "./skills/terraform",
+    "./skills/theme-factory",
+    "./skills/threejs-animation",
+    "./skills/threejs-audio",
+    "./skills/threejs-camera",
+    "./skills/threejs-controls",
+    "./skills/threejs-dev-setup",
+    "./skills/threejs-geometries",
+    "./skills/threejs-helpers",
+    "./skills/threejs-lights",
+    "./skills/threejs-loaders",
+    "./skills/threejs-materials",
+    "./skills/threejs-math",
+    "./skills/threejs-node-tsl",
+    "./skills/threejs-objects",
+    "./skills/threejs-postprocessing",
+    "./skills/threejs-renderers",
+    "./skills/threejs-scenes",
+    "./skills/threejs-textures",
+    "./skills/threejs-webxr",
+    "./skills/tui-04x",
+    "./skills/tui-action-sheet",
+    "./skills/tui-alert-tips",
+    "./skills/tui-avatar",
+    "./skills/tui-avatar-cropper",
+    "./skills/tui-back-top",
+    "./skills/tui-badge",
+    "./skills/tui-button",
+    "./skills/tui-calendar",
+    "./skills/tui-card",
+    "./skills/tui-cell",
+    "./skills/tui-changelog",
+    "./skills/tui-chat-group",
+    "./skills/tui-checkbox",
+    "./skills/tui-circle-progress",
+    "./skills/tui-collapse",
+    "./skills/tui-color",
+    "./skills/tui-common",
+    "./skills/tui-config-provider",
+    "./skills/tui-count-down",
+    "./skills/tui-count-to",
+    "./skills/tui-divider",
+    "./skills/tui-download-setting",
+    "./skills/tui-dropdown",
+    "./skills/tui-empty",
+    "./skills/tui-fab",
+    "./skills/tui-feature",
+    "./skills/tui-field",
+    "./skills/tui-form",
+    "./skills/tui-front-ui",
+    "./skills/tui-full-screen",
+    "./skills/tui-gap",
+    "./skills/tui-grid",
+    "./skills/tui-icon",
+    "./skills/tui-image",
+    "./skills/tui-index-list",
+    "./skills/tui-input",
+    "./skills/tui-install",
+    "./skills/tui-intro",
+    "./skills/tui-keyboard",
+    "./skills/tui-layout",
+    "./skills/tui-lazy-load",
+    "./skills/tui-line",
+    "./skills/tui-line-progress",
+    "./skills/tui-link",
+    "./skills/tui-load-more",
+    "./skills/tui-loading",
+    "./skills/tui-loading-popup",
+    "./skills/tui-mask",
+    "./skills/tui-message-input",
+    "./skills/tui-modal",
+    "./skills/tui-navbar",
+    "./skills/tui-no-network",
+    "./skills/tui-notice-bar",
+    "./skills/tui-npm-setting",
+    "./skills/tui-number-box",
+    "./skills/tui-nvue",
+    "./skills/tui-page-composer",
+    "./skills/tui-pagination",
+    "./skills/tui-picker",
+    "./skills/tui-popup",
+    "./skills/tui-prd-to-descriptions",
+    "./skills/tui-quickstart",
+    "./skills/tui-radio",
+    "./skills/tui-rate",
+    "./skills/tui-read",
+    "./skills/tui-read-more",
+    "./skills/tui-root-portal",
+    "./skills/tui-safe-area-inset",
+    "./skills/tui-search",
+    "./skills/tui-section",
+    "./skills/tui-select",
+    "./skills/tui-setting",
+    "./skills/tui-skeleton",
+    "./skills/tui-slider",
+    "./skills/tui-steps",
+    "./skills/tui-sticky",
+    "./skills/tui-subsection",
+    "./skills/tui-swipe-action",
+    "./skills/tui-swiper",
+    "./skills/tui-switch",
+    "./skills/tui-tabbar",
+    "./skills/tui-table",
+    "./skills/tui-tabs",
+    "./skills/tui-tabs-swiper",
+    "./skills/tui-tag",
+    "./skills/tui-text",
+    "./skills/tui-textarea",
+    "./skills/tui-time-line",
+    "./skills/tui-toast",
+    "./skills/tui-top-tips",
+    "./skills/tui-transition",
+    "./skills/tui-uni-modules-setting",
+    "./skills/tui-upload",
+    "./skills/tui-verification-code",
+    "./skills/tui-vuex-detail",
+    "./skills/tui-waterfall",
+    "./skills/ucharts",
+    "./skills/vitest",
+    "./skills/webapp-testing"
+  ],
+  "expertType": "team",
+  "agentName": "web3d-game-team-lead",
+  "teamInfo": {
+    "leadAgent": "web3d-game-team-lead",
+    "memberAgents": [
+      "engineering-frontend-developer",
+      "engineering-mobile-app-builder",
+      "engineering-code-reviewer",
+      "engineering-code-style-checker",
+      "engineering-software-architect",
+      "design-ux-architect",
+      "design-ui-designer",
+      "design-visual-storyteller",
+      "testing-reality-checker",
+      "testing-performance-benchmarker"
+    ]
+  },
+  "displayName": {
+    "en": "Web3D & Game Project Team",
+    "zh": "Web3D 与游戏项目专家团"
+  },
+  "profession": {
+    "en": "Web3D & Game Project Team",
+    "zh": "Web3D 与游戏项目专家团"
+  },
+  "displayDescription": {
+    "en": "Web3D & Game Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "Web3D 与游戏项目专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in web3d-game-team",
+    "zh": "用 web3d-game-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in web3d-game-team",
+      "zh": "用 web3d-game-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "web3d-game-team-lead",
+      "name": {
+        "en": "web3d-game-team-lead",
+        "zh": "web3d-game-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated web3d-game-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated web3d-game-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/web3d-game-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "engineering-frontend-developer",
+      "name": {
+        "en": "engineering-frontend-developer",
+        "zh": "engineering-frontend-developer"
+      },
+      "profession": {
+        "en": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家 (auto-vendored by compose_team.py)",
+        "zh": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家"
+      },
+      "avatar": "avatars/engineering-frontend-developer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-mobile-app-builder",
+      "name": {
+        "en": "engineering-mobile-app-builder",
+        "zh": "engineering-mobile-app-builder"
+      },
+      "profession": {
+        "en": "精通 iOS/Android 原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验。 (auto-vendored by compose_team.py)",
+        "zh": "精通 iOS/Android 原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验。"
+      },
+      "avatar": "avatars/engineering-mobile-app-builder.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-reviewer",
+      "name": {
+        "en": "engineering-code-reviewer",
+        "zh": "engineering-code-reviewer"
+      },
+      "profession": {
+        "en": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。 (auto-vendored by compose_team.py)",
+        "zh": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。"
+      },
+      "avatar": "avatars/engineering-code-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-style-checker",
+      "name": {
+        "en": "engineering-code-style-checker",
+        "zh": "engineering-code-style-checker"
+      },
+      "profession": {
+        "en": "\"Java 项目规范检查与修复\" (auto-vendored by compose_team.py)",
+        "zh": "\"Java 项目规范检查与修复\""
+      },
+      "avatar": "avatars/engineering-code-style-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-software-architect",
+      "name": {
+        "en": "engineering-software-architect",
+        "zh": "engineering-software-architect"
+      },
+      "profession": {
+        "en": "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。 (auto-vendored by compose_team.py)",
+        "zh": "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。"
+      },
+      "avatar": "avatars/engineering-software-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ux-architect",
+      "name": {
+        "en": "design-ux-architect",
+        "zh": "design-ux-architect"
+      },
+      "profession": {
+        "en": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。 (auto-vendored by compose_team.py)",
+        "zh": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。"
+      },
+      "avatar": "avatars/design-ux-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ui-designer",
+      "name": {
+        "en": "design-ui-designer",
+        "zh": "design-ui-designer"
+      },
+      "profession": {
+        "en": "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象 (auto-vendored by compose_team.py)",
+        "zh": "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象"
+      },
+      "avatar": "avatars/design-ui-designer.png",
+      "role": "member"
+    },
+    {
+      "id": "design-visual-storyteller",
+      "name": {
+        "en": "design-visual-storyteller",
+        "zh": "design-visual-storyteller"
+      },
+      "profession": {
+        "en": "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。 (auto-vendored by compose_team.py)",
+        "zh": "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。"
+      },
+      "avatar": "avatars/design-visual-storyteller.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-reality-checker",
+      "name": {
+        "en": "testing-reality-checker",
+        "zh": "testing-reality-checker"
+      },
+      "profession": {
+        "en": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪 (auto-vendored by compose_team.py)",
+        "zh": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪"
+      },
+      "avatar": "avatars/testing-reality-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-performance-benchmarker",
+      "name": {
+        "en": "testing-performance-benchmarker",
+        "zh": "testing-performance-benchmarker"
+      },
+      "profession": {
+        "en": "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。 (auto-vendored by compose_team.py)",
+        "zh": "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。"
+      },
+      "avatar": "avatars/testing-performance-benchmarker.png",
+      "role": "member"
+    }
+  ]
+}

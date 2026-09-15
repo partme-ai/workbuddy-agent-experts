@@ -8,27 +8,27 @@
     "./agents/design-image-prompt-engineer.md"
   ],
   "displayName": {
-    "en": "design-image-prompt-engineer",
-    "zh": "图像提示词工程师"
+    "en": "Design Image Prompt Engineer",
+    "zh": "design-image-prompt-engineer"
   },
   "profession": {
-    "en": "design-image-prompt-engineer",
-    "zh": "图像提示词工程师"
+    "en": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。 (auto-vendored by compose_team.py)",
+    "zh": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。"
   },
   "displayDescription": {
     "en": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。",
     "zh": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。"
   },
   "avatar": "avatars/expert.png",
-  "categoryId": "01-ProductDesign",
+  "categoryId": "12-IndustryConsultant",
   "defaultInitPrompt": {
-    "zh": "我是图像提示词工程师，请介绍你的专业能力并开始协助我。",
-    "en": "I am design-image-prompt-engineer. Introduce your expertise and help me."
+    "zh": "我是design-image-prompt-engineer，请介绍你的专业能力并开始协助我。",
+    "en": "I am Design Image Prompt Engineer. Introduce your expertise and help me."
   },
   "tags": [
     {
-      "en": "design",
-      "zh": "design"
+      "en": "agent",
+      "zh": "agent"
     }
   ]
 }

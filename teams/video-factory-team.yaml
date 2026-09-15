@@ -1,5 +1,5 @@
 id: video-factory-team
-version: 1.0.0
+version: 1.0.1
 marketplace: my-experts
 allowCodexReferences: true   # references/ 方法论文档引用上游套件命令契约（codex-storyboard-* 等）为事实词汇
 category: 06-ContentCreative
@@ -30,20 +30,21 @@ sources:
   - repo: https://github.com/partme-ai/codex-video-factory-plugin.git
     vendor: ["bin"]
     licenses: ["LICENSE"]
+  # docsTo 按源分目录：三份方法论文档同名（docs/superpowers/...），共用 references 会互相覆盖
   - repo: https://github.com/partme-ai/codex-director-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references
+    docsTo: references/director
     licensePrefix: director-
   - repo: https://github.com/partme-ai/codex-script-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references
+    docsTo: references/script
     licensePrefix: script-
   - repo: https://github.com/partme-ai/codex-storyboard-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references
+    docsTo: references/storyboard
     licensePrefix: storyboard-
 
 quickPrompts:

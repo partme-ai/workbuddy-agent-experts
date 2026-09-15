@@ -1,0 +1,4 @@
+interface:
+  display_name: "技术博客文档"
+  short_description: "编写包含环境、命令、验证记录与证据来源的可复现技术教程和集成指南"
+  default_prompt: "使用 $technical-blog-doc 编写一篇可复现、可验证的技术教程。"

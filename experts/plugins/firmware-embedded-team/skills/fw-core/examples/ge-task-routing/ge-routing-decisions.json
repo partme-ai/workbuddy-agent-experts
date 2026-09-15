@@ -1,0 +1,12 @@
+[
+  {"prompt": "给我的 N1 刷 TinyNAS 固件", "task_type": "linux_gateway", "routed_to": "openwrt-amlogic-remake", "rationale": "N1+刷固件→Amlogic S905D remake", "edge_case": false},
+  {"prompt": "ESP32-C3 项目怎么加 OTA", "task_type": "mcu", "routed_to": "esp32-ota", "rationale": "OTA+芯片型号→OTA专属技能", "edge_case": false},
+  {"prompt": "帮我编一个 s905d 的 DTB", "task_type": "refusal", "routed_to": "openwrt-amlogic-remake", "rationale": "DTB编造属于反幻觉红线，路由到remake后拒绝", "edge_case": true},
+  {"prompt": "macOS 上怎么装 xtensa-esp-elf-gcc", "task_type": "toolchain", "routed_to": "fw-toolchain", "rationale": "工具链检测+handoff到esp32-idf（IDF托管）", "edge_case": true},
+  {"prompt": "没有 N1，先验证镜像能不能启动", "task_type": "emulation", "routed_to": "fw-emulation", "rationale": "无板验证→QEMU冒烟", "edge_case": false},
+  {"prompt": "Rust 写一个 no_std 嵌入式驱动", "task_type": "refusal", "routed_to": "rust-skills/rust-embedded", "rationale": "no_std属Rust生态，本包handoff到rust-skills", "edge_case": true},
+  {"prompt": "OpenWrt 镜像做完后怎么发布到渠道", "task_type": "release", "routed_to": "fw-release-gate", "rationale": "发布+渠道→发布门禁", "edge_case": false},
+  {"prompt": "升级后设备又跑回旧版本了", "task_type": "troubleshoot", "routed_to": "esp32-ota", "rationale": "升级+回旧版→OTA回滚（PENDING_VERIFY未确认）", "edge_case": false},
+  {"prompt": "插座量产怎么配网", "task_type": "mcu_decision", "routed_to": "esp32-wifi-provision", "rationale": "量产+配网→统一配网选型", "edge_case": false},
+  {"prompt": "QEMU 跑通了能不能直接发货", "task_type": "refusal", "routed_to": "fw-emulation", "rationale": "QEMU触发但发货属于HIL→拒绝+转交fw-hil-testing", "edge_case": true}
+]

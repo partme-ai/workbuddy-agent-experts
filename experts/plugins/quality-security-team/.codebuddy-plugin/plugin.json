@@ -90,11 +90,11 @@
       "id": "testing-api-tester",
       "name": {
         "en": "testing-api-tester",
-        "zh": "API 测试员"
+        "zh": "testing-api-tester"
       },
       "profession": {
-        "en": "testing-api-tester",
-        "zh": "API 测试员"
+        "en": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成 (auto-vendored by compose_team.py)",
+        "zh": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成"
       },
       "avatar": "avatars/testing-api-tester.png",
       "role": "member"
@@ -103,11 +103,11 @@
       "id": "testing-performance-benchmarker",
       "name": {
         "en": "testing-performance-benchmarker",
-        "zh": "性能基准师"
+        "zh": "testing-performance-benchmarker"
       },
       "profession": {
-        "en": "testing-performance-benchmarker",
-        "zh": "性能基准师"
+        "en": "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。 (auto-vendored by compose_team.py)",
+        "zh": "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。"
       },
       "avatar": "avatars/testing-performance-benchmarker.png",
       "role": "member"

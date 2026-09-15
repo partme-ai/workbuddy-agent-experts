@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swift Java Migration"
+  short_description: "lossless Java-to-Swift migration"
+  default_prompt: "Use $swift-java-migration to complete this task with repository evidence and executable validation."

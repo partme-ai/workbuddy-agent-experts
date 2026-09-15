@@ -1,0 +1,9 @@
+{
+  "contract": "creative-production-workbench/production-package",
+  "version": "0.1.0",
+  "status": "design_baseline_not_released",
+  "owner_repository": "partme-ai/creative-production-workbench",
+  "schema_path": "contracts/0.1.0/production-package.schema.json",
+  "git_ref": "6676034f1b9346931100bfa2d07ba012f3aff8bb",
+  "sha256": "f395f20040ae4ff36fd4b4b93c4eb3555d461175f9b761733de276efd87bae8e"
+}

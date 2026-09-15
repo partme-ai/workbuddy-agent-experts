@@ -1,0 +1,5 @@
+interface:
+  display_name: Dreamina Canvas CLI
+  short_description: Construct safe argv, route exit codes, separate stdout/stderr
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,306 @@
+{
+  "name": "android-java-team",
+  "version": "1.0.0",
+  "description": "Android Mobile Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/android-java-team-lead.md",
+    "./agents/engineering-mobile-app-builder.md",
+    "./agents/engineering-iot-solution-architect.md",
+    "./agents/engineering-software-architect.md",
+    "./agents/engineering-code-reviewer.md",
+    "./agents/engineering-code-style-checker.md",
+    "./agents/engineering-devops-automator.md",
+    "./agents/testing-embedded-qa-engineer.md",
+    "./agents/testing-accessibility-auditor.md",
+    "./agents/design-ui-designer.md",
+    "./agents/design-ux-architect.md"
+  ],
+  "skills": [
+    "./skills/ansible",
+    "./skills/api-doc-generator",
+    "./skills/appium",
+    "./skills/caffeine-patterns",
+    "./skills/cloudformation",
+    "./skills/commons-patterns",
+    "./skills/cypress",
+    "./skills/detox",
+    "./skills/doc-coauthoring",
+    "./skills/easy4j-deploy",
+    "./skills/easyexcel-fill",
+    "./skills/easyexcel-read",
+    "./skills/easyexcel-write",
+    "./skills/flutter",
+    "./skills/flutter-project-creater",
+    "./skills/full-stack-doc",
+    "./skills/github-actions",
+    "./skills/gitlab-ci",
+    "./skills/guava-patterns",
+    "./skills/hutool-patterns",
+    "./skills/jackson-patterns",
+    "./skills/java-code-comments",
+    "./skills/java-component-patterns",
+    "./skills/java-conventions",
+    "./skills/java-development-manual",
+    "./skills/jest",
+    "./skills/junit",
+    "./skills/junit-mockito-patterns",
+    "./skills/kafka-patterns",
+    "./skills/kotlin-code-review",
+    "./skills/kotlin-coroutines",
+    "./skills/kotlin-gradle-build",
+    "./skills/kotlin-java-migration",
+    "./skills/kotlin-java-migration-testing",
+    "./skills/kotlin-stable",
+    "./skills/kotlin-testing",
+    "./skills/kubernetes",
+    "./skills/license-compliance-triage",
+    "./skills/linuxmirrors-awesome",
+    "./skills/linuxmirrors-docker",
+    "./skills/linuxmirrors-os",
+    "./skills/lombok-patterns",
+    "./skills/mapstruct-patterns",
+    "./skills/markitdown-awesome",
+    "./skills/markitdown-cli",
+    "./skills/markitdown-ocr",
+    "./skills/maven-multi-branch-license-gate-hardening",
+    "./skills/maven-release-validation",
+    "./skills/maven-search",
+    "./skills/maven-snapshot-publication-recovery",
+    "./skills/mermaid",
+    "./skills/mybatis-patterns",
+    "./skills/mybatis-plus-generator",
+    "./skills/mybatis-plus-patterns",
+    "./skills/okhttp5",
+    "./skills/plantuml",
+    "./skills/playwright",
+    "./skills/processon-diagram-generator",
+    "./skills/processon-mindmap",
+    "./skills/pytest",
+    "./skills/redis-redisson-patterns",
+    "./skills/sa-token",
+    "./skills/sa-token-advanced",
+    "./skills/sa-token-api-security",
+    "./skills/sa-token-integration",
+    "./skills/sa-token-micro",
+    "./skills/sa-token-oauth2",
+    "./skills/sa-token-sso",
+    "./skills/seata-patterns",
+    "./skills/selenium",
+    "./skills/spark-optimization",
+    "./skills/spring-boot-starter-patterns",
+    "./skills/technical-blog-doc",
+    "./skills/terraform",
+    "./skills/unirest-java-3",
+    "./skills/unirest-java-4",
+    "./skills/vitest",
+    "./skills/webapp-testing",
+    "./skills/xxl-job-patterns"
+  ],
+  "expertType": "team",
+  "agentName": "android-java-team-lead",
+  "teamInfo": {
+    "leadAgent": "android-java-team-lead",
+    "memberAgents": [
+      "engineering-mobile-app-builder",
+      "engineering-iot-solution-architect",
+      "engineering-software-architect",
+      "engineering-code-reviewer",
+      "engineering-code-style-checker",
+      "engineering-devops-automator",
+      "testing-embedded-qa-engineer",
+      "testing-accessibility-auditor",
+      "design-ui-designer",
+      "design-ux-architect"
+    ]
+  },
+  "displayName": {
+    "en": "Android Mobile Project Team",
+    "zh": "Android 移动项目专家团"
+  },
+  "profession": {
+    "en": "Android Mobile Project Team",
+    "zh": "Android 移动项目专家团"
+  },
+  "displayDescription": {
+    "en": "Android Mobile Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "Android 移动项目专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in android-java-team",
+    "zh": "用 android-java-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in android-java-team",
+      "zh": "用 android-java-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "android-java-team-lead",
+      "name": {
+        "en": "android-java-team-lead",
+        "zh": "android-java-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated android-java-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated android-java-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/android-java-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "engineering-mobile-app-builder",
+      "name": {
+        "en": "engineering-mobile-app-builder",
+        "zh": "engineering-mobile-app-builder"
+      },
+      "profession": {
+        "en": "精通 iOS/Android 原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验。 (auto-vendored by compose_team.py)",
+        "zh": "精通 iOS/Android 原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验。"
+      },
+      "avatar": "avatars/engineering-mobile-app-builder.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-iot-solution-architect",
+      "name": {
+        "en": "engineering-iot-solution-architect",
+        "zh": "engineering-iot-solution-architect"
+      },
+      "profession": {
+        "en": "物联网端到端方案设计专家——精通设备接入（MQTT/CoAP/LwM2M）、边缘计算、云平台（AWS IoT/Azure IoT/阿里云 IoT）、OTA、设备管理、数据管道和安全体系。 (auto-vendored by compose_team.py)",
+        "zh": "物联网端到端方案设计专家——精通设备接入（MQTT/CoAP/LwM2M）、边缘计算、云平台（AWS IoT/Azure IoT/阿里云 IoT）、OTA、设备管理、数据管道和安全体系。"
+      },
+      "avatar": "avatars/engineering-iot-solution-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-software-architect",
+      "name": {
+        "en": "engineering-software-architect",
+        "zh": "engineering-software-architect"
+      },
+      "profession": {
+        "en": "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。 (auto-vendored by compose_team.py)",
+        "zh": "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。"
+      },
+      "avatar": "avatars/engineering-software-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-reviewer",
+      "name": {
+        "en": "engineering-code-reviewer",
+        "zh": "engineering-code-reviewer"
+      },
+      "profession": {
+        "en": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。 (auto-vendored by compose_team.py)",
+        "zh": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。"
+      },
+      "avatar": "avatars/engineering-code-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-style-checker",
+      "name": {
+        "en": "engineering-code-style-checker",
+        "zh": "engineering-code-style-checker"
+      },
+      "profession": {
+        "en": "\"Java 项目规范检查与修复\" (auto-vendored by compose_team.py)",
+        "zh": "\"Java 项目规范检查与修复\""
+      },
+      "avatar": "avatars/engineering-code-style-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-devops-automator",
+      "name": {
+        "en": "engineering-devops-automator",
+        "zh": "engineering-devops-automator"
+      },
+      "profession": {
+        "en": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家 (auto-vendored by compose_team.py)",
+        "zh": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家"
+      },
+      "avatar": "avatars/engineering-devops-automator.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-embedded-qa-engineer",
+      "name": {
+        "en": "testing-embedded-qa-engineer",
+        "zh": "testing-embedded-qa-engineer"
+      },
+      "profession": {
+        "en": "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。 (auto-vendored by compose_team.py)",
+        "zh": "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。"
+      },
+      "avatar": "avatars/testing-embedded-qa-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-accessibility-auditor",
+      "name": {
+        "en": "testing-accessibility-auditor",
+        "zh": "testing-accessibility-auditor"
+      },
+      "profession": {
+        "en": "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。 (auto-vendored by compose_team.py)",
+        "zh": "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。"
+      },
+      "avatar": "avatars/testing-accessibility-auditor.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ui-designer",
+      "name": {
+        "en": "design-ui-designer",
+        "zh": "design-ui-designer"
+      },
+      "profession": {
+        "en": "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象 (auto-vendored by compose_team.py)",
+        "zh": "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象"
+      },
+      "avatar": "avatars/design-ui-designer.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ux-architect",
+      "name": {
+        "en": "design-ux-architect",
+        "zh": "design-ux-architect"
+      },
+      "profession": {
+        "en": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。 (auto-vendored by compose_team.py)",
+        "zh": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。"
+      },
+      "avatar": "avatars/design-ux-architect.png",
+      "role": "member"
+    }
+  ]
+}

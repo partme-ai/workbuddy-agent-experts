@@ -1,0 +1,6 @@
+interface:
+  display_name: Dreamina Canvas Discovery
+  short_description: Look up live models, voices, ratios, resolutions, durations,
+    batch limits
+policy:
+  allow_implicit_invocation: false

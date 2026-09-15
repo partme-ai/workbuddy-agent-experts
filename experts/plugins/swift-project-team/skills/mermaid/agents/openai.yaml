@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mermaid 图表"
+  short_description: "为 Markdown、README 和技术文档生成可直接渲染的 Mermaid 图表源码"
+  default_prompt: "使用 $mermaid 为这份 Markdown 文档生成合适的图表。"

@@ -1,0 +1,72 @@
+{
+  "schema": 2,
+  "target_language": "zig",
+  "java_baseline": "<java-sha-or-tag>",
+  "target_baseline": "<zig-sha>",
+  "acceptance_module": {
+    "name": "<project>-test",
+    "root": "<project>-test",
+    "build_manifest": "build.zig",
+    "build_step": "migration-test",
+    "published": false,
+    "components": ["<project-core>", "<project-adapter>"],
+    "command": "zig build migration-test",
+    "status": "PASS",
+    "failed": 0,
+    "skipped": 0,
+    "not_run": 0,
+    "artifact": "verification/runs/whole-project.json"
+  },
+  "source_tests": [
+    {
+      "source": "src/test/java/org/example/ExampleTest.java#exampleCase",
+      "case_id": "default",
+      "targets": ["<project>-test/tests/source_parity.zig#example case"],
+      "disposition": "MIRRORED",
+      "contract_preserved": true,
+      "inputs_preserved": true,
+      "assertions_preserved": true,
+      "fixture_state_preserved": true,
+      "cleanup_preserved": true,
+      "case_expansion_complete": true,
+      "result_parity": "MATCH",
+      "evidence": "verification/cases/example.json"
+    }
+  ],
+  "assets": [
+    {
+      "source": "src/test/resources/example.json",
+      "target": "<project>-test/suite/source/example.json",
+      "mode": "COPY_EXACT",
+      "sha256": "<sha256>"
+    }
+  ],
+  "runs": {
+    "java": {
+      "command": "<exact-java-suite-command>",
+      "status": "PASS",
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "artifact": "verification/runs/java.json"
+    },
+    "target": {
+      "command": "zig build test",
+      "status": "PASS",
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "artifact": "verification/runs/zig.json"
+    },
+    "differential": {
+      "command": "<exact-java-zig-differential-command>",
+      "status": "PASS",
+      "matched": 1,
+      "mismatched": 0,
+      "harness_failures": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "artifact": "verification/runs/differential.json"
+    }
+  }
+}

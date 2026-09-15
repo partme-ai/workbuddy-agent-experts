@@ -1,0 +1,11 @@
+== 版本 ==
+ESP-IDF v6.1（git shallow clone tag v6.1，2026-09-02 构建于 macOS arm64 + Docker-free 宿主）
+== 产物 ==
+-rw-r--r--@ 1 wandl  wheel   126688 Sep  3 01:17 /tmp/ge3/esp-idf/examples/get-started/hello_world/build/hello_world.bin
+-rwxr-xr-x@ 1 wandl  wheel  3104768 Sep  3 01:17 /tmp/ge3/esp-idf/examples/get-started/hello_world/build/hello_world.elf
+== bin sha256 ==
+fb1975cc8cdded1bccdbde4d721716ee1b76c288785fe705b42f8cf50901189f  /tmp/ge3/esp-idf/examples/get-started/hello_world/build/hello_world.bin
+== 尺寸检查（来自构建输出）==
+hello_world.bin binary size 0x1eee0 bytes. Smallest app partition is 0x100000 bytes. 0xe1120 bytes (88%) free.
+== esptool ==
+esptool v5.4.0

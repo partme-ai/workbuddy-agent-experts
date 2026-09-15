@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Macros"
+  short_description: "Design, test, and debug declarative and procedural macros"
+  default_prompt: "Use $rust-macros to design, implement, and test this Rust macro."

@@ -1,0 +1,8 @@
+== /etc/golden-marker（tar.gz 直读）==
+GOLDEN-OK
+== rc.d 含 S99golden-boot？ ==
+./etc/init.d/golden-boot
+./etc/rc.d/S99golden-boot
+== init.d/golden-boot 头两行 ==
+#!/bin/sh /etc/rc.common
+START=99

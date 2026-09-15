@@ -8,27 +8,27 @@
     "./agents/engineering-ai-engineer.md"
   ],
   "displayName": {
-    "en": "engineering-ai-engineer",
-    "zh": "AI 工程师"
+    "en": "Engineering Ai Engineer",
+    "zh": "engineering-ai-engineer"
   },
   "profession": {
-    "en": "engineering-ai-engineer",
-    "zh": "AI 工程师"
+    "en": "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。 (auto-vendored by compose_team.py)",
+    "zh": "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。"
   },
   "displayDescription": {
     "en": "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。",
     "zh": "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。"
   },
   "avatar": "avatars/expert.png",
-  "categoryId": "02-Engineering",
+  "categoryId": "12-IndustryConsultant",
   "defaultInitPrompt": {
-    "zh": "我是AI 工程师，请介绍你的专业能力并开始协助我。",
-    "en": "I am engineering-ai-engineer. Introduce your expertise and help me."
+    "zh": "我是engineering-ai-engineer，请介绍你的专业能力并开始协助我。",
+    "en": "I am Engineering Ai Engineer. Introduce your expertise and help me."
   },
   "tags": [
     {
-      "en": "engineering",
-      "zh": "engineering"
+      "en": "agent",
+      "zh": "agent"
     }
   ]
 }

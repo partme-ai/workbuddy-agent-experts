@@ -1,0 +1,426 @@
+# Audio
+
+SDL3's audio system is built around **Audio Streams**, which handle format conversion and mixing automatically.
+
+## Basic Audio Playback
+
+### Quick WAV Playback
+
+```zig
+const sdl3 = @import("sdl3");
+
+pub fn main() !void {
+    defer sdl3.shutdown();
+    try sdl3.init(.{ .audio = true });
+    defer sdl3.quit(.{ .audio = true });
+
+    // Load WAV file (returns struct { Spec, []u8 })
+    const spec, const wav_data = try sdl3.audio.loadWav("sound.wav");
+    defer sdl3.free(wav_data.ptr);  // Free with sdl3.free()
+
+    // Open default playback device with simplified API
+    const stream = try sdl3.audio.Device.default_playback.openStream(
+        spec,   // Match WAV format
+        void,   // No callback user data type
+        null,   // No callback (push audio)
+        null,   // No user data
+    );
+    defer stream.deinit();  // Also closes device
+
+    // Queue audio data
+    try stream.putData(wav_data);
+
+    // Resume playback (streams start paused)
+    try stream.resumeDevice();
+
+    // Wait for playback to finish
+    while (try stream.getQueued() > 0) {
+        sdl3.timer.delayMilliseconds(100);
+    }
+}
+```
+
+### Audio Spec
+
+```zig
+const sdl3 = @import("sdl3");
+
+const spec = sdl3.audio.Spec{
+    .format = .signed_16_bit_little_endian,       // Signed 16-bit samples
+    .num_channels = 2,        // Stereo
+    .sample_rate = 44100,        // 44.1 kHz sample rate
+};
+
+// Common formats
+.unsigned_8_bit,      // Unsigned 8-bit
+.signed_8_bit,      // Signed 8-bit
+.signed_16_bit_little_endian,     // Signed 16-bit (CD quality)
+.signed_32_bit_little_endian,     // Signed 32-bit
+.floating_32_bit_little_endian,     // 32-bit float (-1.0 to 1.0)
+```
+
+## Audio Devices
+
+### Listing Devices
+
+```zig
+// Get playback devices (returns []Device slice)
+const playback_devices = try sdl3.audio.getPlaybackDevices();
+defer sdl3.free(playback_devices.ptr);
+
+for (playback_devices) |device| {
+    const name = try device.getName();
+    std.debug.print("Playback: {s}\n", .{name});
+}
+
+// Get recording devices
+const recording_devices = try sdl3.audio.getRecordingDevices();
+defer sdl3.free(recording_devices.ptr);
+
+for (recording_devices) |device| {
+    const name = try device.getName();
+    std.debug.print("Recording: {s}\n", .{name});
+}
+```
+
+### Opening a Specific Device
+
+```zig
+// Open specific device (device.open creates a logical device)
+const device = try device_id.open(desired_spec);
+defer device.close();
+
+// Create stream for the device
+const stream = try sdl3.audio.Stream.init(source_spec, device_spec);
+defer stream.deinit();
+
+// Bind stream to device
+try device.bindStream(stream);
+
+// Resume device
+try device.resumePlayback();
+```
+
+### Device Events
+
+```zig
+while (sdl3.events.poll()) |event| {
+    switch (event) {
+        .audio_device_added => |a| {
+            if (a.recording) {
+                std.debug.print("Recording device added\n", .{});
+            } else {
+                std.debug.print("Playback device added\n", .{});
+            }
+            refreshDeviceList();
+        },
+
+        .audio_device_removed => |a| {
+            if (a.device == current_device_id) {
+                // Our device was removed, switch to default
+                switchToDefaultDevice();
+            }
+        },
+
+        .audio_device_format_changed => |a| {
+            // Device format changed, may need to reconfigure
+        },
+
+        else => {},
+    }
+}
+```
+
+## Audio Streams
+
+Audio streams handle format conversion, resampling, and buffering.
+
+### Creating a Stream
+
+```zig
+const source_spec = sdl3.audio.Spec{
+    .format = .signed_16_bit_little_endian,
+    .num_channels = 2,
+    .sample_rate = 44100,
+};
+
+const dest_spec = sdl3.audio.Spec{
+    .format = .floating_32_bit_little_endian,
+    .num_channels = 2,
+    .sample_rate = 48000,
+};
+
+// Stream converts from source to dest format
+const stream = try sdl3.audio.Stream.init(source_spec, dest_spec);
+defer stream.deinit();
+```
+
+### Pushing Audio Data
+
+```zig
+// Push audio data into stream (for playback)
+try stream.putData(audio_buffer);
+
+// Get converted audio data (for recording)
+const data = try stream.getData(output_buffer);
+const bytes_read = data.len;
+
+// Check queued data
+const queued_bytes = try stream.getQueued();
+```
+
+### Stream Callbacks
+
+```zig
+fn audioCallback(
+    user_data: ?*MyAudioState,
+    stream: sdl3.audio.Stream,
+    additional_amount: c_int,
+    total_amount: c_int,
+) void {
+    const state = user_data orelse return;
+
+    // Generate or fetch audio data
+    var buffer: [4096]u8 = undefined;
+    const samples = generateAudio(&buffer, @intCast(additional_amount));
+
+    // Push to stream
+    stream.putData(samples) catch |err| std.log.err("audio put failed: {}", .{err});
+}
+
+// Set callback
+stream.setGetCallback(MyAudioState, audioCallback, my_state);
+```
+
+## Mixing Multiple Sounds
+
+```zig
+const AudioMixer = struct {
+    device: sdl3.audio.Device,
+    streams: std.ArrayList(sdl3.audio.Stream) = .empty,
+    allocator: std.mem.Allocator,
+
+    fn init(allocator: std.mem.Allocator) !AudioMixer {
+        const device = try sdl3.audio.Device.default_playback.open(.{
+            .format = .floating_32_bit_little_endian,
+            .num_channels = 2,
+            .sample_rate = 48000,
+        });
+
+        return .{
+            .device = device,
+            .allocator = allocator,
+        };
+    }
+
+    fn deinit(self: *AudioMixer) void {
+        for (self.streams.items) |stream| {
+            stream.deinit();
+        }
+        self.streams.deinit(self.allocator);
+        self.device.close();
+    }
+
+    fn playSound(self: *AudioMixer, wav_data: []const u8, spec: sdl3.audio.Spec) !void {
+        // Create stream for this sound
+        const stream = try sdl3.audio.Stream.init(spec, self.device.getFormat());
+
+        // Bind to device (device mixes all bound streams)
+        try self.device.bindStream(stream);
+
+        // Queue the sound data
+        try stream.putData(wav_data);
+
+        self.streams.append(self.allocator, stream) catch |err| std.log.err("stream append failed: {}", .{err});
+    }
+
+    fn update(self: *AudioMixer) void {
+        // Remove finished streams
+        var i: usize = 0;
+        while (i < self.streams.items.len) {
+            if ((try self.streams.items[i].getQueued()) == 0) {
+                self.streams.items[i].deinit();
+                _ = self.streams.swapRemove(i);
+            } else {
+                i += 1;
+            }
+        }
+    }
+};
+```
+
+## Audio Recording
+
+```zig
+pub fn main() !void {
+    defer sdl3.shutdown();
+    try sdl3.init(.{ .audio = true });
+    defer sdl3.quit(.{ .audio = true });
+
+    const spec = sdl3.audio.Spec{
+        .format = .signed_16_bit_little_endian,
+        .num_channels = 1,
+        .sample_rate = 16000,
+    };
+
+    // Open recording device
+    const stream = try sdl3.audio.Device.default_recording.openStream(
+        spec,
+        void,
+        null,
+        null,
+    );
+    defer stream.deinit();
+
+    // Start recording
+    try stream.resumeDevice();
+
+    var recording: std.ArrayList(u8) = .empty;
+    defer recording.deinit(allocator);
+
+    // Record for 5 seconds
+    const start = sdl3.timer.getMillisecondsSinceInit();
+    while (sdl3.timer.getMillisecondsSinceInit() - start < 5000) {
+        var buffer: [4096]u8 = undefined;
+        if (stream.getData(&buffer)) |data| {
+            recording.appendSlice(allocator, data) catch |err| std.log.err("recording append failed: {}", .{err});
+        }
+        sdl3.timer.delayMilliseconds(10);
+    }
+
+    // Save recording...
+}
+```
+
+## Loading Audio Files
+
+### WAV Files (Built-in)
+
+```zig
+// Load WAV (returns struct { Spec, []u8 })
+const spec, const data = try sdl3.audio.loadWav("sound.wav");
+defer sdl3.free(data.ptr);
+
+// Load from IO stream
+const io = try sdl3.io_stream.Stream.fromFile("sound.wav", "rb");
+const spec2, const data2 = try sdl3.audio.loadWavIo(io, true);
+```
+
+### Other Formats
+
+For MP3, OGG, FLAC, etc., use SDL_mixer or decode yourself:
+
+```zig
+// Example with a hypothetical decoder
+const decoded = try myMp3Decoder.decode("music.mp3");
+defer decoded.deinit();
+
+const stream = try sdl3.audio.Stream.init(decoded.spec, device_spec);
+try stream.putData(decoded.samples);
+```
+
+## Volume Control
+
+```zig
+// Set stream gain (0.0 = silent, 1.0 = normal, >1.0 = amplify)
+try stream.setGain(0.5);  // 50% volume
+
+const gain = try stream.getGain();
+```
+
+## Audio Format Conversion
+
+```zig
+// Convert audio data between formats
+const source_spec = sdl3.audio.Spec{ .format = .signed_16_bit_little_endian, .num_channels = 2, .sample_rate = 44100 };
+const dest_spec = sdl3.audio.Spec{ .format = .floating_32_bit_little_endian, .num_channels = 2, .sample_rate = 48000 };
+
+// Streams convert automatically
+const stream = try sdl3.audio.Stream.init(source_spec, dest_spec);
+try stream.putData(s16_data);
+
+// Get converted data
+var output: [8192]u8 = undefined;
+const converted = try stream.getData(&output);
+```
+
+## Channel Layouts
+
+SDL uses standard channel orderings:
+
+```
+1 channel:  FRONT
+2 channels: FL, FR
+3 channels: FL, FR, LFE
+4 channels: FL, FR, BL, BR
+5 channels: FL, FR, LFE, BL, BR
+6 channels: FL, FR, FC, LFE, BL, BR (5.1)
+7 channels: FL, FR, FC, LFE, BC, SL, SR (6.1)
+8 channels: FL, FR, FC, LFE, BL, BR, SL, SR (7.1)
+```
+
+## Pause/Resume
+
+```zig
+// Pause stream
+try stream.pauseDevice();
+
+// Resume stream
+try stream.resumeDevice();
+
+// Pause device (pauses all bound streams)
+try device.pausePlayback();
+try device.resumePlayback();
+```
+
+## Flush and Clear
+
+```zig
+// Clear all queued audio
+try stream.clear();
+
+// Flush (push all buffered data to device)
+try stream.flush();
+```
+
+## Simple Sound Effects Manager
+
+```zig
+const SoundManager = struct {
+    sounds: std.StringHashMap(Sound),
+    mixer: AudioMixer,
+
+    const Sound = struct {
+        data: []u8,
+        spec: sdl3.audio.Spec,
+    };
+
+    fn loadSound(self: *SoundManager, name: []const u8, path: []const u8) !void {
+        const spec, const data = try sdl3.audio.loadWav(path);
+
+        // Copy data since loadWav returns temporary buffer
+        const owned = try self.allocator.dupe(u8, data);
+        sdl3.free(data.ptr);
+
+        try self.sounds.put(name, .{ .data = owned, .spec = spec });
+    }
+
+    fn play(self: *SoundManager, name: []const u8) !void {
+        if (self.sounds.get(name)) |sound| {
+            try self.mixer.playSound(sound.data, sound.spec);
+        }
+    }
+
+    fn playWithVolume(self: *SoundManager, name: []const u8, volume: f32) !void {
+        if (self.sounds.get(name)) |sound| {
+            const stream = try self.mixer.playSound(sound.data, sound.spec);
+            try stream.setGain(volume);
+        }
+    }
+};
+```
+
+## Related
+
+- [Init & Lifecycle](init-lifecycle.md) - Initialization
+- [Events](events.md) - Audio device events

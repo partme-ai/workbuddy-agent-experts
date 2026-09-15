@@ -84,21 +84,13 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
     modifiers = ModifierCommands(bpy_module)
     curves = CurveCommands(bpy_module)
     asset_policy = PathPolicy(approved_asset_roots) if approved_asset_roots else None
-    assets = AssetCommands(bpy_module, asset_policy=asset_policy, output_root=approved_output_root)
+    assets = AssetCommands(bpy_module, asset_policy=asset_policy)
     uvs = UVCommands(bpy_module)
     rigs = RigCommands(bpy_module, adapter=_version_adapter)
     constraints = ConstraintCommands(bpy_module)
     advanced_animation = AdvancedAnimationCommands(bpy_module)
     quality = QualityCommands(bpy_module)
-    from .scheduler import Scheduler as _Scheduler
-    _production_scheduler = _Scheduler(
-        process_factory=__import__('subprocess').Popen,
-    )
-    _journal = None
-    if approved_output_root is not None:
-        from .job_journal import JobJournal
-        _journal = JobJournal(Path(approved_output_root).resolve())
-    jobs = JobManager(bpy_module, approved_output_root, scheduler=_production_scheduler, journal=_journal)
+    jobs = JobManager(bpy_module, approved_output_root)
     geometry_nodes = GeometryNodeCommands(bpy_module, adapter=_version_adapter)
     sculpt = SculptCommands(bpy_module)
     retopo = RetopoCommands(bpy_module)
@@ -229,12 +221,6 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
                       validate=closed_arguments(required=('path','dataType','names'), optional=('link',)))
     registry.register('asset.pack_resources',assets.pack_resources,validate=closed_arguments())
     registry.register('asset.make_paths_relative',assets.make_paths_relative,validate=closed_arguments())
-    registry.register('asset.dependencies',assets.dependencies,
-                      validate=closed_arguments(optional=('includePacked',)),risk='read')
-    registry.register('asset.validate_portability',assets.validate_portability,
-                      validate=closed_arguments(required=('targetDirectory',)),risk='read')
-    registry.register('asset.package_project',assets.package_project,
-                      validate=closed_arguments(required=('targetDirectory',),optional=('includeCaches','includeProxies')))
     registry.register('uv.mark_seams',uvs.mark_seams,
                       validate=closed_arguments(required=('selection',),optional=('seam',)))
     registry.register('uv.unwrap',uvs.unwrap,
@@ -271,10 +257,6 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
                       validate=closed_arguments(required=('material','path','usage')))
     registry.register('material.inspect_nodes',materials.inspect_nodes,
                       validate=closed_arguments(required=('material',)),risk='read')
-    registry.register('material.add_node',materials.add_node,
-                      validate=closed_arguments(required=('material','nodeType','name')))
-    registry.register('material.connect_nodes',materials.connect_nodes,
-                      validate=closed_arguments(required=('material','fromNode','fromSocket','toNode','toSocket')))
     registry.register('material.create_node_group',materials.create_node_group,
                       validate=closed_arguments(required=('material','groupName'),optional=('baseColor','roughness')))
     registry.register('material.bake',materials.bake,
@@ -301,16 +283,6 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
                       validate=closed_arguments(required=('keyName','frame','value'),optional=('name','objectId')))
     registry.register('animation.retarget',advanced_animation.retarget,
                       validate=closed_arguments(required=('source','target','boneMap','frameStart','frameEnd'),optional=('step',)))
-    registry.register('animation.driver_create',advanced_animation.driver_create,
-                      validate=closed_arguments(required=('owner','dataPath','expression'),optional=('variables',)))
-    registry.register('animation.keying_set_create',advanced_animation.keying_set_create,
-                      validate=closed_arguments(required=('name','paths')))
-    registry.register('animation.marker_set',advanced_animation.marker_set,
-                      validate=closed_arguments(required=('name','frame'),optional=('camera',)))
-    registry.register('animation.motion_path_calculate',advanced_animation.motion_path_calculate,
-                      validate=closed_arguments(required=('target','frameStart','frameEnd')))
-    registry.register('animation.root_motion',advanced_animation.root_motion,
-                      validate=closed_arguments(required=('armature','sourceBone','targetObject','frameStart','frameEnd')))
     registry.register('camera.follow_path',advanced_animation.camera_follow_path,
                       validate=closed_arguments(required=('camera','path','name','frameStart','frameEnd'),optional=('targetObjectId',)))
     registry.register('camera.add_handheld',advanced_animation.camera_handheld,
@@ -329,20 +301,11 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
     registry.register('validation.motion_discontinuity',quality.motion_discontinuity,
                       validate=closed_arguments(required=('object','frameStart','frameEnd','positionLimit','angleLimitDegrees')),risk='read')
     registry.register('job.submit',jobs.submit,
-                      validate=closed_arguments(required=('kind',),optional=('jobId','format','parameters','priority')))
+                      validate=closed_arguments(required=('kind',),optional=('jobId','format','parameters')))
     registry.register('job.status',jobs.status,validate=closed_arguments(required=('jobId',)),risk='read')
     registry.register('job.cancel',jobs.cancel,validate=closed_arguments(required=('jobId',)),risk='read')
     registry.register('job.recover',jobs.recover,validate=closed_arguments(required=('jobId',)),risk='read')
     registry.register('job.resume',jobs.resume,validate=closed_arguments(required=('jobId',)))
-    registry.register('job.estimate',jobs.estimate,
-                      validate=closed_arguments(required=('kind',),optional=('parameters',)),
-                      risk='read')
-    registry.register('job.list',jobs.list,
-                      validate=closed_arguments(optional=('state','offset','limit')),
-                      risk='read')
-    registry.register('job.events',jobs.events,
-                      validate=closed_arguments(optional=('jobId','afterRevision')),
-                      risk='read')
     registry.register('geometry_nodes.create_group',geometry_nodes.create_group,
                       validate=closed_arguments(required=('object','groupName','modifierName'),optional=('inputs',)))
     registry.register('geometry_nodes.add_node',geometry_nodes.add_node,
@@ -371,22 +334,12 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
                       validate=closed_arguments(required=('objectId','sourceObjectId'),optional=('maxDeviation','maxPoleValence')),
                       risk='read')
     registry.register('hair.create_curves',hair.create_curves,validate=closed_arguments(required=('surface','name','strands'),optional=('radius',)))
-    registry.register('hair.groom',hair.groom,
-                      validate=closed_arguments(required=('objectId','operation','strength'),optional=('selection',)))
-    registry.register('hair.validate',hair.validate,
-                      validate=closed_arguments(required=('objectId','surfaceObjectId'),optional=('limits',)),
-                      risk='read')
     registry.register('hair.inspect',hair.inspect,validate=closed_arguments(optional=('name','objectId')),risk='read')
     registry.register('simulation.rigid_body',simulation.rigid_body,validate=closed_arguments(required=('bodyType',),optional=('name','objectId','collisionShape','mass')))
     registry.register('simulation.collision',simulation.collision,validate=closed_arguments(optional=('name','objectId','thickness')))
     registry.register('simulation.cloth',simulation.cloth,validate=closed_arguments(optional=('name','objectId','modifierName','quality','mass','frameStart','frameEnd')))
     registry.register('simulation.soft_body',simulation.soft_body,validate=closed_arguments(optional=('name','objectId','modifierName','frameStart','frameEnd')))
     registry.register('simulation.quick_smoke',simulation.quick_smoke,validate=closed_arguments(required=('flows',),optional=('resolution','frameStart','frameEnd')))
-    registry.register('simulation.bake',simulation.bake,
-                      validate=closed_arguments(required=('objectId','bakeType','frameStart','frameEnd')))
-    registry.register('simulation.validate',simulation.validate,
-                      validate=closed_arguments(required=('objectId',),optional=('metrics',)),
-                      risk='read')
     registry.register('simulation.cache_status',simulation.cache_status,validate=closed_arguments(optional=('name','objectId')),risk='read')
     registry.register('simulation.free_cache',simulation.free_cache,validate=closed_arguments(optional=('name','objectId')))
     registry.register('render.configure',rendering.configure,
@@ -396,8 +349,6 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
     registry.register('render.create_view_layer',rendering.create_view_layer,validate=closed_arguments(required=('name',)))
     registry.register('render.inspect',rendering.inspect,validate=closed_arguments(),risk='read')
     registry.register('compositor.configure',compositor.configure,validate=closed_arguments(optional=('exposure','glare')))
-    registry.register('compositor.add_node',compositor.add_node,
-                      validate=closed_arguments(required=('nodeType','name')))
     registry.register('compositor.inspect',compositor.inspect,validate=closed_arguments(),risk='read')
     registry.register('compositor.add_tracking_mask',compositor.add_tracking_mask,
                       validate=closed_arguments(required=('clip','maskName','points')))
@@ -411,10 +362,6 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
                       validate=closed_arguments(required=('material','color'),optional=('name','objectId')))
     registry.register('grease_pencil.add_stroke',grease_pencil.add_stroke,
                       validate=closed_arguments(required=('layer','frame','points'),optional=('name','objectId','materialIndex','cyclic')))
-    registry.register('grease_pencil.add_modifier',grease_pencil.add_modifier,
-                      validate=closed_arguments(required=('objectId','type'),optional=('settings',)))
-    registry.register('grease_pencil.interpolate',grease_pencil.interpolate,
-                      validate=closed_arguments(required=('objectId','layer','frameStart','frameEnd','easing')))
     registry.register('grease_pencil.inspect',grease_pencil.inspect,validate=closed_arguments(optional=('name','objectId')),risk='read')
     registry.register('sequence.add',sequence.add,validate=closed_arguments(required=('type','name','channel','frameStart'),
                       optional=('path','paths','scene','text','duration','fontSize')))
@@ -431,27 +378,11 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
     registry.register('sequence.configure_output',sequence.configure_output,
                       validate=closed_arguments(required=('frameStart','frameEnd'),optional=('width','height','fps')))
     registry.register('sequence.inspect',sequence.inspect,validate=closed_arguments(),risk='read')
-    registry.register('sequence.split',sequence.split,
-                      validate=closed_arguments(required=('name','frame','leftName','rightName')))
-    registry.register('sequence.configure_proxy',sequence.configure_proxy,
-                      validate=closed_arguments(required=('name','sizes','directory')))
-    registry.register('sequence.add_modifier',sequence.add_modifier,
-                      validate=closed_arguments(required=('name','modifierType'),optional=('settings',)))
-    registry.register('sequence.color_grade',sequence.color_grade,
-                      validate=closed_arguments(required=('name',),optional=('lift','gamma','gain')))
-    registry.register('sequence.set_transform',sequence.set_transform,
-                      validate=closed_arguments(required=('name',),optional=('offset_x','offset_y','scale_x','scale_y','rotation')))
-    registry.register('sequence.set_crop',sequence.set_crop,
-                      validate=closed_arguments(required=('name',),optional=('min_x','max_x','min_y','max_y')))
     registry.register('tracking.load_clip',tracking.load_clip,validate=closed_arguments(required=('name','path'),optional=('focalLengthPixels',)))
     registry.register('tracking.add_track',tracking.add_track,validate=closed_arguments(required=('clip','name','markers')))
     registry.register('tracking.solve_camera',tracking.solve_camera,validate=closed_arguments(required=('clip','keyframeA','keyframeB')))
     registry.register('tracking.setup_scene',tracking.setup_scene,validate=closed_arguments(required=('clip',)))
     registry.register('tracking.inspect',tracking.inspect,validate=closed_arguments(required=('clip',)),risk='read')
-    registry.register('rig.auto_weights',rigs.auto_weights,
-                      validate=closed_arguments(required=('mesh','armature'),optional=('maxInfluences',)))
-    registry.register('rig.validate_deformation',rigs.validate_deformation,
-                      validate=closed_arguments(required=('mesh','armature','poses','thresholds')))
     registry.register('rig.rigify_status',rigs.rigify_status,validate=closed_arguments(),risk='read')
     registry.register('rig.rigify_install',rigs.rigify_install,
                       validate=closed_arguments(optional=('allowDownload','savePreferences')),risk='gated')
@@ -522,32 +453,32 @@ def build_registry(bpy_module, *, runtime_mode: str = "managed", approved_output
     recipes = RecipeCommands(bpy_module, registry.dispatch)
     registry.register('recipe.hard_surface_shell', recipes.hard_surface_shell,
                       validate=closed_arguments(required=('name','dimensions','wallThickness'), optional=('bevelWidth',)),
-                      metadata={'skills':['codex-blender-hard-surface'],
+                      metadata={'skills':['blender-hard-surface'],
                                 'effects':{'sceneMutation':True,'longRunning':False,'cancellable':False},
                                 'tests':['tests/runtime/p1_recipe_smoke.py']})
     registry.register('recipe.spear', recipes.spear,
                       validate=closed_arguments(required=('name','length','shaftRadius','headLength','headRadius')),
-                      metadata={'skills':['codex-blender-hard-surface'],
+                      metadata={'skills':['blender-hard-surface'],
                                 'effects':{'sceneMutation':True,'longRunning':False,'cancellable':False},
                                 'tests':['tests/runtime/p1_recipe_smoke.py']})
     registry.register('recipe.desktop_speaker',recipes.desktop_speaker,
                       validate=closed_arguments(required=('name','dimensions'),optional=('bevelWidth','wallThickness')),
-                      metadata={'maturity':'L2','skills':['codex-blender-hard-surface','codex-blender-uv-material'],
+                      metadata={'maturity':'L2','skills':['blender-hard-surface','blender-uv-material'],
                                 'effects':{'sceneMutation':True,'longRunning':False,'cancellable':False},
                                 'tests':['tests/runtime/p2_product_acceptance.py']})
     registry.register('recipe.rigged_spear_character',recipes.rigged_spear_character,
                       validate=closed_arguments(required=('name',),optional=('height','releaseFrame','apexFrame','catchFrame')),
-                      metadata={'maturity':'L2','skills':['codex-blender-character-rigging','codex-blender-character-animation'],
+                      metadata={'maturity':'L2','skills':['blender-character-rigging','blender-character-animation'],
                                 'effects':{'sceneMutation':True,'longRunning':False,'cancellable':False},
                                 'tests':['tests/runtime/p2_character_acceptance.py']})
     registry.register('recipe.procedural_courtyard',recipes.procedural_courtyard,
                       validate=closed_arguments(required=('name','dimensions','archCount'),optional=('rubbleDensity',)),
-                      metadata={'maturity':'L2','skills':['codex-blender-procedural-modeling'],
+                      metadata={'maturity':'L2','skills':['blender-procedural-modeling'],
                                 'effects':{'sceneMutation':True,'longRunning':False,'cancellable':False},
                                 'tests':['tests/runtime/p4_courtyard_acceptance.py']})
     registry.register('recipe.update_procedural_courtyard',recipes.update_procedural_courtyard,
                       validate=closed_arguments(required=('name',),optional=('dimensions','archCount','rubbleDensity')),
-                      metadata={'maturity':'L2','skills':['codex-blender-procedural-modeling'],
+                      metadata={'maturity':'L2','skills':['blender-procedural-modeling'],
                                 'effects':{'sceneMutation':True,'longRunning':False,'cancellable':False},
                                 'tests':['tests/runtime/p4_courtyard_acceptance.py']})
     return registry

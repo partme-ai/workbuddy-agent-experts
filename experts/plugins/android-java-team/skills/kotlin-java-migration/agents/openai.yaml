@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kotlin Java Migration"
+  short_description: "lossless Java-to-Kotlin migration"
+  default_prompt: "Use $kotlin-java-migration to complete this task with repository evidence and executable validation."

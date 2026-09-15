@@ -43,7 +43,7 @@ harness:
     - bin
     - config
     - schemas
-    - skills          # 26 份生产技能 → blender-production/references/
+    - skills          # 全部生产技能（含 blender-previs 白模预演约定）→ blender-production/references/
   licenses:
     - LICENSE
     - THIRD_PARTY_NOTICES.md

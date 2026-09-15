@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Web Services"
+  short_description: "Build production Rust HTTP services and APIs"
+  default_prompt: "Use $rust-web to design and verify this Rust HTTP service or API."

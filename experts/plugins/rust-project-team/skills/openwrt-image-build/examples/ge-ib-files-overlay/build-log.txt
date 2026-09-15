@@ -1,0 +1,1377 @@
+openwrt-imagebuilder-25.12.5-armsr-armv8.Linux-x86_64.tar.zst: OK
+Generate local signing keys...
+WARNING: can't open config file: /builder/shared-workdir/build/staging_dir/host/etc/ssl/openssl.cnf
+WARNING: can't open config file: /builder/shared-workdir/build/staging_dir/host/etc/ssl/openssl.cnf
+read EC key
+writing EC key
+Checking 'true'... ok.
+Checking 'false'... ok.
+Checking 'working-make'... ok.
+Checking 'case-sensitive-fs'... ok.
+Checking 'proper-umask'... ok.
+Checking 'perl-data-dumper'... ok.
+Checking 'perl-findbin'... ok.
+Checking 'perl-file-copy'... ok.
+Checking 'perl-file-compare'... ok.
+Checking 'perl-thread-queue'... ok.
+Checking 'perl-ipc-cmd'... ok.
+Checking 'tar'... ok.
+Checking 'find'... ok.
+Checking 'bash'... updated.
+Checking 'xargs'... ok.
+Checking 'patch'... ok.
+Checking 'diff'... ok.
+Checking 'cp'... ok.
+Checking 'seq'... ok.
+Checking 'awk'... ok.
+Checking 'grep'... updated.
+Checking 'egrep'... updated.
+Checking 'getopt'... ok.
+Checking 'realpath'... ok.
+Checking 'stat'... ok.
+Checking 'gzip'... updated.
+Checking 'unzip'... ok.
+Checking 'bzip2'... ok.
+Checking 'wget'... ok.
+Checking 'install'... ok.
+Checking 'perl'... ok.
+Checking 'python'... updated.
+Checking 'python3'... updated.
+Checking 'python3-distutils'... ok.
+Checking 'python3-stdlib'... ok.
+Checking 'file'... ok.
+Checking 'which'... ok.
+Checking 'ldconfig-stub'... ok.
+Building images for armsr - Generic EFI Boot
+Packages: curl jq apk-mbedtls base-files blkid ca-bundle dnsmasq dropbear e2fsprogs firewall4 fstools kernel kmod-amazon-ena kmod-atlantic kmod-bcmgenet kmod-dwmac-imx kmod-dwmac-rockchip kmod-dwmac-sun8i kmod-e1000e kmod-fs-vfat kmod-fsl-dpaa1-net kmod-fsl-dpaa2-net kmod-fsl-enetc-net kmod-fsl-fec kmod-gpio-pca953x kmod-i2c-mux-pca954x kmod-mvneta kmod-mvpp2 kmod-nft-offload kmod-octeontx2-net kmod-phy-aquantia kmod-phy-broadcom kmod-phy-marvell kmod-phy-marvell-10g kmod-phy-realtek kmod-phy-smsc kmod-renesas-net-avb kmod-rtc-rx8025 kmod-sfp kmod-vmxnet3 kmod-wdt-sp805 libc libgcc libustream-mbedtls logd mkf2fs mtd netifd nftables odhcp6c odhcpd-ipv6only partx-utils ppp ppp-mod-pppoe procd-ujail uci uclient-fetch urandom-seed urngd "base-files=1711~f5dae5ece4" "libc=1.2.5-r5" "kernel=6.12.94~ba5ca7f3e73618aeece9cc1c14e512c2-r1"
+
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+WARNING: opening /work/ib/packages/packages.adb: No such file or directory
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+OK: 0 B in 0 packages
+Package list missing or not up-to-date, generating it.
+
+Building package index...
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+
+Installing packages...
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(  1/170) Installing libgcc1 (14.3.0-r5)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(  2/170) Installing libc (1.2.5-r5)
+(  3/170) Installing libmbedtls21 (3.6.7-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(  4/170) Installing libubox20260213 (2026.06.19~7dd12784-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(  5/170) Installing libuclient20201210 (2026.06.07~daad21fa-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(  6/170) Installing uclient-fetch (2026.06.07~daad21fa-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(  7/170) Installing zlib (1.3.1-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(  8/170) Installing apk-mbedtls (3.0.5-r3)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(  9/170) Installing busybox (1.37.0-r6)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 10/170) Installing libubus20251202 (2026.06.28~24864e78-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 11/170) Installing libuci20250120 (2025.12.02~66127cd7-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 12/170) Installing libjson-c5 (0.18-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 13/170) Installing libblobmsg-json20260213 (2026.06.19~7dd12784-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 14/170) Installing ubusd (2026.06.28~24864e78-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 15/170) Installing ubus (2026.06.28~24864e78-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 16/170) Installing ubox (2025.10.30~6f78fa49-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 17/170) Installing fstools (2026.05.23~16718b6e-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 18/170) Installing fwtool (2025.10.03~04cd252e-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 19/170) Installing jsonfilter (2026.03.16~b9034210-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 20/170) Installing jshn (2026.06.19~7dd12784-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 21/170) Installing libnl-tiny1 (2025.12.02~40493a65-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 22/170) Installing libudebug (2026.01.16~875e1a7a)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 23/170) Installing libucode20230711 (2026.01.16~85922056-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 24/170) Installing ucode (2026.01.16~85922056-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 25/170) Installing ucode-mod-fs (2026.01.16~85922056-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 26/170) Installing ucode-mod-ubus (2026.01.16~85922056-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 27/170) Installing ucode-mod-uci (2026.01.16~85922056-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 28/170) Installing ucode-mod-uloop (2026.01.16~85922056-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 29/170) Installing netifd (2026.02.26~cbb83a18-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 30/170) Installing openwrt-keyring (2025.12.10~f0670054-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 31/170) Installing libjson-script20260213 (2026.06.19~7dd12784-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 32/170) Installing procd (2026.03.13~58eb263d-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 33/170) Installing procd-seccomp (2026.03.13~58eb263d-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 34/170) Installing usign (2025.10.03~c4c72b1b-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 35/170) Installing base-files (1711~f5dae5ece4)
+( 36/170) Installing libpthread (1.2.5-r5)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 37/170) Installing librt (1.2.5-r5)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 38/170) Installing libuuid1 (2.41.5-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 39/170) Installing libblkid1 (2.41.5-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 40/170) Installing blkid (2.41.5-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 41/170) Installing ca-bundle (20260601-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 42/170) Installing libnghttp2-14 (1.70.0-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 43/170) Installing libcurl4 (8.19.0-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 44/170) Installing curl (8.19.0-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 45/170) Installing dnsmasq (2.93-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 46/170) Installing dropbear (2025.89-r3)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 47/170) Installing libe2p2 (1.47.3-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 48/170) Installing libcomerr0 (1.47.3-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 49/170) Installing libss2 (1.47.3-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 50/170) Installing libext2fs2 (1.47.3-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 51/170) Installing e2fsprogs (1.47.3-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 52/170) Installing kernel (6.12.94~ba5ca7f3e73618aeece9cc1c14e512c2-r1)
+( 53/170) Installing kmod-crypto-hash (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 54/170) Installing kmod-crypto-crc32c (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 55/170) Installing kmod-lib-crc32c (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 56/170) Installing kmod-nf-conntrack (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 57/170) Installing kmod-nf-conntrack6 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 58/170) Installing kmod-nf-log (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 59/170) Installing kmod-nf-log6 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 60/170) Installing kmod-nf-nat (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 61/170) Installing kmod-nf-reject (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 62/170) Installing kmod-nf-reject6 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 63/170) Installing kmod-nfnetlink (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 64/170) Installing kmod-nft-core (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 65/170) Installing kmod-nft-fib (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 66/170) Installing kmod-nft-nat (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 67/170) Installing kmod-nf-flow (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 68/170) Installing kmod-nft-offload (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 69/170) Installing jansson4 (2.14.1-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 70/170) Installing libmnl0 (1.0.5-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 71/170) Installing libnftnl11 (1.3.1-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 72/170) Installing nftables-json (1.1.6-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 73/170) Installing firewall4 (2025.03.17~b6e51575-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 74/170) Installing jq (1.8.1-r2)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 75/170) Installing kmod-amazon-ena (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 76/170) Installing kmod-i2c-core (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 77/170) Installing kmod-hwmon-core (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 78/170) Installing kmod-crypto-null (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 79/170) Installing kmod-crypto-aead (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 80/170) Installing kmod-crypto-manager (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 81/170) Installing kmod-crypto-hmac (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 82/170) Installing kmod-crypto-sha3 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 83/170) Installing kmod-crypto-sha512 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 84/170) Installing kmod-crypto-rng (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 85/170) Installing kmod-crypto-geniv (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 86/170) Installing kmod-crypto-seqiv (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 87/170) Installing kmod-crypto-ctr (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 88/170) Installing kmod-crypto-gf128 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 89/170) Installing kmod-crypto-ghash (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 90/170) Installing kmod-crypto-gcm (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 91/170) Installing kmod-macsec (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 92/170) Installing kmod-pps (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 93/170) Installing kmod-ptp (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 94/170) Installing kmod-atlantic (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 95/170) Installing kmod-libphy (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 96/170) Installing kmod-fixed-phy (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 97/170) Installing kmod-of-mdio (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 98/170) Installing kmod-mdio-bcm-unimac (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+( 99/170) Installing kmod-phylib-broadcom (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(100/170) Installing kmod-phy-bcm7xxx (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(101/170) Installing kmod-bcmgenet (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(102/170) Installing kmod-mdio-devres (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(103/170) Installing kmod-phylink (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(104/170) Installing kmod-pcs-xpcs (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(105/170) Installing kmod-stmmac-core (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(106/170) Installing kmod-dwmac-imx (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(107/170) Installing kmod-mdio-bus-mux (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(108/170) Installing kmod-dwmac-rockchip (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(109/170) Installing kmod-dwmac-sun8i (6.12.94-r1)
+(110/170) Installing kmod-e1000e (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(111/170) Installing kmod-nls-base (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(112/170) Installing kmod-nls-cp437 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(113/170) Installing kmod-nls-iso8859-1 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(114/170) Installing kmod-nls-utf8 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(115/170) Installing kmod-fs-vfat (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(116/170) Installing kmod-crypto-crc32 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(117/170) Installing kmod-acpi-mdio (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(118/170) Installing kmod-fsl-xgmac-mdio (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(119/170) Installing kmod-fsl-dpaa1-net (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(120/170) Installing kmod-fsl-mc-dpio (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(121/170) Installing kmod-fsl-pcs-lynx (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(122/170) Installing kmod-fsl-dpaa2-net (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(123/170) Installing kmod-fsl-enetc-net (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(124/170) Installing kmod-net-selftests (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(125/170) Installing kmod-fsl-fec (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(126/170) Installing kmod-regmap-core (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(127/170) Installing kmod-regmap-i2c (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(128/170) Installing kmod-gpio-pca953x (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(129/170) Installing kmod-i2c-mux (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(130/170) Installing kmod-i2c-mux-pca954x (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(131/170) Installing kmod-marvell-mdio (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(132/170) Installing kmod-mvneta (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(133/170) Installing kmod-mvpp2 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(134/170) Installing kmod-octeontx2-net (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(135/170) Installing kmod-lib-crc-itu-t (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(136/170) Installing kmod-phy-aquantia (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(137/170) Installing kmod-phy-broadcom (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(138/170) Installing kmod-phy-marvell (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(139/170) Installing kmod-phy-marvell-10g (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(140/170) Installing kmod-phy-realtek (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(141/170) Installing kmod-lib-crc16 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(142/170) Installing kmod-phy-smsc (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(143/170) Installing kmod-mdio-gpio (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(144/170) Installing kmod-mii (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(145/170) Installing kmod-renesas-net-avb (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(146/170) Installing kmod-rtc-rx8025 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(147/170) Installing kmod-sfp (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(148/170) Installing kmod-vmxnet3 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(149/170) Installing kmod-wdt-sp805 (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(150/170) Installing libustream-mbedtls20201210 (2026.03.01~99f1c0db-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(151/170) Installing logd (2025.10.30~6f78fa49-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(152/170) Installing libf2fs6 (1.16.0-r4)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(153/170) Installing mkf2fs (1.16.0-r4)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(154/170) Installing mtd (27)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(155/170) Installing odhcp6c (2026.06.20~07d324ee-r3)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(156/170) Installing odhcpd-ipv6only (2026.06.29~5d7be43f-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(157/170) Installing libsmartcols1 (2.41.5-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(158/170) Installing partx-utils (2.41.5-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(159/170) Installing kmod-lib-crc-ccitt (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(160/170) Installing kmod-slhc (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(161/170) Installing kmod-ppp (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(162/170) Installing ppp (2.5.2-r4)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(163/170) Installing kmod-pppox (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(164/170) Installing kmod-pppoe (6.12.94-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(165/170) Installing ppp-mod-pppoe (2.5.2-r4)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(166/170) Installing procd-ujail (2026.03.13~58eb263d-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(167/170) Installing uci (2025.12.02~66127cd7-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(168/170) Installing getrandom (2025.10.30~6f78fa49-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(169/170) Installing urandom-seed (3)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+(170/170) Installing urngd (2025.10.03~f17e33d9-r1)
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+wgetERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+OK: 13.5 MiB in 170 packages
+
+Finalizing root filesystem...
+add alternative: /usr/bin/ssh-keygen -> /usr/sbin/dropbear
+add alternative: /usr/bin/scp -> /usr/sbin/dropbear
+add alternative: /usr/bin/ssh -> /usr/sbin/dropbear
+add alternative: /sbin/logread -> /usr/libexec/logread-ubox
+add alternative: /sbin/rmmod -> /sbin/kmodloader
+add alternative: /sbin/insmod -> /sbin/kmodloader
+add alternative: /sbin/lsmod -> /sbin/kmodloader
+add alternative: /sbin/modinfo -> /sbin/kmodloader
+add alternative: /sbin/modprobe -> /sbin/kmodloader
+add alternative: /usr/bin/wget -> /bin/uclient-fetch
+Enabling boot
+Enabling cron
+Enabling dnsmasq
+Enabling done
+Enabling dropbear
+Enabling firewall
+Enabling golden-boot
+Enabling gpio_switch
+Enabling led
+Enabling log
+Enabling network
+Enabling odhcpd
+Enabling packet_steering
+Enabling sysctl
+Enabling sysfixtime
+Enabling sysntpd
+Enabling system
+Enabling umount
+Enabling urandom_seed
+Enabling urngd
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+
+Building images...
+28172 blocks
+Pseudo file "dev" exists in source filesystem "/work/ib/build_dir/target-aarch64_generic_musl/root-armsr/dev".
+Ignoring, exclude it (-e/-ef) to override.
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/root.squashfs, block size 262144.
+[|                                                               ]   0/697   0%[===============================================================\] 733/733 100%
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 262144
+	compressed data, compressed metadata, compressed fragments,
+	no xattrs, compressed ids
+	duplicates are removed
+Filesystem size 4400.91 Kbytes (4.30 Mbytes)
+	31.41% of uncompressed filesystem size (14009.85 Kbytes)
+Inode table size 6886 bytes (6.72 Kbytes)
+	20.67% of uncompressed inode table size (33322 bytes)
+Directory table size 10206 bytes (9.97 Kbytes)
+	50.61% of uncompressed directory table size (20164 bytes)
+Number of duplicate files found 10
+Number of inodes 993
+Number of files 688
+Number of fragments 38
+Number of symbolic links 225
+Number of device nodes 1
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 79
+Number of hard-links 0
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	unknown (0)
+Number of gids 1
+	unknown (0)
+Creating filesystem with parameters:
+    Size: 109051904
+    Block size: 4096
+    Blocks per group: 32768
+    Inodes per group: 6656
+    Inode size: 256
+    Journal blocks: 1024
+    Label: rootfs
+    Blocks: 26624
+    Block groups: 1
+    Reserved blocks: 0
+    Reserved block group size: 7
+Created filesystem with 1002/6656 inodes and 5579/26624 blocks
+212992+0 records in
+212992+0 records out
+109051904 bytes (109 MB, 104 MiB) copied, 0.436415 s, 250 MB/s
+1+0 records in
+1+0 records out
+109051904 bytes (109 MB, 104 MiB) copied, 0.327987 s, 332 MB/s
+8801+1 records in
+8801+1 records out
+4506530 bytes (4.5 MB, 4.3 MiB) copied, 0.00628396 s, 717 MB/s
+0+1 records in
+1+0 records out
+109051904 bytes (109 MB, 104 MiB) copied, 0.137176 s, 795 MB/s
+cp: cannot stat '/work/ib/staging_dir/target-aarch64_generic_musl/root-armsr/boot/.': No such file or directory
++ [ 6 -ne 5 ]
++ [ 6 -ne 6 ]
++ OUTPUT=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz
++ KERNELSIZE=128
++ KERNELDIR=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot
++ KERNELPARTTYPE=ef
++ ROOTFSSIZE=104
++ ROOTFSIMAGE=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/root.ext4
++ ROOTFSPARTTYPE=83
++ ALIGN=256
++ rm -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz
++ head=16
++ sect=63
++ ptgen -o /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz -h 16 -s 63 -g -t ef -p 128m -t 83 -p 104m -l 256 -S 0xae113b1b -G ae113b1b-7710-9c1d-d716-382d3e61a700
+part 0 131072
+part 0 106496
++ set 262144 134217728 134479872 109051904
++ KERNELOFFSET=512
++ KERNELSIZE=134217728
++ ROOTFSOFFSET=262656
++ ROOTFSSIZE=212992
++ [ -n 1 ]
++ dd if=/dev/zero of=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz bs=512 seek=262656 conv=notrunc count=212992
+212992+0 records in
+212992+0 records out
+109051904 bytes (109 MB, 104 MiB) copied, 0.148822 s, 733 MB/s
++ dd if=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/root.ext4 of=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz bs=512 seek=262656 conv=notrunc
+212992+0 records in
+212992+0 records out
+109051904 bytes (109 MB, 104 MiB) copied, 0.121116 s, 900 MB/s
++ [ -n ae113b1b-7710-9c1d-d716-382d3e61a700 ]
++ [ -n 1 ]
++ dd if=/dev/zero of=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz bs=512 seek=475648 conv=notrunc count=63
+63+0 records in
+63+0 records out
+32256 bytes (32 kB, 32 KiB) copied, 6.5833e-05 s, 490 MB/s
++ mkfs.fat --invariant -n kernel -C /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel -S 512 131072
+mkfs.fat: Warning: lowercase labels might not work properly on some systems
+mkfs.fat 4.2 (2021-01-31)
++ LC_ALL=C dos_dircopy /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot /
++ local entry
++ local baseentry
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi ]
++ [ -d /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi ]
++ basename /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi
++ baseentry=efi
++ mmd -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel ::/efi
++ dos_dircopy /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi /efi/
++ local entry
++ local baseentry
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/boot ]
++ [ -d /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/boot ]
++ basename /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/boot
++ baseentry=boot
++ mmd -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel ::/efi/boot
++ dos_dircopy /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/boot /efi/boot/
++ local entry
++ local baseentry
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/boot/bootaa64.efi ]
++ mcopy -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/boot/bootaa64.efi ::/efi/boot/
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt ]
++ [ -d /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt ]
++ basename /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt
++ baseentry=openwrt
++ mmd -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel ::/efi/openwrt
++ dos_dircopy /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt /efi/openwrt/
++ local entry
++ local baseentry
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt/bootaa64.efi ]
++ mcopy -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt/bootaa64.efi ::/efi/openwrt/
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt/grub.cfg ]
++ mcopy -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt/grub.cfg ::/efi/openwrt/
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt/vmlinux ]
++ mcopy -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.boot/efi/openwrt/vmlinux ::/efi/openwrt/
++ dd if=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel of=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz bs=512 seek=512 conv=notrunc
+262144+0 records in
+262144+0 records out
+134217728 bytes (134 MB, 128 MiB) copied, 0.201697 s, 665 MB/s
++ rm -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz.kernel
+cp: cannot stat '/work/ib/staging_dir/target-aarch64_generic_musl/root-armsr/boot/.': No such file or directory
++ [ 6 -ne 5 ]
++ [ 6 -ne 6 ]
++ OUTPUT=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz
++ KERNELSIZE=128
++ KERNELDIR=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot
++ KERNELPARTTYPE=ef
++ ROOTFSSIZE=104
++ ROOTFSIMAGE=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/root.squashfs
++ ROOTFSPARTTYPE=83
++ ALIGN=256
++ rm -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz
++ head=16
++ sect=63
++ ptgen -o /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz -h 16 -s 63 -g -t ef -p 128m -t 83 -p 104m -l 256 -S 0xae113b1b -G ae113b1b-7710-9c1d-d716-382d3e61a700
+part 0 131072
+part 0 106496
++ set 262144 134217728 134479872 109051904
++ KERNELOFFSET=512
++ KERNELSIZE=134217728
++ ROOTFSOFFSET=262656
++ ROOTFSSIZE=212992
++ [ -n 1 ]
++ dd if=/dev/zero of=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz bs=512 seek=262656 conv=notrunc count=212992
+212992+0 records in
+212992+0 records out
+109051904 bytes (109 MB, 104 MiB) copied, 0.128755 s, 847 MB/s
++ dd if=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/root.squashfs of=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz bs=512 seek=262656 conv=notrunc
+8801+1 records in
+8801+1 records out
+4506530 bytes (4.5 MB, 4.3 MiB) copied, 0.00499675 s, 902 MB/s
++ [ -n ae113b1b-7710-9c1d-d716-382d3e61a700 ]
++ [ -n 1 ]
++ dd if=/dev/zero of=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz bs=512 seek=475648 conv=notrunc count=63
+63+0 records in
+63+0 records out
+32256 bytes (32 kB, 32 KiB) copied, 4.2542e-05 s, 758 MB/s
++ mkfs.fat --invariant -n kernel -C /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel -S 512 131072
+mkfs.fat: Warning: lowercase labels might not work properly on some systems
+mkfs.fat 4.2 (2021-01-31)
++ LC_ALL=C dos_dircopy /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot /
++ local entry
++ local baseentry
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi ]
++ [ -d /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi ]
++ basename /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi
++ baseentry=efi
++ mmd -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel ::/efi
++ dos_dircopy /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi /efi/
++ local entry
++ local baseentry
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/boot ]
++ [ -d /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/boot ]
++ basename /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/boot
++ baseentry=boot
++ mmd -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel ::/efi/boot
++ dos_dircopy /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/boot /efi/boot/
++ local entry
++ local baseentry
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/boot/bootaa64.efi ]
++ mcopy -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/boot/bootaa64.efi ::/efi/boot/
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt ]
++ [ -d /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt ]
++ basename /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt
++ baseentry=openwrt
++ mmd -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel ::/efi/openwrt
++ dos_dircopy /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt /efi/openwrt/
++ local entry
++ local baseentry
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt/bootaa64.efi ]
++ mcopy -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt/bootaa64.efi ::/efi/openwrt/
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt/grub.cfg ]
++ mcopy -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt/grub.cfg ::/efi/openwrt/
++ [ -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt/vmlinux ]
++ mcopy -i /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.boot/efi/openwrt/vmlinux ::/efi/openwrt/
++ dd if=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel of=/work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz bs=512 seek=512 conv=notrunc
+262144+0 records in
+262144+0 records out
+134217728 bytes (134 MB, 128 MiB) copied, 0.190595 s, 704 MB/s
++ rm -f /work/ib/build_dir/target-aarch64_generic_musl/linux-armsr_armv8/tmp/openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz.kernel
+11226+1 records in
+11226+1 records out
+5748167 bytes (5.7 MB, 5.5 MiB) copied, 0.00914513 s, 629 MB/s
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/lib/libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+
+Calculating checksums...
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/work/ib/staging_dir/host/bin/../lib/runas.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.

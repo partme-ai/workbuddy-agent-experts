@@ -1,0 +1,4 @@
+interface:
+  display_name: "API 文档生成器"
+  short_description: "从 OpenAPI 契约、路由和源码生成可追溯的接口文档"
+  default_prompt: "使用 $api-doc-generator 从当前项目生成有证据来源的 API 文档。"

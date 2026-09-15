@@ -14,13 +14,13 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_NAMES = (
-    "codex-processon-use",
-    "codex-processon-setup",
-    "codex-processon-diagram",
-    "codex-processon-mindmap",
-    "codex-processon-infographic",
-    "codex-processon-prompt",
-    "codex-processon-review",
+    "processon-use",
+    "processon-setup",
+    "processon-diagram",
+    "processon-mindmap",
+    "processon-infographic",
+    "processon-prompt",
+    "processon-review",
 )
 REQUIRED_FILES = (
     ".codex-plugin/plugin.json",
@@ -134,6 +134,16 @@ def validate_distribution(root: Path = ROOT) -> list[str]:
             errors.append(f"missing required file: skills/{name}/SKILL.md")
         else:
             _validate_skill(skill_path, name, errors)
+
+    managed = set(SKILL_NAMES)
+    skills_dir = root / "skills"
+    if skills_dir.is_dir():
+        for child in sorted(skills_dir.iterdir()):
+            if child.is_dir() and child.name not in managed:
+                errors.append(
+                    f"unmanaged skill directory: skills/{child.name} "
+                    "(skill bodies are vendored; add them to the source package)"
+                )
 
     plugin_path = root / ".codex-plugin/plugin.json"
     mcp_path = root / ".mcp.json"

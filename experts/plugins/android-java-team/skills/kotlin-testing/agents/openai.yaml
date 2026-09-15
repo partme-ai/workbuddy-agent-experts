@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kotlin Testing"
+  short_description: "high-value Kotlin test design and validation"
+  default_prompt: "Use $kotlin-testing to complete this task with repository evidence and executable validation."

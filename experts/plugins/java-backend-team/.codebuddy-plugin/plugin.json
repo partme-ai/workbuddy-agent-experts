@@ -1,0 +1,469 @@
+{
+  "name": "java-backend-team",
+  "version": "1.0.0",
+  "description": "Java Backend Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/java-backend-team-lead.md",
+    "./agents/engineering-backend-architect.md",
+    "./agents/engineering-software-architect.md",
+    "./agents/engineering-multi-agent-systems-architect.md",
+    "./agents/engineering-data-engineer.md",
+    "./agents/engineering-database-optimizer.md",
+    "./agents/engineering-code-reviewer.md",
+    "./agents/engineering-code-style-checker.md",
+    "./agents/engineering-codebase-onboarding-engineer.md",
+    "./agents/engineering-devops-automator.md",
+    "./agents/engineering-it-service-manager.md",
+    "./agents/testing-api-tester.md",
+    "./agents/testing-evidence-collector.md",
+    "./agents/testing-reality-checker.md",
+    "./agents/design-ux-architect.md"
+  ],
+  "skills": [
+    "./skills/ansible",
+    "./skills/api-doc-generator",
+    "./skills/appium",
+    "./skills/caffeine-patterns",
+    "./skills/cloudformation",
+    "./skills/commons-patterns",
+    "./skills/cypress",
+    "./skills/ddd-api-designer",
+    "./skills/ddd-architecture-awesome",
+    "./skills/ddd-architecture-clean",
+    "./skills/ddd-architecture-cola",
+    "./skills/ddd-architecture-doc",
+    "./skills/ddd-architecture-evaluator",
+    "./skills/ddd-architecture-hexagonal",
+    "./skills/ddd-architecture-layered",
+    "./skills/ddd-architecture-onion",
+    "./skills/ddd-architecture-selector",
+    "./skills/ddd-code-reviewer",
+    "./skills/ddd-cqrs-architecture",
+    "./skills/ddd-devops-integration",
+    "./skills/ddd-domain-designer",
+    "./skills/ddd-event-storming",
+    "./skills/ddd-testing-strategist",
+    "./skills/ddd4j-annotation",
+    "./skills/ddd4j-architecture",
+    "./skills/ddd4j-auth",
+    "./skills/ddd4j-bom",
+    "./skills/ddd4j-boot-architecture",
+    "./skills/ddd4j-boot-auth",
+    "./skills/ddd4j-boot-autoconfiguration",
+    "./skills/ddd4j-boot-bom",
+    "./skills/ddd4j-boot-cache",
+    "./skills/ddd4j-boot-data",
+    "./skills/ddd4j-boot-extensions",
+    "./skills/ddd4j-boot-mq",
+    "./skills/ddd4j-boot-observability",
+    "./skills/ddd4j-boot-release",
+    "./skills/ddd4j-boot-testing",
+    "./skills/ddd4j-boot-version-selection",
+    "./skills/ddd4j-boot-web",
+    "./skills/ddd4j-cache",
+    "./skills/ddd4j-cloud-architecture",
+    "./skills/ddd4j-cloud-bom",
+    "./skills/ddd4j-cloud-context",
+    "./skills/ddd4j-cloud-data",
+    "./skills/ddd4j-cloud-feign",
+    "./skills/ddd4j-cloud-observability",
+    "./skills/ddd4j-cloud-release",
+    "./skills/ddd4j-cloud-stream",
+    "./skills/ddd4j-cloud-tenant",
+    "./skills/ddd4j-cloud-testing",
+    "./skills/ddd4j-cloud-version-selection",
+    "./skills/ddd4j-cloud-web",
+    "./skills/ddd4j-core",
+    "./skills/ddd4j-data",
+    "./skills/ddd4j-extensions",
+    "./skills/ddd4j-javalin-architecture",
+    "./skills/ddd4j-javalin-auth",
+    "./skills/ddd4j-javalin-cache",
+    "./skills/ddd4j-javalin-data",
+    "./skills/ddd4j-javalin-extensions",
+    "./skills/ddd4j-javalin-mq",
+    "./skills/ddd4j-javalin-production-hardening",
+    "./skills/ddd4j-javalin-release",
+    "./skills/ddd4j-javalin-runtime",
+    "./skills/ddd4j-javalin-testing",
+    "./skills/ddd4j-javalin-version-selection",
+    "./skills/ddd4j-javalin-web",
+    "./skills/ddd4j-kit",
+    "./skills/ddd4j-metrics",
+    "./skills/ddd4j-mq",
+    "./skills/ddd4j-quarkus-architecture",
+    "./skills/ddd4j-quarkus-auth",
+    "./skills/ddd4j-quarkus-cache",
+    "./skills/ddd4j-quarkus-data",
+    "./skills/ddd4j-quarkus-extension-authoring",
+    "./skills/ddd4j-quarkus-mq",
+    "./skills/ddd4j-quarkus-release",
+    "./skills/ddd4j-quarkus-runtime",
+    "./skills/ddd4j-quarkus-testing",
+    "./skills/ddd4j-quarkus-version-selection",
+    "./skills/ddd4j-quarkus-web",
+    "./skills/ddd4j-runtime",
+    "./skills/ddd4j-version-selection",
+    "./skills/ddd4j-web",
+    "./skills/detox",
+    "./skills/doc-coauthoring",
+    "./skills/easy4j-deploy",
+    "./skills/easyexcel-fill",
+    "./skills/easyexcel-read",
+    "./skills/easyexcel-write",
+    "./skills/elasticsearch",
+    "./skills/full-stack-doc",
+    "./skills/github-actions",
+    "./skills/gitlab-ci",
+    "./skills/guava-patterns",
+    "./skills/hutool-patterns",
+    "./skills/jackson-patterns",
+    "./skills/java-code-comments",
+    "./skills/java-component-patterns",
+    "./skills/java-conventions",
+    "./skills/java-development-manual",
+    "./skills/jest",
+    "./skills/junit",
+    "./skills/junit-mockito-patterns",
+    "./skills/kafka-patterns",
+    "./skills/kotlin-code-review",
+    "./skills/kotlin-coroutines",
+    "./skills/kotlin-gradle-build",
+    "./skills/kotlin-java-migration",
+    "./skills/kotlin-java-migration-testing",
+    "./skills/kotlin-stable",
+    "./skills/kotlin-testing",
+    "./skills/kubernetes",
+    "./skills/license-compliance-triage",
+    "./skills/linuxmirrors-awesome",
+    "./skills/linuxmirrors-docker",
+    "./skills/linuxmirrors-os",
+    "./skills/lombok-patterns",
+    "./skills/mapstruct-patterns",
+    "./skills/markitdown-awesome",
+    "./skills/markitdown-cli",
+    "./skills/markitdown-ocr",
+    "./skills/maven-multi-branch-license-gate-hardening",
+    "./skills/maven-release-validation",
+    "./skills/maven-search",
+    "./skills/maven-snapshot-publication-recovery",
+    "./skills/mermaid",
+    "./skills/mybatis-patterns",
+    "./skills/mybatis-plus-generator",
+    "./skills/mybatis-plus-patterns",
+    "./skills/mysql",
+    "./skills/okhttp5",
+    "./skills/openspec-apply",
+    "./skills/openspec-archive",
+    "./skills/openspec-bulk-archive",
+    "./skills/openspec-config",
+    "./skills/openspec-continue",
+    "./skills/openspec-explore",
+    "./skills/openspec-ff",
+    "./skills/openspec-initial",
+    "./skills/openspec-install",
+    "./skills/openspec-new",
+    "./skills/openspec-onboard",
+    "./skills/openspec-schema",
+    "./skills/openspec-sync",
+    "./skills/openspec-update",
+    "./skills/openspec-verify",
+    "./skills/oracle",
+    "./skills/plantuml",
+    "./skills/playwright",
+    "./skills/postgresql",
+    "./skills/processon-diagram-generator",
+    "./skills/processon-mindmap",
+    "./skills/pytest",
+    "./skills/redis",
+    "./skills/redis-redisson-patterns",
+    "./skills/sa-token",
+    "./skills/sa-token-advanced",
+    "./skills/sa-token-api-security",
+    "./skills/sa-token-integration",
+    "./skills/sa-token-micro",
+    "./skills/sa-token-oauth2",
+    "./skills/sa-token-sso",
+    "./skills/seata-patterns",
+    "./skills/selenium",
+    "./skills/spark-optimization",
+    "./skills/spring-ai",
+    "./skills/spring-ai-alibaba",
+    "./skills/spring-boot",
+    "./skills/spring-boot-starter-patterns",
+    "./skills/spring-cloud",
+    "./skills/spring-cloud-alibaba",
+    "./skills/spring-data-jpa",
+    "./skills/spring-security",
+    "./skills/technical-blog-doc",
+    "./skills/terraform",
+    "./skills/unirest-java-3",
+    "./skills/unirest-java-4",
+    "./skills/vitest",
+    "./skills/webapp-testing",
+    "./skills/xxl-job-patterns"
+  ],
+  "expertType": "team",
+  "agentName": "java-backend-team-lead",
+  "teamInfo": {
+    "leadAgent": "java-backend-team-lead",
+    "memberAgents": [
+      "engineering-backend-architect",
+      "engineering-software-architect",
+      "engineering-multi-agent-systems-architect",
+      "engineering-data-engineer",
+      "engineering-database-optimizer",
+      "engineering-code-reviewer",
+      "engineering-code-style-checker",
+      "engineering-codebase-onboarding-engineer",
+      "engineering-devops-automator",
+      "engineering-it-service-manager",
+      "testing-api-tester",
+      "testing-evidence-collector",
+      "testing-reality-checker",
+      "design-ux-architect"
+    ]
+  },
+  "displayName": {
+    "en": "Java Backend Project Team",
+    "zh": "Java 后端项目专家团"
+  },
+  "profession": {
+    "en": "Java Backend Project Team",
+    "zh": "Java 后端项目专家团"
+  },
+  "displayDescription": {
+    "en": "Java Backend Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "Java 后端项目专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in java-backend-team",
+    "zh": "用 java-backend-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in java-backend-team",
+      "zh": "用 java-backend-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "java-backend-team-lead",
+      "name": {
+        "en": "java-backend-team-lead",
+        "zh": "java-backend-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated java-backend-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated java-backend-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/java-backend-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "engineering-backend-architect",
+      "name": {
+        "en": "engineering-backend-architect",
+        "zh": "engineering-backend-architect"
+      },
+      "profession": {
+        "en": "资深后端架构师，专精可扩展系统设计、数据库架构、API 开发和云基础设施。构建健壮、安全、高性能的服务端应用和微服务。 (auto-vendored by compose_team.py)",
+        "zh": "资深后端架构师，专精可扩展系统设计、数据库架构、API 开发和云基础设施。构建健壮、安全、高性能的服务端应用和微服务。"
+      },
+      "avatar": "avatars/engineering-backend-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-software-architect",
+      "name": {
+        "en": "engineering-software-architect",
+        "zh": "engineering-software-architect"
+      },
+      "profession": {
+        "en": "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。 (auto-vendored by compose_team.py)",
+        "zh": "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。"
+      },
+      "avatar": "avatars/engineering-software-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-multi-agent-systems-architect",
+      "name": {
+        "en": "engineering-multi-agent-systems-architect",
+        "zh": "engineering-multi-agent-systems-architect"
+      },
+      "profession": {
+        "en": "系统架构师，专精于 multi-agent（多智能体）AI 流水线的设计、协调与治理——涵盖拓扑选型、上下文管理、智能体间信任、故障恢复、human-in-the-loop（人在环中）门控，以及面向生产级智能体系统的可观测性。 (auto-vendored by compose_team.py)",
+        "zh": "系统架构师，专精于 multi-agent（多智能体）AI 流水线的设计、协调与治理——涵盖拓扑选型、上下文管理、智能体间信任、故障恢复、human-in-the-loop（人在环中）门控，以及面向生产级智能体系统的可观测性。"
+      },
+      "avatar": "avatars/engineering-multi-agent-systems-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-data-engineer",
+      "name": {
+        "en": "engineering-data-engineer",
+        "zh": "engineering-data-engineer"
+      },
+      "profession": {
+        "en": "专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。 (auto-vendored by compose_team.py)",
+        "zh": "专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。"
+      },
+      "avatar": "avatars/engineering-data-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-database-optimizer",
+      "name": {
+        "en": "engineering-database-optimizer",
+        "zh": "engineering-database-optimizer"
+      },
+      "profession": {
+        "en": "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。 (auto-vendored by compose_team.py)",
+        "zh": "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。"
+      },
+      "avatar": "avatars/engineering-database-optimizer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-reviewer",
+      "name": {
+        "en": "engineering-code-reviewer",
+        "zh": "engineering-code-reviewer"
+      },
+      "profession": {
+        "en": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。 (auto-vendored by compose_team.py)",
+        "zh": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。"
+      },
+      "avatar": "avatars/engineering-code-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-style-checker",
+      "name": {
+        "en": "engineering-code-style-checker",
+        "zh": "engineering-code-style-checker"
+      },
+      "profession": {
+        "en": "\"Java 项目规范检查与修复\" (auto-vendored by compose_team.py)",
+        "zh": "\"Java 项目规范检查与修复\""
+      },
+      "avatar": "avatars/engineering-code-style-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-codebase-onboarding-engineer",
+      "name": {
+        "en": "engineering-codebase-onboarding-engineer",
+        "zh": "engineering-codebase-onboarding-engineer"
+      },
+      "profession": {
+        "en": "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。 (auto-vendored by compose_team.py)",
+        "zh": "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。"
+      },
+      "avatar": "avatars/engineering-codebase-onboarding-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-devops-automator",
+      "name": {
+        "en": "engineering-devops-automator",
+        "zh": "engineering-devops-automator"
+      },
+      "profession": {
+        "en": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家 (auto-vendored by compose_team.py)",
+        "zh": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家"
+      },
+      "avatar": "avatars/engineering-devops-automator.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-it-service-manager",
+      "name": {
+        "en": "engineering-it-service-manager",
+        "zh": "engineering-it-service-manager"
+      },
+      "profession": {
+        "en": "资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA 治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值 (auto-vendored by compose_team.py)",
+        "zh": "资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA 治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值"
+      },
+      "avatar": "avatars/engineering-it-service-manager.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-api-tester",
+      "name": {
+        "en": "testing-api-tester",
+        "zh": "testing-api-tester"
+      },
+      "profession": {
+        "en": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成 (auto-vendored by compose_team.py)",
+        "zh": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成"
+      },
+      "avatar": "avatars/testing-api-tester.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-evidence-collector",
+      "name": {
+        "en": "testing-evidence-collector",
+        "zh": "testing-evidence-collector"
+      },
+      "profession": {
+        "en": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。 (auto-vendored by compose_team.py)",
+        "zh": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。"
+      },
+      "avatar": "avatars/testing-evidence-collector.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-reality-checker",
+      "name": {
+        "en": "testing-reality-checker",
+        "zh": "testing-reality-checker"
+      },
+      "profession": {
+        "en": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪 (auto-vendored by compose_team.py)",
+        "zh": "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪"
+      },
+      "avatar": "avatars/testing-reality-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ux-architect",
+      "name": {
+        "en": "design-ux-architect",
+        "zh": "design-ux-architect"
+      },
+      "profession": {
+        "en": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。 (auto-vendored by compose_team.py)",
+        "zh": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。"
+      },
+      "avatar": "avatars/design-ux-architect.png",
+      "role": "member"
+    }
+  ]
+}

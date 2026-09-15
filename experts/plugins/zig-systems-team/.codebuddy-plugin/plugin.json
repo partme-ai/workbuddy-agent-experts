@@ -1,0 +1,292 @@
+{
+  "name": "zig-systems-team",
+  "version": "1.0.0",
+  "description": "Zig/C Systems Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/zig-systems-team-lead.md",
+    "./agents/engineering-embedded-firmware-engineer.md",
+    "./agents/engineering-embedded-linux-driver-engineer.md",
+    "./agents/engineering-fpga-digital-design-engineer.md",
+    "./agents/engineering-code-reviewer.md",
+    "./agents/engineering-code-style-checker.md",
+    "./agents/engineering-devops-automator.md",
+    "./agents/testing-embedded-qa-engineer.md",
+    "./agents/testing-evidence-collector.md"
+  ],
+  "skills": [
+    "./skills/ansible",
+    "./skills/api-doc-generator",
+    "./skills/appium",
+    "./skills/cloudformation",
+    "./skills/cypress",
+    "./skills/detox",
+    "./skills/doc-coauthoring",
+    "./skills/esp32-debug",
+    "./skills/esp32-freertos",
+    "./skills/esp32-idf",
+    "./skills/esp32-lowpower",
+    "./skills/esp32-ota",
+    "./skills/esp32-peripherals",
+    "./skills/esp32-secureboot",
+    "./skills/esp32-variants",
+    "./skills/esp32-wifi-provision",
+    "./skills/full-stack-doc",
+    "./skills/fw-core",
+    "./skills/fw-emulation",
+    "./skills/fw-hil-testing",
+    "./skills/fw-release-gate",
+    "./skills/fw-toolchain",
+    "./skills/github-actions",
+    "./skills/gitlab-ci",
+    "./skills/jest",
+    "./skills/junit",
+    "./skills/kubernetes",
+    "./skills/linuxmirrors-awesome",
+    "./skills/linuxmirrors-docker",
+    "./skills/linuxmirrors-os",
+    "./skills/markitdown-awesome",
+    "./skills/markitdown-cli",
+    "./skills/markitdown-ocr",
+    "./skills/mermaid",
+    "./skills/openwrt-amlogic-remake",
+    "./skills/openwrt-image-build",
+    "./skills/openwrt-procd-init",
+    "./skills/openwrt-serial-recovery",
+    "./skills/openwrt-storage-mount",
+    "./skills/openwrt-uci-defaults",
+    "./skills/plantuml",
+    "./skills/playwright",
+    "./skills/processon-diagram-generator",
+    "./skills/processon-mindmap",
+    "./skills/pytest",
+    "./skills/rust-api-design",
+    "./skills/rust-by-example",
+    "./skills/rust-cargo-build",
+    "./skills/rust-cli",
+    "./skills/rust-code-review",
+    "./skills/rust-concurrency",
+    "./skills/rust-crate-discovery",
+    "./skills/rust-database",
+    "./skills/rust-dependencies",
+    "./skills/rust-documentation",
+    "./skills/rust-embedded",
+    "./skills/rust-http-client",
+    "./skills/rust-java-migration",
+    "./skills/rust-java-migration-testing",
+    "./skills/rust-lombok-macros",
+    "./skills/rust-macros",
+    "./skills/rust-module-layout",
+    "./skills/rust-observability",
+    "./skills/rust-performance",
+    "./skills/rust-semver",
+    "./skills/rust-stable",
+    "./skills/rust-stdlib",
+    "./skills/rust-style-clippy",
+    "./skills/rust-testing",
+    "./skills/rust-uniffi-building",
+    "./skills/rust-unsafe-ffi",
+    "./skills/rust-web",
+    "./skills/rust-web-security",
+    "./skills/rust-workspace",
+    "./skills/selenium",
+    "./skills/spark-optimization",
+    "./skills/technical-blog-doc",
+    "./skills/terraform",
+    "./skills/vitest",
+    "./skills/webapp-testing",
+    "./skills/zig-0-15",
+    "./skills/zig-0-16",
+    "./skills/zig-build-system",
+    "./skills/zig-code-review",
+    "./skills/zig-concurrency",
+    "./skills/zig-crypto",
+    "./skills/zig-http",
+    "./skills/zig-java-migration",
+    "./skills/zig-java-migration-testing",
+    "./skills/zig-json",
+    "./skills/zig-project-structure",
+    "./skills/zig-raylib",
+    "./skills/zig-sdl3-bindings",
+    "./skills/zig-testing",
+    "./skills/zig-tiger-style"
+  ],
+  "expertType": "team",
+  "agentName": "zig-systems-team-lead",
+  "teamInfo": {
+    "leadAgent": "zig-systems-team-lead",
+    "memberAgents": [
+      "engineering-embedded-firmware-engineer",
+      "engineering-embedded-linux-driver-engineer",
+      "engineering-fpga-digital-design-engineer",
+      "engineering-code-reviewer",
+      "engineering-code-style-checker",
+      "engineering-devops-automator",
+      "testing-embedded-qa-engineer",
+      "testing-evidence-collector"
+    ]
+  },
+  "displayName": {
+    "en": "Zig/C Systems Team",
+    "zh": "Zig/C 系统编程专家团"
+  },
+  "profession": {
+    "en": "Zig/C Systems Team",
+    "zh": "Zig/C 系统编程专家团"
+  },
+  "displayDescription": {
+    "en": "Zig/C Systems Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "Zig/C 系统编程专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in zig-systems-team",
+    "zh": "用 zig-systems-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in zig-systems-team",
+      "zh": "用 zig-systems-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "zig-systems-team-lead",
+      "name": {
+        "en": "zig-systems-team-lead",
+        "zh": "zig-systems-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated zig-systems-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated zig-systems-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/zig-systems-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "engineering-embedded-firmware-engineer",
+      "name": {
+        "en": "engineering-embedded-firmware-engineer",
+        "zh": "engineering-embedded-firmware-engineer"
+      },
+      "profession": {
+        "en": "裸机和 RTOS 固件开发专家——精通 ESP32/ESP-IDF、PlatformIO、Arduino、ARM Cortex-M、STM32 HAL/LL、Nordic nRF5/nRF Connect SDK、FreeRTOS、Zephyr。 (auto-vendored by compose_team.py)",
+        "zh": "裸机和 RTOS 固件开发专家——精通 ESP32/ESP-IDF、PlatformIO、Arduino、ARM Cortex-M、STM32 HAL/LL、Nordic nRF5/nRF Connect SDK、FreeRTOS、Zephyr。"
+      },
+      "avatar": "avatars/engineering-embedded-firmware-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-embedded-linux-driver-engineer",
+      "name": {
+        "en": "engineering-embedded-linux-driver-engineer",
+        "zh": "engineering-embedded-linux-driver-engineer"
+      },
+      "profession": {
+        "en": "嵌入式 Linux 内核驱动与 BSP 开发专家——精通 Linux 内核模块、设备树、Platform/I2C/SPI/USB 驱动框架、DMA、中断子系统、Yocto/Buildroot、U-Boot、交叉编译工具链。 (auto-vendored by compose_team.py)",
+        "zh": "嵌入式 Linux 内核驱动与 BSP 开发专家——精通 Linux 内核模块、设备树、Platform/I2C/SPI/USB 驱动框架、DMA、中断子系统、Yocto/Buildroot、U-Boot、交叉编译工具链。"
+      },
+      "avatar": "avatars/engineering-embedded-linux-driver-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-fpga-digital-design-engineer",
+      "name": {
+        "en": "engineering-fpga-digital-design-engineer",
+        "zh": "engineering-fpga-digital-design-engineer"
+      },
+      "profession": {
+        "en": "FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、VHDL、Vivado/Quartus、AXI/AHB 总线、时序收敛、Zynq/Intel SoC FPGA、高层次综合（HLS）。 (auto-vendored by compose_team.py)",
+        "zh": "FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、VHDL、Vivado/Quartus、AXI/AHB 总线、时序收敛、Zynq/Intel SoC FPGA、高层次综合（HLS）。"
+      },
+      "avatar": "avatars/engineering-fpga-digital-design-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-reviewer",
+      "name": {
+        "en": "engineering-code-reviewer",
+        "zh": "engineering-code-reviewer"
+      },
+      "profession": {
+        "en": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。 (auto-vendored by compose_team.py)",
+        "zh": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。"
+      },
+      "avatar": "avatars/engineering-code-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-style-checker",
+      "name": {
+        "en": "engineering-code-style-checker",
+        "zh": "engineering-code-style-checker"
+      },
+      "profession": {
+        "en": "\"Java 项目规范检查与修复\" (auto-vendored by compose_team.py)",
+        "zh": "\"Java 项目规范检查与修复\""
+      },
+      "avatar": "avatars/engineering-code-style-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-devops-automator",
+      "name": {
+        "en": "engineering-devops-automator",
+        "zh": "engineering-devops-automator"
+      },
+      "profession": {
+        "en": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家 (auto-vendored by compose_team.py)",
+        "zh": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家"
+      },
+      "avatar": "avatars/engineering-devops-automator.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-embedded-qa-engineer",
+      "name": {
+        "en": "testing-embedded-qa-engineer",
+        "zh": "testing-embedded-qa-engineer"
+      },
+      "profession": {
+        "en": "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。 (auto-vendored by compose_team.py)",
+        "zh": "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。"
+      },
+      "avatar": "avatars/testing-embedded-qa-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-evidence-collector",
+      "name": {
+        "en": "testing-evidence-collector",
+        "zh": "testing-evidence-collector"
+      },
+      "profession": {
+        "en": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。 (auto-vendored by compose_team.py)",
+        "zh": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。"
+      },
+      "avatar": "avatars/testing-evidence-collector.png",
+      "role": "member"
+    }
+  ]
+}

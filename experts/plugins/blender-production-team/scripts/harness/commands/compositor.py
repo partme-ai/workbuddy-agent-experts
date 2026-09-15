@@ -5,33 +5,6 @@ from ..errors import HarnessError
 from .validation import finite_number
 
 
-# ---------------------------------------------------------------------------
-# Compositor node whitelist: plan name -> Blender bl_idname
-#
-# Derived from bpy.types at Blender 5.2.1 (verified live):
-#   CompositorNodeRLayers, CompositorNodeOutputFile, CompositorNodeCryptomatte,
-#   CompositorNodeKeying, CompositorNodeMask
-# ---------------------------------------------------------------------------
-_COMPOSITOR_NODE_WHITELIST: dict[str, str] = {
-    'Render Layers': 'CompositorNodeRLayers',
-    'File Output': 'CompositorNodeOutputFile',
-    'Cryptomatte': 'CompositorNodeCryptomatte',
-    'Keying': 'CompositorNodeKeying',
-    'Mask': 'CompositorNodeMask',
-}
-
-
-def _resolve_compositor_node_type(name: str) -> str:
-    """Resolve a plan-level compositor node type name to a Blender bl_idname.
-
-    Only explicit, reviewed names from the whitelist are accepted.
-    """
-    if name in _COMPOSITOR_NODE_WHITELIST:
-        return _COMPOSITOR_NODE_WHITELIST[name]
-    raise HarnessError('INVALID_ARGUMENT',
-                       f'compositor node type is not whitelisted: {name}')
-
-
 class CompositorCommands:
     def __init__(self,bpy_module,output_root=None):
         self.bpy=bpy_module;self.output_root=Path(output_root).resolve() if output_root else None
@@ -61,34 +34,6 @@ class CompositorCommands:
         chain.append(composite)
         for source,target in zip(chain,chain[1:]):tree.links.new(source.outputs['Image'],target.inputs['Image'])
         return {'changedObjects':[],'result':{'nodes':[item.name for item in chain],'exposure':exposure,'glare':glare}}
-    def add_node(self,args):
-        """Add a compositor node by whitelisted type name.
-
-        Parameters
-        ----------
-        nodeType : str
-            Whitelisted plan name (e.g. 'Render Layers', 'File Output').
-        name : str
-            Name for the new node.
-        """
-        node_type_input = args.get('nodeType')
-        name = args.get('name')
-        if not isinstance(node_type_input,str) or not node_type_input:
-            raise HarnessError('INVALID_ARGUMENT','nodeType is required')
-        if not isinstance(name,str) or not name:
-            raise HarnessError('INVALID_ARGUMENT','name is required')
-        bl_idname = _resolve_compositor_node_type(node_type_input)
-        tree = self._tree(True)
-        if tree.nodes.get(name):
-            raise HarnessError('NAME_COLLISION',f'compositor node already exists: {name}')
-        try:
-            node = tree.nodes.new(bl_idname)
-        except RuntimeError as exc:
-            raise HarnessError('INVALID_ARGUMENT',
-                               f'Blender rejected compositor node type {bl_idname}: {exc}') from exc
-        node.name = name
-        return {'changedObjects':[],'result':{'name':node.name,'nodeType':node.bl_idname}}
-
     def inspect(self,_args):
         scene=self.bpy.context.scene;tree=self._tree(False)
         if tree is None:return {'changedObjects':[],'result':{'enabled':False,'nodes':[],'links':[]}}

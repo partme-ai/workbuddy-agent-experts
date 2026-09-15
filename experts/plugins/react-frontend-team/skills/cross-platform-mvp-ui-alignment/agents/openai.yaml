@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cross-platform MVP UI Alignment"
+  short_description: "对齐多平台 MVP 规格、设计语言与成套 Phone/Tablet UI 资产"
+  default_prompt: "Use $cross-platform-mvp-ui-alignment to align my Android and Apple MVP specs and produce matching phone and tablet UI assets."

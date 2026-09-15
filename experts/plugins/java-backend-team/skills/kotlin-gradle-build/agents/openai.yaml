@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kotlin Gradle Build"
+  short_description: "Kotlin Gradle build and module engineering"
+  default_prompt: "Use $kotlin-gradle-build to complete this task with repository evidence and executable validation."

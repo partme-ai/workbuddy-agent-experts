@@ -92,11 +92,11 @@
       "id": "engineering-ai-agent-architect",
       "name": {
         "en": "engineering-ai-agent-architect",
-        "zh": "agent-architect"
+        "zh": "engineering-ai-agent-architect"
       },
       "profession": {
-        "en": "engineering-ai-agent-architect",
-        "zh": "agent-architect"
+        "en": "\"智能体架构师，**首选 AgentScope**（自研 java/kotlin/rust/zig + 阿里官方 python + 多语言 Runtime），专精 Agent Harness 设计、多 Agent 协作框架、评估体系（Eval Pipeline）、Guardrails 规范与 RAG 架构；Java 技术栈覆盖 AgentScope-java、Spring AI、LangChain4j，把 LLM 应用从 PoC 推到生产级。\" (auto-vendored by compose_team.py)",
+        "zh": "\"智能体架构师，**首选 AgentScope**（自研 java/kotlin/rust/zig + 阿里官方 python + 多语言 Runtime），专精 Agent Harness 设计、多 Agent 协作框架、评估体系（Eval Pipeline）、Guardrails 规范与 RAG 架构；Java 技术栈覆盖 AgentScope-java、Spring AI、LangChain4j，把 LLM 应用从 PoC 推到生产级。\""
       },
       "avatar": "avatars/engineering-ai-agent-architect.png",
       "role": "member"
@@ -105,11 +105,11 @@
       "id": "engineering-backend-architect",
       "name": {
         "en": "engineering-backend-architect",
-        "zh": "后端架构师"
+        "zh": "engineering-backend-architect"
       },
       "profession": {
-        "en": "engineering-backend-architect",
-        "zh": "后端架构师"
+        "en": "资深后端架构师，专精可扩展系统设计、数据库架构、API 开发和云基础设施。构建健壮、安全、高性能的服务端应用和微服务。 (auto-vendored by compose_team.py)",
+        "zh": "资深后端架构师，专精可扩展系统设计、数据库架构、API 开发和云基础设施。构建健壮、安全、高性能的服务端应用和微服务。"
       },
       "avatar": "avatars/engineering-backend-architect.png",
       "role": "member"
@@ -118,11 +118,11 @@
       "id": "engineering-code-reviewer",
       "name": {
         "en": "engineering-code-reviewer",
-        "zh": "代码审查员"
+        "zh": "engineering-code-reviewer"
       },
       "profession": {
-        "en": "engineering-code-reviewer",
-        "zh": "代码审查员"
+        "en": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。 (auto-vendored by compose_team.py)",
+        "zh": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。"
       },
       "avatar": "avatars/engineering-code-reviewer.png",
       "role": "member"
@@ -131,11 +131,11 @@
       "id": "engineering-database-optimizer",
       "name": {
         "en": "engineering-database-optimizer",
-        "zh": "数据库优化师"
+        "zh": "engineering-database-optimizer"
       },
       "profession": {
-        "en": "engineering-database-optimizer",
-        "zh": "数据库优化师"
+        "en": "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。 (auto-vendored by compose_team.py)",
+        "zh": "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。"
       },
       "avatar": "avatars/engineering-database-optimizer.png",
       "role": "member"
@@ -144,11 +144,11 @@
       "id": "engineering-devops-automator",
       "name": {
         "en": "engineering-devops-automator",
-        "zh": "DevOps 自动化师"
+        "zh": "engineering-devops-automator"
       },
       "profession": {
-        "en": "engineering-devops-automator",
-        "zh": "DevOps 自动化师"
+        "en": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家 (auto-vendored by compose_team.py)",
+        "zh": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家"
       },
       "avatar": "avatars/engineering-devops-automator.png",
       "role": "member"
@@ -157,11 +157,11 @@
       "id": "engineering-data-engineer",
       "name": {
         "en": "engineering-data-engineer",
-        "zh": "数据工程师"
+        "zh": "engineering-data-engineer"
       },
       "profession": {
-        "en": "engineering-data-engineer",
-        "zh": "数据工程师"
+        "en": "专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。 (auto-vendored by compose_team.py)",
+        "zh": "专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。"
       },
       "avatar": "avatars/engineering-data-engineer.png",
       "role": "member"

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/partme-ai/codex-blender-plugin/skills/codex-blender-previs/references/previs-map.schema.json",
+  "title": "White-model geometry-to-role map",
+  "description": "Declares which placeholder geometry stands for which story role, and states what the geometry deliberately does not encode. This file travels with the previs video to the downstream video-generation handoff.",
+  "type": "object",
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "projectId": { "type": "string", "minLength": 1 },
+    "previsVideo": {
+      "type": "object",
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "durationFrames": { "type": "integer", "minimum": 1 },
+        "fps": {
+          "type": "object",
+          "properties": {
+            "num": { "type": "integer", "minimum": 1 },
+            "den": { "type": "integer", "minimum": 1 }
+          },
+          "required": ["num", "den"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["path", "durationFrames", "fps"],
+      "additionalProperties": false
+    },
+    "cast": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "roleId": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "label": { "type": "string", "minLength": 1 },
+          "placeholder": {
+            "type": "object",
+            "properties": {
+              "objectName": { "type": "string", "pattern": "^previs_role_[a-z0-9-]+$" },
+              "primitiveType": { "type": "string", "minLength": 1 },
+              "colorHex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+            },
+            "required": ["objectName", "primitiveType", "colorHex"],
+            "additionalProperties": false
+          },
+          "representsInFinal": { "type": "string", "minLength": 1 },
+          "assetImageRef": { "type": "string" }
+        },
+        "required": ["roleId", "label", "placeholder", "representsInFinal"],
+        "additionalProperties": false
+      }
+    },
+    "encoding": {
+      "type": "object",
+      "properties": {
+        "encodes": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "enum": [
+              "camera-movement",
+              "shot-size",
+              "cut-timing",
+              "subject-position",
+              "subject-motion-direction",
+              "spatial-relationships",
+              "scale-relationships"
+            ]
+          }
+        },
+        "doesNotEncode": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "limb-articulation",
+              "facial-performance",
+              "costume-or-texture",
+              "physics-detail",
+              "final-lighting"
+            ]
+          }
+        }
+      },
+      "required": ["encodes", "doesNotEncode"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["schema_version", "projectId", "previsVideo", "cast", "encoding"],
+  "additionalProperties": false
+}

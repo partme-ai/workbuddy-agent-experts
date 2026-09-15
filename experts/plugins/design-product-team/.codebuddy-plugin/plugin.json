@@ -1,0 +1,410 @@
+{
+  "name": "design-product-team",
+  "version": "1.0.0",
+  "description": "Design & Product Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/design-product-team-lead.md",
+    "./agents/design-ux-architect.md",
+    "./agents/design-ui-designer.md",
+    "./agents/design-ux-researcher.md",
+    "./agents/design-persona-walkthrough.md",
+    "./agents/design-visual-storyteller.md",
+    "./agents/design-inclusive-visuals-specialist.md",
+    "./agents/design-brand-guardian.md",
+    "./agents/design-whimsy-injector.md",
+    "./agents/design-image-prompt-engineer.md",
+    "./agents/engineering-frontend-developer.md"
+  ],
+  "skills": [
+    "./skills/adobe-xd",
+    "./skills/algorithmic-art",
+    "./skills/appium",
+    "./skills/ascii-ansi-colorizer",
+    "./skills/ascii-cli-logo-banner",
+    "./skills/ascii-cli-logo-banner-figletjs",
+    "./skills/ascii-cli-logo-banner-python",
+    "./skills/ascii-diagram-boxflow",
+    "./skills/ascii-image-to-ascii",
+    "./skills/ascii-mini-charts",
+    "./skills/ascii-motd-profile-banner",
+    "./skills/ascii-progress-and-spinner",
+    "./skills/ascii-table-renderer",
+    "./skills/ascii-terminal-animation-pack",
+    "./skills/ascii-text-art-library",
+    "./skills/avue",
+    "./skills/avue-crud",
+    "./skills/avue-form",
+    "./skills/better-icons",
+    "./skills/bootstrap-vue3",
+    "./skills/brand-guidelines",
+    "./skills/canvas-design",
+    "./skills/cli-ascii-logo",
+    "./skills/cross-platform-mvp-ui-alignment",
+    "./skills/cypress",
+    "./skills/detox",
+    "./skills/drawio-architecture",
+    "./skills/drawio-flowchart",
+    "./skills/element-plus-vue3",
+    "./skills/huashu-design",
+    "./skills/jest",
+    "./skills/junit",
+    "./skills/layui-vue3",
+    "./skills/lime-echart",
+    "./skills/openspec-apply",
+    "./skills/openspec-archive",
+    "./skills/openspec-bulk-archive",
+    "./skills/openspec-config",
+    "./skills/openspec-continue",
+    "./skills/openspec-explore",
+    "./skills/openspec-ff",
+    "./skills/openspec-initial",
+    "./skills/openspec-install",
+    "./skills/openspec-new",
+    "./skills/openspec-onboard",
+    "./skills/openspec-schema",
+    "./skills/openspec-sync",
+    "./skills/openspec-update",
+    "./skills/openspec-verify",
+    "./skills/pencil",
+    "./skills/pencil-design-from-stitch-html",
+    "./skills/pencil-mcp-batch-design",
+    "./skills/pencil-mcp-batch-get",
+    "./skills/pencil-mcp-find-empty-space-on-canvas",
+    "./skills/pencil-mcp-get-editor-state",
+    "./skills/pencil-mcp-get-guidelines",
+    "./skills/pencil-mcp-get-screenshot",
+    "./skills/pencil-mcp-get-style-guide",
+    "./skills/pencil-mcp-get-style-guide-tags",
+    "./skills/pencil-mcp-get-variables",
+    "./skills/pencil-mcp-open-document",
+    "./skills/pencil-mcp-replace-all-matching-properties",
+    "./skills/pencil-mcp-search-all-unique-properties",
+    "./skills/pencil-mcp-set-variables",
+    "./skills/pencil-mcp-snapshot-layout",
+    "./skills/pencil-skill-creator",
+    "./skills/pencil-ui-design-spec-generator",
+    "./skills/pencil-ui-design-system-antd",
+    "./skills/pencil-ui-design-system-bootstrap",
+    "./skills/pencil-ui-design-system-echarts",
+    "./skills/pencil-ui-design-system-element",
+    "./skills/pencil-ui-design-system-layui",
+    "./skills/pencil-ui-design-system-ucharts",
+    "./skills/pencil-ui-design-system-uview",
+    "./skills/pencil-ui-design-system-uviewpro",
+    "./skills/pencil-ui-design-system-vant",
+    "./skills/pencil-ui-designer",
+    "./skills/playwright",
+    "./skills/pytest",
+    "./skills/remotion",
+    "./skills/selenium",
+    "./skills/theme-factory",
+    "./skills/tui-04x",
+    "./skills/tui-action-sheet",
+    "./skills/tui-alert-tips",
+    "./skills/tui-avatar",
+    "./skills/tui-avatar-cropper",
+    "./skills/tui-back-top",
+    "./skills/tui-badge",
+    "./skills/tui-button",
+    "./skills/tui-calendar",
+    "./skills/tui-card",
+    "./skills/tui-cell",
+    "./skills/tui-changelog",
+    "./skills/tui-chat-group",
+    "./skills/tui-checkbox",
+    "./skills/tui-circle-progress",
+    "./skills/tui-collapse",
+    "./skills/tui-color",
+    "./skills/tui-common",
+    "./skills/tui-config-provider",
+    "./skills/tui-count-down",
+    "./skills/tui-count-to",
+    "./skills/tui-divider",
+    "./skills/tui-download-setting",
+    "./skills/tui-dropdown",
+    "./skills/tui-empty",
+    "./skills/tui-fab",
+    "./skills/tui-feature",
+    "./skills/tui-field",
+    "./skills/tui-form",
+    "./skills/tui-front-ui",
+    "./skills/tui-full-screen",
+    "./skills/tui-gap",
+    "./skills/tui-grid",
+    "./skills/tui-icon",
+    "./skills/tui-image",
+    "./skills/tui-index-list",
+    "./skills/tui-input",
+    "./skills/tui-install",
+    "./skills/tui-intro",
+    "./skills/tui-keyboard",
+    "./skills/tui-layout",
+    "./skills/tui-lazy-load",
+    "./skills/tui-line",
+    "./skills/tui-line-progress",
+    "./skills/tui-link",
+    "./skills/tui-load-more",
+    "./skills/tui-loading",
+    "./skills/tui-loading-popup",
+    "./skills/tui-mask",
+    "./skills/tui-message-input",
+    "./skills/tui-modal",
+    "./skills/tui-navbar",
+    "./skills/tui-no-network",
+    "./skills/tui-notice-bar",
+    "./skills/tui-npm-setting",
+    "./skills/tui-number-box",
+    "./skills/tui-nvue",
+    "./skills/tui-page-composer",
+    "./skills/tui-pagination",
+    "./skills/tui-picker",
+    "./skills/tui-popup",
+    "./skills/tui-prd-to-descriptions",
+    "./skills/tui-quickstart",
+    "./skills/tui-radio",
+    "./skills/tui-rate",
+    "./skills/tui-read",
+    "./skills/tui-read-more",
+    "./skills/tui-root-portal",
+    "./skills/tui-safe-area-inset",
+    "./skills/tui-search",
+    "./skills/tui-section",
+    "./skills/tui-select",
+    "./skills/tui-setting",
+    "./skills/tui-skeleton",
+    "./skills/tui-slider",
+    "./skills/tui-steps",
+    "./skills/tui-sticky",
+    "./skills/tui-subsection",
+    "./skills/tui-swipe-action",
+    "./skills/tui-swiper",
+    "./skills/tui-switch",
+    "./skills/tui-tabbar",
+    "./skills/tui-table",
+    "./skills/tui-tabs",
+    "./skills/tui-tabs-swiper",
+    "./skills/tui-tag",
+    "./skills/tui-text",
+    "./skills/tui-textarea",
+    "./skills/tui-time-line",
+    "./skills/tui-toast",
+    "./skills/tui-top-tips",
+    "./skills/tui-transition",
+    "./skills/tui-uni-modules-setting",
+    "./skills/tui-upload",
+    "./skills/tui-verification-code",
+    "./skills/tui-vuex-detail",
+    "./skills/tui-waterfall",
+    "./skills/ucharts",
+    "./skills/vant-vue3",
+    "./skills/vitest",
+    "./skills/webapp-testing"
+  ],
+  "expertType": "team",
+  "agentName": "design-product-team-lead",
+  "teamInfo": {
+    "leadAgent": "design-product-team-lead",
+    "memberAgents": [
+      "design-ux-architect",
+      "design-ui-designer",
+      "design-ux-researcher",
+      "design-persona-walkthrough",
+      "design-visual-storyteller",
+      "design-inclusive-visuals-specialist",
+      "design-brand-guardian",
+      "design-whimsy-injector",
+      "design-image-prompt-engineer",
+      "engineering-frontend-developer"
+    ]
+  },
+  "displayName": {
+    "en": "Design & Product Team",
+    "zh": "设计与产品专家团"
+  },
+  "profession": {
+    "en": "Design & Product Team",
+    "zh": "设计与产品专家团"
+  },
+  "displayDescription": {
+    "en": "Design & Product Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "设计与产品专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "01-ProductDesign",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in design-product-team",
+    "zh": "用 design-product-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in design-product-team",
+      "zh": "用 design-product-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "design-product-team-lead",
+      "name": {
+        "en": "design-product-team-lead",
+        "zh": "design-product-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated design-product-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated design-product-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/design-product-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "design-ux-architect",
+      "name": {
+        "en": "design-ux-architect",
+        "zh": "design-ux-architect"
+      },
+      "profession": {
+        "en": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。 (auto-vendored by compose_team.py)",
+        "zh": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。"
+      },
+      "avatar": "avatars/design-ux-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ui-designer",
+      "name": {
+        "en": "design-ui-designer",
+        "zh": "design-ui-designer"
+      },
+      "profession": {
+        "en": "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象 (auto-vendored by compose_team.py)",
+        "zh": "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象"
+      },
+      "avatar": "avatars/design-ui-designer.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ux-researcher",
+      "name": {
+        "en": "design-ux-researcher",
+        "zh": "design-ux-researcher"
+      },
+      "profession": {
+        "en": "专精用户行为分析、可用性测试和数据驱动设计洞察的用户体验研究专家。提供可落地的研究发现，提升产品可用性和用户满意度 (auto-vendored by compose_team.py)",
+        "zh": "专精用户行为分析、可用性测试和数据驱动设计洞察的用户体验研究专家。提供可落地的研究发现，提升产品可用性和用户满意度"
+      },
+      "avatar": "avatars/design-ux-researcher.png",
+      "role": "member"
+    },
+    {
+      "id": "design-persona-walkthrough",
+      "name": {
+        "en": "design-persona-walkthrough",
+        "zh": "design-persona-walkthrough"
+      },
+      "profession": {
+        "en": "从设定好的 persona（用户画像）心理视角出发，对网页进行认知走查的模拟——捕捉每个滚动位置上的情绪反应与理性思考，再输出植根于 LIFT、Cialdini、Fogg 框架的结构化 CRO 报告 (auto-vendored by compose_team.py)",
+        "zh": "从设定好的 persona（用户画像）心理视角出发，对网页进行认知走查的模拟——捕捉每个滚动位置上的情绪反应与理性思考，再输出植根于 LIFT、Cialdini、Fogg 框架的结构化 CRO 报告"
+      },
+      "avatar": "avatars/design-persona-walkthrough.png",
+      "role": "member"
+    },
+    {
+      "id": "design-visual-storyteller",
+      "name": {
+        "en": "design-visual-storyteller",
+        "zh": "design-visual-storyteller"
+      },
+      "profession": {
+        "en": "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。 (auto-vendored by compose_team.py)",
+        "zh": "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。"
+      },
+      "avatar": "avatars/design-visual-storyteller.png",
+      "role": "member"
+    },
+    {
+      "id": "design-inclusive-visuals-specialist",
+      "name": {
+        "en": "design-inclusive-visuals-specialist",
+        "zh": "design-inclusive-visuals-specialist"
+      },
+      "profession": {
+        "en": "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。 (auto-vendored by compose_team.py)",
+        "zh": "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。"
+      },
+      "avatar": "avatars/design-inclusive-visuals-specialist.png",
+      "role": "member"
+    },
+    {
+      "id": "design-brand-guardian",
+      "name": {
+        "en": "design-brand-guardian",
+        "zh": "design-brand-guardian"
+      },
+      "profession": {
+        "en": "专精品牌形象开发、一致性维护和战略品牌定位的品牌策略师和品牌守护专家 (auto-vendored by compose_team.py)",
+        "zh": "专精品牌形象开发、一致性维护和战略品牌定位的品牌策略师和品牌守护专家"
+      },
+      "avatar": "avatars/design-brand-guardian.png",
+      "role": "member"
+    },
+    {
+      "id": "design-whimsy-injector",
+      "name": {
+        "en": "design-whimsy-injector",
+        "zh": "design-whimsy-injector"
+      },
+      "profession": {
+        "en": "创意专家，专门给品牌体验注入个性、惊喜和趣味元素，用意想不到的小细节让用户记住你的产品。 (auto-vendored by compose_team.py)",
+        "zh": "创意专家，专门给品牌体验注入个性、惊喜和趣味元素，用意想不到的小细节让用户记住你的产品。"
+      },
+      "avatar": "avatars/design-whimsy-injector.png",
+      "role": "member"
+    },
+    {
+      "id": "design-image-prompt-engineer",
+      "name": {
+        "en": "design-image-prompt-engineer",
+        "zh": "design-image-prompt-engineer"
+      },
+      "profession": {
+        "en": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。 (auto-vendored by compose_team.py)",
+        "zh": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。"
+      },
+      "avatar": "avatars/design-image-prompt-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-frontend-developer",
+      "name": {
+        "en": "engineering-frontend-developer",
+        "zh": "engineering-frontend-developer"
+      },
+      "profession": {
+        "en": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家 (auto-vendored by compose_team.py)",
+        "zh": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家"
+      },
+      "avatar": "avatars/engineering-frontend-developer.png",
+      "role": "member"
+    }
+  ]
+}

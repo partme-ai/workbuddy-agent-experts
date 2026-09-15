@@ -1,0 +1,21 @@
+# Golden Example: UCI config file (samba4)
+# This is a golden example for skill verification, not production code.
+# Demonstrates: SMB2/3 + NetBIOS 广播 + 友好名称。
+# See SKILL.md §uhttpd-config.md + openwrt-storage-mount §fstab-uci.md
+
+config samba
+    option workgroup 'WORKGROUP'
+    option server_string 'GE-Example-NAS'
+    option netbios_name 'GE-NAS'
+    option name_resolve_order 'bcast host'
+    option server_min_protocol 'SMB2'
+    option server_max_protocol 'SMB3'
+    option discoverable 'yes'
+
+config sambashare
+    option name 'share'
+    option path '/mnt/usb/share'
+    option read_only 'no'
+    option guest_ok 'yes'
+    option create_mask '0666'
+    option dir_mask '0777'

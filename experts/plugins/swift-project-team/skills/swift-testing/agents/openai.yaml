@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swift Testing"
+  short_description: "high-value Swift test design and validation"
+  default_prompt: "Use $swift-testing to complete this task with repository evidence and executable validation."

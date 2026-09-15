@@ -11,6 +11,10 @@ already-open Blender windows to `blender-connector`, design work to
 `blender-preview`, approved outputs to `blender-export`, and failures to
 `blender-recover`.
 
+On first use, call `blender_connection_status`. If no guarded Harness session is connected, route to
+`blender-mcp-setup` and call `blender_getting_started`; do not assume that Blender, the trusted
+Add-on, or a session exists merely because this Skill was loaded.
+
 After the implementation brief, load only the required domain Skills:
 
 - scene organization and approved imports → `blender-scene-assembly`
@@ -20,6 +24,8 @@ After the implementation brief, load only the required domain Skills:
 - camera work → `blender-cinematography`; acceptance measurements → `blender-quality-validation`
 - sculpt, hair, or simulation → `blender-sculpt-surface`, `blender-hair`, or `blender-simulation`
 - rendering/compositing → `blender-render-compositing`
+- shot-list blocking or timing previews, or a white-model reference video for
+  downstream video generation → `blender-previs`
 - Grease Pencil, tracking, or VSE → `blender-grease-pencil`, `blender-tracking`, or `blender-sequence-editing`
 - `job.*` → `blender-background-jobs`; add render-compositing for EXPORT, RENDER_STILL, or RENDER_ANIMATION_FRAMES; add sequence-editing for COMPOSE_VIDEO; add simulation for BAKE_POINT_CACHES
 

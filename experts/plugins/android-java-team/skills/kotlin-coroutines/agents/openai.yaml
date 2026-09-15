@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kotlin Coroutines"
+  short_description: "structured coroutine and Flow implementation"
+  default_prompt: "Use $kotlin-coroutines to complete this task with repository evidence and executable validation."

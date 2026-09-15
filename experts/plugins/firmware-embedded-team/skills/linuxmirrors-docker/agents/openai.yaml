@@ -1,0 +1,4 @@
+interface:
+  display_name: "LinuxMirrors Docker"
+  short_description: "规划 Docker Engine 安装、换源与镜像加速"
+  default_prompt: "使用 $linuxmirrors-docker 规划 Docker Engine 安装或 Registry Mirror 更换，并给出验证与回滚步骤。"

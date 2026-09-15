@@ -1,0 +1,4 @@
+interface:
+  display_name: "PlantUML 图表"
+  short_description: "为系统设计生成精确、可验证的 UML、C4 与企业架构图源码"
+  default_prompt: "使用 $plantuml 为当前系统生成精确的 UML 或 C4 图。"

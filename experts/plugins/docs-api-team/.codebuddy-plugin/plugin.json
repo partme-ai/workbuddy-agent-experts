@@ -1,0 +1,228 @@
+{
+  "name": "docs-api-team",
+  "version": "1.0.0",
+  "description": "Docs & API Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/docs-api-team-lead.md",
+    "./agents/engineering-code-reviewer.md",
+    "./agents/engineering-code-style-checker.md",
+    "./agents/testing-api-tester.md",
+    "./agents/testing-evidence-collector.md",
+    "./agents/engineering-backend-architect.md",
+    "./agents/engineering-frontend-developer.md"
+  ],
+  "skills": [
+    "./skills/ansible",
+    "./skills/api-doc-generator",
+    "./skills/appium",
+    "./skills/cloudformation",
+    "./skills/cypress",
+    "./skills/detox",
+    "./skills/doc-coauthoring",
+    "./skills/full-stack-doc",
+    "./skills/github-actions",
+    "./skills/gitlab-ci",
+    "./skills/internal-comms",
+    "./skills/jest",
+    "./skills/junit",
+    "./skills/kubernetes",
+    "./skills/linuxmirrors-awesome",
+    "./skills/linuxmirrors-docker",
+    "./skills/linuxmirrors-os",
+    "./skills/markitdown-awesome",
+    "./skills/markitdown-cli",
+    "./skills/markitdown-ocr",
+    "./skills/mermaid",
+    "./skills/openspec-apply",
+    "./skills/openspec-archive",
+    "./skills/openspec-bulk-archive",
+    "./skills/openspec-config",
+    "./skills/openspec-continue",
+    "./skills/openspec-explore",
+    "./skills/openspec-ff",
+    "./skills/openspec-initial",
+    "./skills/openspec-install",
+    "./skills/openspec-new",
+    "./skills/openspec-onboard",
+    "./skills/openspec-schema",
+    "./skills/openspec-sync",
+    "./skills/openspec-update",
+    "./skills/openspec-verify",
+    "./skills/plantuml",
+    "./skills/playwright",
+    "./skills/processon-diagram-generator",
+    "./skills/processon-mindmap",
+    "./skills/pytest",
+    "./skills/selenium",
+    "./skills/slack-gif-creator",
+    "./skills/spark-optimization",
+    "./skills/speckit-analyze",
+    "./skills/speckit-baseline",
+    "./skills/speckit-check",
+    "./skills/speckit-checklist",
+    "./skills/speckit-clarify",
+    "./skills/speckit-constitution",
+    "./skills/speckit-implement",
+    "./skills/speckit-initial",
+    "./skills/speckit-install",
+    "./skills/speckit-plan",
+    "./skills/speckit-specify",
+    "./skills/speckit-tasks",
+    "./skills/speckit-taskstoissues",
+    "./skills/technical-blog-doc",
+    "./skills/terraform",
+    "./skills/vitest",
+    "./skills/webapp-testing"
+  ],
+  "expertType": "team",
+  "agentName": "docs-api-team-lead",
+  "teamInfo": {
+    "leadAgent": "docs-api-team-lead",
+    "memberAgents": [
+      "engineering-code-reviewer",
+      "engineering-code-style-checker",
+      "testing-api-tester",
+      "testing-evidence-collector",
+      "engineering-backend-architect",
+      "engineering-frontend-developer"
+    ]
+  },
+  "displayName": {
+    "en": "Docs & API Team",
+    "zh": "文档与 API 专家团"
+  },
+  "profession": {
+    "en": "Docs & API Team",
+    "zh": "文档与 API 专家团"
+  },
+  "displayDescription": {
+    "en": "Docs & API Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "文档与 API 专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "04-Documentation",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in docs-api-team",
+    "zh": "用 docs-api-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in docs-api-team",
+      "zh": "用 docs-api-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "docs-api-team-lead",
+      "name": {
+        "en": "docs-api-team-lead",
+        "zh": "docs-api-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated docs-api-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated docs-api-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/docs-api-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "engineering-code-reviewer",
+      "name": {
+        "en": "engineering-code-reviewer",
+        "zh": "engineering-code-reviewer"
+      },
+      "profession": {
+        "en": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。 (auto-vendored by compose_team.py)",
+        "zh": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。"
+      },
+      "avatar": "avatars/engineering-code-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-style-checker",
+      "name": {
+        "en": "engineering-code-style-checker",
+        "zh": "engineering-code-style-checker"
+      },
+      "profession": {
+        "en": "\"Java 项目规范检查与修复\" (auto-vendored by compose_team.py)",
+        "zh": "\"Java 项目规范检查与修复\""
+      },
+      "avatar": "avatars/engineering-code-style-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-api-tester",
+      "name": {
+        "en": "testing-api-tester",
+        "zh": "testing-api-tester"
+      },
+      "profession": {
+        "en": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成 (auto-vendored by compose_team.py)",
+        "zh": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成"
+      },
+      "avatar": "avatars/testing-api-tester.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-evidence-collector",
+      "name": {
+        "en": "testing-evidence-collector",
+        "zh": "testing-evidence-collector"
+      },
+      "profession": {
+        "en": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。 (auto-vendored by compose_team.py)",
+        "zh": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。"
+      },
+      "avatar": "avatars/testing-evidence-collector.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-backend-architect",
+      "name": {
+        "en": "engineering-backend-architect",
+        "zh": "engineering-backend-architect"
+      },
+      "profession": {
+        "en": "资深后端架构师，专精可扩展系统设计、数据库架构、API 开发和云基础设施。构建健壮、安全、高性能的服务端应用和微服务。 (auto-vendored by compose_team.py)",
+        "zh": "资深后端架构师，专精可扩展系统设计、数据库架构、API 开发和云基础设施。构建健壮、安全、高性能的服务端应用和微服务。"
+      },
+      "avatar": "avatars/engineering-backend-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-frontend-developer",
+      "name": {
+        "en": "engineering-frontend-developer",
+        "zh": "engineering-frontend-developer"
+      },
+      "profession": {
+        "en": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家 (auto-vendored by compose_team.py)",
+        "zh": "精通现代 Web 技术、React/Vue/Angular 框架、UI 实现和性能优化的前端开发专家"
+      },
+      "avatar": "avatars/engineering-frontend-developer.png",
+      "role": "member"
+    }
+  ]
+}

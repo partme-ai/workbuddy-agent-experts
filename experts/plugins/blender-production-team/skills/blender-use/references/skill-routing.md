@@ -24,6 +24,7 @@ Every Skill uses `blender-<clear-action-or-domain>`, lowercase ASCII and hyphens
 | Grease Pencil | grease-pencil | cinematography for delivery camera |
 | Camera tracking | tracking | render-compositing for tracked masks |
 | VSE timeline | sequence-editing | export/background-jobs |
+| Shot-list blocking / white-model previs | previs | cinematography, sequence-editing, background-jobs |
 | Numeric acceptance | quality-validation | the owning production Skill |
 
 ## Conditional jobs

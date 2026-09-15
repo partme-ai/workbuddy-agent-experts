@@ -14,7 +14,7 @@ description: Domain reference library routing into every Blender production skil
 | `blender-character-animation` | Animate a registered Blender character rig and a single interactive prop with editable timing, IK controls, constraints, and continuity checks. |
 | `blender-character-rigging` | Build and inspect editable Blender armatures, skin weights, IK controls, pole targets, joint limits, and prop constraints for character work. |
 | `blender-cinematography` | Design and validate Blender cameras, lenses, subject aiming, path motion, focus, framing, and controlled handheld response. |
-| `blender-connector` | Connect to a Blender window that is already open through the optional Blender Connector Add-on. |
+| `blender-connector` | Connect Codex to an already-open Blender window through the pinned PartMe Blender MCP Add-on. |
 | `blender-curves` | Build editable Blender paths, profiles, cables, rails, or curve-driven props using registered curve commands. |
 | `blender-design` | Turn a user's idea into a Blender scene through milestone-based modeling, materials, lighting, camera, and animation commands. |
 | `blender-export` | Export an approved Blender snapshot to verified model, image, video, EXR, USD, or Alembic artifacts using compatible receipt contracts. |
@@ -22,10 +22,13 @@ description: Domain reference library routing into every Blender production skil
 | `blender-hair` | Create and inspect native Blender Hair Curves from explicit surface-local strand points, radii, and bound source surfaces. |
 | `blender-hard-surface` | Create editable hard-surface, product, mechanical, or prop geometry with registered Blender mesh, modifier, collection, and recipe commands. |
 | `blender-harness` | Launch a managed Blender harness session and dispatch structured JSON commands through harness_cli.py. Covers session bootstrap, the closed request envelope (protocolVersion/sessionId/requestId/transactionId/command/arguments/expectedSceneRevision), receipt verification, error codes, capability maturity levels and background jobs. Use this skill for ANY task that needs to create, modify, inspect or export Blender content. |
+| `blender-harness-driving` | Drive the Codex Blender Harness from a shell client: launch a session, dispatch the closed request contract, keep the sceneRevision chain coherent, sign action-bound authorizations for gated commands, and verify exported artifacts independently. |
 | `blender-inspect` | Inspect an active Blender scene read-only before the agent designs, modifies, previews, or exports it. |
 | `blender-jimeng-web` | Use an already enabled official Jimeng Blender uploader to render or select a local video and create a Jimeng Web handoff link. |
 | `blender-managed` | Start a non-invasive Blender design session without installing a Blender Add-on. Use for new projects or when the user wants to launch Blender. |
+| `blender-mcp-setup` | Set up or diagnose the plugin-owned Blender MCP connection when Blender is missing, the Add-on is disabled, Start MCP Server has not been clicked, or no guarded Harness session is discoverable. |
 | `blender-preview` | Capture fresh camera, front, side, and top Blender previews for milestone review or visual diagnosis. |
+| `blender-previs` | Use when turning a story or shot list into a color-coded white-model previs video in Blender, producing placeholder blocking, exact cut timing, and a machine-readable geometry-to-role map for downstream Seedance video generation. |
 | `blender-procedural-modeling` | Build or update reusable Blender Geometry Nodes systems and parameterized environments with version-probed node and socket semantics. |
 | `blender-quality-validation` | Measure Blender geometry, character, prop, collision, motion, and camera acceptance criteria against explicit objects, frames, proxies, and tolerances. |
 | `blender-recover` | Rollback a failed Blender milestone or resume from the latest confirmed checkpoint without replaying uncommitted commands. |

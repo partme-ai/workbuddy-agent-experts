@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kotlin Java Migration Testing"
+  short_description: "complete Java-to-Kotlin parity acceptance"
+  default_prompt: "Use $kotlin-java-migration-testing to complete this task with repository evidence and executable validation."

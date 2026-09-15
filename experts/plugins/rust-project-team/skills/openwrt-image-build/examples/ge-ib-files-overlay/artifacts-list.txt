@@ -1,0 +1,18 @@
+total 73984
+drwxr-xr-x 2 root root     4096 Sep  2 17:04 .
+drwxr-xr-x 3 root root     4096 Sep  2 17:00 ..
+-rw-r--r-- 1 root root 14530791 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic-ext4-combined-efi.img.gz
+-rw-r--r-- 1 root root  5857422 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic-ext4-rootfs.img.gz
+-rw-r--r-- 1 root root 20156928 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic-kernel.bin
+-rw-r--r-- 1 root root  5748167 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic-rootfs.tar.gz
+-rw-r--r-- 1 root root 13286891 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic-squashfs-combined-efi.img.gz
+-rw-r--r-- 1 root root  4609526 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic-squashfs-rootfs.img.gz
+-rw-r--r-- 1 root root  5748167 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic-targz-rootfs.tar.gz
+-rw-r--r-- 1 root root    24764 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic.bom.cdx.json
+-rw-r--r-- 1 root root     4892 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-generic.manifest
+-rw-r--r-- 1 root root  5747080 Sep  2 17:04 openwrt-25.12.5-armsr-armv8-rootfs.cpio.gz
+-rw-r--r-- 1 root root     2746 Sep  2 17:04 profiles.json
+-rw-r--r-- 1 root root     1270 Sep  2 17:04 sha256sums
+== rootfs.tar.gz 探测 ==
+/work/ib/bin/targets/armsr/armv8/openwrt-25.12.5-armsr-armv8-generic-rootfs.tar.gz
+/work/ib/bin/targets/armsr/armv8/openwrt-25.12.5-armsr-armv8-generic-targz-rootfs.tar.gz

@@ -1,0 +1,370 @@
+{
+  "name": "python-project-team",
+  "version": "1.0.0",
+  "description": "Python Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/python-project-team-lead.md",
+    "./agents/engineering-backend-architect.md",
+    "./agents/engineering-ai-engineer.md",
+    "./agents/engineering-ai-agent-architect.md",
+    "./agents/engineering-data-engineer.md",
+    "./agents/engineering-database-optimizer.md",
+    "./agents/engineering-ai-data-remediation-engineer.md",
+    "./agents/engineering-code-reviewer.md",
+    "./agents/engineering-code-style-checker.md",
+    "./agents/engineering-devops-automator.md",
+    "./agents/engineering-email-intelligence-engineer.md",
+    "./agents/testing-api-tester.md",
+    "./agents/testing-evidence-collector.md",
+    "./agents/design-ux-architect.md"
+  ],
+  "skills": [
+    "./skills/agent-browser",
+    "./skills/ansible",
+    "./skills/api-doc-generator",
+    "./skills/appium",
+    "./skills/architecture-patterns",
+    "./skills/autoresearch",
+    "./skills/browser-trace",
+    "./skills/caveman",
+    "./skills/cloudformation",
+    "./skills/code-generator",
+    "./skills/codebase-design",
+    "./skills/codegraph",
+    "./skills/cypress",
+    "./skills/detox",
+    "./skills/django",
+    "./skills/doc-coauthoring",
+    "./skills/elasticsearch",
+    "./skills/fastapi",
+    "./skills/fastapi-templates",
+    "./skills/flask",
+    "./skills/full-stack-doc",
+    "./skills/github-actions",
+    "./skills/gitlab-ci",
+    "./skills/jest",
+    "./skills/junit",
+    "./skills/kubernetes",
+    "./skills/linuxmirrors-awesome",
+    "./skills/linuxmirrors-docker",
+    "./skills/linuxmirrors-os",
+    "./skills/markitdown-awesome",
+    "./skills/markitdown-cli",
+    "./skills/markitdown-ocr",
+    "./skills/mcp-builder",
+    "./skills/mermaid",
+    "./skills/mysql",
+    "./skills/openspec-apply",
+    "./skills/openspec-archive",
+    "./skills/openspec-bulk-archive",
+    "./skills/openspec-config",
+    "./skills/openspec-continue",
+    "./skills/openspec-explore",
+    "./skills/openspec-ff",
+    "./skills/openspec-initial",
+    "./skills/openspec-install",
+    "./skills/openspec-new",
+    "./skills/openspec-onboard",
+    "./skills/openspec-schema",
+    "./skills/openspec-sync",
+    "./skills/openspec-update",
+    "./skills/openspec-verify",
+    "./skills/oracle",
+    "./skills/plantuml",
+    "./skills/playwright",
+    "./skills/postgresql",
+    "./skills/processon-diagram-generator",
+    "./skills/processon-mindmap",
+    "./skills/pytest",
+    "./skills/python-anti-patterns",
+    "./skills/python-background-jobs",
+    "./skills/python-code-style",
+    "./skills/python-configuration",
+    "./skills/python-design-patterns",
+    "./skills/python-error-handling",
+    "./skills/python-observability",
+    "./skills/python-packaging",
+    "./skills/python-performance-optimization",
+    "./skills/python-project-structure",
+    "./skills/python-resilience",
+    "./skills/python-resource-management",
+    "./skills/python-testing-patterns",
+    "./skills/python-type-safety",
+    "./skills/redis",
+    "./skills/selenium",
+    "./skills/skill-awesome",
+    "./skills/skill-creator",
+    "./skills/skill-installer",
+    "./skills/skill-official-evaluation",
+    "./skills/skill-sop-creator",
+    "./skills/skill-trace-checker",
+    "./skills/skill-trace-evaluation",
+    "./skills/spark-optimization",
+    "./skills/speckit-analyze",
+    "./skills/speckit-baseline",
+    "./skills/speckit-check",
+    "./skills/speckit-checklist",
+    "./skills/speckit-clarify",
+    "./skills/speckit-constitution",
+    "./skills/speckit-implement",
+    "./skills/speckit-initial",
+    "./skills/speckit-install",
+    "./skills/speckit-plan",
+    "./skills/speckit-specify",
+    "./skills/speckit-tasks",
+    "./skills/speckit-taskstoissues",
+    "./skills/technical-blog-doc",
+    "./skills/terraform",
+    "./skills/vitest",
+    "./skills/webapp-testing"
+  ],
+  "expertType": "team",
+  "agentName": "python-project-team-lead",
+  "teamInfo": {
+    "leadAgent": "python-project-team-lead",
+    "memberAgents": [
+      "engineering-backend-architect",
+      "engineering-ai-engineer",
+      "engineering-ai-agent-architect",
+      "engineering-data-engineer",
+      "engineering-database-optimizer",
+      "engineering-ai-data-remediation-engineer",
+      "engineering-code-reviewer",
+      "engineering-code-style-checker",
+      "engineering-devops-automator",
+      "engineering-email-intelligence-engineer",
+      "testing-api-tester",
+      "testing-evidence-collector",
+      "design-ux-architect"
+    ]
+  },
+  "displayName": {
+    "en": "Python Project Team",
+    "zh": "Python 项目专家团"
+  },
+  "profession": {
+    "en": "Python Project Team",
+    "zh": "Python 项目专家团"
+  },
+  "displayDescription": {
+    "en": "Python Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml.",
+    "zh": "Python 项目专家团：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "en": "Bootstrap a new project in python-project-team",
+    "zh": "用 python-project-team 的标准流程启动这个项目"
+  },
+  "quickPrompts": [
+    {
+      "en": "Bootstrap a new project in python-project-team",
+      "zh": "用 python-project-team 的标准流程启动这个项目"
+    },
+    {
+      "en": "Run a health check on this codebase",
+      "zh": "对这个代码库做一次健康检查"
+    },
+    {
+      "en": "Refresh to the latest vendored skills snapshot",
+      "zh": "升级到最新的 skills 快照"
+    }
+  ],
+  "tags": [
+    {
+      "en": "auto-assembled",
+      "zh": "自动组装"
+    },
+    {
+      "en": "language-specialist",
+      "zh": "语言专家团"
+    }
+  ],
+  "members": [
+    {
+      "id": "python-project-team-lead",
+      "name": {
+        "en": "python-project-team-lead",
+        "zh": "python-project-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated python-project-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated python-project-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/python-project-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "engineering-backend-architect",
+      "name": {
+        "en": "engineering-backend-architect",
+        "zh": "engineering-backend-architect"
+      },
+      "profession": {
+        "en": "资深后端架构师，专精可扩展系统设计、数据库架构、API 开发和云基础设施。构建健壮、安全、高性能的服务端应用和微服务。 (auto-vendored by compose_team.py)",
+        "zh": "资深后端架构师，专精可扩展系统设计、数据库架构、API 开发和云基础设施。构建健壮、安全、高性能的服务端应用和微服务。"
+      },
+      "avatar": "avatars/engineering-backend-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-ai-engineer",
+      "name": {
+        "en": "engineering-ai-engineer",
+        "zh": "engineering-ai-engineer"
+      },
+      "profession": {
+        "en": "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。 (auto-vendored by compose_team.py)",
+        "zh": "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。"
+      },
+      "avatar": "avatars/engineering-ai-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-ai-agent-architect",
+      "name": {
+        "en": "engineering-ai-agent-architect",
+        "zh": "engineering-ai-agent-architect"
+      },
+      "profession": {
+        "en": "\"智能体架构师，**首选 AgentScope**（自研 java/kotlin/rust/zig + 阿里官方 python + 多语言 Runtime），专精 Agent Harness 设计、多 Agent 协作框架、评估体系（Eval Pipeline）、Guardrails 规范与 RAG 架构；Java 技术栈覆盖 AgentScope-java、Spring AI、LangChain4j，把 LLM 应用从 PoC 推到生产级。\" (auto-vendored by compose_team.py)",
+        "zh": "\"智能体架构师，**首选 AgentScope**（自研 java/kotlin/rust/zig + 阿里官方 python + 多语言 Runtime），专精 Agent Harness 设计、多 Agent 协作框架、评估体系（Eval Pipeline）、Guardrails 规范与 RAG 架构；Java 技术栈覆盖 AgentScope-java、Spring AI、LangChain4j，把 LLM 应用从 PoC 推到生产级。\""
+      },
+      "avatar": "avatars/engineering-ai-agent-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-data-engineer",
+      "name": {
+        "en": "engineering-data-engineer",
+        "zh": "engineering-data-engineer"
+      },
+      "profession": {
+        "en": "专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。 (auto-vendored by compose_team.py)",
+        "zh": "专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。"
+      },
+      "avatar": "avatars/engineering-data-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-database-optimizer",
+      "name": {
+        "en": "engineering-database-optimizer",
+        "zh": "engineering-database-optimizer"
+      },
+      "profession": {
+        "en": "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。 (auto-vendored by compose_team.py)",
+        "zh": "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。"
+      },
+      "avatar": "avatars/engineering-database-optimizer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-ai-data-remediation-engineer",
+      "name": {
+        "en": "engineering-ai-data-remediation-engineer",
+        "zh": "engineering-ai-data-remediation-engineer"
+      },
+      "profession": {
+        "en": "\"自愈数据管道专家——使用气隙隔离的本地 SLM 和语义聚类，自动检测、分类和修复大规模数据异常。专注于修复层：拦截坏数据、通过 Ollama 生成确定性修复逻辑，并保证零数据丢失。不是通用数据工程师——而是当你的数据出了问题且管道不能停的时候，出手的外科手术级专家。\" (auto-vendored by compose_team.py)",
+        "zh": "\"自愈数据管道专家——使用气隙隔离的本地 SLM 和语义聚类，自动检测、分类和修复大规模数据异常。专注于修复层：拦截坏数据、通过 Ollama 生成确定性修复逻辑，并保证零数据丢失。不是通用数据工程师——而是当你的数据出了问题且管道不能停的时候，出手的外科手术级专家。\""
+      },
+      "avatar": "avatars/engineering-ai-data-remediation-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-reviewer",
+      "name": {
+        "en": "engineering-code-reviewer",
+        "zh": "engineering-code-reviewer"
+      },
+      "profession": {
+        "en": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。 (auto-vendored by compose_team.py)",
+        "zh": "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。"
+      },
+      "avatar": "avatars/engineering-code-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-style-checker",
+      "name": {
+        "en": "engineering-code-style-checker",
+        "zh": "engineering-code-style-checker"
+      },
+      "profession": {
+        "en": "\"Java 项目规范检查与修复\" (auto-vendored by compose_team.py)",
+        "zh": "\"Java 项目规范检查与修复\""
+      },
+      "avatar": "avatars/engineering-code-style-checker.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-devops-automator",
+      "name": {
+        "en": "engineering-devops-automator",
+        "zh": "engineering-devops-automator"
+      },
+      "profession": {
+        "en": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家 (auto-vendored by compose_team.py)",
+        "zh": "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家"
+      },
+      "avatar": "avatars/engineering-devops-automator.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-email-intelligence-engineer",
+      "name": {
+        "en": "engineering-email-intelligence-engineer",
+        "zh": "engineering-email-intelligence-engineer"
+      },
+      "profession": {
+        "en": "专精从原始邮件线程中提取结构化、可供 AI 推理的数据，服务于智能体和自动化系统。 (auto-vendored by compose_team.py)",
+        "zh": "专精从原始邮件线程中提取结构化、可供 AI 推理的数据，服务于智能体和自动化系统。"
+      },
+      "avatar": "avatars/engineering-email-intelligence-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-api-tester",
+      "name": {
+        "en": "testing-api-tester",
+        "zh": "testing-api-tester"
+      },
+      "profession": {
+        "en": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成 (auto-vendored by compose_team.py)",
+        "zh": "专注于全面 API 验证、性能测试和质量保证的 API 测试专家，覆盖所有系统和第三方集成"
+      },
+      "avatar": "avatars/testing-api-tester.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-evidence-collector",
+      "name": {
+        "en": "testing-evidence-collector",
+        "zh": "testing-evidence-collector"
+      },
+      "profession": {
+        "en": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。 (auto-vendored by compose_team.py)",
+        "zh": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。"
+      },
+      "avatar": "avatars/testing-evidence-collector.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ux-architect",
+      "name": {
+        "en": "design-ux-architect",
+        "zh": "design-ux-architect"
+      },
+      "profession": {
+        "en": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。 (auto-vendored by compose_team.py)",
+        "zh": "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。"
+      },
+      "avatar": "avatars/design-ux-architect.png",
+      "role": "member"
+    }
+  ]
+}

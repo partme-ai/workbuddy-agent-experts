@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swift Concurrency"
+  short_description: "structured Swift concurrency implementation"
+  default_prompt: "Use $swift-concurrency to complete this task with repository evidence and executable validation."

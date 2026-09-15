@@ -1,4 +1,4 @@
-"""PBR material creation, assignment, node graph manipulation."""
+"""PBR material creation and assignment."""
 
 from __future__ import annotations
 from pathlib import Path
@@ -7,37 +7,6 @@ from .validation import require_name
 from ..errors import HarnessError
 from ..identity import ObjectResolver
 from ..operation_context import OperationContext
-
-
-# ---------------------------------------------------------------------------
-# Shader node whitelist: plan name -> Blender bl_idname
-#
-# Derived from bpy.types at Blender 5.2.1 (verified live):
-#   ShaderNodeBsdfPrincipled, ShaderNodeTexImage, ShaderNodeNormalMap,
-#   ShaderNodeMapping, ShaderNodeMath, ShaderNodeMix, ShaderNodeValToRGB
-# ---------------------------------------------------------------------------
-_SHADER_NODE_WHITELIST: dict[str, str] = {
-    'Principled': 'ShaderNodeBsdfPrincipled',
-    'Image Texture': 'ShaderNodeTexImage',
-    'Normal Map': 'ShaderNodeNormalMap',
-    'Mapping': 'ShaderNodeMapping',
-    'Math': 'ShaderNodeMath',
-    'Mix': 'ShaderNodeMix',
-    'ColorRamp': 'ShaderNodeValToRGB',
-}
-
-
-def _resolve_node_type(name: str, bpy_module) -> str:
-    """Resolve a plan-level node type name to a Blender bl_idname.
-
-    Only explicit, reviewed names from the whitelist are accepted.
-    Arbitrary bl_idname strings are rejected regardless of whether
-    Blender knows the type.
-    """
-    if name in _SHADER_NODE_WHITELIST:
-        return _SHADER_NODE_WHITELIST[name]
-    raise HarnessError('INVALID_ARGUMENT',
-                       f'node type is not whitelisted: {name}')
 
 
 def _unit(value, field):
@@ -180,92 +149,6 @@ class MaterialCommands:
             self.bpy.data.node_groups.remove(group);raise
         return {'changedObjects':[],'result':{'material':material_name,'groupName':group.name,
           'inputs':[{'name':item.name,'identifier':item.identifier} for item in group.interface.items_tree if item.item_type=='SOCKET' and item.in_out=='INPUT']}}
-
-    def add_node(self, arguments: dict) -> dict:
-        """Add a shader node to a material's node tree.
-
-        Parameters
-        ----------
-        material : str
-            Material name.
-        nodeType : str
-            Whitelisted plan name (e.g. 'Principled') or live bl_idname.
-        name : str
-            Name for the new node.
-        """
-        material_name = require_name(arguments.get('material'))
-        node_type_input = require_name(arguments.get('nodeType'))
-        node_name = require_name(arguments.get('name'))
-        material = self.bpy.data.materials.get(material_name)
-        if material is None:
-            raise HarnessError('MATERIAL_NOT_FOUND', f'material not found: {material_name}')
-        bl_idname = _resolve_node_type(node_type_input, self.bpy)
-        material.use_nodes = True
-        tree = material.node_tree
-        if tree is None:
-            raise HarnessError('MATERIAL_NODE_MISSING', 'material has no node tree')
-        # Reject name collision with existing node
-        if tree.nodes.get(node_name):
-            raise HarnessError('NAME_COLLISION', f'node already exists: {node_name}')
-        try:
-            node = tree.nodes.new(bl_idname)
-        except RuntimeError as exc:
-            raise HarnessError('INVALID_ARGUMENT',
-                               f'Blender rejected node type {bl_idname}: {exc}') from exc
-        node.name = node_name
-        return {'changedObjects': [], 'result': {
-            'material': material_name, 'nodeName': node.name,
-            'nodeType': node.bl_idname,
-        }}
-
-    def connect_nodes(self, arguments: dict) -> dict:
-        """Connect two nodes in a material's node tree.
-
-        Parameters
-        ----------
-        material : str
-            Material name.
-        fromNode : str
-            Source node name.
-        fromSocket : str
-            Source output socket name.
-        toNode : str
-            Target node name.
-        toSocket : str
-            Target input socket name.
-        """
-        material_name = require_name(arguments.get('material'))
-        from_node_name = require_name(arguments.get('fromNode'))
-        from_socket_name = require_name(arguments.get('fromSocket'))
-        to_node_name = require_name(arguments.get('toNode'))
-        to_socket_name = require_name(arguments.get('toSocket'))
-        material = self.bpy.data.materials.get(material_name)
-        if material is None:
-            raise HarnessError('MATERIAL_NOT_FOUND', f'material not found: {material_name}')
-        if not material.use_nodes or material.node_tree is None:
-            raise HarnessError('MATERIAL_NODE_MISSING', 'material has no node tree')
-        tree = material.node_tree
-        from_node = tree.nodes.get(from_node_name)
-        to_node = tree.nodes.get(to_node_name)
-        if from_node is None:
-            raise HarnessError('NODE_NOT_FOUND', f'source node not found: {from_node_name}')
-        if to_node is None:
-            raise HarnessError('NODE_NOT_FOUND', f'target node not found: {to_node_name}')
-        from_socket = from_node.outputs.get(from_socket_name)
-        to_socket = to_node.inputs.get(to_socket_name)
-        if from_socket is None:
-            raise HarnessError('SOCKET_NOT_FOUND', f'output socket not found: {from_socket_name}')
-        if to_socket is None:
-            raise HarnessError('SOCKET_NOT_FOUND', f'input socket not found: {to_socket_name}')
-        tree.links.new(from_socket, to_socket)
-        # Count links after connecting for verification
-        link_count = len(tree.links)
-        return {'changedObjects': [], 'result': {
-            'material': material_name,
-            'fromNode': from_node_name, 'fromSocket': from_socket_name,
-            'toNode': to_node_name, 'toSocket': to_socket_name,
-            'linkCount': link_count,
-        }}
 
     def bake(self,arguments):
         obj=self.objects.resolve(arguments.get('object'),required_type={'MESH'});kind=str(arguments.get('bakeType','ROUGHNESS')).upper()
