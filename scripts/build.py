@@ -159,6 +159,8 @@ _TEXT_RULES = (
     ("Codex Image Factory", "Image Factory"),
     ("codex-image-factory-", "image-factory-"),
     ("codex-video-factory-", "video-factory-"),
+    ("codex-processon-", "processon-"),
+    ("codex-dreamina-3d-", "dreamina-3d-"),
 )
 
 

@@ -1,0 +1,37 @@
+id: dreamina-design-team
+version: 1.0.0
+marketplace: my-experts
+category: 06-ContentCreative
+allowCodexReferences: true   # 上游技能/文档的事实性引用（付费门禁、互操作声明等）
+
+display:
+  name: {zh: "即梦设计专家团", en: "Dreamina Design Team"}
+  description:
+    zh: "即梦设计专家团：多智能体协作团队，逐项核验、闭环交付。"
+    en: "Dreamina Design Team: a multi-agent expert team with verified, closed-loop delivery."
+
+lead: dreamina-design-lead
+members:
+  - id: dreamina-design-lead
+  - id: dreamina-image-designer
+  - id: dreamina-video-designer
+  - id: dreamina-video-evaluator
+  - id: dreamina-design-gatekeeper
+
+skills:
+  - skills/dreamina-design-harness
+
+sources:
+  - repo: ../codex-dreamina-design-plugin
+    vendor: ["skills", "scripts"]
+    licenses: ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+
+quickPrompts:
+  - {zh: "用即梦生成一组产品图并过评测", en: "用即梦生成一组产品图并过评测"}
+  - {zh: "把这个分镜脚本生成为视频片段", en: "把这个分镜脚本生成为视频片段"}
+  - {zh: "做一次受预算控制的即梦视频生产", en: "做一次受预算控制的即梦视频生产"}
+
+tags:
+  - {zh: "文生图/图生图", en: "文生图/图生图"}
+  - {zh: "文生视频/图生视频", en: "文生视频/图生视频"}
+  - {zh: "付费门禁", en: "付费门禁"}

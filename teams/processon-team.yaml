@@ -1,0 +1,37 @@
+id: processon-team
+version: 1.0.0
+marketplace: my-experts
+category: 06-ContentCreative
+allowCodexReferences: true   # 上游技能/文档的事实性引用（付费门禁、互操作声明等）
+
+display:
+  name: {zh: "ProcessOn 专家团", en: "ProcessOn Team"}
+  description:
+    zh: "ProcessOn 专家团：多智能体协作团队，逐项核验、闭环交付。"
+    en: "ProcessOn Team: a multi-agent expert team with verified, closed-loop delivery."
+
+lead: processon-team-lead
+members:
+  - id: processon-team-lead
+  - id: processon-mindmap-specialist
+  - id: processon-diagram-specialist
+  - id: processon-infographic-specialist
+  - id: processon-review-specialist
+
+skills:
+  - skills/processon-workbuddy
+
+sources:
+  - repo: ../codex-processon-plugin
+    vendor: ["skills", "scripts"]
+    licenses: ["LICENSE", "NOTICE"]
+
+quickPrompts:
+  - {zh: "把这篇文档整理成一张层级清晰的思维导图", en: "把这篇文档整理成一张层级清晰的思维导图"}
+  - {zh: "为我们的系统画一张架构图", en: "为我们的系统画一张架构图"}
+  - {zh: "把这组数据做成信息图", en: "把这组数据做成信息图"}
+
+tags:
+  - {zh: "思维导图", en: "思维导图"}
+  - {zh: "流程架构图", en: "流程架构图"}
+  - {zh: "信息图", en: "信息图"}

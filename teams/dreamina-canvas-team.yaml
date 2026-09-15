@@ -1,0 +1,37 @@
+id: dreamina-canvas-team
+version: 1.0.0
+marketplace: my-experts
+category: 01-ProductDesign
+allowCodexReferences: true   # 上游技能/文档的事实性引用（付费门禁、互操作声明等）
+
+display:
+  name: {zh: "即梦画布专家团", en: "Dreamina Canvas Team"}
+  description:
+    zh: "即梦画布专家团：多智能体协作团队，逐项核验、闭环交付。"
+    en: "Dreamina Canvas Team: a multi-agent expert team with verified, closed-loop delivery."
+
+lead: dreamina-canvas-lead
+members:
+  - id: dreamina-canvas-lead
+  - id: dreamina-canvas-creator
+  - id: dreamina-canvas-av-designer
+  - id: dreamina-canvas-timeline-editor
+  - id: dreamina-canvas-operator
+
+skills:
+  - skills/dreamina-canvas-harness
+
+sources:
+  - repo: ../codex-dreamina-canvas-plugin
+    vendor: ["skills", "scripts"]
+    licenses: ["LICENSE"]
+
+quickPrompts:
+  - {zh: "建一个画布，把这条视频配上一段音频并合成", en: "建一个画布，把这条视频配上一段音频并合成"}
+  - {zh: "在画布里给我的产品生成图+视频+配音素材", en: "在画布里给我的产品生成图+视频+配音素材"}
+  - {zh: "恢复上次中断的画布合成", en: "恢复上次中断的画布合成"}
+
+tags:
+  - {zh: "多模态画布", en: "多模态画布"}
+  - {zh: "音频生成", en: "音频生成"}
+  - {zh: "时间线合成", en: "时间线合成"}

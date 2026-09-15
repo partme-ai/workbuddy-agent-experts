@@ -1,0 +1,46 @@
+id: short-drama-studio-team
+version: 1.0.0
+marketplace: my-experts
+category: 06-ContentCreative
+allowCodexReferences: true   # 上游技能/文档的事实性引用（付费门禁、互操作声明等）
+
+display:
+  name: {zh: "短剧制片厂", en: "Short Drama Studio"}
+  description:
+    zh: "短剧制片厂：多智能体协作团队，逐项核验、闭环交付（本团队为薄编排层，执行调度到各执行团队）"
+    en: "Short Drama Studio: a multi-agent expert team with verified, closed-loop delivery."
+
+lead: short-drama-studio-lead
+members:
+  - id: short-drama-studio-lead
+  - id: video-director
+  - id: video-screenwriter
+  - id: storyboard-artist
+  - id: short-drama-pipeline-coordinator
+
+skills:
+  - skills/short-drama-pipeline
+
+sources:
+  - repo: ../codex-director-plugin
+    vendor: ["docs"]
+    docsTo: references
+    licensePrefix: director-
+  - repo: ../codex-script-plugin
+    vendor: ["docs"]
+    docsTo: references
+    licensePrefix: script-
+  - repo: ../codex-storyboard-plugin
+    vendor: ["docs"]
+    docsTo: references
+    licensePrefix: storyboard-
+
+quickPrompts:
+  - {zh: "把这本小说做成 60 秒短剧，走完创作到成片全链路", en: "把这本小说做成 60 秒短剧，走完创作到成片全链路"}
+  - {zh: "为这个品牌策划一支 3D 白模广告短片", en: "为这个品牌策划一支 3D 白模广告短片"}
+  - {zh: "只出剧本和故事板，素材我自己生成", en: "只出剧本和故事板，素材我自己生成"}
+
+tags:
+  - {zh: "全链路制片", en: "全链路制片"}
+  - {zh: "白模广告", en: "白模广告"}
+  - {zh: "剧本故事板", en: "剧本故事板"}

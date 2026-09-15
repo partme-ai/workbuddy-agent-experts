@@ -1,0 +1,37 @@
+id: dreamina-3d-team
+version: 1.0.0
+marketplace: my-experts
+category: 01-ProductDesign
+allowCodexReferences: true   # 上游技能/文档的事实性引用（付费门禁、互操作声明等）
+
+display:
+  name: {zh: "即梦3D视觉专家团", en: "Dreamina 3D Visual Team"}
+  description:
+    zh: "即梦3D视觉专家团：多智能体协作团队，逐项核验、闭环交付。"
+    en: "Dreamina 3D Visual Team: a multi-agent expert team with verified, closed-loop delivery."
+
+lead: dreamina-3d-lead
+members:
+  - id: dreamina-3d-lead
+  - id: dreamina-3d-blender-handoff-engineer
+  - id: dreamina-3d-seedance-producer
+  - id: dreamina-3d-web-operator
+  - id: dreamina-3d-recovery-operator
+
+skills:
+  - skills/dreamina-3d-harness
+
+sources:
+  - repo: ../codex-dreamina-3d-plugin
+    vendor: ["skills", "scripts"]
+    licenses: ["LICENSE", "NOTICE"]
+
+quickPrompts:
+  - {zh: "把这份 Blender 白模预览做成 Seedance 视频", en: "把这份 Blender 白模预览做成 Seedance 视频"}
+  - {zh: "校验这份 3D 交接产物并提交出片", en: "校验这份 3D 交接产物并提交出片"}
+  - {zh: "恢复中断的 3D 出片任务", en: "恢复中断的 3D 出片任务"}
+
+tags:
+  - {zh: "白模视频", en: "白模视频"}
+  - {zh: "Seedance", en: "Seedance"}
+  - {zh: "交接契约", en: "交接契约"}

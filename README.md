@@ -82,6 +82,11 @@ cp -R dist/my-experts/plugins/blender-production-team ~/.workbuddy/plugins/marke
 | Google Stitch 专家团 | 织界 + 界面设计/设计系统/代码工程/交付验收 | stitch-design-team@my-experts |
 | 图片工厂专家团 | 画枢 + 提示词/生产/评审/恢复（经本地 Codex CLI 出图） | image-factory-team@my-experts |
 | 视频工厂专家团 | 影枢 + 导演/编剧/故事板/生产/评审（rough→批准→final） | video-factory-team@my-experts |
+| ProcessOn 专家团 | 图叙 + 导图/图解/信息图/审阅 | processon-team@my-experts |
+| 即梦设计专家团 | 梦绘 + 图片/视频/评测/付费门禁（图+视频；**声音在画布**） | dreamina-design-team@my-experts |
+| 即梦画布专家团 | 布澜 + 建布/多媒(图视频**音频**)/时间线/运营 | dreamina-canvas-team@my-experts |
+| 即梦3D视觉专家团 | 幻构 + Blender交接/Seedance制片/网页兜底/恢复（白模视频） | dreamina-3d-team@my-experts |
+| 短剧制片厂（薄编排层） | 剧枢 + 导演/编剧/故事板/管线协调；调度即梦设计/3D视觉/视频工厂 | short-drama-studio-team@my-experts |
 
 单专家（expertType: agent）：`singles.yaml` 当前精选 16 个（AI 工程师/无障碍审计/渗透测试/港股合规审查等）；
 **改为 `singles: ['*']` 即可把全部 263+ 智能体逐一发布为单专家**。团队 lead 也是单专家发布的一员。
