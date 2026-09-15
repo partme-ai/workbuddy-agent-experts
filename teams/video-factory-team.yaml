@@ -24,23 +24,23 @@ skills:
 
 sources:
   # 技能本体（5 个）从 video-factory-skills 包 vendor（单一事实源）
-  - repo: ../../workspace-agent-skills/full-aigc-skills-repositories/video-factory-skills
+  - repo: https://github.com/full-aigc-skills/video-factory-skills.git
     vendor: ["skills"]
   # 宿主执行面（bin）从插件仓 vendor
-  - repo: ../codex-video-factory-plugin
+  - repo: https://github.com/partme-ai/codex-video-factory-plugin.git
     vendor: ["bin"]
     licenses: ["LICENSE"]
-  - repo: repos/director-plugin
+  - repo: https://github.com/partme-ai/codex-director-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references
     licensePrefix: director-
-  - repo: repos/script-plugin
+  - repo: https://github.com/partme-ai/codex-script-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references
     licensePrefix: script-
-  - repo: repos/storyboard-plugin
+  - repo: https://github.com/partme-ai/codex-storyboard-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references

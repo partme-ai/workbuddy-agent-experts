@@ -22,7 +22,7 @@ skills:
   - skills/dreamina-canvas-harness
 
 sources:
-  - repo: ../codex-dreamina-canvas-plugin
+  - repo: https://github.com/partme-ai/codex-dreamina-canvas-plugin.git
     vendor: ["skills", "scripts"]
     licenses: ["LICENSE"]
 

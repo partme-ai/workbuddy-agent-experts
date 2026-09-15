@@ -36,7 +36,7 @@ skills:
 
 # 运行时来源：构建时从 codex-blender-plugin 检出目录 vendor（harness 单一事实源仍在该仓库）
 harness:
-  repo: ../codex-blender-plugin/.worktrees/feat/blender-1.0-production
+  repo: https://github.com/partme-ai/codex-blender-plugin.git
   vendor:
     - scripts
     - bin

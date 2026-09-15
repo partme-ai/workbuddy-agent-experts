@@ -22,12 +22,12 @@ skills:
   - skills/short-drama-pipeline
 
 sources:
-  - repo: repos/director-plugin
+  - repo: https://github.com/partme-ai/codex-director-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references
     licensePrefix: director-
-  - repo: repos/script-plugin
+  - repo: https://github.com/partme-ai/codex-script-plugin.git
     vendor: ["."]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references

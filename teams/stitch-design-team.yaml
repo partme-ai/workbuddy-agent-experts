@@ -23,10 +23,10 @@ skills:
 
 sources:
   # 技能本体的单一事实源是 full-stack-skills/stitch-skills（v1.1.0，43 个技能，逐字 vendor）
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/stitch-skills
+  - repo: https://github.com/full-stack-skills/stitch-skills.git
     vendor: ["skills"]
   # 宿主执行面（MCP 代理、setup、harness 脚本）与法律文件仍由插件仓提供
-  - repo: ../codex-stitch-design-plugin
+  - repo: https://github.com/partme-ai/codex-stitch-plugin.git
     vendor: ["scripts"]
     licenses: ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
 
