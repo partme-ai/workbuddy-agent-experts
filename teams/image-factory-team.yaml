@@ -22,8 +22,12 @@ skills:
   - skills/image-factory-harness
 
 sources:
+  # 技能本体（4 个）从 image-factory-skills 包 vendor（单一事实源）
+  - repo: ../../workspace-agent-skills/full-aigc-skills-repositories/image-factory-skills
+    vendor: ["skills"]
+  # 宿主执行面（bin/scripts/data）从插件仓 vendor
   - repo: ../codex-image-factory-plugin
-    vendor: ["skills", "bin", "scripts", "data"]
+    vendor: ["bin", "scripts", "data"]
     licenses: ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
 
 quickPrompts:

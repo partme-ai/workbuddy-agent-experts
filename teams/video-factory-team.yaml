@@ -23,8 +23,12 @@ skills:
   - skills/video-factory-harness
 
 sources:
+  # 技能本体（5 个）从 video-factory-skills 包 vendor（单一事实源）
+  - repo: ../../workspace-agent-skills/full-aigc-skills-repositories/video-factory-skills
+    vendor: ["skills"]
+  # 宿主执行面（bin）从插件仓 vendor
   - repo: ../codex-video-factory-plugin
-    vendor: ["skills", "bin"]
+    vendor: ["bin"]
     licenses: ["LICENSE"]
   - repo: ../codex-director-plugin
     vendor: ["docs"]

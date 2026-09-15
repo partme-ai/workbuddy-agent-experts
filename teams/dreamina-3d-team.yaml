@@ -22,8 +22,12 @@ skills:
   - skills/dreamina-3d-harness
 
 sources:
+  # 技能本体（6 个）从 dreamina-skills 包 vendor（3d 层，单一事实源）
+  - repo: ../../workspace-agent-skills/full-aigc-skills-repositories/dreamina-skills
+    vendor: ["skills"]
+  # 宿主执行面（scripts）从插件仓 vendor
   - repo: ../codex-dreamina-3d-plugin
-    vendor: ["skills", "scripts"]
+    vendor: ["scripts"]
     licenses: ["LICENSE", "NOTICE"]
 
 quickPrompts:
