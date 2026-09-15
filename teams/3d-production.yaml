@@ -5,6 +5,7 @@ id: blender-production-team
 version: 0.4.0
 marketplace: my-experts
 capabilities: true
+allowCodexReferences: true   # 执行面事实上是 Codex Blender Harness（插件真名）：WorkBuddy 经同一套 harness_cli.py/launch_harness.py 驱动 Blender，"Codex" 为互操作事实而非品牌残留
 category: 01-ProductDesign
 
 display:
