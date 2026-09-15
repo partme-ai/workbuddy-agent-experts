@@ -25,22 +25,22 @@ members:
 
 # ── 技能来源：vendor from skills organizations (resolved by compose_team.py) ──
 sources:
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/document-skills
+  - repo: https://github.com/full-stack-skills/document-skills.git
     vendor: ['skills']
     licensePrefix: document-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/openspec-skills
+  - repo: https://github.com/full-stack-skills/openspec-skills.git
     vendor: ['skills']
     licensePrefix: openspec-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/speckit-skills
+  - repo: https://github.com/full-stack-skills/speckit-skills.git
     vendor: ['skills']
     licensePrefix: speckit-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/social-skills
+  - repo: https://github.com/full-stack-skills/social-skills.git
     vendor: ['skills']
     licensePrefix: social-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/testing-skills
+  - repo: https://github.com/full-stack-skills/testing-skills.git
     vendor: ['skills']
     licensePrefix: testing-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/devops-skills
+  - repo: https://github.com/full-stack-skills/devops-skills.git
     vendor: ['skills']
     licensePrefix: devops-skills-
 

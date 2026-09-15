@@ -29,34 +29,34 @@ members:
 
 # ── 技能来源：vendor from skills organizations (resolved by compose_team.py) ──
 sources:
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/vue-skills
+  - repo: https://github.com/full-stack-skills/vue-skills.git
     vendor: ['skills']
     licensePrefix: vue-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/vue-ui-skills
+  - repo: https://github.com/full-stack-skills/vue-ui-skills.git
     vendor: ['skills']
     licensePrefix: vue-ui-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/uniapp-skills
+  - repo: https://github.com/full-stack-skills/uniapp-skills.git
     vendor: ['skills']
     licensePrefix: uniapp-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/uview-skills
+  - repo: https://github.com/full-stack-skills/uview-skills.git
     vendor: ['skills']
     licensePrefix: uview-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/avue-skills
+  - repo: https://github.com/full-stack-skills/avue-skills.git
     vendor: ['skills']
     licensePrefix: avue-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/build-skills
+  - repo: https://github.com/full-stack-skills/build-skills.git
     vendor: ['skills']
     licensePrefix: build-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/testing-skills
+  - repo: https://github.com/full-stack-skills/testing-skills.git
     vendor: ['skills']
     licensePrefix: testing-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/devops-skills
+  - repo: https://github.com/full-stack-skills/devops-skills.git
     vendor: ['skills']
     licensePrefix: devops-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/design-skills
+  - repo: https://github.com/full-stack-skills/design-skills.git
     vendor: ['skills']
     licensePrefix: design-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/openspec-skills
+  - repo: https://github.com/full-stack-skills/openspec-skills.git
     vendor: ['skills']
     licensePrefix: openspec-skills-
 

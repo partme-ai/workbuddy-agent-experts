@@ -25,7 +25,9 @@ import json
 import re
 import shutil
 import struct
+import subprocess
 import sys
+import tempfile
 import zlib
 from pathlib import Path
 
@@ -35,6 +37,29 @@ try:
     import yaml
 except ImportError:  # pragma: no cover
     yaml = None
+
+
+def _is_git_url(s: str) -> bool:
+    """Detect git-scheme sources so we can git clone them on the fly.
+
+    Covers ssh (git@host:owner/repo.git) and https (https://host/owner/repo).
+    Local paths (./, ../, /) fall through and are resolved against ROOT.
+    """
+    return s.startswith(("git@", "git://", "http://", "https://")) or s.endswith(".git")
+
+
+def _git_clone_into(cache_root: Path, repo_url: str, dest_name: str) -> Path:
+    """Shallow-clone repo_url into <cache_root>/<dest_name>. Uses --depth 1
+    because we only need the working tree (no history). Cached clones are
+    reused across builds when the local working tree is clean.
+    """
+    dest = cache_root / dest_name
+    if not (dest / ".git").exists():
+        subprocess.run(
+            ["git", "clone", "--quiet", "--depth", "1", repo_url, str(dest)],
+            check=True,
+        )
+    return dest
 
 
 def load_yaml(path: Path):
@@ -330,10 +355,20 @@ def build_team(team_path: Path, out: Path) -> dict:
     marketplace = team["marketplace"]
     sources = team_sources(team)
     for source in sources:
-        repo = (ROOT / source["repo"]).resolve()
+        repo_ref = source["repo"]
+        if _is_git_url(repo_ref):
+            # shallow-clone to a stable per-URL cache directory
+            import hashlib as _h
+            key = _h.sha1(repo_ref.encode()).hexdigest()[:12]
+            tail = repo_ref.rstrip("/").rstrip(".git").rsplit("/", 1)[-1]
+            cache_root = Path(tempfile.gettempdir()) / "workbuddy-vendor-cache"
+            cache_root.mkdir(parents=True, exist_ok=True)
+            repo = _git_clone_into(cache_root, repo_ref, f"{tail}-{key}")
+        else:
+            repo = (ROOT / repo_ref).resolve()
         source["_repo_path"] = repo
         if not repo.is_dir():
-            raise SystemExit(f"source repo not found: {source['repo']} -> {repo}")
+            raise SystemExit(f"source repo not found: {repo_ref} -> {repo}")
 
     members = []
     for entry in team["members"]:

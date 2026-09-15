@@ -233,9 +233,16 @@ def render_team_yaml(team: dict) -> str:
     tid = team["id"]
     members = team.get("members", [])
 
-    # resolve skills → source repos with licensePrefix
+    # resolve skills → source repos. Emit GitHub HTTPS URLs as the
+    # repo field so the generated team is portable across machines —
+    # build.py shallow-clones the URL on demand (see scripts/build.py
+    # `_is_git_url`). Override to a local relative path via the
+    # `WORKBUDDY_VENDOR_MODE=local` environment variable if you want to
+    # bypass the clone (offline work, etc).
     sources: list[dict] = []
-    seen_pkgs: set[tuple[str, str]] = set()  # (root_str, pkg_name)
+    seen_pkgs: set[tuple[str, str]] = set()
+    import os
+    vendor_mode = os.environ.get("WORKBUDDY_VENDOR_MODE", "git").lower()
     for skill_alias in team.get("skills", []):
         res = resolve_skill(skill_alias)
         if not res:
@@ -243,20 +250,30 @@ def render_team_yaml(team: dict) -> str:
                   file=sys.stderr)
             continue
         root, pkg_name, _ = res
-        root_str = str(root)
-        # rel path from workbuddy-agent-experts/ to the package
-        if "full-aigc-skills-repositories" in root_str:
-            rel_repo = "../../workspace-agent-skills/full-aigc-skills-repositories/" + pkg_name
+        # GitHub org lookup by root name
+        if "full-aigc-skills-repositories" in str(root):
+            org = "full-aigc-skills"
         else:
-            rel_repo = "../../workspace-agent-skills/full-stack-skills-repositories/" + pkg_name
-        if (root_str, pkg_name) in seen_pkgs:
+            org = "full-stack-skills"
+        pkg_url = f"https://github.com/{org}/{pkg_name}.git"
+        if (pkg_url, pkg_name) in seen_pkgs:
             continue
-        seen_pkgs.add((root_str, pkg_name))
-        sources.append({
+        seen_pkgs.add((pkg_url, pkg_name))
+        if vendor_mode == "local":
+            # fall back to the local checkout path (offline / dev mode)
+            if "full-aigc-skills-repositories" in str(root):
+                rel_repo = "../../workspace-agent-skills/full-aigc-skills-repositories/" + pkg_name
+            else:
+                rel_repo = "../../workspace-agent-skills/full-stack-skills-repositories/" + pkg_name
+        else:
+            rel_repo = pkg_url
+        entry: dict = {
             "repo": rel_repo,
             "vendor": ["skills"],
             "licensePrefix": f"{pkg_name}-",
-        })
+        }
+        # include the ref so build.py's future clone step can pin a tag
+        sources.append(entry)
 
     # lead = the team's `lead` (or first member if missing)
     lead = f"{tid}-lead"

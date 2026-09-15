@@ -28,22 +28,22 @@ members:
 
 # ── 技能来源：vendor from skills organizations (resolved by compose_team.py) ──
 sources:
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/rust-skills
+  - repo: https://github.com/full-stack-skills/rust-skills.git
     vendor: ['skills']
     licensePrefix: rust-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/tauri-skills
+  - repo: https://github.com/full-stack-skills/tauri-skills.git
     vendor: ['skills']
     licensePrefix: tauri-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/electron-skills
+  - repo: https://github.com/full-stack-skills/electron-skills.git
     vendor: ['skills']
     licensePrefix: electron-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/build-skills
+  - repo: https://github.com/full-stack-skills/build-skills.git
     vendor: ['skills']
     licensePrefix: build-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/testing-skills
+  - repo: https://github.com/full-stack-skills/testing-skills.git
     vendor: ['skills']
     licensePrefix: testing-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/devops-skills
+  - repo: https://github.com/full-stack-skills/devops-skills.git
     vendor: ['skills']
     licensePrefix: devops-skills-
 

@@ -29,19 +29,19 @@ members:
 
 # ── 技能来源：vendor from skills organizations (resolved by compose_team.py) ──
 sources:
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/flutter-skills
+  - repo: https://github.com/full-stack-skills/flutter-skills.git
     vendor: ['skills']
     licensePrefix: flutter-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/design-skills
+  - repo: https://github.com/full-stack-skills/design-skills.git
     vendor: ['skills']
     licensePrefix: design-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/testing-skills
+  - repo: https://github.com/full-stack-skills/testing-skills.git
     vendor: ['skills']
     licensePrefix: testing-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/devops-skills
+  - repo: https://github.com/full-stack-skills/devops-skills.git
     vendor: ['skills']
     licensePrefix: devops-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/openspec-skills
+  - repo: https://github.com/full-stack-skills/openspec-skills.git
     vendor: ['skills']
     licensePrefix: openspec-skills-
 

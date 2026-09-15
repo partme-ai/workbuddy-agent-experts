@@ -33,34 +33,34 @@ members:
 
 # ── 技能来源：vendor from skills organizations (resolved by compose_team.py) ──
 sources:
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/java-skills
+  - repo: https://github.com/full-stack-skills/java-skills.git
     vendor: ['skills']
     licensePrefix: java-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/spring-skills
+  - repo: https://github.com/full-stack-skills/spring-skills.git
     vendor: ['skills']
     licensePrefix: spring-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/kotlin-skills
+  - repo: https://github.com/full-stack-skills/kotlin-skills.git
     vendor: ['skills']
     licensePrefix: kotlin-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/ddd-skills
+  - repo: https://github.com/full-stack-skills/ddd-skills.git
     vendor: ['skills']
     licensePrefix: ddd-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/ddd4j-skills
+  - repo: https://github.com/full-stack-skills/ddd4j-skills.git
     vendor: ['skills']
     licensePrefix: ddd4j-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/database-skills
+  - repo: https://github.com/full-stack-skills/database-skills.git
     vendor: ['skills']
     licensePrefix: database-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/testing-skills
+  - repo: https://github.com/full-stack-skills/testing-skills.git
     vendor: ['skills']
     licensePrefix: testing-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/devops-skills
+  - repo: https://github.com/full-stack-skills/devops-skills.git
     vendor: ['skills']
     licensePrefix: devops-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/openspec-skills
+  - repo: https://github.com/full-stack-skills/openspec-skills.git
     vendor: ['skills']
     licensePrefix: openspec-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/document-skills
+  - repo: https://github.com/full-stack-skills/document-skills.git
     vendor: ['skills']
     licensePrefix: document-skills-
 

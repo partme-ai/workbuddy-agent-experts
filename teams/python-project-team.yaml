@@ -32,28 +32,28 @@ members:
 
 # ── 技能来源：vendor from skills organizations (resolved by compose_team.py) ──
 sources:
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/python-skills
+  - repo: https://github.com/full-stack-skills/python-skills.git
     vendor: ['skills']
     licensePrefix: python-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/database-skills
+  - repo: https://github.com/full-stack-skills/database-skills.git
     vendor: ['skills']
     licensePrefix: database-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/testing-skills
+  - repo: https://github.com/full-stack-skills/testing-skills.git
     vendor: ['skills']
     licensePrefix: testing-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/devops-skills
+  - repo: https://github.com/full-stack-skills/devops-skills.git
     vendor: ['skills']
     licensePrefix: devops-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/openspec-skills
+  - repo: https://github.com/full-stack-skills/openspec-skills.git
     vendor: ['skills']
     licensePrefix: openspec-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/document-skills
+  - repo: https://github.com/full-stack-skills/document-skills.git
     vendor: ['skills']
     licensePrefix: document-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/agent-skills
+  - repo: https://github.com/full-stack-skills/agent-skills.git
     vendor: ['skills']
     licensePrefix: agent-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/speckit-skills
+  - repo: https://github.com/full-stack-skills/speckit-skills.git
     vendor: ['skills']
     licensePrefix: speckit-skills-
 

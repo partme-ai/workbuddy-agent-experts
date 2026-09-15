@@ -29,28 +29,28 @@ members:
 
 # ── 技能来源：vendor from skills organizations (resolved by compose_team.py) ──
 sources:
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/threejs-skills
+  - repo: https://github.com/full-stack-skills/threejs-skills.git
     vendor: ['skills']
     licensePrefix: threejs-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/t2ui-skills
+  - repo: https://github.com/full-stack-skills/t2ui-skills.git
     vendor: ['skills']
     licensePrefix: t2ui-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/chart-skills
+  - repo: https://github.com/full-stack-skills/chart-skills.git
     vendor: ['skills']
     licensePrefix: chart-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/design-skills
+  - repo: https://github.com/full-stack-skills/design-skills.git
     vendor: ['skills']
     licensePrefix: design-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/cocos-skills
+  - repo: https://github.com/full-stack-skills/cocos-skills.git
     vendor: ['skills']
     licensePrefix: cocos-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/testing-skills
+  - repo: https://github.com/full-stack-skills/testing-skills.git
     vendor: ['skills']
     licensePrefix: testing-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/devops-skills
+  - repo: https://github.com/full-stack-skills/devops-skills.git
     vendor: ['skills']
     licensePrefix: devops-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/openspec-skills
+  - repo: https://github.com/full-stack-skills/openspec-skills.git
     vendor: ['skills']
     licensePrefix: openspec-skills-
 

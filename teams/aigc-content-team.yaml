@@ -26,28 +26,28 @@ members:
 
 # ── 技能来源：vendor from skills organizations (resolved by compose_team.py) ──
 sources:
-  - repo: ../../workspace-agent-skills/full-aigc-skills-repositories/image-factory-skills
+  - repo: https://github.com/full-aigc-skills/image-factory-skills.git
     vendor: ['skills']
     licensePrefix: image-factory-skills-
-  - repo: ../../workspace-agent-skills/full-aigc-skills-repositories/video-factory-skills
+  - repo: https://github.com/full-aigc-skills/video-factory-skills.git
     vendor: ['skills']
     licensePrefix: video-factory-skills-
-  - repo: ../../workspace-agent-skills/full-aigc-skills-repositories/blender-skills
+  - repo: https://github.com/full-aigc-skills/blender-skills.git
     vendor: ['skills']
     licensePrefix: blender-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/stitch-skills
+  - repo: https://github.com/full-stack-skills/stitch-skills.git
     vendor: ['skills']
     licensePrefix: stitch-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/processon-skills
+  - repo: https://github.com/full-stack-skills/processon-skills.git
     vendor: ['skills']
     licensePrefix: processon-skills-
-  - repo: ../../workspace-agent-skills/full-aigc-skills-repositories/dreamina-skills
+  - repo: https://github.com/full-aigc-skills/dreamina-skills.git
     vendor: ['skills']
     licensePrefix: dreamina-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/document-skills
+  - repo: https://github.com/full-stack-skills/document-skills.git
     vendor: ['skills']
     licensePrefix: document-skills-
-  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/design-skills
+  - repo: https://github.com/full-stack-skills/design-skills.git
     vendor: ['skills']
     licensePrefix: design-skills-
 
