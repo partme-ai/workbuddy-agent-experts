@@ -1,0 +1,57 @@
+# 团队定义：把独立智能体组团为一个 WorkBuddy 智能体团队插件
+# 由 scripts/build.py 消费；智能体正文一律引用 agents/ 下的单一事实源。
+
+id: blender-production-team
+version: 0.2.0
+marketplace: partme-blender
+category: 01-ProductDesign
+
+display:
+  name: {zh: Blender 3D 生产专家团, en: Blender Production Team}
+  description:
+    zh: 结构化 Blender 生产团队：启动托管 harness 会话，派发闭合契约命令，交付经回执核验的模型、动画、渲染与视频。
+    en: Structured Blender production team driving a managed harness session with closed-contract
+        commands and receipt-verified delivery of models, animation, renders and video.
+
+lead: blender-team-lead
+members:
+  - id: blender-team-lead
+    persona: {zh: 岚一, en: Lan}
+    role: lead
+  - id: blender-modeler
+    persona: {zh: 塑岩, en: Suyan}
+  - id: blender-rigger-animator
+    persona: {zh: 骨风, en: Gufeng}
+  - id: blender-lookdev-renderer
+    persona: {zh: 彩澜, en: Cailan}
+  - id: blender-effects-editor
+    persona: {zh: 影流, en: Yingliu}
+  - id: blender-qc-delivery
+    persona: {zh: 核真, en: Hezhen}
+
+skills:
+  - skills/blender-harness
+  - skills/blender-production
+
+# 运行时来源：构建时从 codex-blender-plugin 检出目录 vendor（harness 单一事实源仍在该仓库）
+harness:
+  repo: ../codex-blender-plugin/.worktrees/feat/blender-1.0-production
+  vendor:
+    - scripts
+    - bin
+    - config
+    - schemas
+    - skills          # 26 份生产技能 → blender-production/references/
+  licenses:
+    - LICENSE
+    - THIRD_PARTY_NOTICES.md
+
+quickPrompts:
+  - {zh: 建一个硬表面产品件并导出经验证的 GLB/FBX, en: Model a hard-surface product and export verified GLB/FBX}
+  - {zh: 绑定角色、做变形验证并渲染转台, en: Rig a character, validate deformation, render a turntable}
+  - {zh: 在 VSE 剪辑序列并导出通过媒体校验的 H.264/AAC, en: Edit a sequence in VSE and export verified H.264/AAC}
+
+tags:
+  - {zh: Blender, en: Blender}
+  - {zh: 3D 生产, en: 3D Production}
+  - {zh: 回执核验交付, en: Receipt-Verified Delivery}
