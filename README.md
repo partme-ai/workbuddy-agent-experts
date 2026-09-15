@@ -66,7 +66,7 @@ cd workbuddy-agent-experts
 ```powershell
 git clone https://github.com/partme-ai/workbuddy-agent-experts.git
 cd workbuddy-agent-experts
-.\install.ps1           # 或 .\install.ps1 -uninstall 卸载？暂仅支持 --uninstall 传参形式
+.\install.ps1           # 卸载：.\install.ps1 --uninstall
 ```
 
 安装器（`scripts/install.py`，纯标准库）把 `experts/` 部署到
