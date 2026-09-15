@@ -17,6 +17,12 @@ curated teams).
 
 Idempotency: re-running on the same team-compositions.yaml produces a
 byte-identical set of files (modulo header comments).
+
+CLI:
+  --dry-run              write to /tmp/composed-teams/{agents,teams}
+                          instead of agents/ and teams/, and print a diff
+                          summary against the current tracked files
+  --output-dir=PATH      override the output directory (default: repo root)
 """
 from __future__ import annotations
 
@@ -91,22 +97,60 @@ def collect_agent_ids() -> set[str]:
     return found
 
 
-def vendor_agent(agent_id: str, out_dir: Path) -> Path:
-    """Copy the upstream agent .md into agents/, strip codex-/codexX- prefix
-    in frontmatter name field so it's neutral (build.py vendor_neutral_skill
-    only handles skills/<id>/, not agents/, so we sanitize here).
+def _domain_for_agent(agent_id: str) -> str:
+    """Find which agency-agents-zh domain directory the agent lives in.
+
+    Used to mirror the hand-curated agents/ layout (e.g. agents/design/,
+    agents/engineering/, agents/testing/), which build.py's agent_index
+    rglob handles transitively — agents are deduped across teams by stem.
     """
-    # find source file
+    for d in AGENTS_SRC.iterdir():
+        if d.is_dir() and d.name not in AGENT_SKIP_DIRS:
+            if (d / f"{agent_id}.md").is_file():
+                return d.name
+    return "misc"  # synthetic lead agents that don't have an upstream file
+
+
+def vendor_agent(agent_id: str, out_root: Path) -> Path:
+    """Copy the upstream agent .md into out_root/agents/<domain>/<id>.md,
+    strip codex-/codexX- prefix in frontmatter name field. If the source
+    file does not exist (e.g. <team-id>-lead), generate a minimal stub
+    under misc/.
+    """
     sources = list(AGENTS_SRC.rglob(f"{agent_id}.md"))
     sources = [s for s in sources if ".git" not in s.parts]
-    if not sources:
-        raise FileNotFoundError(f"agent not found: {agent_id}")
-    src = sources[0]
-    target = out_dir / f"{agent_id}.md"
+    domain = _domain_for_agent(agent_id) if sources else "misc"
+    target = out_root / "agents" / domain / f"{agent_id}.md"
     target.parent.mkdir(parents=True, exist_ok=True)
-    text = src.read_text(encoding="utf-8", errors="replace")
-    # strip known host prefixes from the frontmatter name field
-    text = re.sub(r"^name:\s*codex[a-z-]*-(.+)$", r"name: \1", text, count=1, flags=re.M)
+    if sources:
+        src = sources[0]
+        text = src.read_text(encoding="utf-8", errors="replace")
+        # strip known host prefixes from the frontmatter name field
+        text = re.sub(r"^name:\s*codex[a-z-]*-(.+)$", r"name: \1", text, count=1, flags=re.M)
+    else:
+        text = (
+            "---\n"
+            f"name: {agent_id}\n"
+            f"description: Team lead agent for the auto-generated "
+            f"{agent_id.rsplit('-lead', 1)[0]} team. "
+            f"Orchestrates the rest of the team members and routes work.\n"
+            "workbuddy:\n"
+            "  role: lead\n"
+            "  category: 02-Engineering\n"
+            "---\n\n"
+            f"# {agent_id}\n\n"
+            "## Role\n\n"
+            f"This is the lead agent for the `{agent_id.rsplit('-lead', 1)[0]}` "
+            "team. It routes work to the other members based on task type and "
+            "verifies outputs against the team's quality gates.\n\n"
+            "## Behavior\n\n"
+            "- Always identify the task type before delegating\n"
+            "- Use the `*` member agent that best matches the task's primary domain\n"
+            "- Verify deliverables before declaring done\n\n"
+            "## Constraints\n\n"
+            "- Does not perform direct code generation; delegates to specialist members\n"
+            "- Escalates blockers to the user, never silently retries\n"
+        )
     target.write_text(text, encoding="utf-8")
     return target
 
@@ -154,8 +198,19 @@ def render_team_yaml(team: dict) -> str:
 
     # lead = the team's `lead` (or first member if missing)
     lead = f"{tid}-lead"
-    members_yaml = "\n".join(f"  - {m}" for m in members)
+    # lead must appear in members for build.py; use members[0] if no
+    # explicit <team-id>-lead. The stub for <team-id>-lead is vendored
+    # into agents/<domain>/ so build.py's agent_index can resolve it.
+    lead_id = f"{tid}-lead"
+    if lead_id not in members:
+        members = [lead_id] + members
 
+    members_yaml = "\n".join(f"  - id: {m}" for m in members)
+
+    # The lead line intentionally references an explicit agent id
+    # (e.g. java-backend-team-lead) so build.py validates it via
+    # agent_index. The lead's source file is auto-vendored as a stub
+    # under agents/misc/<team-id>-lead.md by vendor_agent() below.
     sources_yaml_lines = ["sources:"]
     for s in sources:
         sources_yaml_lines.append(f"  - repo: {s['repo']}")
@@ -164,6 +219,10 @@ def render_team_yaml(team: dict) -> str:
             sources_yaml_lines.append(f"    licensePrefix: {s['licensePrefix']}")
     sources_yaml = "\n".join(sources_yaml_lines)
 
+    # build.py requires lead to be a real agent id in members. Use the
+    # synthetic <team-id>-lead (generated as an agent stub by vendor_agent)
+    # as the explicit lead.
+    lead_id = f"{tid}-lead"
     return f"""# AUTO-GENERATED by scripts/compose_team.py from team-compositions.yaml
 # Do not edit by hand; re-run the script to refresh.
 
@@ -179,7 +238,7 @@ display:
     zh: "{team['display']['name']['zh']}：多智能体协作团队，由 scripts/compose_team.py 自动组装。"
     en: "{team['display']['name']['en']}: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
 
-lead: {lead}
+lead: {lead_id}
 members:
 {members_yaml}
 
@@ -196,6 +255,15 @@ quickPrompts:
 # ────────────────────────── entry point ──────────────────────────
 
 def main() -> int:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true",
+                    help="write to /tmp/composed-teams/{agents,teams} for inspection "
+                         "(does NOT touch the in-repo agents/ or teams/)")
+    ap.add_argument("--output-dir", type=Path, default=None,
+                    help="override the output directory (default: repo root)")
+    args = ap.parse_args()
+
     data = yaml.safe_load(COMPOSITIONS.read_text())
     teams = data.get("compositions", [])
 
@@ -211,19 +279,44 @@ def main() -> int:
             print(f"  {tid}: {m!r}", file=sys.stderr)
         return 1
 
-    # vendor agents (deduped across teams)
-    all_agents_needed: set[str] = set()
+    out_root = args.output_dir or (Path("/tmp/composed-teams") if args.dry_run else ROOT)
+    out_agents = out_root / "agents"
+    out_teams = out_root / "teams"
+    out_agents.mkdir(parents=True, exist_ok=True)
+    out_teams.mkdir(parents=True, exist_ok=True)
+
+    # vendor agents (deduped across teams) — mirror the hand-curated
+    # agents/<domain>/<id>.md layout (build.py's agent_index rglob handles
+    # subdirectories; files are deduped by stem so the same role agent
+    # used by multiple teams only lives at one path).
     for t in teams:
-        all_agents_needed.update(t.get("members", []))
-    for aid in sorted(all_agents_needed):
-        vendor_agent(aid, ROOT / "agents")
-    print(f"vendored {len(all_agents_needed)} agent roles into agents/")
+        for aid in list(t.get("members", [])) + [f"{t['id']}-lead"]:
+            vendor_agent(aid, out_root)
+    print(f"vendored agents into {out_agents}/<domain>/")
 
     # render teams
     for t in teams:
-        out = ROOT / "teams" / f"{t['id']}.yaml"
+        out = out_teams / f"{t['id']}.yaml"
         out.write_text(render_team_yaml(t), encoding="utf-8")
-    print(f"rendered {len(teams)} team yamls into teams/")
+    print(f"rendered {len(teams)} team yamls into {out_teams}/")
+
+    if args.dry_run:
+        existing = sorted((ROOT / "teams").glob("*.yaml"))
+        new = sorted(out_teams.glob("*.yaml"))
+        existing_names = {p.name for p in existing}
+        new_names = {p.name for p in new}
+        print()
+        print("=== dry-run summary (writes to /tmp, does NOT touch in-repo files) ===")
+        print(f"  will create ({len(new_names - existing_names)}): {sorted(new_names - existing_names)[:8]}{'...' if len(new_names - existing_names) > 8 else ''}")
+        print(f"  will overwrite ({len(new_names & existing_names)}): {sorted(new_names & existing_names)[:8]}{'...' if len(new_names & existing_names) > 8 else ''}")
+        print(f"  no-change (manual teams): {sorted(existing_names - new_names)[:6]}")
+        print()
+        print(f"output: {out_root}")
+        print()
+        print("NOTE: dry-run does NOT build-verify because build.py reads")
+        print("      agents/ from the in-repo tree only. To verify, run:")
+        print("      python3 scripts/compose_team.py  (writes in-repo)")
+        print("      python3 scripts/build.py teams/<tid>.yaml --out /tmp/x")
 
     return 0
 
