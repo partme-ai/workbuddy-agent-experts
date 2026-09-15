@@ -1,0 +1,525 @@
+version: 1.0.0
+compositions:
+
+# ────────────────────────── Language / stack teams ──────────────────────────
+
+# java-backend-team: 后端 Java + Spring + 数据库 + DDD 场景
+- id: java-backend-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Java 后端项目专家团", en: "Java Backend Project Team"}
+  members:
+    - engineering-backend-architect
+    - engineering-software-architect
+    - engineering-multi-agent-systems-architect
+    - engineering-data-engineer
+    - engineering-database-optimizer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-codebase-onboarding-engineer
+    - engineering-devops-automator
+    - engineering-it-service-manager
+    - testing-api-tester
+    - testing-evidence-collector
+    - testing-reality-checker
+    - design-ux-architect
+  skills:
+    - java
+    - spring
+    - kotlin
+    - ddd
+    - ddd4j
+    - database
+    - testing
+    - devops
+    - openspec
+    - document
+
+# android-java-team: 移动端 Android（Java/Kotlin）
+- id: android-java-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Android 移动项目专家团", en: "Android Mobile Project Team"}
+  members:
+    - engineering-mobile-app-builder
+    - engineering-iot-solution-architect
+    - engineering-software-architect
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-embedded-qa-engineer
+    - testing-accessibility-auditor
+    - design-ui-designer
+    - design-ux-architect
+  skills:
+    - java
+    - kotlin
+    - flutter
+    - document
+    - testing
+    - devops
+
+# rust-project-team: Rust + 嵌入式/CLI 场景
+- id: rust-project-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Rust 项目专家团", en: "Rust Project Team"}
+  members:
+    - engineering-rust-architect
+    - engineering-software-architect
+    - engineering-backend-architect
+    - engineering-embedded-firmware-engineer
+    - engineering-embedded-linux-driver-engineer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-embedded-qa-engineer
+    - testing-api-tester
+    - testing-evidence-collector
+    - design-ux-architect
+  skills:
+    - rust
+    - zig
+    - firmware
+    - tauri
+    - testing
+    - devops
+    - openspec
+    - document
+
+# python-project-team: Python 后端 / 数据 / AI 工程
+- id: python-project-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Python 项目专家团", en: "Python Project Team"}
+  members:
+    - engineering-backend-architect
+    - engineering-ai-engineer
+    - engineering-ai-agent-architect
+    - engineering-data-engineer
+    - engineering-database-optimizer
+    - engineering-ai-data-remediation-engineer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - engineering-email-intelligence-engineer
+    - testing-api-tester
+    - testing-evidence-collector
+    - design-ux-architect
+  skills:
+    - python
+    - database
+    - testing
+    - devops
+    - openspec
+    - document
+    - agent
+    - speckit
+
+# javascript-project-team: Node.js / 通用 JS
+- id: javascript-project-team
+  category: 02-Engineering
+  display:
+    name: {zh: "JavaScript 项目专家团", en: "JavaScript Project Team"}
+  members:
+    - engineering-backend-architect
+    - engineering-frontend-developer
+    - engineering-mobile-app-builder
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - engineering-it-service-manager
+    - testing-accessibility-auditor
+    - testing-api-tester
+    - design-ui-designer
+    - design-ux-architect
+  skills:
+    - nodejs
+    - build
+    - testing
+    - devops
+    - openspec
+    - document
+
+# typescript-project-team: TypeScript 严格类型
+- id: typescript-project-team
+  category: 02-Engineering
+  display:
+    name: {zh: "TypeScript 项目专家团", en: "TypeScript Project Team"}
+  members:
+    - engineering-backend-architect
+    - engineering-frontend-developer
+    - engineering-mobile-app-builder
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - engineering-minimal-change-engineer
+    - testing-api-tester
+    - testing-accessibility-auditor
+    - design-ui-designer
+    - design-ux-architect
+  skills:
+    - nodejs
+    - build
+    - testing
+    - devops
+    - openspec
+    - document
+
+# go-project-team: Go 后端 / 云原生
+- id: go-project-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Go 项目专家团", en: "Go Project Team"}
+  members:
+    - engineering-backend-architect
+    - engineering-software-architect
+    - engineering-database-optimizer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - engineering-sre
+    - testing-api-tester
+    - testing-performance-benchmarker
+    - design-ux-architect
+  skills:
+    - go
+    - database
+    - testing
+    - devops
+    - openspec
+    - document
+
+# swift-project-team: iOS / macOS Swift
+- id: swift-project-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Swift 项目专家团", en: "Swift Project Team"}
+  members:
+    - engineering-mobile-app-builder
+    - engineering-frontend-developer
+    - engineering-software-architect
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-accessibility-auditor
+    - testing-evidence-collector
+    - design-ui-designer
+    - design-ux-architect
+  skills:
+    - swift
+    - openspec
+    - testing
+    - devops
+    - document
+
+# flutter-project-team: Flutter 跨端移动
+- id: flutter-project-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Flutter 项目专家团", en: "Flutter Project Team"}
+  members:
+    - engineering-mobile-app-builder
+    - engineering-frontend-developer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-accessibility-auditor
+    - testing-evidence-collector
+    - design-ui-designer
+    - design-ux-architect
+    - design-ux-researcher
+  skills:
+    - flutter
+    - design
+    - testing
+    - devops
+    - openspec
+
+# web3d-game-team: Three.js / Cocos / 3D / 游戏
+- id: web3d-game-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Web3D 与游戏项目专家团", en: "Web3D & Game Project Team"}
+  members:
+    - engineering-frontend-developer
+    - engineering-mobile-app-builder
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-software-architect
+    - design-ux-architect
+    - design-ui-designer
+    - design-visual-storyteller
+    - testing-reality-checker
+    - testing-performance-benchmarker
+  skills:
+    - threejs
+    - t2ui
+    - chart
+    - design
+    - cocos
+    - testing
+    - devops
+    - openspec
+
+# tauri-desktop-team: Tauri 桌面（Rust + Web 前端）
+- id: tauri-desktop-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Tauri 桌面项目专家团", en: "Tauri Desktop Project Team"}
+  members:
+    - engineering-rust-architect
+    - engineering-frontend-developer
+    - engineering-mechanical-design-engineer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-evidence-collector
+    - design-ui-designer
+    - design-ux-architect
+  skills:
+    - rust
+    - tauri
+    - electron
+    - build
+    - testing
+    - devops
+
+# firmware-embedded-team: 嵌入式裸机 / RTOS
+- id: firmware-embedded-team
+  category: 02-Engineering
+  display:
+    name: {zh: "固件与嵌入式项目专家团", en: "Firmware & Embedded Project Team"}
+  members:
+    - engineering-embedded-firmware-engineer
+    - engineering-embedded-linux-driver-engineer
+    - engineering-fpga-digital-design-engineer
+    - engineering-iot-solution-architect
+    - engineering-mechanical-design-engineer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-embedded-qa-engineer
+    - testing-evidence-collector
+    - testing-reality-checker
+  skills:
+    - firmware
+    - rust
+    - zig
+    - testing
+    - devops
+    - document
+
+# c-cpp-lowlevel-team: Zig/C/C++ 低层/系统编程（重用 zig 包）
+- id: zig-systems-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Zig/C 系统编程专家团", en: "Zig/C Systems Team"}
+  members:
+    - engineering-embedded-firmware-engineer
+    - engineering-embedded-linux-driver-engineer
+    - engineering-fpga-digital-design-engineer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-embedded-qa-engineer
+    - testing-evidence-collector
+  skills:
+    - zig
+    - firmware
+    - rust
+    - testing
+    - devops
+    - document
+
+# vue-frontend-team: Vue 生态（含 uniapp）
+- id: vue-frontend-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Vue 前端项目专家团", en: "Vue Frontend Project Team"}
+  members:
+    - engineering-frontend-developer
+    - engineering-mobile-app-builder
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-accessibility-auditor
+    - testing-evidence-collector
+    - design-ui-designer
+    - design-ux-architect
+    - design-visual-storyteller
+  skills:
+    - vue
+    - vue-ui
+    - uniapp
+    - uview
+    - avue
+    - build
+    - testing
+    - devops
+    - design
+    - openspec
+
+# react-frontend-team: React 生态
+- id: react-frontend-team
+  category: 02-Engineering
+  display:
+    name: {zh: "React 前端项目专家团", en: "React Frontend Project Team"}
+  members:
+    - engineering-frontend-developer
+    - engineering-mobile-app-builder
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-accessibility-auditor
+    - testing-evidence-collector
+    - design-ui-designer
+    - design-ux-architect
+    - design-visual-storyteller
+  skills:
+    - react
+    - build
+    - testing
+    - devops
+    - design
+    - openspec
+
+# angular-frontend-team
+- id: angular-frontend-team
+  category: 02-Engineering
+  display:
+    name: {zh: "Angular 前端项目专家团", en: "Angular Frontend Project Team"}
+  members:
+    - engineering-frontend-developer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - engineering-devops-automator
+    - testing-accessibility-auditor
+    - design-ui-designer
+    - design-ux-architect
+  skills:
+    - angular
+    - build
+    - testing
+    - devops
+    - design
+    - openspec
+
+# uniapp-mini-program-team: 微信/支付宝/抖音小程序
+- id: uniapp-mini-program-team
+  category: 02-Engineering
+  display:
+    name: {zh: "uni-app 跨端小程序项目专家团", en: "uni-app Mini Program Project Team"}
+  members:
+    - engineering-mobile-app-builder
+    - engineering-frontend-developer
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - testing-accessibility-auditor
+    - design-ui-designer
+    - design-ux-architect
+  skills:
+    - uniapp
+    - uview
+    - vue
+    - vue-ui
+    - design
+    - testing
+    - devops
+
+# ────────────────────────── Cross-functional teams ──────────────────────────
+
+# qa-devops-team
+- id: qa-devops-team
+  category: 03-Quality
+  display:
+    name: {zh: "QA & DevOps 专家团", en: "QA & DevOps Team"}
+  members:
+    - engineering-devops-automator
+    - engineering-incident-response-commander
+    - engineering-sre
+    - engineering-it-service-manager
+    - testing-api-tester
+    - testing-evidence-collector
+    - testing-performance-benchmarker
+    - testing-reality-checker
+    - testing-workflow-optimizer
+    - testing-tool-evaluator
+  skills:
+    - testing
+    - devops
+    - build
+    - docker
+    - openspec
+    - document
+
+# design-product-team
+- id: design-product-team
+  category: 01-ProductDesign
+  display:
+    name: {zh: "设计与产品专家团", en: "Design & Product Team"}
+  members:
+    - design-ux-architect
+    - design-ui-designer
+    - design-ux-researcher
+    - design-persona-walkthrough
+    - design-visual-storyteller
+    - design-inclusive-visuals-specialist
+    - design-brand-guardian
+    - design-whimsy-injector
+    - design-image-prompt-engineer
+    - engineering-frontend-developer
+  skills:
+    - design
+    - t2ui
+    - chart
+    - ascii
+    - drawio
+    - pencil
+    - avue
+    - vue-ui
+    - testing
+    - openspec
+
+# aigc-content-team
+- id: aigc-content-team
+  category: 06-ContentCreative
+  display:
+    name: {zh: "AIGC 内容生产专家团", en: "AIGC Content Team"}
+  members:
+    - design-image-prompt-engineer
+    - engineering-ai-data-remediation-engineer
+    - design-ux-architect
+    - design-visual-storyteller
+    - engineering-frontend-developer
+    - testing-evidence-collector
+    - testing-reality-checker
+  skills:
+    - image-factory
+    - video-factory
+    - blender
+    - stitch
+    - processon
+    - dreamina
+    - document
+    - design
+
+# docs-api-team
+- id: docs-api-team
+  category: 04-Documentation
+  display:
+    name: {zh: "文档与 API 专家团", en: "Docs & API Team"}
+  members:
+    - engineering-code-reviewer
+    - engineering-code-style-checker
+    - testing-api-tester
+    - testing-evidence-collector
+    - engineering-backend-architect
+    - engineering-frontend-developer
+  skills:
+    - document
+    - openspec
+    - speckit
+    - social
+    - testing
+    - devops
