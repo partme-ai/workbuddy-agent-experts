@@ -2,7 +2,7 @@
 """workbuddy-agent-experts 组装器：独立智能体 → WorkBuddy 智能体团队插件 → 本地 marketplace。
 
 用法：
-    python3 scripts/build.py [teams/3d-production.yaml ...] [--out dist]
+    python3 scripts/build.py [teams/*.yaml ...] [--out experts]
 
 流程：
     1. 读团队定义（members/lead/skills/harness 来源）
@@ -10,7 +10,7 @@
     3. 生成 avatars（纯色 PNG，无外部依赖）与项目 logo（缺失时自动生成）
     4. 按 harness.repo 配置 vendor 执行面（scripts/bin/config/schemas）
        并把 harness 仓库 skills/*/SKILL.md 收进 blender-production/references/
-    5. 产出目录型 marketplace：<out>/<marketplace>/{.codebuddy-plugin/marketplace.json, plugins/<team>/}
+    5. 产出目录型 marketplace：<out>/{.codebuddy-plugin/marketplace.json, plugins/<team>/}（默认 experts/）
 
 安装（build 之后的动作，见 README）：
     rm -rf ~/.workbuddy/plugins/marketplaces/<marketplace>
@@ -339,7 +339,7 @@ def build_team(team_path: Path, out: Path) -> dict:
     if lead not in {m["entry"]["id"] for m in members}:
         raise SystemExit(f"lead {lead} is not a member")
 
-    plugin_dir = out / marketplace / "plugins" / team_id
+    plugin_dir = out / "plugins" / team_id
     if plugin_dir.exists():
         shutil.rmtree(plugin_dir)
 
@@ -450,7 +450,7 @@ def build_single(agent_id: str, out: Path, marketplace: str, version: str, *, si
     parsed = parse_agent(find_agent(agent_id))
     meta, body = parsed["meta"], parsed["body"]
     wb = meta.get("workbuddy", {})
-    plugin_dir = out / marketplace / "plugins" / agent_id
+    plugin_dir = out / "plugins" / agent_id
     if plugin_dir.exists():
         shutil.rmtree(plugin_dir)
 
@@ -495,8 +495,9 @@ def build_single(agent_id: str, out: Path, marketplace: str, version: str, *, si
 
 
 def write_marketplace_manifest(out: Path, marketplace: str, plugins: list[dict]) -> None:
+    """marketplace 名只进清单字段；目录树直接是 out 根（experts/）。"""
     """聚合清单：所有已构建插件一次写入（修掉逐团队覆盖的旧 bug）。"""
-    market_meta = out / marketplace / ".codebuddy-plugin"
+    market_meta = out / ".codebuddy-plugin"
     market_meta.mkdir(parents=True, exist_ok=True)
     (market_meta / "marketplace.json").write_text(json.dumps({
         "name": marketplace,
@@ -580,9 +581,9 @@ def install_my_experts(dist_market: Path) -> Path:
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Assemble agents into WorkBuddy team/single-expert plugins")
     parser.add_argument("teams", nargs="*", default=None)
-    parser.add_argument("--out", default=str(ROOT / "dist"))
+    parser.add_argument("--out", default=str(ROOT / "experts"))
     parser.add_argument("--install", action="store_true",
-                        help="deploy dist/my-experts into ~/.workbuddy (official custom-expert channel)")
+                        help="deploy experts/ into ~/.workbuddy/plugins/marketplaces/my-experts (official channel)")
     args = parser.parse_args(argv)
     out = Path(args.out).resolve()
     team_paths = [Path(t) for t in args.teams] or sorted((ROOT / "teams").glob("*.yaml"))
@@ -610,7 +611,7 @@ def main(argv=None) -> int:
 
     installed = None
     if args.install:
-        installed = str(install_my_experts(out / "my-experts"))
+        installed = str(install_my_experts(out))
     print(json.dumps({"plugins": len(results), "installed": installed, "detail": results},
                      ensure_ascii=False, indent=2))
     return 0
