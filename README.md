@@ -36,27 +36,30 @@ python3 scripts/build.py                 # 全部团队
 python3 scripts/build.py teams/3d-production.yaml --out dist
 ```
 
-产物：`dist/partme-blender/{.codebuddy-plugin/marketplace.json, plugins/blender-production-team/}`
+产物：`dist/my-experts/{.codebuddy-plugin/marketplace.json, plugins/blender-production-team/}`
 （执行面 harness 在构建时从 `teams/*.yaml` 的 `harness.repo` 指向的 codex-blender-plugin 检出 vendor，26 份生产技能收进 `blender-production/references/`。）
 
 ## 安装到 WorkBuddy
 
 ```bash
-rm -rf ~/.workbuddy/plugins/marketplaces/partme-blender
-cp -R dist/partme-blender ~/.workbuddy/plugins/marketplaces/
-# 重启 WorkBuddy；SessionPluginSwitcher 启动时扫描 plugins/marketplaces/* 注册
+# my-experts 是 WorkBuddy 官方的自定义专家通道（应用源码 registerMarketplaceIfNeeded 只注册
+# experts + my-experts 两个 marketplace；其余目录一律不注册）
+mkdir -p ~/.workbuddy/plugins/marketplaces/my-experts/plugins
+cp -R dist/my-experts/.codebuddy-plugin ~/.workbuddy/plugins/marketplaces/my-experts/
+rm -rf ~/.workbuddy/plugins/marketplaces/my-experts/plugins/blender-production-team
+cp -R dist/my-experts/plugins/blender-production-team ~/.workbuddy/plugins/marketplaces/my-experts/plugins/
+# 重启 WorkBuddy；专家/智能体列表会经 scanCustomExperts 读 my-experts 清单列出
 ```
 
-> 经验教训：marketplace 必须位于 `~/.workbuddy/plugins/marketplaces/` 内才会被扫描注册；
-> 指向任意本地路径的 `known_marketplaces.json` 条目**不会**注册（2026-09-15 实测）。
-> 安装记录在 `plugins/installed_plugins.json`（`name@marketplace` → cache 路径），启用开关在
-> `~/.workbuddy/settings.json` 的 `enabledPlugins`。
+> 2026-09-15 源码级结论（app.asar 反解）：注册名单硬编码 `experts` + `my-experts`；
+> `my-experts/.codebuddy-plugin/marketplace.json` 必须存在且列出插件，否则 scanCustomExperts
+> 返回空；无 `experts/custom/<userId>/experts.json` 白名单文件时全部列出。
 
 ## 已有团队
 
 | 团队 | 成员 | 插件 |
 |---|---|---|
-| Blender 3D 生产专家团 | 岚一(主理)/塑岩/骨风/彩澜/影流/核真 | blender-production-team@partme-blender |
+| Blender 3D 生产专家团 | 岚一(主理)/塑岩/骨风/彩澜/影流/核真 | blender-production-team@my-experts |
 
 ## 新增一个智能体 / 一个团队
 

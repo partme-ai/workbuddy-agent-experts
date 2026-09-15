@@ -14,7 +14,7 @@
 
 安装（build 之后的动作，见 README）：
     rm -rf ~/.workbuddy/plugins/marketplaces/<marketplace>
-    cp -R <out>/<marketplace> ~/.workbuddy/plugins/marketplaces/
+    cp -R <out>/my-experts/.codebuddy-plugin <out>/my-experts/plugins/... ~/.workbuddy/plugins/marketplaces/my-experts/
     # WorkBuddy 启动时由 SessionPluginSwitcher 扫描 plugins/marketplaces/* 注册
 """
 
