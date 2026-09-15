@@ -1,0 +1,155 @@
+{
+  "name": "quality-security-team",
+  "version": "1.0.0",
+  "description": "Quality & Security Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/quality-team-lead.md",
+    "./agents/testing-api-tester.md",
+    "./agents/testing-performance-benchmarker.md",
+    "./agents/security-appsec-engineer.md",
+    "./agents/security-threat-detection-engineer.md",
+    "./agents/security-incident-responder.md"
+  ],
+  "skills": [],
+  "expertType": "team",
+  "agentName": "quality-team-lead",
+  "teamInfo": {
+    "leadAgent": "quality-team-lead",
+    "memberAgents": [
+      "testing-api-tester",
+      "testing-performance-benchmarker",
+      "security-appsec-engineer",
+      "security-threat-detection-engineer",
+      "security-incident-responder"
+    ]
+  },
+  "displayName": {
+    "en": "Quality & Security Team",
+    "zh": "质量与安全专家团"
+  },
+  "profession": {
+    "en": "Quality & Security Team",
+    "zh": "质量与安全专家团"
+  },
+  "displayDescription": {
+    "en": "Quality & Security Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+    "zh": "质量与安全专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "en": "为这个服务做一轮 API 测试与性能基线",
+    "zh": "为这个服务做一轮 API 测试与性能基线"
+  },
+  "quickPrompts": [
+    {
+      "en": "为这个服务做一轮 API 测试与性能基线",
+      "zh": "为这个服务做一轮 API 测试与性能基线"
+    },
+    {
+      "en": "对我们的 Web 应用做威胁建模与加固建议",
+      "zh": "对我们的 Web 应用做威胁建模与加固建议"
+    },
+    {
+      "en": "制定一份安全事件响应预案",
+      "zh": "制定一份安全事件响应预案"
+    }
+  ],
+  "tags": [
+    {
+      "en": "测试",
+      "zh": "测试"
+    },
+    {
+      "en": "应用安全",
+      "zh": "应用安全"
+    },
+    {
+      "en": "应急响应",
+      "zh": "应急响应"
+    }
+  ],
+  "members": [
+    {
+      "id": "quality-team-lead",
+      "name": {
+        "en": "quality-team-lead",
+        "zh": "质量与安全专家团主理人"
+      },
+      "profession": {
+        "en": "Team Lead",
+        "zh": "质量与安全专家团主理人"
+      },
+      "avatar": "avatars/quality-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "testing-api-tester",
+      "name": {
+        "en": "testing-api-tester",
+        "zh": "API 测试员"
+      },
+      "profession": {
+        "en": "testing-api-tester",
+        "zh": "API 测试员"
+      },
+      "avatar": "avatars/testing-api-tester.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-performance-benchmarker",
+      "name": {
+        "en": "testing-performance-benchmarker",
+        "zh": "性能基准师"
+      },
+      "profession": {
+        "en": "testing-performance-benchmarker",
+        "zh": "性能基准师"
+      },
+      "avatar": "avatars/testing-performance-benchmarker.png",
+      "role": "member"
+    },
+    {
+      "id": "security-appsec-engineer",
+      "name": {
+        "en": "security-appsec-engineer",
+        "zh": "应用安全工程师"
+      },
+      "profession": {
+        "en": "security-appsec-engineer",
+        "zh": "应用安全工程师"
+      },
+      "avatar": "avatars/security-appsec-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "security-threat-detection-engineer",
+      "name": {
+        "en": "security-threat-detection-engineer",
+        "zh": "威胁检测工程师（安全运营）"
+      },
+      "profession": {
+        "en": "security-threat-detection-engineer",
+        "zh": "威胁检测工程师（安全运营）"
+      },
+      "avatar": "avatars/security-threat-detection-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "security-incident-responder",
+      "name": {
+        "en": "security-incident-responder",
+        "zh": "事件响应专家"
+      },
+      "profession": {
+        "en": "security-incident-responder",
+        "zh": "事件响应专家"
+      },
+      "avatar": "avatars/security-incident-responder.png",
+      "role": "member"
+    }
+  ]
+}

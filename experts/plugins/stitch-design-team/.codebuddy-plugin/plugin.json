@@ -1,0 +1,185 @@
+{
+  "name": "stitch-design-team",
+  "version": "1.0.0",
+  "description": "Google Stitch Design Team: a multi-agent team with verified, closed-loop delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/stitch-team-lead.md",
+    "./agents/stitch-ui-designer.md",
+    "./agents/stitch-design-system-manager.md",
+    "./agents/stitch-code-engineer.md",
+    "./agents/stitch-delivery-engineer.md"
+  ],
+  "skills": [
+    "./skills/stitch-code-to-design",
+    "./skills/stitch-delete-project",
+    "./skills/stitch-delivery-harness",
+    "./skills/stitch-design-md",
+    "./skills/stitch-design-use",
+    "./skills/stitch-extract-design-md",
+    "./skills/stitch-extract-static-html",
+    "./skills/stitch-local-setup",
+    "./skills/stitch-loop",
+    "./skills/stitch-manage-design-system",
+    "./skills/stitch-mcp-create-project",
+    "./skills/stitch-mcp-generate-screen-from-text",
+    "./skills/stitch-mcp-get-project",
+    "./skills/stitch-mcp-get-screen",
+    "./skills/stitch-mcp-list-projects",
+    "./skills/stitch-mcp-list-screens",
+    "./skills/stitch-react-components",
+    "./skills/stitch-react-native",
+    "./skills/stitch-react-vite-dashboard",
+    "./skills/stitch-remotion",
+    "./skills/stitch-shadcn-ui",
+    "./skills/stitch-site-md",
+    "./skills/stitch-skill-creator",
+    "./skills/stitch-taste-design",
+    "./skills/stitch-ued-guide",
+    "./skills/stitch-ui-design-spec-bootstrap",
+    "./skills/stitch-ui-design-spec-element-plus",
+    "./skills/stitch-ui-design-spec-generator",
+    "./skills/stitch-ui-design-spec-layui",
+    "./skills/stitch-ui-design-spec-uview",
+    "./skills/stitch-ui-design-spec-uviewpro",
+    "./skills/stitch-ui-design-spec-vant",
+    "./skills/stitch-ui-design-variants",
+    "./skills/stitch-ui-designer",
+    "./skills/stitch-ui-prompt-architect",
+    "./skills/stitch-upload-to-stitch",
+    "./skills/stitch-uview-components",
+    "./skills/stitch-uview-plus-components",
+    "./skills/stitch-uviewpro-components",
+    "./skills/stitch-vue-bootstrap-components",
+    "./skills/stitch-vue-element-components",
+    "./skills/stitch-vue-layui-components",
+    "./skills/stitch-vue-vant-components",
+    "./skills/stitch-workbuddy"
+  ],
+  "expertType": "team",
+  "agentName": "stitch-team-lead",
+  "teamInfo": {
+    "leadAgent": "stitch-team-lead",
+    "memberAgents": [
+      "stitch-ui-designer",
+      "stitch-design-system-manager",
+      "stitch-code-engineer",
+      "stitch-delivery-engineer"
+    ]
+  },
+  "displayName": {
+    "en": "Google Stitch Design Team",
+    "zh": "Google Stitch 专家团"
+  },
+  "profession": {
+    "en": "Google Stitch Design Team",
+    "zh": "Google Stitch 专家团"
+  },
+  "displayDescription": {
+    "en": "Google Stitch Design Team: a multi-agent team with verified, closed-loop delivery.",
+    "zh": "Google Stitch 专家团：以MCP 驱动的多智能体协作团队，逐项核验、闭环交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "01-ProductDesign",
+  "defaultInitPrompt": {
+    "en": "为我的新产品在 Stitch 上生成一套 5 屏 App 界面设计",
+    "zh": "为我的新产品在 Stitch 上生成一套 5 屏 App 界面设计"
+  },
+  "quickPrompts": [
+    {
+      "en": "为我的新产品在 Stitch 上生成一套 5 屏 App 界面设计",
+      "zh": "为我的新产品在 Stitch 上生成一套 5 屏 App 界面设计"
+    },
+    {
+      "en": "把这张参考页复刻成 Stitch 设计并导出静态 HTML",
+      "zh": "把这张参考页复刻成 Stitch 设计并导出静态 HTML"
+    },
+    {
+      "en": "给我一份多屏设计的一致性走查报告",
+      "zh": "给我一份多屏设计的一致性走查报告"
+    }
+  ],
+  "tags": [
+    {
+      "en": "Stitch",
+      "zh": "Stitch"
+    },
+    {
+      "en": "界面设计",
+      "zh": "界面设计"
+    },
+    {
+      "en": "设计交付",
+      "zh": "设计交付"
+    }
+  ],
+  "members": [
+    {
+      "id": "stitch-team-lead",
+      "name": {
+        "en": "stitch-team-lead",
+        "zh": "Stitch 专家团主理人"
+      },
+      "profession": {
+        "en": "Stitch Production Lead",
+        "zh": "Stitch 设计总监"
+      },
+      "avatar": "avatars/stitch-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "stitch-ui-designer",
+      "name": {
+        "en": "stitch-ui-designer",
+        "zh": "Stitch 界面设计师"
+      },
+      "profession": {
+        "en": "Stitch UI Designer",
+        "zh": "界面设计师"
+      },
+      "avatar": "avatars/stitch-ui-designer.png",
+      "role": "member"
+    },
+    {
+      "id": "stitch-design-system-manager",
+      "name": {
+        "en": "stitch-design-system-manager",
+        "zh": "Stitch 设计系统管理员"
+      },
+      "profession": {
+        "en": "Stitch Design System Manager",
+        "zh": "设计系统管理员"
+      },
+      "avatar": "avatars/stitch-design-system-manager.png",
+      "role": "member"
+    },
+    {
+      "id": "stitch-code-engineer",
+      "name": {
+        "en": "stitch-code-engineer",
+        "zh": "Stitch 代码工程师"
+      },
+      "profession": {
+        "en": "Stitch Code Engineer",
+        "zh": "设计工程"
+      },
+      "avatar": "avatars/stitch-code-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "stitch-delivery-engineer",
+      "name": {
+        "en": "stitch-delivery-engineer",
+        "zh": "Stitch 交付工程师"
+      },
+      "profession": {
+        "en": "Stitch Delivery Engineer",
+        "zh": "交付验收"
+      },
+      "avatar": "avatars/stitch-delivery-engineer.png",
+      "role": "member"
+    }
+  ]
+}

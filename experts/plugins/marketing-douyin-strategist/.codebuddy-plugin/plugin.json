@@ -1,0 +1,34 @@
+{
+  "name": "marketing-douyin-strategist",
+  "version": "1.0.0",
+  "description": "专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。",
+  "expertType": "agent",
+  "agentName": "marketing-douyin-strategist",
+  "agents": [
+    "./agents/marketing-douyin-strategist.md"
+  ],
+  "displayName": {
+    "en": "marketing-douyin-strategist",
+    "zh": "抖音策略师"
+  },
+  "profession": {
+    "en": "marketing-douyin-strategist",
+    "zh": "抖音策略师"
+  },
+  "displayDescription": {
+    "en": "专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。",
+    "zh": "专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "07-SalesCommerce",
+  "defaultInitPrompt": {
+    "zh": "我是抖音策略师，请介绍你的专业能力并开始协助我。",
+    "en": "I am marketing-douyin-strategist. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "marketing",
+      "zh": "marketing"
+    }
+  ]
+}

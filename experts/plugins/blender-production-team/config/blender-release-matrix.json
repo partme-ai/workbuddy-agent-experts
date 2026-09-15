@@ -1,0 +1,102 @@
+{
+  "combinations": [
+    {
+      "version": "4.2.23",
+      "platform": "macos-arm64",
+      "url": "https://download.blender.org/release/Blender4.2/blender-4.2.23-macos-arm64.dmg",
+      "artifact": "blender-4.2.23-macos-arm64.dmg",
+      "sha256": "8b6bc5fafd4773e94bb863ca19ba1c9a54d096eecbbc4375eae7dbc3b49fab40"
+    },
+    {
+      "version": "4.2.23",
+      "platform": "windows-x64",
+      "url": "https://download.blender.org/release/Blender4.2/blender-4.2.23-windows-x64.zip",
+      "artifact": "blender-4.2.23-windows-x64.zip",
+      "sha256": "82e791475779a7342424a480bdde9a20b43710da9264c60346125aa16cd910cb"
+    },
+    {
+      "version": "4.3.2",
+      "platform": "macos-arm64",
+      "url": "https://download.blender.org/release/Blender4.3/blender-4.3.2-macos-arm64.dmg",
+      "artifact": "blender-4.3.2-macos-arm64.dmg",
+      "sha256": "32297d20fae74683052267b9171945712c0aeb8a499d8e677e44740d3e30a034"
+    },
+    {
+      "version": "4.3.2",
+      "platform": "windows-x64",
+      "url": "https://download.blender.org/release/Blender4.3/blender-4.3.2-windows-x64.zip",
+      "artifact": "blender-4.3.2-windows-x64.zip",
+      "sha256": "933a62a770c941e316535f893629ff106ddd2aa5a956f0081ec557439073d4f6"
+    },
+    {
+      "version": "4.4.3",
+      "platform": "macos-arm64",
+      "url": "https://download.blender.org/release/Blender4.4/blender-4.4.3-macos-arm64.dmg",
+      "artifact": "blender-4.4.3-macos-arm64.dmg",
+      "sha256": "9b592fdc758b9069c210494f10108b06ef82fd65a4aa8c0cc07d6eba0585578b"
+    },
+    {
+      "version": "4.4.3",
+      "platform": "windows-x64",
+      "url": "https://download.blender.org/release/Blender4.4/blender-4.4.3-windows-x64.zip",
+      "artifact": "blender-4.4.3-windows-x64.zip",
+      "sha256": "60a9703b07f2cf42509f699ccdec4f5ede71c1932f6c14329f0e14c023e27d5c"
+    },
+    {
+      "version": "4.5.13",
+      "platform": "macos-arm64",
+      "url": "https://download.blender.org/release/Blender4.5/blender-4.5.13-macos-arm64.dmg",
+      "artifact": "blender-4.5.13-macos-arm64.dmg",
+      "sha256": "663ce944257c61ff1d6aa09e15c8f57bbd8d59023adb2fa7edde33a9ed960b53"
+    },
+    {
+      "version": "4.5.13",
+      "platform": "windows-x64",
+      "url": "https://download.blender.org/release/Blender4.5/blender-4.5.13-windows-x64.zip",
+      "artifact": "blender-4.5.13-windows-x64.zip",
+      "sha256": "b5fdf800ce65fa2f209e8f68d02667e4d720fa1c42f247c72d1882ab04decba6"
+    },
+    {
+      "version": "5.0.1",
+      "platform": "macos-arm64",
+      "url": "https://download.blender.org/release/Blender5.0/blender-5.0.1-macos-arm64.dmg",
+      "artifact": "blender-5.0.1-macos-arm64.dmg",
+      "sha256": "102a81ddee5346c96339c6a529069a2d52df05f330eb9bfd431c8dd79fb4afb6"
+    },
+    {
+      "version": "5.0.1",
+      "platform": "windows-x64",
+      "url": "https://download.blender.org/release/Blender5.0/blender-5.0.1-windows-x64.zip",
+      "artifact": "blender-5.0.1-windows-x64.zip",
+      "sha256": "921d77f6c505a35b2c2f6e67d4ad1c10b72418338ba0e0d3ea7f582a5e5fe46e"
+    },
+    {
+      "version": "5.1.2",
+      "platform": "macos-arm64",
+      "url": "https://download.blender.org/release/Blender5.1/blender-5.1.2-macos-arm64.dmg",
+      "artifact": "blender-5.1.2-macos-arm64.dmg",
+      "sha256": "f104ffee2ba6aee32328e5c203b7e4608d8a1745f7bbcf2766f3b9777e8fbe17"
+    },
+    {
+      "version": "5.1.2",
+      "platform": "windows-x64",
+      "url": "https://download.blender.org/release/Blender5.1/blender-5.1.2-windows-x64.zip",
+      "artifact": "blender-5.1.2-windows-x64.zip",
+      "sha256": "345bedea7b0acf7cc9666423d8553f9129622aea34ded65c23e8cb70f83f14ff"
+    },
+    {
+      "version": "5.2.1",
+      "platform": "macos-arm64",
+      "url": "https://download.blender.org/release/Blender5.2/blender-5.2.1-macos-arm64.dmg",
+      "artifact": "blender-5.2.1-macos-arm64.dmg",
+      "sha256": "6409e21de80994db5f4c4a34486b6fd43cea21085b912f7491c53e923acb65a3"
+    },
+    {
+      "version": "5.2.1",
+      "platform": "windows-x64",
+      "url": "https://download.blender.org/release/Blender5.2/blender-5.2.1-windows-x64.zip",
+      "artifact": "blender-5.2.1-windows-x64.zip",
+      "sha256": "0e631dad7d0cad6d5d18abdd2e2550f6c0213215334eda00ddbd3d22b96ecb2c"
+    }
+  ]
+}

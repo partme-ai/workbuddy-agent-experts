@@ -1,0 +1,4 @@
+{
+  "excludeDomains": [],
+  "excludeClasses": ["expert", "experimental"]
+}

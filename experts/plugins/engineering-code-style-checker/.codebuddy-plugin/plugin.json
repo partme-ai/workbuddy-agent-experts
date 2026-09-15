@@ -1,0 +1,34 @@
+{
+  "name": "engineering-code-style-checker",
+  "version": "1.0.0",
+  "description": "Java 项目规范检查与修复",
+  "expertType": "agent",
+  "agentName": "engineering-code-style-checker",
+  "agents": [
+    "./agents/engineering-code-style-checker.md"
+  ],
+  "displayName": {
+    "en": "engineering-code-style-checker",
+    "zh": "code-style-checker"
+  },
+  "profession": {
+    "en": "engineering-code-style-checker",
+    "zh": "code-style-checker"
+  },
+  "displayDescription": {
+    "en": "Java 项目规范检查与修复",
+    "zh": "Java 项目规范检查与修复"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "我是code-style-checker，请介绍你的专业能力并开始协助我。",
+    "en": "I am engineering-code-style-checker. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "engineering",
+      "zh": "engineering"
+    }
+  ]
+}

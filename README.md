@@ -14,9 +14,10 @@ experts/           构建产物（gitignored，确定性可重建）：完整 ma
                    experts/.codebuddy-plugin/marketplace.json + experts/plugins/<插件>/
 ```
 
-**源 vs 产物**：固定、手工编辑、进 git 的是 `agents/ teams/ skills/ singles.yaml`；
-`experts/` 是每次 `build.py` 从源 + 兄弟仓库（blender/stitch/工厂等）重新组装的产物，
-不手工编辑、不进 git（避免把 2.6MB harness 等 vendor 内容在仓库间复制两份并漂移）。
+**源 vs 产物（发行模式）**：`agents/ teams/ skills/ singles.yaml` 是手工编辑的源；
+`experts/` 是**预构建产物，随仓库一起提交**——使用者不需要兄弟仓库、不需要构建，
+克隆即得完整 marketplace（含 vendor 好的执行面）。维护者改源后跑 `build.py`
+重新生成 experts/ 并提交（构建需要本机存在 ../codex-* 兄弟仓库检出）。
 
 ### 独立智能体格式（agency-agents-zh 风格 + WorkBuddy 适配块）
 
@@ -52,13 +53,27 @@ python3 scripts/build.py teams/3d-production.yaml --out dist
 my-experts 是应用与本项目共用的通道：应用启动时 `scanCustomExperts` 会对账清单，
 所以手工放置的外部插件也会被自动并入。
 
+**安装（macOS / Linux）**
+
 ```bash
-python3 scripts/build.py --install
-# 把 experts/ 部署到 ~/.workbuddy/plugins/marketplaces/my-experts/（官方自定义通道；
-# 应用源码只注册 experts + my-experts 两个名字，所以部署目录必须叫 my-experts——
-# 仓内叫 experts/ 只是仓库布局，通道名以部署目标为准）。非破坏式：外部插件幸存。
-# 重启 WorkBuddy；专家/智能体列表经 scanCustomExperts 读 my-experts 清单列出
+git clone https://github.com/partme-ai/workbuddy-agent-experts.git
+cd workbuddy-agent-experts
+./install.sh            # 或 ./install.sh --uninstall 卸载
 ```
+
+**安装（Windows PowerShell）**
+
+```powershell
+git clone https://github.com/partme-ai/workbuddy-agent-experts.git
+cd workbuddy-agent-experts
+.\install.ps1           # 或 .\install.ps1 -uninstall 卸载？暂仅支持 --uninstall 传参形式
+```
+
+安装器（`scripts/install.py`，纯标准库）把 `experts/` 部署到
+`~/.workbuddy/plugins/marketplaces/my-experts/`（官方自定义通道，应用源码只注册
+experts + my-experts 两个名字）；同时写 cache 镜像与安装记录（改前自动 .bak 备份）。
+**非破坏式**：只替换本套件拥有的插件，应用 UI 或他方创建的专家幸存（已实测）。
+装完重启 WorkBuddy（或重开专家选择器）。
 
 > 2026-09-15 源码级结论（app.asar 反解）：注册名单硬编码 `experts` + `my-experts`；
 > `my-experts/.codebuddy-plugin/marketplace.json` 必须存在且列出插件，否则 scanCustomExperts

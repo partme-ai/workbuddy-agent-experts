@@ -1,0 +1,155 @@
+{
+  "name": "design-team",
+  "version": "1.0.0",
+  "description": "Design Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/design-team-lead.md",
+    "./agents/design-ux-architect.md",
+    "./agents/design-ui-designer.md",
+    "./agents/design-ux-researcher.md",
+    "./agents/design-brand-guardian.md",
+    "./agents/design-visual-storyteller.md"
+  ],
+  "skills": [],
+  "expertType": "team",
+  "agentName": "design-team-lead",
+  "teamInfo": {
+    "leadAgent": "design-team-lead",
+    "memberAgents": [
+      "design-ux-architect",
+      "design-ui-designer",
+      "design-ux-researcher",
+      "design-brand-guardian",
+      "design-visual-storyteller"
+    ]
+  },
+  "displayName": {
+    "en": "Design Team",
+    "zh": "设计专家团"
+  },
+  "profession": {
+    "en": "Design Team",
+    "zh": "设计专家团"
+  },
+  "displayDescription": {
+    "en": "Design Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+    "zh": "设计专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "01-ProductDesign",
+  "defaultInitPrompt": {
+    "en": "为新产品定义完整的体验架构与设计系统",
+    "zh": "为新产品定义完整的体验架构与设计系统"
+  },
+  "quickPrompts": [
+    {
+      "en": "为新产品定义完整的体验架构与设计系统",
+      "zh": "为新产品定义完整的体验架构与设计系统"
+    },
+    {
+      "en": "做一次可用性走查并输出改进优先级",
+      "zh": "做一次可用性走查并输出改进优先级"
+    },
+    {
+      "en": "梳理品牌视觉规范并落到组件库",
+      "zh": "梳理品牌视觉规范并落到组件库"
+    }
+  ],
+  "tags": [
+    {
+      "en": "UX",
+      "zh": "UX"
+    },
+    {
+      "en": "设计系统",
+      "zh": "设计系统"
+    },
+    {
+      "en": "品牌",
+      "zh": "品牌"
+    }
+  ],
+  "members": [
+    {
+      "id": "design-team-lead",
+      "name": {
+        "en": "design-team-lead",
+        "zh": "设计专家团主理人"
+      },
+      "profession": {
+        "en": "Team Lead",
+        "zh": "设计专家团主理人"
+      },
+      "avatar": "avatars/design-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "design-ux-architect",
+      "name": {
+        "en": "design-ux-architect",
+        "zh": "UX 架构师"
+      },
+      "profession": {
+        "en": "design-ux-architect",
+        "zh": "UX 架构师"
+      },
+      "avatar": "avatars/design-ux-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ui-designer",
+      "name": {
+        "en": "design-ui-designer",
+        "zh": "UI 设计师"
+      },
+      "profession": {
+        "en": "design-ui-designer",
+        "zh": "UI 设计师"
+      },
+      "avatar": "avatars/design-ui-designer.png",
+      "role": "member"
+    },
+    {
+      "id": "design-ux-researcher",
+      "name": {
+        "en": "design-ux-researcher",
+        "zh": "UX 研究员"
+      },
+      "profession": {
+        "en": "design-ux-researcher",
+        "zh": "UX 研究员"
+      },
+      "avatar": "avatars/design-ux-researcher.png",
+      "role": "member"
+    },
+    {
+      "id": "design-brand-guardian",
+      "name": {
+        "en": "design-brand-guardian",
+        "zh": "品牌守护者"
+      },
+      "profession": {
+        "en": "design-brand-guardian",
+        "zh": "品牌守护者"
+      },
+      "avatar": "avatars/design-brand-guardian.png",
+      "role": "member"
+    },
+    {
+      "id": "design-visual-storyteller",
+      "name": {
+        "en": "design-visual-storyteller",
+        "zh": "视觉叙事师"
+      },
+      "profession": {
+        "en": "design-visual-storyteller",
+        "zh": "视觉叙事师"
+      },
+      "avatar": "avatars/design-visual-storyteller.png",
+      "role": "member"
+    }
+  ]
+}

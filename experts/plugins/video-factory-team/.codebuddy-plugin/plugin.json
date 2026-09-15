@@ -1,0 +1,164 @@
+{
+  "name": "video-factory-team",
+  "version": "1.0.0",
+  "description": "Video Factory Team: a multi-agent team with verified, closed-loop delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/video-factory-lead.md",
+    "./agents/video-director.md",
+    "./agents/video-screenwriter.md",
+    "./agents/storyboard-artist.md",
+    "./agents/video-production-operator.md",
+    "./agents/video-delivery-judge.md"
+  ],
+  "skills": [
+    "./skills/video-factory-harness",
+    "./skills/video-factory-judge",
+    "./skills/video-factory-plan",
+    "./skills/video-factory-recover",
+    "./skills/video-factory-run",
+    "./skills/video-factory-use",
+    "./skills/video-shots",
+    "./skills/video-sync"
+  ],
+  "expertType": "team",
+  "agentName": "video-factory-lead",
+  "teamInfo": {
+    "leadAgent": "video-factory-lead",
+    "memberAgents": [
+      "video-director",
+      "video-screenwriter",
+      "storyboard-artist",
+      "video-production-operator",
+      "video-delivery-judge"
+    ]
+  },
+  "displayName": {
+    "en": "Video Factory Team",
+    "zh": "视频工厂专家团"
+  },
+  "profession": {
+    "en": "Video Factory Team",
+    "zh": "视频工厂专家团"
+  },
+  "displayDescription": {
+    "en": "Video Factory Team: a multi-agent team with verified, closed-loop delivery.",
+    "zh": "视频工厂专家团：以CLI 驱动的多智能体协作团队，逐项核验、闭环交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "06-ContentCreative",
+  "defaultInitPrompt": {
+    "en": "把这本小说改编成 60 秒短剧并走完粗剪到终剪",
+    "zh": "把这本小说改编成 60 秒短剧并走完粗剪到终剪"
+  },
+  "quickPrompts": [
+    {
+      "en": "把这本小说改编成 60 秒短剧并走完粗剪到终剪",
+      "zh": "把这本小说改编成 60 秒短剧并走完粗剪到终剪"
+    },
+    {
+      "en": "分析这批素材并给我一份粗剪计划与报价",
+      "zh": "分析这批素材并给我一份粗剪计划与报价"
+    },
+    {
+      "en": "对轨粗剪与镜头表并给出差异清单",
+      "zh": "对轨粗剪与镜头表并给出差异清单"
+    }
+  ],
+  "tags": [
+    {
+      "en": "短剧",
+      "zh": "短剧"
+    },
+    {
+      "en": "验证式合成",
+      "zh": "验证式合成"
+    },
+    {
+      "en": "视频生产",
+      "zh": "视频生产"
+    }
+  ],
+  "members": [
+    {
+      "id": "video-factory-lead",
+      "name": {
+        "en": "video-factory-lead",
+        "zh": "视频工厂主理人"
+      },
+      "profession": {
+        "en": "Video Factory Lead",
+        "zh": "视频制片总监"
+      },
+      "avatar": "avatars/video-factory-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "video-director",
+      "name": {
+        "en": "video-director",
+        "zh": "短剧导演"
+      },
+      "profession": {
+        "en": "Video Director",
+        "zh": "导演"
+      },
+      "avatar": "avatars/video-director.png",
+      "role": "member"
+    },
+    {
+      "id": "video-screenwriter",
+      "name": {
+        "en": "video-screenwriter",
+        "zh": "短剧编剧"
+      },
+      "profession": {
+        "en": "Video Screenwriter",
+        "zh": "编剧"
+      },
+      "avatar": "avatars/video-screenwriter.png",
+      "role": "member"
+    },
+    {
+      "id": "storyboard-artist",
+      "name": {
+        "en": "storyboard-artist",
+        "zh": "故事板师"
+      },
+      "profession": {
+        "en": "Storyboard Artist",
+        "zh": "故事板"
+      },
+      "avatar": "avatars/storyboard-artist.png",
+      "role": "member"
+    },
+    {
+      "id": "video-production-operator",
+      "name": {
+        "en": "video-production-operator",
+        "zh": "视频生产操作员"
+      },
+      "profession": {
+        "en": "Video Production Operator",
+        "zh": "生产执行"
+      },
+      "avatar": "avatars/video-production-operator.png",
+      "role": "member"
+    },
+    {
+      "id": "video-delivery-judge",
+      "name": {
+        "en": "video-delivery-judge",
+        "zh": "视频交付评审员"
+      },
+      "profession": {
+        "en": "Video Delivery Judge",
+        "zh": "交付评审"
+      },
+      "avatar": "avatars/video-delivery-judge.png",
+      "role": "member"
+    }
+  ]
+}

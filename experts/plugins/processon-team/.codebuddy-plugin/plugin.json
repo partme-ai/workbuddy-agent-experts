@@ -1,0 +1,149 @@
+{
+  "name": "processon-team",
+  "version": "1.0.0",
+  "description": "ProcessOn Team: a multi-agent expert team with verified, closed-loop delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/processon-team-lead.md",
+    "./agents/processon-mindmap-specialist.md",
+    "./agents/processon-diagram-specialist.md",
+    "./agents/processon-infographic-specialist.md",
+    "./agents/processon-review-specialist.md"
+  ],
+  "skills": [
+    "./skills/processon-diagram",
+    "./skills/processon-infographic",
+    "./skills/processon-mindmap",
+    "./skills/processon-prompt",
+    "./skills/processon-review",
+    "./skills/processon-setup",
+    "./skills/processon-use",
+    "./skills/processon-workbuddy"
+  ],
+  "expertType": "team",
+  "agentName": "processon-team-lead",
+  "teamInfo": {
+    "leadAgent": "processon-team-lead",
+    "memberAgents": [
+      "processon-mindmap-specialist",
+      "processon-diagram-specialist",
+      "processon-infographic-specialist",
+      "processon-review-specialist"
+    ]
+  },
+  "displayName": {
+    "en": "ProcessOn Team",
+    "zh": "ProcessOn 专家团"
+  },
+  "profession": {
+    "en": "ProcessOn Team",
+    "zh": "ProcessOn 专家团"
+  },
+  "displayDescription": {
+    "en": "ProcessOn Team: a multi-agent expert team with verified, closed-loop delivery.",
+    "zh": "ProcessOn 专家团：多智能体协作团队，逐项核验、闭环交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "06-ContentCreative",
+  "defaultInitPrompt": {
+    "en": "把这篇文档整理成一张层级清晰的思维导图",
+    "zh": "把这篇文档整理成一张层级清晰的思维导图"
+  },
+  "quickPrompts": [
+    {
+      "en": "把这篇文档整理成一张层级清晰的思维导图",
+      "zh": "把这篇文档整理成一张层级清晰的思维导图"
+    },
+    {
+      "en": "为我们的系统画一张架构图",
+      "zh": "为我们的系统画一张架构图"
+    },
+    {
+      "en": "把这组数据做成信息图",
+      "zh": "把这组数据做成信息图"
+    }
+  ],
+  "tags": [
+    {
+      "en": "思维导图",
+      "zh": "思维导图"
+    },
+    {
+      "en": "流程架构图",
+      "zh": "流程架构图"
+    },
+    {
+      "en": "信息图",
+      "zh": "信息图"
+    }
+  ],
+  "members": [
+    {
+      "id": "processon-team-lead",
+      "name": {
+        "en": "processon-team-lead",
+        "zh": "ProcessOn 专家团主理人"
+      },
+      "profession": {
+        "en": "图表总监",
+        "zh": "图表总监"
+      },
+      "avatar": "avatars/processon-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "processon-mindmap-specialist",
+      "name": {
+        "en": "processon-mindmap-specialist",
+        "zh": "思维导图专家"
+      },
+      "profession": {
+        "en": "思维导图",
+        "zh": "思维导图"
+      },
+      "avatar": "avatars/processon-mindmap-specialist.png",
+      "role": "member"
+    },
+    {
+      "id": "processon-diagram-specialist",
+      "name": {
+        "en": "processon-diagram-specialist",
+        "zh": "图解专家"
+      },
+      "profession": {
+        "en": "图解",
+        "zh": "图解"
+      },
+      "avatar": "avatars/processon-diagram-specialist.png",
+      "role": "member"
+    },
+    {
+      "id": "processon-infographic-specialist",
+      "name": {
+        "en": "processon-infographic-specialist",
+        "zh": "信息图专家"
+      },
+      "profession": {
+        "en": "信息图",
+        "zh": "信息图"
+      },
+      "avatar": "avatars/processon-infographic-specialist.png",
+      "role": "member"
+    },
+    {
+      "id": "processon-review-specialist",
+      "name": {
+        "en": "processon-review-specialist",
+        "zh": "图表审阅员"
+      },
+      "profession": {
+        "en": "审阅",
+        "zh": "审阅"
+      },
+      "avatar": "avatars/processon-review-specialist.png",
+      "role": "member"
+    }
+  ]
+}

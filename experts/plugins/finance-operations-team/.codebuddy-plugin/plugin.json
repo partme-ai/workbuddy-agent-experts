@@ -1,0 +1,155 @@
+{
+  "name": "finance-operations-team",
+  "version": "1.0.0",
+  "description": "Finance & Operations Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/finance-team-lead.md",
+    "./agents/finance-financial-analyst.md",
+    "./agents/finance-investment-researcher.md",
+    "./agents/finance-tax-strategist.md",
+    "./agents/finance-fraud-detector.md",
+    "./agents/chief-financial-officer.md"
+  ],
+  "skills": [],
+  "expertType": "team",
+  "agentName": "finance-team-lead",
+  "teamInfo": {
+    "leadAgent": "finance-team-lead",
+    "memberAgents": [
+      "finance-financial-analyst",
+      "finance-investment-researcher",
+      "finance-tax-strategist",
+      "finance-fraud-detector",
+      "chief-financial-officer"
+    ]
+  },
+  "displayName": {
+    "en": "Finance & Operations Team",
+    "zh": "财务经营专家团"
+  },
+  "profession": {
+    "en": "Finance & Operations Team",
+    "zh": "财务经营专家团"
+  },
+  "displayDescription": {
+    "en": "Finance & Operations Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+    "zh": "财务经营专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "en": "分析这份财报并给出经营洞察",
+    "zh": "分析这份财报并给出经营洞察"
+  },
+  "quickPrompts": [
+    {
+      "en": "分析这份财报并给出经营洞察",
+      "zh": "分析这份财报并给出经营洞察"
+    },
+    {
+      "en": "为一个跨境业务设计税务筹划方案",
+      "zh": "为一个跨境业务设计税务筹划方案"
+    },
+    {
+      "en": "搭建一套经营指标看板框架",
+      "zh": "搭建一套经营指标看板框架"
+    }
+  ],
+  "tags": [
+    {
+      "en": "财务分析",
+      "zh": "财务分析"
+    },
+    {
+      "en": "税务",
+      "zh": "税务"
+    },
+    {
+      "en": "经营",
+      "zh": "经营"
+    }
+  ],
+  "members": [
+    {
+      "id": "finance-team-lead",
+      "name": {
+        "en": "finance-team-lead",
+        "zh": "财务经营专家团主理人"
+      },
+      "profession": {
+        "en": "Team Lead",
+        "zh": "财务经营专家团主理人"
+      },
+      "avatar": "avatars/finance-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "finance-financial-analyst",
+      "name": {
+        "en": "finance-financial-analyst",
+        "zh": "财务分析师"
+      },
+      "profession": {
+        "en": "finance-financial-analyst",
+        "zh": "财务分析师"
+      },
+      "avatar": "avatars/finance-financial-analyst.png",
+      "role": "member"
+    },
+    {
+      "id": "finance-investment-researcher",
+      "name": {
+        "en": "finance-investment-researcher",
+        "zh": "投资研究员"
+      },
+      "profession": {
+        "en": "finance-investment-researcher",
+        "zh": "投资研究员"
+      },
+      "avatar": "avatars/finance-investment-researcher.png",
+      "role": "member"
+    },
+    {
+      "id": "finance-tax-strategist",
+      "name": {
+        "en": "finance-tax-strategist",
+        "zh": "税务策略师"
+      },
+      "profession": {
+        "en": "finance-tax-strategist",
+        "zh": "税务策略师"
+      },
+      "avatar": "avatars/finance-tax-strategist.png",
+      "role": "member"
+    },
+    {
+      "id": "finance-fraud-detector",
+      "name": {
+        "en": "finance-fraud-detector",
+        "zh": "金融风控分析师"
+      },
+      "profession": {
+        "en": "finance-fraud-detector",
+        "zh": "金融风控分析师"
+      },
+      "avatar": "avatars/finance-fraud-detector.png",
+      "role": "member"
+    },
+    {
+      "id": "chief-financial-officer",
+      "name": {
+        "en": "chief-financial-officer",
+        "zh": "首席财务官"
+      },
+      "profession": {
+        "en": "chief-financial-officer",
+        "zh": "首席财务官"
+      },
+      "avatar": "avatars/chief-financial-officer.png",
+      "role": "member"
+    }
+  ]
+}

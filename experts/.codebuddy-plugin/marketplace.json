@@ -1,0 +1,166 @@
+{
+  "name": "my-experts",
+  "description": "my-experts marketplace (built by workbuddy-agent-experts)",
+  "plugins": [
+    {
+      "name": "blender-production-team",
+      "source": "./plugins/blender-production-team",
+      "description": "Structured Blender production team driving a managed harness session with closed-contract commands and receipt-verified delivery of models, animation, renders and video."
+    },
+    {
+      "name": "design-team",
+      "source": "./plugins/design-team",
+      "description": "Design Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "dreamina-3d-team",
+      "source": "./plugins/dreamina-3d-team",
+      "description": "Dreamina 3D Visual Team: a multi-agent expert team with verified, closed-loop delivery."
+    },
+    {
+      "name": "dreamina-canvas-team",
+      "source": "./plugins/dreamina-canvas-team",
+      "description": "Dreamina Canvas Team: a multi-agent expert team with verified, closed-loop delivery."
+    },
+    {
+      "name": "dreamina-design-team",
+      "source": "./plugins/dreamina-design-team",
+      "description": "Dreamina Design Team: a multi-agent expert team with verified, closed-loop delivery."
+    },
+    {
+      "name": "engineering-team",
+      "source": "./plugins/engineering-team",
+      "description": "Engineering Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "finance-operations-team",
+      "source": "./plugins/finance-operations-team",
+      "description": "Finance & Operations Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "gis-spatial-team",
+      "source": "./plugins/gis-spatial-team",
+      "description": "GIS & Spatial Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "growth-marketing-team",
+      "source": "./plugins/growth-marketing-team",
+      "description": "Growth & Marketing Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "image-factory-team",
+      "source": "./plugins/image-factory-team",
+      "description": "Image Factory Team: a multi-agent team with verified, closed-loop delivery."
+    },
+    {
+      "name": "processon-team",
+      "source": "./plugins/processon-team",
+      "description": "ProcessOn Team: a multi-agent expert team with verified, closed-loop delivery."
+    },
+    {
+      "name": "product-strategy-team",
+      "source": "./plugins/product-strategy-team",
+      "description": "Product & Strategy Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "quality-security-team",
+      "source": "./plugins/quality-security-team",
+      "description": "Quality & Security Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "short-drama-studio-team",
+      "source": "./plugins/short-drama-studio-team",
+      "description": "Short Drama Studio: a multi-agent expert team with verified, closed-loop delivery."
+    },
+    {
+      "name": "stitch-design-team",
+      "source": "./plugins/stitch-design-team",
+      "description": "Google Stitch Design Team: a multi-agent team with verified, closed-loop delivery."
+    },
+    {
+      "name": "video-factory-team",
+      "source": "./plugins/video-factory-team",
+      "description": "Video Factory Team: a multi-agent team with verified, closed-loop delivery."
+    },
+    {
+      "name": "engineering-ai-engineer",
+      "source": "./plugins/engineering-ai-engineer",
+      "description": "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。"
+    },
+    {
+      "name": "engineering-codebase-onboarding-engineer",
+      "source": "./plugins/engineering-codebase-onboarding-engineer",
+      "description": "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。"
+    },
+    {
+      "name": "engineering-code-style-checker",
+      "source": "./plugins/engineering-code-style-checker",
+      "description": "Java 项目规范检查与修复"
+    },
+    {
+      "name": "design-image-prompt-engineer",
+      "source": "./plugins/design-image-prompt-engineer",
+      "description": "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。"
+    },
+    {
+      "name": "design-inclusive-visuals-specialist",
+      "source": "./plugins/design-inclusive-visuals-specialist",
+      "description": "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。"
+    },
+    {
+      "name": "gis-geoai-ml-engineer",
+      "source": "./plugins/gis-geoai-ml-engineer",
+      "description": "地理空间机器学习专家，构建模型从卫星与航拍影像中做特征提取、目标检测、影像分割和地表覆盖分类。"
+    },
+    {
+      "name": "gis-drone-reality-mapping",
+      "source": "./plugins/gis-drone-reality-mapping",
+      "description": "摄影测量与实景采集专家，把无人机影像处理成 orthomosaic（正射影像）、数字地形模型、point cloud（点云）和三维网格——打通现场采集与 GIS 可用成果之间的链路。"
+    },
+    {
+      "name": "marketing-app-store-optimizer",
+      "source": "./plugins/marketing-app-store-optimizer",
+      "description": "应用商店营销专家，专注应用商店优化（ASO）、转化率优化和应用可发现性。"
+    },
+    {
+      "name": "marketing-aeo-foundations",
+      "source": "./plugins/marketing-aeo-foundations",
+      "description": "AI 引擎优化基础设施专家——落地 llms.txt、AI 感知的 robots.txt、token 预算化内容、结构化 Markdown 可用性，以及 agent 发现文件，让 AI 爬虫、引用引擎和浏览型 agent 能找到、解析并执行你的站点内容"
+    },
+    {
+      "name": "marketing-douyin-strategist",
+      "source": "./plugins/marketing-douyin-strategist",
+      "description": "专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。"
+    },
+    {
+      "name": "testing-accessibility-auditor",
+      "source": "./plugins/testing-accessibility-auditor",
+      "description": "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。"
+    },
+    {
+      "name": "testing-embedded-qa-engineer",
+      "source": "./plugins/testing-embedded-qa-engineer",
+      "description": "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。"
+    },
+    {
+      "name": "security-penetration-tester",
+      "source": "./plugins/security-penetration-tester",
+      "description": "进攻性安全专家，开展授权的渗透测试、红队行动以及面向网络、Web 应用和云基础设施的漏洞评估。"
+    },
+    {
+      "name": "security-cloud-security-architect",
+      "source": "./plugins/security-cloud-security-architect",
+      "description": "云原生安全专家，设计零信任架构，在 AWS、Azure 与 GCP 上落地纵深防御，并从第一天起就为基础设施即代码（IaC）流水线保驾护航。"
+    },
+    {
+      "name": "finance-financial-forecaster",
+      "source": "./plugins/finance-financial-forecaster",
+      "description": "专注企业财务预测与场景建模的分析专家，精通收入预测、现金流管理、烧钱率分析和融资对接，帮助创业公司和成长型企业在不确定环境中做出有数据支撑的财务决策。"
+    },
+    {
+      "name": "finance-hk-stock-compliance-reviewer",
+      "source": "./plugins/finance-hk-stock-compliance-reviewer",
+      "description": "资深香港股市合规审查专家，精通HKEX上市规则、SFC监管条例、公司条例及证券及期货条例。提供上市申请合规审查、持续责任监督、关联交易合规、披露义务审核及企业管治顾问服务。"
+    }
+  ]
+}

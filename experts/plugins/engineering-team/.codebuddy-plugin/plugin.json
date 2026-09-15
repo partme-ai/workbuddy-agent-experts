@@ -1,0 +1,170 @@
+{
+  "name": "engineering-team",
+  "version": "1.0.0",
+  "description": "Engineering Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/eng-team-lead.md",
+    "./agents/engineering-ai-agent-architect.md",
+    "./agents/engineering-backend-architect.md",
+    "./agents/engineering-code-reviewer.md",
+    "./agents/engineering-database-optimizer.md",
+    "./agents/engineering-devops-automator.md",
+    "./agents/engineering-data-engineer.md"
+  ],
+  "skills": [],
+  "expertType": "team",
+  "agentName": "eng-team-lead",
+  "teamInfo": {
+    "leadAgent": "eng-team-lead",
+    "memberAgents": [
+      "engineering-ai-agent-architect",
+      "engineering-backend-architect",
+      "engineering-code-reviewer",
+      "engineering-database-optimizer",
+      "engineering-devops-automator",
+      "engineering-data-engineer"
+    ]
+  },
+  "displayName": {
+    "en": "Engineering Team",
+    "zh": "工程研发专家团"
+  },
+  "profession": {
+    "en": "Engineering Team",
+    "zh": "工程研发专家团"
+  },
+  "displayDescription": {
+    "en": "Engineering Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+    "zh": "工程研发专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "en": "帮我设计一个可演进的后端服务架构并给出决策依据",
+    "zh": "帮我设计一个可演进的后端服务架构并给出决策依据"
+  },
+  "quickPrompts": [
+    {
+      "en": "帮我设计一个可演进的后端服务架构并给出决策依据",
+      "zh": "帮我设计一个可演进的后端服务架构并给出决策依据"
+    },
+    {
+      "en": "评审这个仓库的代码并给出可执行的改进清单",
+      "zh": "评审这个仓库的代码并给出可执行的改进清单"
+    },
+    {
+      "en": "为这个数据管道设计 ETL 与可观测性方案",
+      "zh": "为这个数据管道设计 ETL 与可观测性方案"
+    }
+  ],
+  "tags": [
+    {
+      "en": "架构",
+      "zh": "架构"
+    },
+    {
+      "en": "代码质量",
+      "zh": "代码质量"
+    },
+    {
+      "en": "DevOps",
+      "zh": "DevOps"
+    }
+  ],
+  "members": [
+    {
+      "id": "eng-team-lead",
+      "name": {
+        "en": "eng-team-lead",
+        "zh": "工程研发专家团主理人"
+      },
+      "profession": {
+        "en": "Team Lead",
+        "zh": "工程研发专家团主理人"
+      },
+      "avatar": "avatars/eng-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "engineering-ai-agent-architect",
+      "name": {
+        "en": "engineering-ai-agent-architect",
+        "zh": "agent-architect"
+      },
+      "profession": {
+        "en": "engineering-ai-agent-architect",
+        "zh": "agent-architect"
+      },
+      "avatar": "avatars/engineering-ai-agent-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-backend-architect",
+      "name": {
+        "en": "engineering-backend-architect",
+        "zh": "后端架构师"
+      },
+      "profession": {
+        "en": "engineering-backend-architect",
+        "zh": "后端架构师"
+      },
+      "avatar": "avatars/engineering-backend-architect.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-code-reviewer",
+      "name": {
+        "en": "engineering-code-reviewer",
+        "zh": "代码审查员"
+      },
+      "profession": {
+        "en": "engineering-code-reviewer",
+        "zh": "代码审查员"
+      },
+      "avatar": "avatars/engineering-code-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-database-optimizer",
+      "name": {
+        "en": "engineering-database-optimizer",
+        "zh": "数据库优化师"
+      },
+      "profession": {
+        "en": "engineering-database-optimizer",
+        "zh": "数据库优化师"
+      },
+      "avatar": "avatars/engineering-database-optimizer.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-devops-automator",
+      "name": {
+        "en": "engineering-devops-automator",
+        "zh": "DevOps 自动化师"
+      },
+      "profession": {
+        "en": "engineering-devops-automator",
+        "zh": "DevOps 自动化师"
+      },
+      "avatar": "avatars/engineering-devops-automator.png",
+      "role": "member"
+    },
+    {
+      "id": "engineering-data-engineer",
+      "name": {
+        "en": "engineering-data-engineer",
+        "zh": "数据工程师"
+      },
+      "profession": {
+        "en": "engineering-data-engineer",
+        "zh": "数据工程师"
+      },
+      "avatar": "avatars/engineering-data-engineer.png",
+      "role": "member"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+#!/bin/sh
+# Entry point for the Image Factory CLI.
+#
+# Resolves the repository root from this script's own location so the command
+# works whether it is invoked from the checkout, from PATH, or through a symlink.
+set -e
+SELF=$0
+while [ -L "$SELF" ]; do
+  SELF=$(readlink "$SELF")
+done
+DIR=$(cd "$(dirname "$SELF")/.." && pwd)
+exec python3 "$DIR/scripts/image_factory_cli.py" "$@"

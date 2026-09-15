@@ -1,0 +1,34 @@
+{
+  "name": "finance-hk-stock-compliance-reviewer",
+  "version": "1.0.0",
+  "description": "资深香港股市合规审查专家，精通HKEX上市规则、SFC监管条例、公司条例及证券及期货条例。提供上市申请合规审查、持续责任监督、关联交易合规、披露义务审核及企业管治顾问服务。",
+  "expertType": "agent",
+  "agentName": "finance-hk-stock-compliance-reviewer",
+  "agents": [
+    "./agents/finance-hk-stock-compliance-reviewer.md"
+  ],
+  "displayName": {
+    "en": "finance-hk-stock-compliance-reviewer",
+    "zh": "香港股市合规审查专家"
+  },
+  "profession": {
+    "en": "finance-hk-stock-compliance-reviewer",
+    "zh": "香港股市合规审查专家"
+  },
+  "displayDescription": {
+    "en": "资深香港股市合规审查专家，精通HKEX上市规则、SFC监管条例、公司条例及证券及期货条例。提供上市申请合规审查、持续责任监督、关联交易合规、披露义务审核及企业管治顾问服务。",
+    "zh": "资深香港股市合规审查专家，精通HKEX上市规则、SFC监管条例、公司条例及证券及期货条例。提供上市申请合规审查、持续责任监督、关联交易合规、披露义务审核及企业管治顾问服务。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "zh": "我是香港股市合规审查专家，请介绍你的专业能力并开始协助我。",
+    "en": "I am finance-hk-stock-compliance-reviewer. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "finance",
+      "zh": "finance"
+    }
+  ]
+}

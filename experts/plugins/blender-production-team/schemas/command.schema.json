@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CodexBlenderCommand",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocolVersion", "sessionId", "requestId", "transactionId", "command", "arguments"],
+  "properties": {
+    "protocolVersion": {"type": "string", "const": "codex-blender/v1"},
+    "sessionId": {"type": "string"},
+    "requestId": {"type": "string"},
+    "transactionId": {"type": "string"},
+    "command": {"type": "string", "pattern": "^[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*$"},
+    "arguments": {"type": "object"},
+    "expectedSceneRevision": {"type": "integer", "minimum": 0},
+    "authorization": {"type": "string"}
+  }
+}

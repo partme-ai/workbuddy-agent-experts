@@ -1,0 +1,34 @@
+{
+  "name": "gis-drone-reality-mapping",
+  "version": "1.0.0",
+  "description": "摄影测量与实景采集专家，把无人机影像处理成 orthomosaic（正射影像）、数字地形模型、point cloud（点云）和三维网格——打通现场采集与 GIS 可用成果之间的链路。",
+  "expertType": "agent",
+  "agentName": "gis-drone-reality-mapping",
+  "agents": [
+    "./agents/gis-drone-reality-mapping.md"
+  ],
+  "displayName": {
+    "en": "gis-drone-reality-mapping",
+    "zh": "无人机实景测绘专家"
+  },
+  "profession": {
+    "en": "gis-drone-reality-mapping",
+    "zh": "无人机实景测绘专家"
+  },
+  "displayDescription": {
+    "en": "摄影测量与实景采集专家，把无人机影像处理成 orthomosaic（正射影像）、数字地形模型、point cloud（点云）和三维网格——打通现场采集与 GIS 可用成果之间的链路。",
+    "zh": "摄影测量与实景采集专家，把无人机影像处理成 orthomosaic（正射影像）、数字地形模型、point cloud（点云）和三维网格——打通现场采集与 GIS 可用成果之间的链路。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "01-ProductDesign",
+  "defaultInitPrompt": {
+    "zh": "我是无人机实景测绘专家，请介绍你的专业能力并开始协助我。",
+    "en": "I am gis-drone-reality-mapping. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "gis",
+      "zh": "gis"
+    }
+  ]
+}

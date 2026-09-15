@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CodexBlenderMilestoneReceipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocolVersion", "milestone", "sceneRevision", "snapshotId", "views", "sceneSummary", "warnings"],
+  "properties": {
+    "protocolVersion": {"type": "string", "const": "codex-blender/v1"},
+    "milestone": {"type": "string", "enum": ["scene_structure", "modeling", "materials", "lighting_camera", "animation", "final_preview", "save_export"]},
+    "sceneRevision": {"type": "integer", "minimum": 0},
+    "snapshotId": {"type": "string"},
+    "views": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "path", "sha256"],
+        "properties": {
+          "name": {"type": "string"},
+          "path": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "sceneSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objects", "materials", "lights", "cameras"],
+      "properties": {
+        "objects": {"type": "integer", "minimum": 0},
+        "materials": {"type": "integer", "minimum": 0},
+        "lights": {"type": "integer", "minimum": 0},
+        "cameras": {"type": "integer", "minimum": 0}
+      }
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  }
+}

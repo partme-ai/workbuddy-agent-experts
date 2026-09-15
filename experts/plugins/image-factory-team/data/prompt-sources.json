@@ -1,0 +1,64 @@
+{
+  "sources": [
+    {
+      "id": "freestylefly",
+      "repo": "freestylefly/awesome-gpt-image-2",
+      "revision": "0dc09c46c8a30b1fdd89c18cc78a894dac2104e3",
+      "license": "MIT",
+      "mode": "bundled_templates",
+      "entry": "data/style-library.json",
+      "tags": "模板 工业级 海报 电商 信息图 插画",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2/blob/0dc09c46c8a30b1fdd89c18cc78a894dac2104e3/data/style-library.json"
+    },
+    {
+      "id": "wuyoscar",
+      "repo": "wuyoscar/GPT-Image2-Skill",
+      "revision": "05cb1130bba29e0fc028220376280a2e934a8041",
+      "license": "MIT",
+      "mode": "linked_gallery",
+      "entry": "skills/gpt-image/references/gallery.md",
+      "tags": "案例 角色 水墨 绘本 编辑 typography",
+      "url": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/05cb1130bba29e0fc028220376280a2e934a8041/skills/gpt-image/references/gallery.md"
+    },
+    {
+      "id": "youmind-gallery",
+      "repo": "YouMind-OpenLab/awesome-gpt-image-2",
+      "revision": "7516ce0d3132231e0de80f8a7978bc6ed728abe5",
+      "license": "CC-BY-4.0",
+      "mode": "linked_gallery",
+      "entry": "README.md",
+      "tags": "图库 预览 产品 人物 UI",
+      "url": "https://github.com/YouMind-OpenLab/awesome-gpt-image-2/blob/7516ce0d3132231e0de80f8a7978bc6ed728abe5/README.md"
+    },
+    {
+      "id": "songguoxs",
+      "repo": "songguoxs/gpt4o-image-prompts",
+      "revision": "c282b673debc8ddb31258c0474228774a628069d",
+      "license": "UNSPECIFIED",
+      "mode": "link_only",
+      "entry": "data/prompts.json",
+      "tags": "中文 水墨 绘本 结构化 JSON",
+      "url": "https://github.com/songguoxs/gpt4o-image-prompts/blob/c282b673debc8ddb31258c0474228774a628069d/data/prompts.json"
+    },
+    {
+      "id": "youmind-search",
+      "repo": "YouMind-OpenLab/ai-image-prompts-skill",
+      "revision": "6e8339bbfda7ed3f21978df84f266f1c393f5918",
+      "license": "MIT",
+      "mode": "linked_catalog",
+      "entry": "references/manifest.json",
+      "tags": "检索 分镜 漫画 电商 社交 storyboard",
+      "url": "https://github.com/YouMind-OpenLab/ai-image-prompts-skill/blob/6e8339bbfda7ed3f21978df84f266f1c393f5918/references/manifest.json"
+    },
+    {
+      "id": "dongyubin",
+      "repo": "dongyubin/Awesome-AI-Images-Prompts",
+      "revision": "b4467b0e2215b735e45f93b9950305400a1c1530",
+      "license": "UNSPECIFIED",
+      "mode": "link_only",
+      "entry": "README.md",
+      "tags": "跨模型 对照 中文 灵感",
+      "url": "https://github.com/dongyubin/Awesome-AI-Images-Prompts/blob/b4467b0e2215b735e45f93b9950305400a1c1530/README.md"
+    }
+  ]
+}

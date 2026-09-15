@@ -1,0 +1,142 @@
+{
+  "name": "short-drama-studio-team",
+  "version": "1.0.0",
+  "description": "Short Drama Studio: a multi-agent expert team with verified, closed-loop delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/short-drama-studio-lead.md",
+    "./agents/video-director.md",
+    "./agents/video-screenwriter.md",
+    "./agents/storyboard-artist.md",
+    "./agents/short-drama-pipeline-coordinator.md"
+  ],
+  "skills": [
+    "./skills/short-drama-pipeline"
+  ],
+  "expertType": "team",
+  "agentName": "short-drama-studio-lead",
+  "teamInfo": {
+    "leadAgent": "short-drama-studio-lead",
+    "memberAgents": [
+      "video-director",
+      "video-screenwriter",
+      "storyboard-artist",
+      "short-drama-pipeline-coordinator"
+    ]
+  },
+  "displayName": {
+    "en": "Short Drama Studio",
+    "zh": "短剧制片厂"
+  },
+  "profession": {
+    "en": "Short Drama Studio",
+    "zh": "短剧制片厂"
+  },
+  "displayDescription": {
+    "en": "Short Drama Studio: a multi-agent expert team with verified, closed-loop delivery.",
+    "zh": "短剧制片厂：多智能体协作团队，逐项核验、闭环交付（本团队为薄编排层，执行调度到各执行团队）"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "06-ContentCreative",
+  "defaultInitPrompt": {
+    "en": "把这本小说做成 60 秒短剧，走完创作到成片全链路",
+    "zh": "把这本小说做成 60 秒短剧，走完创作到成片全链路"
+  },
+  "quickPrompts": [
+    {
+      "en": "把这本小说做成 60 秒短剧，走完创作到成片全链路",
+      "zh": "把这本小说做成 60 秒短剧，走完创作到成片全链路"
+    },
+    {
+      "en": "为这个品牌策划一支 3D 白模广告短片",
+      "zh": "为这个品牌策划一支 3D 白模广告短片"
+    },
+    {
+      "en": "只出剧本和故事板，素材我自己生成",
+      "zh": "只出剧本和故事板，素材我自己生成"
+    }
+  ],
+  "tags": [
+    {
+      "en": "全链路制片",
+      "zh": "全链路制片"
+    },
+    {
+      "en": "白模广告",
+      "zh": "白模广告"
+    },
+    {
+      "en": "剧本故事板",
+      "zh": "剧本故事板"
+    }
+  ],
+  "members": [
+    {
+      "id": "short-drama-studio-lead",
+      "name": {
+        "en": "short-drama-studio-lead",
+        "zh": "短剧制片厂厂长"
+      },
+      "profession": {
+        "en": "总制片",
+        "zh": "总制片"
+      },
+      "avatar": "avatars/short-drama-studio-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "video-director",
+      "name": {
+        "en": "video-director",
+        "zh": "短剧导演"
+      },
+      "profession": {
+        "en": "Video Director",
+        "zh": "导演"
+      },
+      "avatar": "avatars/video-director.png",
+      "role": "member"
+    },
+    {
+      "id": "video-screenwriter",
+      "name": {
+        "en": "video-screenwriter",
+        "zh": "短剧编剧"
+      },
+      "profession": {
+        "en": "Video Screenwriter",
+        "zh": "编剧"
+      },
+      "avatar": "avatars/video-screenwriter.png",
+      "role": "member"
+    },
+    {
+      "id": "storyboard-artist",
+      "name": {
+        "en": "storyboard-artist",
+        "zh": "故事板师"
+      },
+      "profession": {
+        "en": "Storyboard Artist",
+        "zh": "故事板"
+      },
+      "avatar": "avatars/storyboard-artist.png",
+      "role": "member"
+    },
+    {
+      "id": "short-drama-pipeline-coordinator",
+      "name": {
+        "en": "short-drama-pipeline-coordinator",
+        "zh": "短剧管线协调员"
+      },
+      "profession": {
+        "en": "管线协调",
+        "zh": "管线协调"
+      },
+      "avatar": "avatars/short-drama-pipeline-coordinator.png",
+      "role": "member"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "security-penetration-tester",
+  "version": "1.0.0",
+  "description": "进攻性安全专家，开展授权的渗透测试、红队行动以及面向网络、Web 应用和云基础设施的漏洞评估。",
+  "expertType": "agent",
+  "agentName": "security-penetration-tester",
+  "agents": [
+    "./agents/security-penetration-tester.md"
+  ],
+  "displayName": {
+    "en": "security-penetration-tester",
+    "zh": "渗透测试员"
+  },
+  "profession": {
+    "en": "security-penetration-tester",
+    "zh": "渗透测试员"
+  },
+  "displayDescription": {
+    "en": "进攻性安全专家，开展授权的渗透测试、红队行动以及面向网络、Web 应用和云基础设施的漏洞评估。",
+    "zh": "进攻性安全专家，开展授权的渗透测试、红队行动以及面向网络、Web 应用和云基础设施的漏洞评估。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "我是渗透测试员，请介绍你的专业能力并开始协助我。",
+    "en": "I am security-penetration-tester. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "security",
+      "zh": "security"
+    }
+  ]
+}

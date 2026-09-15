@@ -1,0 +1,186 @@
+{
+  "name": "blender-production-team",
+  "version": "0.4.0",
+  "description": "Structured Blender production team driving a managed harness session with closed-contract commands and receipt-verified delivery of models, animation, renders and video.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/blender-team-lead.md",
+    "./agents/blender-modeler.md",
+    "./agents/blender-rigger-animator.md",
+    "./agents/blender-lookdev-renderer.md",
+    "./agents/blender-effects-editor.md",
+    "./agents/blender-qc-delivery.md"
+  ],
+  "skills": [
+    "./skills/blender-background-jobs",
+    "./skills/blender-capabilities",
+    "./skills/blender-character-animation",
+    "./skills/blender-character-rigging",
+    "./skills/blender-cinematography",
+    "./skills/blender-connector",
+    "./skills/blender-curves",
+    "./skills/blender-design",
+    "./skills/blender-export",
+    "./skills/blender-grease-pencil",
+    "./skills/blender-hair",
+    "./skills/blender-hard-surface",
+    "./skills/blender-harness",
+    "./skills/blender-inspect",
+    "./skills/blender-jimeng-web",
+    "./skills/blender-managed",
+    "./skills/blender-preview",
+    "./skills/blender-procedural-modeling",
+    "./skills/blender-production",
+    "./skills/blender-quality-validation",
+    "./skills/blender-recover",
+    "./skills/blender-render-compositing",
+    "./skills/blender-retopology",
+    "./skills/blender-scene-assembly",
+    "./skills/blender-sculpt-surface",
+    "./skills/blender-sequence-editing",
+    "./skills/blender-simulation",
+    "./skills/blender-tracking",
+    "./skills/blender-use",
+    "./skills/blender-uv-material"
+  ],
+  "expertType": "team",
+  "agentName": "blender-team-lead",
+  "teamInfo": {
+    "leadAgent": "blender-team-lead",
+    "memberAgents": [
+      "blender-modeler",
+      "blender-rigger-animator",
+      "blender-lookdev-renderer",
+      "blender-effects-editor",
+      "blender-qc-delivery"
+    ]
+  },
+  "displayName": {
+    "en": "Blender Production Team",
+    "zh": "Blender 3D 生产专家团"
+  },
+  "profession": {
+    "en": "Blender Production Team",
+    "zh": "Blender 3D 生产专家团"
+  },
+  "displayDescription": {
+    "en": "Structured Blender production team driving a managed harness session with closed-contract commands and receipt-verified delivery of models, animation, renders and video.",
+    "zh": "结构化 Blender 生产团队：启动托管 harness 会话，派发闭合契约命令，交付经回执核验的模型、动画、渲染与视频。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "01-ProductDesign",
+  "defaultInitPrompt": {
+    "en": "Model a hard-surface product and export verified GLB/FBX",
+    "zh": "建一个硬表面产品件并导出经验证的 GLB/FBX"
+  },
+  "quickPrompts": [
+    {
+      "en": "Model a hard-surface product and export verified GLB/FBX",
+      "zh": "建一个硬表面产品件并导出经验证的 GLB/FBX"
+    },
+    {
+      "en": "Rig a character",
+      "zh": "绑定角色、做变形验证并渲染转台"
+    },
+    {
+      "en": "Edit a sequence in VSE and export verified H.264/AAC",
+      "zh": "在 VSE 剪辑序列并导出通过媒体校验的 H.264/AAC"
+    }
+  ],
+  "tags": [
+    {
+      "en": "Blender",
+      "zh": "Blender"
+    },
+    {
+      "en": "3D Production",
+      "zh": "3D 生产"
+    },
+    {
+      "en": "Receipt-Verified Delivery",
+      "zh": "回执核验交付"
+    }
+  ],
+  "members": [
+    {
+      "id": "blender-team-lead",
+      "name": {
+        "en": "Lan",
+        "zh": "岚一"
+      },
+      "profession": {
+        "en": "3D Production Director",
+        "zh": "3D 生产总监"
+      },
+      "avatar": "avatars/blender-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "blender-modeler",
+      "name": {
+        "en": "Suyan",
+        "zh": "塑岩"
+      },
+      "profession": {
+        "en": "3D Modeler",
+        "zh": "3D 建模师"
+      },
+      "avatar": "avatars/blender-modeler.png",
+      "role": "member"
+    },
+    {
+      "id": "blender-rigger-animator",
+      "name": {
+        "en": "Gufeng",
+        "zh": "骨风"
+      },
+      "profession": {
+        "en": "Character TD / Animator",
+        "zh": "绑定动画师"
+      },
+      "avatar": "avatars/blender-rigger-animator.png",
+      "role": "member"
+    },
+    {
+      "id": "blender-lookdev-renderer",
+      "name": {
+        "en": "Cailan",
+        "zh": "彩澜"
+      },
+      "profession": {
+        "en": "Lookdev / Lighting Artist",
+        "zh": "材质渲染师"
+      },
+      "avatar": "avatars/blender-lookdev-renderer.png",
+      "role": "member"
+    },
+    {
+      "id": "blender-effects-editor",
+      "name": {
+        "en": "Yingliu",
+        "zh": "影流"
+      },
+      "profession": {
+        "en": "FX / Editorial Artist",
+        "zh": "特效剪辑师"
+      },
+      "avatar": "avatars/blender-effects-editor.png",
+      "role": "member"
+    },
+    {
+      "id": "blender-qc-delivery",
+      "name": {
+        "en": "Hezhen",
+        "zh": "核真"
+      },
+      "profession": {
+        "en": "QC / Pipeline Engineer",
+        "zh": "质检交付工程师"
+      },
+      "avatar": "avatars/blender-qc-delivery.png",
+      "role": "member"
+    }
+  ]
+}

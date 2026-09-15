@@ -1,0 +1,146 @@
+{
+  "name": "image-factory-team",
+  "version": "1.0.0",
+  "description": "Image Factory Team: a multi-agent team with verified, closed-loop delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/image-factory-lead.md",
+    "./agents/image-prompt-engineer.md",
+    "./agents/image-production-operator.md",
+    "./agents/image-quality-judge.md",
+    "./agents/image-recovery-engineer.md"
+  ],
+  "skills": [
+    "./skills/image-factory-harness",
+    "./skills/image-factory-judge",
+    "./skills/image-factory-recover",
+    "./skills/image-factory-run",
+    "./skills/image-factory-use"
+  ],
+  "expertType": "team",
+  "agentName": "image-factory-lead",
+  "teamInfo": {
+    "leadAgent": "image-factory-lead",
+    "memberAgents": [
+      "image-prompt-engineer",
+      "image-production-operator",
+      "image-quality-judge",
+      "image-recovery-engineer"
+    ]
+  },
+  "displayName": {
+    "en": "Image Factory Team",
+    "zh": "图片工厂专家团"
+  },
+  "profession": {
+    "en": "Image Factory Team",
+    "zh": "图片工厂专家团"
+  },
+  "displayDescription": {
+    "en": "Image Factory Team: a multi-agent team with verified, closed-loop delivery.",
+    "zh": "图片工厂专家团：以CLI 驱动的多智能体协作团队，逐项核验、闭环交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "06-ContentCreative",
+  "defaultInitPrompt": {
+    "en": "给我们的新品生成一组符合品牌主色的营销图，带评测闭环",
+    "zh": "给我们的新品生成一组符合品牌主色的营销图，带评测闭环"
+  },
+  "quickPrompts": [
+    {
+      "en": "给我们的新品生成一组符合品牌主色的营销图，带评测闭环",
+      "zh": "给我们的新品生成一组符合品牌主色的营销图，带评测闭环"
+    },
+    {
+      "en": "按这张构图重生成三版并给我评测对比",
+      "zh": "按这张构图重生成三版并给我评测对比"
+    },
+    {
+      "en": "恢复昨天中断的出图任务",
+      "zh": "恢复昨天中断的出图任务"
+    }
+  ],
+  "tags": [
+    {
+      "en": "图片生成",
+      "zh": "图片生成"
+    },
+    {
+      "en": "评测闭环",
+      "zh": "评测闭环"
+    },
+    {
+      "en": "预算门禁",
+      "zh": "预算门禁"
+    }
+  ],
+  "members": [
+    {
+      "id": "image-factory-lead",
+      "name": {
+        "en": "image-factory-lead",
+        "zh": "图片工厂主理人"
+      },
+      "profession": {
+        "en": "Image Factory Lead",
+        "zh": "图片生产总监"
+      },
+      "avatar": "avatars/image-factory-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "image-prompt-engineer",
+      "name": {
+        "en": "image-prompt-engineer",
+        "zh": "图片提示词工程师"
+      },
+      "profession": {
+        "en": "Image Prompt Engineer",
+        "zh": "提示词工程"
+      },
+      "avatar": "avatars/image-prompt-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "image-production-operator",
+      "name": {
+        "en": "image-production-operator",
+        "zh": "图片生产操作员"
+      },
+      "profession": {
+        "en": "Image Production Operator",
+        "zh": "生产执行"
+      },
+      "avatar": "avatars/image-production-operator.png",
+      "role": "member"
+    },
+    {
+      "id": "image-quality-judge",
+      "name": {
+        "en": "image-quality-judge",
+        "zh": "图片质量评审员"
+      },
+      "profession": {
+        "en": "Image Quality Judge",
+        "zh": "质量评审"
+      },
+      "avatar": "avatars/image-quality-judge.png",
+      "role": "member"
+    },
+    {
+      "id": "image-recovery-engineer",
+      "name": {
+        "en": "image-recovery-engineer",
+        "zh": "图片恢复工程师"
+      },
+      "profession": {
+        "en": "Image Recovery Engineer",
+        "zh": "故障恢复"
+      },
+      "avatar": "avatars/image-recovery-engineer.png",
+      "role": "member"
+    }
+  ]
+}

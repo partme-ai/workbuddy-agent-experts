@@ -1,0 +1,34 @@
+{
+  "name": "marketing-aeo-foundations",
+  "version": "1.0.0",
+  "description": "AI 引擎优化基础设施专家——落地 llms.txt、AI 感知的 robots.txt、token 预算化内容、结构化 Markdown 可用性，以及 agent 发现文件，让 AI 爬虫、引用引擎和浏览型 agent 能找到、解析并执行你的站点内容",
+  "expertType": "agent",
+  "agentName": "marketing-aeo-foundations",
+  "agents": [
+    "./agents/marketing-aeo-foundations.md"
+  ],
+  "displayName": {
+    "en": "marketing-aeo-foundations",
+    "zh": "AEO 基础架构师"
+  },
+  "profession": {
+    "en": "marketing-aeo-foundations",
+    "zh": "AEO 基础架构师"
+  },
+  "displayDescription": {
+    "en": "AI 引擎优化基础设施专家——落地 llms.txt、AI 感知的 robots.txt、token 预算化内容、结构化 Markdown 可用性，以及 agent 发现文件，让 AI 爬虫、引用引擎和浏览型 agent 能找到、解析并执行你的站点内容",
+    "zh": "AI 引擎优化基础设施专家——落地 llms.txt、AI 感知的 robots.txt、token 预算化内容、结构化 Markdown 可用性，以及 agent 发现文件，让 AI 爬虫、引用引擎和浏览型 agent 能找到、解析并执行你的站点内容"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "07-SalesCommerce",
+  "defaultInitPrompt": {
+    "zh": "我是AEO 基础架构师，请介绍你的专业能力并开始协助我。",
+    "en": "I am marketing-aeo-foundations. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "marketing",
+      "zh": "marketing"
+    }
+  ]
+}

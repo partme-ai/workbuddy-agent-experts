@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "ArtifactReceipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocolVersion",
+    "producer",
+    "sessionId",
+    "sceneRevision",
+    "snapshotId",
+    "path",
+    "sha256",
+    "format",
+    "bytes",
+    "parameters",
+    "validation",
+    "restoration",
+    "warnings"
+  ],
+  "properties": {
+    "protocolVersion": {
+      "type": "string",
+      "const": "codex-blender/v1"
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "sessionId": {"type": "string"},
+    "sceneRevision": {"type": "integer", "minimum": 0},
+    "snapshotId": {"type": "string"},
+    "path": { "type": "string" },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "format": {"type": "string", "enum": ["blend", "glb", "gltf", "fbx", "obj", "stl", "png", "jpg", "mp4"]},
+    "bytes": { "type": "integer", "exclusiveMinimum": 0 },
+    "parameters": {"type": "object"},
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "checks"],
+      "properties": {
+        "status": {"type": "string", "enum": ["passed", "failed"]},
+        "checks": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "restoration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["confirmed", "failed", "unknown"]
+        }
+      }
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  }
+}

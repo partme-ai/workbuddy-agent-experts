@@ -1,0 +1,155 @@
+{
+  "name": "dreamina-canvas-team",
+  "version": "1.0.0",
+  "description": "Dreamina Canvas Team: a multi-agent expert team with verified, closed-loop delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/dreamina-canvas-lead.md",
+    "./agents/dreamina-canvas-creator.md",
+    "./agents/dreamina-canvas-av-designer.md",
+    "./agents/dreamina-canvas-timeline-editor.md",
+    "./agents/dreamina-canvas-operator.md"
+  ],
+  "skills": [
+    "./skills/dreamina-canvas-auth",
+    "./skills/dreamina-canvas-cli",
+    "./skills/dreamina-canvas-compose",
+    "./skills/dreamina-canvas-create",
+    "./skills/dreamina-canvas-discover-models",
+    "./skills/dreamina-canvas-download-assets",
+    "./skills/dreamina-canvas-generate-audio",
+    "./skills/dreamina-canvas-generate-image",
+    "./skills/dreamina-canvas-generate-video",
+    "./skills/dreamina-canvas-harness",
+    "./skills/dreamina-canvas-manage-timeline",
+    "./skills/dreamina-canvas-quote-and-run",
+    "./skills/dreamina-canvas-resume-operation",
+    "./skills/dreamina-canvas-use"
+  ],
+  "expertType": "team",
+  "agentName": "dreamina-canvas-lead",
+  "teamInfo": {
+    "leadAgent": "dreamina-canvas-lead",
+    "memberAgents": [
+      "dreamina-canvas-creator",
+      "dreamina-canvas-av-designer",
+      "dreamina-canvas-timeline-editor",
+      "dreamina-canvas-operator"
+    ]
+  },
+  "displayName": {
+    "en": "Dreamina Canvas Team",
+    "zh": "即梦画布专家团"
+  },
+  "profession": {
+    "en": "Dreamina Canvas Team",
+    "zh": "即梦画布专家团"
+  },
+  "displayDescription": {
+    "en": "Dreamina Canvas Team: a multi-agent expert team with verified, closed-loop delivery.",
+    "zh": "即梦画布专家团：多智能体协作团队，逐项核验、闭环交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "01-ProductDesign",
+  "defaultInitPrompt": {
+    "en": "建一个画布，把这条视频配上一段音频并合成",
+    "zh": "建一个画布，把这条视频配上一段音频并合成"
+  },
+  "quickPrompts": [
+    {
+      "en": "建一个画布，把这条视频配上一段音频并合成",
+      "zh": "建一个画布，把这条视频配上一段音频并合成"
+    },
+    {
+      "en": "在画布里给我的产品生成图+视频+配音素材",
+      "zh": "在画布里给我的产品生成图+视频+配音素材"
+    },
+    {
+      "en": "恢复上次中断的画布合成",
+      "zh": "恢复上次中断的画布合成"
+    }
+  ],
+  "tags": [
+    {
+      "en": "多模态画布",
+      "zh": "多模态画布"
+    },
+    {
+      "en": "音频生成",
+      "zh": "音频生成"
+    },
+    {
+      "en": "时间线合成",
+      "zh": "时间线合成"
+    }
+  ],
+  "members": [
+    {
+      "id": "dreamina-canvas-lead",
+      "name": {
+        "en": "dreamina-canvas-lead",
+        "zh": "即梦画布专家团主理人"
+      },
+      "profession": {
+        "en": "画布总监",
+        "zh": "画布总监"
+      },
+      "avatar": "avatars/dreamina-canvas-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "dreamina-canvas-creator",
+      "name": {
+        "en": "dreamina-canvas-creator",
+        "zh": "画布创作师"
+      },
+      "profession": {
+        "en": "画布创作",
+        "zh": "画布创作"
+      },
+      "avatar": "avatars/dreamina-canvas-creator.png",
+      "role": "member"
+    },
+    {
+      "id": "dreamina-canvas-av-designer",
+      "name": {
+        "en": "dreamina-canvas-av-designer",
+        "zh": "画布多媒设计师"
+      },
+      "profession": {
+        "en": "多媒生成",
+        "zh": "多媒生成"
+      },
+      "avatar": "avatars/dreamina-canvas-av-designer.png",
+      "role": "member"
+    },
+    {
+      "id": "dreamina-canvas-timeline-editor",
+      "name": {
+        "en": "dreamina-canvas-timeline-editor",
+        "zh": "画布时间线编辑"
+      },
+      "profession": {
+        "en": "时间线",
+        "zh": "时间线"
+      },
+      "avatar": "avatars/dreamina-canvas-timeline-editor.png",
+      "role": "member"
+    },
+    {
+      "id": "dreamina-canvas-operator",
+      "name": {
+        "en": "dreamina-canvas-operator",
+        "zh": "画布运营操作员"
+      },
+      "profession": {
+        "en": "运营",
+        "zh": "运营"
+      },
+      "avatar": "avatars/dreamina-canvas-operator.png",
+      "role": "member"
+    }
+  ]
+}

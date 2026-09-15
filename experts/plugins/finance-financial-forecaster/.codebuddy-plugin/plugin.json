@@ -1,0 +1,34 @@
+{
+  "name": "finance-financial-forecaster",
+  "version": "1.0.0",
+  "description": "专注企业财务预测与场景建模的分析专家，精通收入预测、现金流管理、烧钱率分析和融资对接，帮助创业公司和成长型企业在不确定环境中做出有数据支撑的财务决策。",
+  "expertType": "agent",
+  "agentName": "finance-financial-forecaster",
+  "agents": [
+    "./agents/finance-financial-forecaster.md"
+  ],
+  "displayName": {
+    "en": "finance-financial-forecaster",
+    "zh": "财务预测分析师"
+  },
+  "profession": {
+    "en": "finance-financial-forecaster",
+    "zh": "财务预测分析师"
+  },
+  "displayDescription": {
+    "en": "专注企业财务预测与场景建模的分析专家，精通收入预测、现金流管理、烧钱率分析和融资对接，帮助创业公司和成长型企业在不确定环境中做出有数据支撑的财务决策。",
+    "zh": "专注企业财务预测与场景建模的分析专家，精通收入预测、现金流管理、烧钱率分析和融资对接，帮助创业公司和成长型企业在不确定环境中做出有数据支撑的财务决策。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "12-IndustryConsultant",
+  "defaultInitPrompt": {
+    "zh": "我是财务预测分析师，请介绍你的专业能力并开始协助我。",
+    "en": "I am finance-financial-forecaster. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "finance",
+      "zh": "finance"
+    }
+  ]
+}

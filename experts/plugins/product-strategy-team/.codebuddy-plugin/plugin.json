@@ -1,0 +1,155 @@
+{
+  "name": "product-strategy-team",
+  "version": "1.0.0",
+  "description": "Product & Strategy Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/product-team-lead.md",
+    "./agents/product-manager.md",
+    "./agents/product-trend-researcher.md",
+    "./agents/product-feedback-synthesizer.md",
+    "./agents/product-sprint-prioritizer.md",
+    "./agents/business-strategist.md"
+  ],
+  "skills": [],
+  "expertType": "team",
+  "agentName": "product-team-lead",
+  "teamInfo": {
+    "leadAgent": "product-team-lead",
+    "memberAgents": [
+      "product-manager",
+      "product-trend-researcher",
+      "product-feedback-synthesizer",
+      "product-sprint-prioritizer",
+      "business-strategist"
+    ]
+  },
+  "displayName": {
+    "en": "Product & Strategy Team",
+    "zh": "产品与策略专家团"
+  },
+  "profession": {
+    "en": "Product & Strategy Team",
+    "zh": "产品与策略专家团"
+  },
+  "displayDescription": {
+    "en": "Product & Strategy Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+    "zh": "产品与策略专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "01-ProductDesign",
+  "defaultInitPrompt": {
+    "en": "为下一个季度做产品规划并排优先级",
+    "zh": "为下一个季度做产品规划并排优先级"
+  },
+  "quickPrompts": [
+    {
+      "en": "为下一个季度做产品规划并排优先级",
+      "zh": "为下一个季度做产品规划并排优先级"
+    },
+    {
+      "en": "汇总近期用户反馈并提炼需求洞察",
+      "zh": "汇总近期用户反馈并提炼需求洞察"
+    },
+    {
+      "en": "做一份新市场进入策略分析",
+      "zh": "做一份新市场进入策略分析"
+    }
+  ],
+  "tags": [
+    {
+      "en": "产品规划",
+      "zh": "产品规划"
+    },
+    {
+      "en": "用户洞察",
+      "zh": "用户洞察"
+    },
+    {
+      "en": "战略",
+      "zh": "战略"
+    }
+  ],
+  "members": [
+    {
+      "id": "product-team-lead",
+      "name": {
+        "en": "product-team-lead",
+        "zh": "产品与策略专家团主理人"
+      },
+      "profession": {
+        "en": "Team Lead",
+        "zh": "产品与策略专家团主理人"
+      },
+      "avatar": "avatars/product-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "product-manager",
+      "name": {
+        "en": "product-manager",
+        "zh": "产品经理"
+      },
+      "profession": {
+        "en": "product-manager",
+        "zh": "产品经理"
+      },
+      "avatar": "avatars/product-manager.png",
+      "role": "member"
+    },
+    {
+      "id": "product-trend-researcher",
+      "name": {
+        "en": "product-trend-researcher",
+        "zh": "趋势研究员"
+      },
+      "profession": {
+        "en": "product-trend-researcher",
+        "zh": "趋势研究员"
+      },
+      "avatar": "avatars/product-trend-researcher.png",
+      "role": "member"
+    },
+    {
+      "id": "product-feedback-synthesizer",
+      "name": {
+        "en": "product-feedback-synthesizer",
+        "zh": "反馈分析师"
+      },
+      "profession": {
+        "en": "product-feedback-synthesizer",
+        "zh": "反馈分析师"
+      },
+      "avatar": "avatars/product-feedback-synthesizer.png",
+      "role": "member"
+    },
+    {
+      "id": "product-sprint-prioritizer",
+      "name": {
+        "en": "product-sprint-prioritizer",
+        "zh": "Sprint 排序师"
+      },
+      "profession": {
+        "en": "product-sprint-prioritizer",
+        "zh": "Sprint 排序师"
+      },
+      "avatar": "avatars/product-sprint-prioritizer.png",
+      "role": "member"
+    },
+    {
+      "id": "business-strategist",
+      "name": {
+        "en": "business-strategist",
+        "zh": "商业战略家"
+      },
+      "profession": {
+        "en": "business-strategist",
+        "zh": "商业战略家"
+      },
+      "avatar": "avatars/business-strategist.png",
+      "role": "member"
+    }
+  ]
+}

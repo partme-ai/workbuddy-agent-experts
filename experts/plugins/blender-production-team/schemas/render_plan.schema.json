@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CodexBlenderRenderPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "jobId", "frameStart", "frameEnd", "frameStep", "width", "height", "imageFormat", "colorMode", "colorDepth", "includeAudio"],
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "1.0.0"},
+    "jobId": {"type": "string", "pattern": "^job_[A-Za-z0-9_-]{1,80}$"},
+    "frameStart": {"type": "integer"},
+    "frameEnd": {"type": "integer"},
+    "frameStep": {"type": "integer", "minimum": 1},
+    "width": {"type": "integer", "minimum": 2},
+    "height": {"type": "integer", "minimum": 2},
+    "imageFormat": {"type": "string", "enum": ["PNG", "OPEN_EXR_MULTILAYER"]},
+    "colorMode": {"type": "string", "enum": ["RGB", "RGBA"]},
+    "colorDepth": {"type": "string", "enum": ["8", "16", "32"]},
+    "includeAudio": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: Dreamina Canvas (end-to-end)
+  short_description: Single implicit entry point; routes to the smallest applicable
+    Canvas Skill chain
+policy:
+  allow_implicit_invocation: true

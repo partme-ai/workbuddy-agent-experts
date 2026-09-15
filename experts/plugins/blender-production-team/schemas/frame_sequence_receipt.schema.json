@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CodexBlenderFrameSequenceReceipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["receiptVersion", "protocolVersion", "producer", "jobId", "snapshotSha256", "frameStart", "frameEnd", "frameStep", "format", "width", "height", "colorMode", "colorDepth", "frames", "fps", "reusedFrames", "renderedFrames", "validation"],
+  "properties": {
+    "receiptVersion": {"type": "string", "const": "3.0.0"},
+    "protocolVersion": {"type": "string", "const": "codex-blender/v1"},
+    "producer": {"type": "object", "additionalProperties": false, "required": ["name", "version"], "properties": {"name": {"type": "string", "const": "codex-blender"}, "version": {"type": "string"}}},
+    "jobId": {"type": "string", "pattern": "^job_[A-Za-z0-9_-]{1,80}$"},
+    "snapshotSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "frameStart": {"type": "integer"},
+    "frameEnd": {"type": "integer"},
+    "frameStep": {"type": "integer", "minimum": 1},
+    "format": {"type": "string", "enum": ["PNG", "OPEN_EXR_MULTILAYER"]},
+    "width": {"type": "integer", "minimum": 2},
+    "height": {"type": "integer", "minimum": 2},
+    "colorMode": {"type": "string", "enum": ["RGB", "RGBA"]},
+    "colorDepth": {"type": "string", "enum": ["8", "16", "32"]},
+    "frames": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["frame", "path", "bytes", "sha256"], "properties": {"frame": {"type": "integer"}, "path": {"type": "string"}, "bytes": {"type": "integer", "exclusiveMinimum": 0}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}}},
+    "fps": {"type": "number", "exclusiveMinimum": 0},
+    "audio": {"type": "object", "additionalProperties": false, "required": ["path", "bytes", "sha256", "format"], "properties": {"path": {"type": "string"}, "bytes": {"type": "integer", "exclusiveMinimum": 0}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "format": {"type": "string", "const": "wav"}}},
+    "reusedFrames": {"type": "array", "items": {"type": "integer"}},
+    "renderedFrames": {"type": "array", "items": {"type": "integer"}},
+    "validation": {"type": "object", "additionalProperties": false, "required": ["status", "checks"], "properties": {"status": {"type": "string", "enum": ["passed", "failed"]}, "checks": {"type": "array", "items": {"type": "string"}}}}
+  }
+}

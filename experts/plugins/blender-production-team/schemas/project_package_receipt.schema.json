@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "ProjectPackageReceipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocolVersion",
+    "producer",
+    "sourceProject",
+    "targetDirectory",
+    "packagePath",
+    "files",
+    "manifest",
+    "validation",
+    "warnings"
+  ],
+  "properties": {
+    "protocolVersion": {
+      "type": "string",
+      "const": "codex-blender/v1"
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"}
+      }
+    },
+    "sourceProject": {
+      "type": "string",
+      "description": "Absolute path of the original .blend file"
+    },
+    "targetDirectory": {
+      "type": "string",
+      "description": "Absolute path of the package output directory"
+    },
+    "packagePath": {
+      "type": "string",
+      "description": "Absolute path of the packaged .blend file inside the target directory"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["originalPath", "packagedPath", "sha256", "bytes", "license"],
+        "properties": {
+          "originalPath": {
+            "type": "string",
+            "description": "Original absolute path of the file"
+          },
+          "packagedPath": {
+            "type": "string",
+            "description": "Path relative to the package root"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "license": {
+            "type": "string",
+            "description": "License identifier or 'unknown'"
+          }
+        }
+      }
+    },
+    "manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Path to the dependency_manifest.json inside the package"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "checks"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["passed", "failed"]
+        },
+        "checks": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

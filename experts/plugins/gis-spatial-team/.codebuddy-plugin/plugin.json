@@ -1,0 +1,170 @@
+{
+  "name": "gis-spatial-team",
+  "version": "1.0.0",
+  "description": "GIS & Spatial Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/gis-team-lead.md",
+    "./agents/gis-solution-engineer.md",
+    "./agents/gis-3d-scene-developer.md",
+    "./agents/gis-spatial-data-scientist.md",
+    "./agents/gis-web-gis-developer.md",
+    "./agents/gis-bim-specialist.md",
+    "./agents/gis-cartography-designer.md"
+  ],
+  "skills": [],
+  "expertType": "team",
+  "agentName": "gis-team-lead",
+  "teamInfo": {
+    "leadAgent": "gis-team-lead",
+    "memberAgents": [
+      "gis-solution-engineer",
+      "gis-3d-scene-developer",
+      "gis-spatial-data-scientist",
+      "gis-web-gis-developer",
+      "gis-bim-specialist",
+      "gis-cartography-designer"
+    ]
+  },
+  "displayName": {
+    "en": "GIS & Spatial Team",
+    "zh": "GIS 空间专家团"
+  },
+  "profession": {
+    "en": "GIS & Spatial Team",
+    "zh": "GIS 空间专家团"
+  },
+  "displayDescription": {
+    "en": "GIS & Spatial Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+    "zh": "GIS 空间专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "01-ProductDesign",
+  "defaultInitPrompt": {
+    "en": "为城市级数据设计一个 Web 三维可视化方案",
+    "zh": "为城市级数据设计一个 Web 三维可视化方案"
+  },
+  "quickPrompts": [
+    {
+      "en": "为城市级数据设计一个 Web 三维可视化方案",
+      "zh": "为城市级数据设计一个 Web 三维可视化方案"
+    },
+    {
+      "en": "处理一批无人机实景数据并产出正射成果",
+      "zh": "处理一批无人机实景数据并产出正射成果"
+    },
+    {
+      "en": "为空间分析任务选型并设计处理流水线",
+      "zh": "为空间分析任务选型并设计处理流水线"
+    }
+  ],
+  "tags": [
+    {
+      "en": "三维可视化",
+      "zh": "三维可视化"
+    },
+    {
+      "en": "空间数据",
+      "zh": "空间数据"
+    },
+    {
+      "en": "BIM",
+      "zh": "BIM"
+    }
+  ],
+  "members": [
+    {
+      "id": "gis-team-lead",
+      "name": {
+        "en": "gis-team-lead",
+        "zh": "GIS 空间专家团主理人"
+      },
+      "profession": {
+        "en": "Team Lead",
+        "zh": "GIS 空间专家团主理人"
+      },
+      "avatar": "avatars/gis-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "gis-solution-engineer",
+      "name": {
+        "en": "gis-solution-engineer",
+        "zh": "解决方案工程师"
+      },
+      "profession": {
+        "en": "gis-solution-engineer",
+        "zh": "解决方案工程师"
+      },
+      "avatar": "avatars/gis-solution-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "gis-3d-scene-developer",
+      "name": {
+        "en": "gis-3d-scene-developer",
+        "zh": "三维场景开发者"
+      },
+      "profession": {
+        "en": "gis-3d-scene-developer",
+        "zh": "三维场景开发者"
+      },
+      "avatar": "avatars/gis-3d-scene-developer.png",
+      "role": "member"
+    },
+    {
+      "id": "gis-spatial-data-scientist",
+      "name": {
+        "en": "gis-spatial-data-scientist",
+        "zh": "空间数据科学家"
+      },
+      "profession": {
+        "en": "gis-spatial-data-scientist",
+        "zh": "空间数据科学家"
+      },
+      "avatar": "avatars/gis-spatial-data-scientist.png",
+      "role": "member"
+    },
+    {
+      "id": "gis-web-gis-developer",
+      "name": {
+        "en": "gis-web-gis-developer",
+        "zh": "Web GIS 开发工程师"
+      },
+      "profession": {
+        "en": "gis-web-gis-developer",
+        "zh": "Web GIS 开发工程师"
+      },
+      "avatar": "avatars/gis-web-gis-developer.png",
+      "role": "member"
+    },
+    {
+      "id": "gis-bim-specialist",
+      "name": {
+        "en": "gis-bim-specialist",
+        "zh": "BIM/GIS 专家"
+      },
+      "profession": {
+        "en": "gis-bim-specialist",
+        "zh": "BIM/GIS 专家"
+      },
+      "avatar": "avatars/gis-bim-specialist.png",
+      "role": "member"
+    },
+    {
+      "id": "gis-cartography-designer",
+      "name": {
+        "en": "gis-cartography-designer",
+        "zh": "地图制图设计师"
+      },
+      "profession": {
+        "en": "gis-cartography-designer",
+        "zh": "地图制图设计师"
+      },
+      "avatar": "avatars/gis-cartography-designer.png",
+      "role": "member"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "name": "growth-marketing-team",
+  "version": "1.0.0",
+  "description": "Growth & Marketing Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/growth-team-lead.md",
+    "./agents/marketing-content-creator.md",
+    "./agents/marketing-douyin-strategist.md",
+    "./agents/marketing-bilibili-strategist.md",
+    "./agents/marketing-baidu-seo-specialist.md",
+    "./agents/marketing-china-ecommerce-operator.md"
+  ],
+  "skills": [],
+  "expertType": "team",
+  "agentName": "growth-team-lead",
+  "teamInfo": {
+    "leadAgent": "growth-team-lead",
+    "memberAgents": [
+      "marketing-content-creator",
+      "marketing-douyin-strategist",
+      "marketing-bilibili-strategist",
+      "marketing-baidu-seo-specialist",
+      "marketing-china-ecommerce-operator"
+    ]
+  },
+  "displayName": {
+    "en": "Growth & Marketing Team",
+    "zh": "增长营销专家团"
+  },
+  "profession": {
+    "en": "Growth & Marketing Team",
+    "zh": "增长营销专家团"
+  },
+  "displayDescription": {
+    "en": "Growth & Marketing Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery.",
+    "zh": "增长营销专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "07-SalesCommerce",
+  "defaultInitPrompt": {
+    "en": "为新品上市制定一份小红书+抖音的组合投放方案",
+    "zh": "为新品上市制定一份小红书+抖音的组合投放方案"
+  },
+  "quickPrompts": [
+    {
+      "en": "为新品上市制定一份小红书+抖音的组合投放方案",
+      "zh": "为新品上市制定一份小红书+抖音的组合投放方案"
+    },
+    {
+      "en": "优化我们的百度搜索自然流量策略",
+      "zh": "优化我们的百度搜索自然流量策略"
+    },
+    {
+      "en": "操盘一次电商大促并给出节奏表",
+      "zh": "操盘一次电商大促并给出节奏表"
+    }
+  ],
+  "tags": [
+    {
+      "en": "内容营销",
+      "zh": "内容营销"
+    },
+    {
+      "en": "短视频",
+      "zh": "短视频"
+    },
+    {
+      "en": "电商运营",
+      "zh": "电商运营"
+    }
+  ],
+  "members": [
+    {
+      "id": "growth-team-lead",
+      "name": {
+        "en": "growth-team-lead",
+        "zh": "增长营销专家团主理人"
+      },
+      "profession": {
+        "en": "Team Lead",
+        "zh": "增长营销专家团主理人"
+      },
+      "avatar": "avatars/growth-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "marketing-content-creator",
+      "name": {
+        "en": "marketing-content-creator",
+        "zh": "内容创作者"
+      },
+      "profession": {
+        "en": "marketing-content-creator",
+        "zh": "内容创作者"
+      },
+      "avatar": "avatars/marketing-content-creator.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-douyin-strategist",
+      "name": {
+        "en": "marketing-douyin-strategist",
+        "zh": "抖音策略师"
+      },
+      "profession": {
+        "en": "marketing-douyin-strategist",
+        "zh": "抖音策略师"
+      },
+      "avatar": "avatars/marketing-douyin-strategist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-bilibili-strategist",
+      "name": {
+        "en": "marketing-bilibili-strategist",
+        "zh": "B站内容策略师"
+      },
+      "profession": {
+        "en": "marketing-bilibili-strategist",
+        "zh": "B站内容策略师"
+      },
+      "avatar": "avatars/marketing-bilibili-strategist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-baidu-seo-specialist",
+      "name": {
+        "en": "marketing-baidu-seo-specialist",
+        "zh": "百度 SEO 专家"
+      },
+      "profession": {
+        "en": "marketing-baidu-seo-specialist",
+        "zh": "百度 SEO 专家"
+      },
+      "avatar": "avatars/marketing-baidu-seo-specialist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-china-ecommerce-operator",
+      "name": {
+        "en": "marketing-china-ecommerce-operator",
+        "zh": "中国电商运营专家"
+      },
+      "profession": {
+        "en": "marketing-china-ecommerce-operator",
+        "zh": "中国电商运营专家"
+      },
+      "avatar": "avatars/marketing-china-ecommerce-operator.png",
+      "role": "member"
+    }
+  ]
+}

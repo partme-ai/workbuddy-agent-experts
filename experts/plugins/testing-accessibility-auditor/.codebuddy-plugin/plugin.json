@@ -1,0 +1,34 @@
+{
+  "name": "testing-accessibility-auditor",
+  "version": "1.0.0",
+  "description": "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。",
+  "expertType": "agent",
+  "agentName": "testing-accessibility-auditor",
+  "agents": [
+    "./agents/testing-accessibility-auditor.md"
+  ],
+  "displayName": {
+    "en": "testing-accessibility-auditor",
+    "zh": "无障碍审核员"
+  },
+  "profession": {
+    "en": "testing-accessibility-auditor",
+    "zh": "无障碍审核员"
+  },
+  "displayDescription": {
+    "en": "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。",
+    "zh": "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "我是无障碍审核员，请介绍你的专业能力并开始协助我。",
+    "en": "I am testing-accessibility-auditor. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "testing",
+      "zh": "testing"
+    }
+  ]
+}

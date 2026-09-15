@@ -1,0 +1,34 @@
+{
+  "name": "testing-embedded-qa-engineer",
+  "version": "1.0.0",
+  "description": "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。",
+  "expertType": "agent",
+  "agentName": "testing-embedded-qa-engineer",
+  "agents": [
+    "./agents/testing-embedded-qa-engineer.md"
+  ],
+  "displayName": {
+    "en": "testing-embedded-qa-engineer",
+    "zh": "嵌入式测试工程师"
+  },
+  "profession": {
+    "en": "testing-embedded-qa-engineer",
+    "zh": "嵌入式测试工程师"
+  },
+  "displayDescription": {
+    "en": "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。",
+    "zh": "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "我是嵌入式测试工程师，请介绍你的专业能力并开始协助我。",
+    "en": "I am testing-embedded-qa-engineer. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "testing",
+      "zh": "testing"
+    }
+  ]
+}

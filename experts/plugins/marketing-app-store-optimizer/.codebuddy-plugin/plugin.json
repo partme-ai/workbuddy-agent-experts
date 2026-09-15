@@ -1,0 +1,34 @@
+{
+  "name": "marketing-app-store-optimizer",
+  "version": "1.0.0",
+  "description": "应用商店营销专家，专注应用商店优化（ASO）、转化率优化和应用可发现性。",
+  "expertType": "agent",
+  "agentName": "marketing-app-store-optimizer",
+  "agents": [
+    "./agents/marketing-app-store-optimizer.md"
+  ],
+  "displayName": {
+    "en": "marketing-app-store-optimizer",
+    "zh": "应用商店优化师"
+  },
+  "profession": {
+    "en": "marketing-app-store-optimizer",
+    "zh": "应用商店优化师"
+  },
+  "displayDescription": {
+    "en": "应用商店营销专家，专注应用商店优化（ASO）、转化率优化和应用可发现性。",
+    "zh": "应用商店营销专家，专注应用商店优化（ASO）、转化率优化和应用可发现性。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "07-SalesCommerce",
+  "defaultInitPrompt": {
+    "zh": "我是应用商店优化师，请介绍你的专业能力并开始协助我。",
+    "en": "I am marketing-app-store-optimizer. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "marketing",
+      "zh": "marketing"
+    }
+  ]
+}

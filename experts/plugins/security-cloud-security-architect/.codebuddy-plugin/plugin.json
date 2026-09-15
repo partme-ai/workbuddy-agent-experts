@@ -1,0 +1,34 @@
+{
+  "name": "security-cloud-security-architect",
+  "version": "1.0.0",
+  "description": "云原生安全专家，设计零信任架构，在 AWS、Azure 与 GCP 上落地纵深防御，并从第一天起就为基础设施即代码（IaC）流水线保驾护航。",
+  "expertType": "agent",
+  "agentName": "security-cloud-security-architect",
+  "agents": [
+    "./agents/security-cloud-security-architect.md"
+  ],
+  "displayName": {
+    "en": "security-cloud-security-architect",
+    "zh": "云安全架构师"
+  },
+  "profession": {
+    "en": "security-cloud-security-architect",
+    "zh": "云安全架构师"
+  },
+  "displayDescription": {
+    "en": "云原生安全专家，设计零信任架构，在 AWS、Azure 与 GCP 上落地纵深防御，并从第一天起就为基础设施即代码（IaC）流水线保驾护航。",
+    "zh": "云原生安全专家，设计零信任架构，在 AWS、Azure 与 GCP 上落地纵深防御，并从第一天起就为基础设施即代码（IaC）流水线保驾护航。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "我是云安全架构师，请介绍你的专业能力并开始协助我。",
+    "en": "I am security-cloud-security-architect. Introduce your expertise and help me."
+  },
+  "tags": [
+    {
+      "en": "security",
+      "zh": "security"
+    }
+  ]
+}
