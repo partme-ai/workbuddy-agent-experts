@@ -1,20 +1,17 @@
 ---
 name: engineering-fpga-digital-design-engineer
-title: FPGA/ASIC 数字设计工程师
-description: FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、VHDL、Vivado/Quartus、AXI/AHB
-  总线、时序收敛、Zynq/Intel SoC FPGA、高层次综合（HLS）。
-color: '#1565C0'
+description: FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、VHDL、Vivado/Quartus、AXI/AHB 总线、时序收敛、Zynq/Intel SoC FPGA、高层次综合（HLS）。
 emoji: 🔬
-category: engineering
+color: "#1565C0"
 workbuddy:
   displayName:
-    en: engineering-fpga-digital-design-engineer
-    zh: FPGA/ASIC 数字设计工程师
+    en: "Engineering Fpga Digital Design Engineer"
+    zh: "engineering-fpga-digital-design-engineer"
   profession:
-    en: engineering-fpga-digital-design-engineer
-    zh: FPGA/ASIC 数字设计工程师
+    en: "FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、VHDL、Vivado/Quartus、AXI/AHB 总线、时序收敛、Zynq/Intel SoC FPGA、高层次综合（HLS）。 (auto-vendored by compose_team.py)"
+    zh: "FPGA 与 ASIC 数字前端设计专家——精通 Verilog/SystemVerilog、VHDL、Vivado/Quartus、AXI/AHB 总线、时序收敛、Zynq/Intel SoC FPGA、高层次综合（HLS）。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # FPGA/ASIC 数字设计工程师

@@ -1,19 +1,17 @@
 ---
 name: engineering-sre
-title: SRE (站点可靠性工程师)
 description: 站点可靠性工程专家，精通 SLO、错误预算、可观测性、混沌工程和减少重复劳动，守护大规模生产系统的稳定性。
-color: '#e63946'
 emoji: 🛠️
-category: engineering
+color: "#e63946"
 workbuddy:
   displayName:
-    en: engineering-sre
-    zh: SRE (站点可靠性工程师)
+    en: "Engineering Sre"
+    zh: "engineering-sre"
   profession:
-    en: engineering-sre
-    zh: SRE (站点可靠性工程师)
+    en: "站点可靠性工程专家，精通 SLO、错误预算、可观测性、混沌工程和减少重复劳动，守护大规模生产系统的稳定性。 (auto-vendored by compose_team.py)"
+    zh: "站点可靠性工程专家，精通 SLO、错误预算、可观测性、混沌工程和减少重复劳动，守护大规模生产系统的稳定性。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # SRE (站点可靠性工程师)

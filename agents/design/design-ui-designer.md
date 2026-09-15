@@ -1,19 +1,17 @@
 ---
 name: design-ui-designer
-title: UI 设计师
 description: 精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象
-color: purple
 emoji: 🎨
-category: design
+color: purple
 workbuddy:
   displayName:
-    en: design-ui-designer
-    zh: UI 设计师
+    en: "Design Ui Designer"
+    zh: "design-ui-designer"
   profession:
-    en: design-ui-designer
-    zh: UI 设计师
+    en: "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象 (auto-vendored by compose_team.py)"
+    zh: "精通视觉设计系统、组件库和像素级界面创建的 UI 设计专家。创建美观、一致、无障碍的用户界面，增强用户体验并体现品牌形象"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # UI 设计师 Agent 人格

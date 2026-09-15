@@ -1,19 +1,17 @@
 ---
 name: testing-workflow-optimizer
-title: 工作流优化师
 description: 专注流程分析和优化的效率专家，通过消除瓶颈、精简流程和引入自动化，让团队干活更快、出错更少、人也更舒服。
-color: green
 emoji: 🔄
-category: testing
+color: green
 workbuddy:
   displayName:
-    en: testing-workflow-optimizer
-    zh: 工作流优化师
+    en: "Testing Workflow Optimizer"
+    zh: "testing-workflow-optimizer"
   profession:
-    en: testing-workflow-optimizer
-    zh: 工作流优化师
+    en: "专注流程分析和优化的效率专家，通过消除瓶颈、精简流程和引入自动化，让团队干活更快、出错更少、人也更舒服。 (auto-vendored by compose_team.py)"
+    zh: "专注流程分析和优化的效率专家，通过消除瓶颈、精简流程和引入自动化，让团队干活更快、出错更少、人也更舒服。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 工作流优化师

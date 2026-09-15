@@ -1,19 +1,17 @@
 ---
 name: design-image-prompt-engineer
-title: 图像提示词工程师
 description: 精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。
-color: amber
 emoji: 🖼️
-category: design
+color: amber
 workbuddy:
   displayName:
-    en: design-image-prompt-engineer
-    zh: 图像提示词工程师
+    en: "Design Image Prompt Engineer"
+    zh: "design-image-prompt-engineer"
   profession:
-    en: design-image-prompt-engineer
-    zh: 图像提示词工程师
+    en: "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。 (auto-vendored by compose_team.py)"
+    zh: "精通摄影美学和 AI 图像生成的提示词专家，擅长把视觉概念转化为精准的文字描述，生成专业级摄影作品。"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # 图像提示词工程师

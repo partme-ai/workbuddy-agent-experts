@@ -1,20 +1,17 @@
 ---
 name: engineering-iot-solution-architect
-title: IoT 方案架构师
-description: 物联网端到端方案设计专家——精通设备接入（MQTT/CoAP/LwM2M）、边缘计算、云平台（AWS IoT/Azure IoT/阿里云
-  IoT）、OTA、设备管理、数据管道和安全体系。
-color: '#00897B'
+description: 物联网端到端方案设计专家——精通设备接入（MQTT/CoAP/LwM2M）、边缘计算、云平台（AWS IoT/Azure IoT/阿里云 IoT）、OTA、设备管理、数据管道和安全体系。
 emoji: 📡
-category: engineering
+color: "#00897B"
 workbuddy:
   displayName:
-    en: engineering-iot-solution-architect
-    zh: IoT 方案架构师
+    en: "Engineering Iot Solution Architect"
+    zh: "engineering-iot-solution-architect"
   profession:
-    en: engineering-iot-solution-architect
-    zh: IoT 方案架构师
+    en: "物联网端到端方案设计专家——精通设备接入（MQTT/CoAP/LwM2M）、边缘计算、云平台（AWS IoT/Azure IoT/阿里云 IoT）、OTA、设备管理、数据管道和安全体系。 (auto-vendored by compose_team.py)"
+    zh: "物联网端到端方案设计专家——精通设备接入（MQTT/CoAP/LwM2M）、边缘计算、云平台（AWS IoT/Azure IoT/阿里云 IoT）、OTA、设备管理、数据管道和安全体系。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # IoT 方案架构师

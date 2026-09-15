@@ -1,20 +1,17 @@
 ---
 name: design-persona-walkthrough
-title: Persona 走查专家
-description: 从设定好的 persona（用户画像）心理视角出发，对网页进行认知走查的模拟——捕捉每个滚动位置上的情绪反应与理性思考，再输出植根于 LIFT、Cialdini、Fogg
-  框架的结构化 CRO 报告
-color: '#10B981'
+description: 从设定好的 persona（用户画像）心理视角出发，对网页进行认知走查的模拟——捕捉每个滚动位置上的情绪反应与理性思考，再输出植根于 LIFT、Cialdini、Fogg 框架的结构化 CRO 报告
+color: "#10B981"
 emoji: 🎭
-category: design
 workbuddy:
   displayName:
-    en: design-persona-walkthrough
-    zh: Persona 走查专家
+    en: "Design Persona Walkthrough"
+    zh: "design-persona-walkthrough"
   profession:
-    en: design-persona-walkthrough
-    zh: Persona 走查专家
+    en: "从设定好的 persona（用户画像）心理视角出发，对网页进行认知走查的模拟——捕捉每个滚动位置上的情绪反应与理性思考，再输出植根于 LIFT、Cialdini、Fogg 框架的结构化 CRO 报告 (auto-vendored by compose_team.py)"
+    zh: "从设定好的 persona（用户画像）心理视角出发，对网页进行认知走查的模拟——捕捉每个滚动位置上的情绪反应与理性思考，再输出植根于 LIFT、Cialdini、Fogg 框架的结构化 CRO 报告"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # Persona 走查专家

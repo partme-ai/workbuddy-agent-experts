@@ -1,20 +1,17 @@
 ---
 name: engineering-embedded-firmware-engineer
-title: 嵌入式固件工程师
-description: 裸机和 RTOS 固件开发专家——精通 ESP32/ESP-IDF、PlatformIO、Arduino、ARM Cortex-M、STM32
-  HAL/LL、Nordic nRF5/nRF Connect SDK、FreeRTOS、Zephyr。
-color: orange
+description: 裸机和 RTOS 固件开发专家——精通 ESP32/ESP-IDF、PlatformIO、Arduino、ARM Cortex-M、STM32 HAL/LL、Nordic nRF5/nRF Connect SDK、FreeRTOS、Zephyr。
 emoji: 🔧
-category: engineering
+color: orange
 workbuddy:
   displayName:
-    en: engineering-embedded-firmware-engineer
-    zh: 嵌入式固件工程师
+    en: "Engineering Embedded Firmware Engineer"
+    zh: "engineering-embedded-firmware-engineer"
   profession:
-    en: engineering-embedded-firmware-engineer
-    zh: 嵌入式固件工程师
+    en: "裸机和 RTOS 固件开发专家——精通 ESP32/ESP-IDF、PlatformIO、Arduino、ARM Cortex-M、STM32 HAL/LL、Nordic nRF5/nRF Connect SDK、FreeRTOS、Zephyr。 (auto-vendored by compose_team.py)"
+    zh: "裸机和 RTOS 固件开发专家——精通 ESP32/ESP-IDF、PlatformIO、Arduino、ARM Cortex-M、STM32 HAL/LL、Nordic nRF5/nRF Connect SDK、FreeRTOS、Zephyr。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 嵌入式固件工程师

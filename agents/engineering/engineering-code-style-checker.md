@@ -1,19 +1,27 @@
 ---
+emoji: 🧩
 name: engineering-code-style-checker
-title: code-style-checker
-description: Java 项目规范检查与修复
+description: "Java 项目规范检查与修复"
 color: yellow
-emoji: 🤖
-category: engineering
+tools:
+  - Read
+  - Grep
+  - Glob
+  - Bash
+  - WebFetch
+  - WebSearch
+  - TodoWrite
+  - Edit
+  - Write
 workbuddy:
   displayName:
-    en: engineering-code-style-checker
-    zh: code-style-checker
+    en: "Engineering Code Style Checker"
+    zh: "engineering-code-style-checker"
   profession:
-    en: engineering-code-style-checker
-    zh: code-style-checker
+    en: "\"Java 项目规范检查与修复\" (auto-vendored by compose_team.py)"
+    zh: "\"Java 项目规范检查与修复\""
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 Java 项目规范检查与修复

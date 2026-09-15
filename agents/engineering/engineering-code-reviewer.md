@@ -1,19 +1,17 @@
 ---
 name: engineering-code-reviewer
-title: 代码审查员
 description: 专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。
-color: purple
 emoji: 👀
-category: engineering
+color: purple
 workbuddy:
   displayName:
-    en: engineering-code-reviewer
-    zh: 代码审查员
+    en: "Engineering Code Reviewer"
+    zh: "engineering-code-reviewer"
   profession:
-    en: engineering-code-reviewer
-    zh: 代码审查员
+    en: "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。 (auto-vendored by compose_team.py)"
+    zh: "专业代码审查专家，提供建设性、可操作的反馈，聚焦正确性、可维护性、安全性和性能，而非代码风格偏好。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 代码审查员

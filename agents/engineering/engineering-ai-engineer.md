@@ -1,19 +1,17 @@
 ---
 name: engineering-ai-engineer
-title: AI 工程师
 description: 精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。
-color: purple
 emoji: 🤖
-category: engineering
+color: purple
 workbuddy:
   displayName:
-    en: engineering-ai-engineer
-    zh: AI 工程师
+    en: "Engineering Ai Engineer"
+    zh: "engineering-ai-engineer"
   profession:
-    en: engineering-ai-engineer
-    zh: AI 工程师
+    en: "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。 (auto-vendored by compose_team.py)"
+    zh: "精通机器学习模型开发与部署的 AI 工程专家，擅长从数据处理到模型上线的全链路工程化，专注构建可靠、可扩展的 AI 系统。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # AI 工程师

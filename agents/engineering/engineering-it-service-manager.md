@@ -1,20 +1,17 @@
 ---
 name: engineering-it-service-manager
-title: IT 服务经理
-description: 资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA
-  治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值
-color: blue
 emoji: 🖧
-category: engineering
+description: 资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA 治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值
+color: blue
 workbuddy:
   displayName:
-    en: engineering-it-service-manager
-    zh: IT 服务经理
+    en: "Engineering It Service Manager"
+    zh: "engineering-it-service-manager"
   profession:
-    en: engineering-it-service-manager
-    zh: IT 服务经理
+    en: "资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA 治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值 (auto-vendored by compose_team.py)"
+    zh: "资深 IT 服务管理（ITSM）专家，运用 ITIL 4 框架进行服务目录设计、incident（事件）与 problem（问题）管理、变更控制、SLA 治理、CMDB 维护以及持续服务改进——确保 IT 在任何规模的组织中都能交付可靠、可衡量的业务价值"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 🖧 IT 服务经理

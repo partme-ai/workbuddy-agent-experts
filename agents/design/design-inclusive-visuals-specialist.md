@@ -1,19 +1,17 @@
 ---
 name: design-inclusive-visuals-specialist
-title: 包容性视觉专家
 description: 专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。
-color: '#4DB6AC'
 emoji: 🌈
-category: design
+color: "#4DB6AC"
 workbuddy:
   displayName:
-    en: design-inclusive-visuals-specialist
-    zh: 包容性视觉专家
+    en: "Design Inclusive Visuals Specialist"
+    zh: "design-inclusive-visuals-specialist"
   profession:
-    en: design-inclusive-visuals-specialist
-    zh: 包容性视觉专家
+    en: "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。 (auto-vendored by compose_team.py)"
+    zh: "专注于消除 AI 生成图像中的系统性偏见，确保生成的人物图像和视频在文化、肤色、体型等方面真实、有尊严、不刻板。"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # 包容性视觉专家

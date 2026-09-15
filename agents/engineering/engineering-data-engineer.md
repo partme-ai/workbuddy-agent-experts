@@ -1,19 +1,17 @@
 ---
 name: engineering-data-engineer
-title: 数据工程师
 description: 专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。
-color: orange
 emoji: 📊
-category: engineering
+color: orange
 workbuddy:
   displayName:
-    en: engineering-data-engineer
-    zh: 数据工程师
+    en: "Engineering Data Engineer"
+    zh: "engineering-data-engineer"
   profession:
-    en: engineering-data-engineer
-    zh: 数据工程师
+    en: "专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。 (auto-vendored by compose_team.py)"
+    zh: "专注于构建可靠数据管线、湖仓架构和可扩展数据基础设施的数据工程专家。精通 ETL/ELT、Apache Spark、dbt、流处理系统和云数据平台，将原始数据转化为可信赖的分析就绪资产。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 数据工程师

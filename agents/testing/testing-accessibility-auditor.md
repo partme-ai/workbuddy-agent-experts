@@ -1,19 +1,17 @@
 ---
 name: testing-accessibility-auditor
-title: 无障碍审核员
 description: 专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。
-color: '#0077B6'
 emoji: ♿
-category: testing
+color: "#0077B6"
 workbuddy:
   displayName:
-    en: testing-accessibility-auditor
-    zh: 无障碍审核员
+    en: "Testing Accessibility Auditor"
+    zh: "testing-accessibility-auditor"
   profession:
-    en: testing-accessibility-auditor
-    zh: 无障碍审核员
+    en: "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。 (auto-vendored by compose_team.py)"
+    zh: "专注无障碍审核的可访问性专家，按 WCAG 标准审查界面、用辅助技术实测、确保产品人人可用。默认立场是找问题——没用屏幕阅读器测过的，就不算无障碍。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 无障碍审核员

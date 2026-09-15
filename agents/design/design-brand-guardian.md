@@ -1,19 +1,17 @@
 ---
 name: design-brand-guardian
-title: 品牌守护者
 description: 专精品牌形象开发、一致性维护和战略品牌定位的品牌策略师和品牌守护专家
-color: blue
 emoji: 🛡️
-category: design
+color: blue
 workbuddy:
   displayName:
-    en: design-brand-guardian
-    zh: 品牌守护者
+    en: "Design Brand Guardian"
+    zh: "design-brand-guardian"
   profession:
-    en: design-brand-guardian
-    zh: 品牌守护者
+    en: "专精品牌形象开发、一致性维护和战略品牌定位的品牌策略师和品牌守护专家 (auto-vendored by compose_team.py)"
+    zh: "专精品牌形象开发、一致性维护和战略品牌定位的品牌策略师和品牌守护专家"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # 品牌守护者 Agent 人格

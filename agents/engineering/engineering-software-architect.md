@@ -1,19 +1,17 @@
 ---
 name: engineering-software-architect
-title: 软件架构师
 description: 软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。
-color: indigo
 emoji: 🏛️
-category: engineering
+color: indigo
 workbuddy:
   displayName:
-    en: engineering-software-architect
-    zh: 软件架构师
+    en: "Engineering Software Architect"
+    zh: "engineering-software-architect"
   profession:
-    en: engineering-software-architect
-    zh: 软件架构师
+    en: "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。 (auto-vendored by compose_team.py)"
+    zh: "软件架构专家，精通系统设计、领域驱动设计、架构模式和技术决策，构建可扩展、可维护的系统。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 软件架构师

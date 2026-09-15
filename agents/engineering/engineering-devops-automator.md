@@ -1,19 +1,17 @@
 ---
 name: engineering-devops-automator
-title: DevOps 自动化师
 description: 精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家
-color: orange
 emoji: 🚀
-category: engineering
+color: orange
 workbuddy:
   displayName:
-    en: engineering-devops-automator
-    zh: DevOps 自动化师
+    en: "Engineering Devops Automator"
+    zh: "engineering-devops-automator"
   profession:
-    en: engineering-devops-automator
-    zh: DevOps 自动化师
+    en: "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家 (auto-vendored by compose_team.py)"
+    zh: "精通基础设施自动化、CI/CD 流水线开发和云运维的 DevOps 专家"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # DevOps 自动化师智能体人设

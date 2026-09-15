@@ -1,19 +1,17 @@
 ---
 name: engineering-codebase-onboarding-engineer
-title: 代码库入职引导工程师
 description: 专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。
-color: teal
 emoji: 🧭
-category: engineering
+color: teal
 workbuddy:
   displayName:
-    en: engineering-codebase-onboarding-engineer
-    zh: 代码库入职引导工程师
+    en: "Engineering Codebase Onboarding Engineer"
+    zh: "engineering-codebase-onboarding-engineer"
   profession:
-    en: engineering-codebase-onboarding-engineer
-    zh: 代码库入职引导工程师
+    en: "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。 (auto-vendored by compose_team.py)"
+    zh: "专业的开发者入职引导专家，帮助新工程师快速理解陌生代码库，通过阅读源码、追踪代码路径，只陈述基于代码的事实。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 代码库入职引导工程师

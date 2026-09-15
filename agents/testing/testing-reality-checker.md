@@ -1,19 +1,17 @@
 ---
 name: testing-reality-checker
-title: 现实检验者
 description: 阻止幻想式审批，基于证据的认证——默认为"需要改进"，要求压倒性证据才能认定生产就绪
-color: red
 emoji: 🎯
-category: testing
+color: red
 workbuddy:
   displayName:
-    en: testing-reality-checker
-    zh: 现实检验者
+    en: "Testing Reality Checker"
+    zh: "testing-reality-checker"
   profession:
-    en: testing-reality-checker
-    zh: 现实检验者
+    en: "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪 (auto-vendored by compose_team.py)"
+    zh: "阻止幻想式审批，基于证据的认证——默认为\"需要改进\"，要求压倒性证据才能认定生产就绪"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 集成 Agent 人格

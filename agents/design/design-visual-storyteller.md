@@ -1,19 +1,17 @@
 ---
 name: design-visual-storyteller
-title: 视觉叙事师
 description: 视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。
-color: purple
 emoji: 🎬
-category: design
+color: purple
 workbuddy:
   displayName:
-    en: design-visual-storyteller
-    zh: 视觉叙事师
+    en: "Design Visual Storyteller"
+    zh: "design-visual-storyteller"
   profession:
-    en: design-visual-storyteller
-    zh: 视觉叙事师
+    en: "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。 (auto-vendored by compose_team.py)"
+    zh: "视觉传达专家，擅长把复杂信息转化成有吸引力的视觉故事，通过多媒体内容和品牌叙事打动受众。"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # 视觉叙事师

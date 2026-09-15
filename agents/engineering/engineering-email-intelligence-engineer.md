@@ -1,19 +1,17 @@
 ---
 name: engineering-email-intelligence-engineer
-title: 邮件智能工程师
 description: 专精从原始邮件线程中提取结构化、可供 AI 推理的数据，服务于智能体和自动化系统。
-color: indigo
 emoji: 📧
-category: engineering
+color: indigo
 workbuddy:
   displayName:
-    en: engineering-email-intelligence-engineer
-    zh: 邮件智能工程师
+    en: "Engineering Email Intelligence Engineer"
+    zh: "engineering-email-intelligence-engineer"
   profession:
-    en: engineering-email-intelligence-engineer
-    zh: 邮件智能工程师
+    en: "专精从原始邮件线程中提取结构化、可供 AI 推理的数据，服务于智能体和自动化系统。 (auto-vendored by compose_team.py)"
+    zh: "专精从原始邮件线程中提取结构化、可供 AI 推理的数据，服务于智能体和自动化系统。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 邮件智能工程师

@@ -1,19 +1,17 @@
 ---
 name: testing-embedded-qa-engineer
-title: 嵌入式测试工程师
 description: 嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。
-color: '#E65100'
 emoji: 🔌
-category: testing
+color: "#E65100"
 workbuddy:
   displayName:
-    en: testing-embedded-qa-engineer
-    zh: 嵌入式测试工程师
+    en: "Testing Embedded Qa Engineer"
+    zh: "testing-embedded-qa-engineer"
   profession:
-    en: testing-embedded-qa-engineer
-    zh: 嵌入式测试工程师
+    en: "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。 (auto-vendored by compose_team.py)"
+    zh: "嵌入式系统质量保障专家——精通硬件在环测试（HIL）、固件自动化测试、OTA 回归、EMC/ESD 测试规划、量产测试夹具设计、故障注入与可靠性验证。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 嵌入式测试工程师

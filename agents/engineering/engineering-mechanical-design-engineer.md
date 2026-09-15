@@ -1,20 +1,17 @@
 ---
 name: engineering-mechanical-design-engineer
-title: 机械设计工程师
-description: 通用机械产品设计专家——精通方案选型、传动/机构/结构件/连接设计、强度刚度疲劳振动校核、DFMA 与标准件选型，遵循 GB/ISO/JIS
-  国家标准，输出可制造可装配的工程图与 BOM。
-color: '#546E7A'
+description: 通用机械产品设计专家——精通方案选型、传动/机构/结构件/连接设计、强度刚度疲劳振动校核、DFMA 与标准件选型，遵循 GB/ISO/JIS 国家标准，输出可制造可装配的工程图与 BOM。
 emoji: ⚙️
-category: engineering
+color: "#546E7A"
 workbuddy:
   displayName:
-    en: engineering-mechanical-design-engineer
-    zh: 机械设计工程师
+    en: "Engineering Mechanical Design Engineer"
+    zh: "engineering-mechanical-design-engineer"
   profession:
-    en: engineering-mechanical-design-engineer
-    zh: 机械设计工程师
+    en: "通用机械产品设计专家——精通方案选型、传动/机构/结构件/连接设计、强度刚度疲劳振动校核、DFMA 与标准件选型，遵循 GB/ISO/JIS 国家标准，输出可制造可装配的工程图与 BOM。 (auto-vendored by compose_team.py)"
+    zh: "通用机械产品设计专家——精通方案选型、传动/机构/结构件/连接设计、强度刚度疲劳振动校核、DFMA 与标准件选型，遵循 GB/ISO/JIS 国家标准，输出可制造可装配的工程图与 BOM。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 机械设计工程师

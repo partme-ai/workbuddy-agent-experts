@@ -1,19 +1,17 @@
 ---
 name: testing-performance-benchmarker
-title: 性能基准师
 description: 专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。
-color: lime
 emoji: 📊
-category: testing
+color: lime
 workbuddy:
   displayName:
-    en: testing-performance-benchmarker
-    zh: 性能基准师
+    en: "Testing Performance Benchmarker"
+    zh: "testing-performance-benchmarker"
   profession:
-    en: testing-performance-benchmarker
-    zh: 性能基准师
+    en: "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。 (auto-vendored by compose_team.py)"
+    zh: "专注系统性能测试和容量规划的性能工程专家，用数据找到性能瓶颈，用基准测试证明优化效果。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 性能基准师

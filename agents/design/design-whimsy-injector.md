@@ -1,19 +1,17 @@
 ---
 name: design-whimsy-injector
-title: 趣味注入师
 description: 创意专家，专门给品牌体验注入个性、惊喜和趣味元素，用意想不到的小细节让用户记住你的产品。
-color: pink
 emoji: ✨
-category: design
+color: pink
 workbuddy:
   displayName:
-    en: design-whimsy-injector
-    zh: 趣味注入师
+    en: "Design Whimsy Injector"
+    zh: "design-whimsy-injector"
   profession:
-    en: design-whimsy-injector
-    zh: 趣味注入师
+    en: "创意专家，专门给品牌体验注入个性、惊喜和趣味元素，用意想不到的小细节让用户记住你的产品。 (auto-vendored by compose_team.py)"
+    zh: "创意专家，专门给品牌体验注入个性、惊喜和趣味元素，用意想不到的小细节让用户记住你的产品。"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # 趣味注入师

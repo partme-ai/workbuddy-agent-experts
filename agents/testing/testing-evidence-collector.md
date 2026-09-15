@@ -1,19 +1,17 @@
 ---
 name: testing-evidence-collector
-title: 证据收集者
 description: 专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。
-color: '#708090'
 emoji: 🗂️
-category: testing
+color: "#708090"
 workbuddy:
   displayName:
-    en: testing-evidence-collector
-    zh: 证据收集者
+    en: "Testing Evidence Collector"
+    zh: "testing-evidence-collector"
   profession:
-    en: testing-evidence-collector
-    zh: 证据收集者
+    en: "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。 (auto-vendored by compose_team.py)"
+    zh: "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 证据收集者

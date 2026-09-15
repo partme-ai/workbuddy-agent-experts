@@ -1,19 +1,17 @@
 ---
 name: design-ux-architect
-title: UX 架构师
 description: 技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。
-color: purple
 emoji: 🏗️
-category: design
+color: purple
 workbuddy:
   displayName:
-    en: design-ux-architect
-    zh: UX 架构师
+    en: "Design Ux Architect"
+    zh: "design-ux-architect"
   profession:
-    en: design-ux-architect
-    zh: UX 架构师
+    en: "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。 (auto-vendored by compose_team.py)"
+    zh: "技术架构与 UX 专家，给开发者提供扎实的基础设施——CSS 体系、布局框架、清晰的实现指引。"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # UX 架构师

@@ -8,7 +8,7 @@ Reads:
                                             — skills alias source packages
 
 Writes:
-  agents/<role-id>.md                    — vendored agent role files
+  agents/<domain>/<role-id>.md            — vendored agent role files
   teams/<team-id>.yaml                    — team plugin definitions
 
 Build contract: produced teams/*.yaml must pass `python3 scripts/build.py
@@ -26,6 +26,7 @@ CLI:
 """
 from __future__ import annotations
 
+import json
 import re
 import shutil
 import sys
@@ -43,6 +44,21 @@ SKILLS_ROOTS = [
 ]
 SKIP_PKGS = {"boss-skills", "reelbench-skills"}
 AGENT_SKIP_DIRS = {".git", ".github", "assets", "examples", "integrations", "scripts"}
+
+# Per-domain color used for solid-PNG avatars (must match build.py's palette).
+DOMAIN_COLORS = {
+    "engineering": "blue",
+    "design": "purple",
+    "testing": "green",
+    "marketing": "pink",
+    "sales": "orange",
+    "finance": "yellow",
+    "data-remediation": "teal",
+    "support": "gray",
+    "product": "indigo",
+    "security": "red",
+    "misc": "gray",
+}
 
 # ────────────────────────── skill alias resolution ──────────────────────────
 
@@ -111,11 +127,28 @@ def _domain_for_agent(agent_id: str) -> str:
     return "misc"  # synthetic lead agents that don't have an upstream file
 
 
+def _extract_zh_displayname(text: str) -> tuple[str, str]:
+    """Read the original (zh) name and description from upstream frontmatter
+    for use in build.py's workbuddy.displayName.{zh} / profession.{zh}.
+
+    Returns (name_zh, desc_zh); empty strings if not parseable.
+    """
+    name = ""
+    desc = ""
+    for line in text.splitlines():
+        if line.startswith("name:") and not name:
+            name = line.split(":", 1)[1].strip()
+        elif line.startswith("description:") and not desc:
+            desc = line.split(":", 1)[1].strip()
+    return name, desc
+
+
 def vendor_agent(agent_id: str, out_root: Path) -> Path:
     """Copy the upstream agent .md into out_root/agents/<domain>/<id>.md,
-    strip codex-/codexX- prefix in frontmatter name field. If the source
-    file does not exist (e.g. <team-id>-lead), generate a minimal stub
-    under misc/.
+    sanitize the frontmatter, and inject the workbuddy: block that
+    build.py expects (displayName.{en,zh}, profession.{en,zh}, maxTurns).
+    If the source file does not exist (e.g. <team-id>-lead), synthesize
+    a minimal stub under misc/.
     """
     sources = list(AGENTS_SRC.rglob(f"{agent_id}.md"))
     sources = [s for s in sources if ".git" not in s.parts]
@@ -125,32 +158,61 @@ def vendor_agent(agent_id: str, out_root: Path) -> Path:
     if sources:
         src = sources[0]
         text = src.read_text(encoding="utf-8", errors="replace")
-        # strip known host prefixes from the frontmatter name field
-        text = re.sub(r"^name:\s*codex[a-z-]*-(.+)$", r"name: \1", text, count=1, flags=re.M)
+        # FORCE the frontmatter `name:` to the English agent_id — build.py
+        # uses meta['name'] as the avatar filename, and the upstream Chinese
+        # name ("后端架构师") would break avatar PNG writes on Chinese
+        # subdir names. We preserve the upstream Chinese name via
+        # workbuddy.displayName.zh below.
+        text = re.sub(r"^name:\s.*$", f"name: {agent_id}", text, count=1, flags=re.M)
+        # ensure emoji + color fields (build.py reads meta.get('color') and
+        # meta.get('emoji'); missing color crashes the avatar PNG generator).
+        if not re.search(r"^emoji:\s", text, re.M):
+            text = re.sub(r"^---\n", f"---\nemoji: 🧩\n", text, count=1)
+        if not re.search(r"^color:\s", text, re.M):
+            color = DOMAIN_COLORS.get(domain, "gray")
+            text = re.sub(r"^emoji:\s.*\n", f"\\g<0>color: {color}\n", text, count=1)
+        zh_name, zh_desc = _extract_zh_displayname(text)
+        en_name = agent_id.replace("-", " ").title()
+        en_desc = (zh_desc or "Role-specific agent") + " (auto-vendored by compose_team.py)"
     else:
+        zh_name = agent_id
+        zh_desc = f"Team lead agent for the auto-generated {agent_id.rsplit('-lead', 1)[0]} team. Routes work to members and verifies outputs."
+        en_name = agent_id.replace("-", " ").title()
+        en_desc = zh_desc
+        # minimal frontmatter for stub agents (no upstream source)
         text = (
-            "---\n"
-            f"name: {agent_id}\n"
-            f"description: Team lead agent for the auto-generated "
-            f"{agent_id.rsplit('-lead', 1)[0]} team. "
-            f"Orchestrates the rest of the team members and routes work.\n"
-            "workbuddy:\n"
-            "  role: lead\n"
-            "  category: 02-Engineering\n"
-            "---\n\n"
-            f"# {agent_id}\n\n"
-            "## Role\n\n"
+            f"---\nname: {agent_id}\n"
+            f"description: {zh_desc}\n"
+            f"emoji: 🧩\ncolor: gray\n"
+            f"---\n\n# {agent_id}\n\n## Role\n\n"
             f"This is the lead agent for the `{agent_id.rsplit('-lead', 1)[0]}` "
             "team. It routes work to the other members based on task type and "
             "verifies outputs against the team's quality gates.\n\n"
             "## Behavior\n\n"
             "- Always identify the task type before delegating\n"
-            "- Use the `*` member agent that best matches the task's primary domain\n"
+            "- Use the member agent that best matches the task's primary domain\n"
             "- Verify deliverables before declaring done\n\n"
             "## Constraints\n\n"
             "- Does not perform direct code generation; delegates to specialist members\n"
             "- Escalates blockers to the user, never silently retries\n"
         )
+
+    # inject/overwrite workbuddy: block at end of frontmatter (or create
+    # frontmatter if missing). The block is required by build.py.
+    wb_block = (
+        "\nworkbuddy:\n"
+        f"  displayName:\n"
+        f"    en: {json.dumps(en_name, ensure_ascii=False)}\n"
+        f"    zh: {json.dumps(zh_name, ensure_ascii=False)}\n"
+        f"  profession:\n"
+        f"    en: {json.dumps(en_desc, ensure_ascii=False)}\n"
+        f"    zh: {json.dumps(zh_desc, ensure_ascii=False)}\n"
+        f"  maxTurns: 120\n"
+    )
+    # remove any existing workbuddy: block
+    text = re.sub(r"\nworkbuddy:\n(?:  .*\n)+", "", text)
+    # insert before the closing ---
+    text = re.sub(r"\n---\n", wb_block + "\n---\n", text, count=1)
     target.write_text(text, encoding="utf-8")
     return target
 
@@ -249,6 +311,10 @@ quickPrompts:
   - {{zh: "用 {tid} 的标准流程启动这个项目", en: "Bootstrap a new project in {tid}"}}
   - {{zh: "对这个代码库做一次健康检查", en: "Run a health check on this codebase"}}
   - {{zh: "升级到最新的 skills 快照", en: "Refresh to the latest vendored skills snapshot"}}
+
+tags:
+  - {{zh: "自动组装", en: "auto-assembled"}}
+  - {{zh: "语言专家团", en: "language-specialist"}}
 """
 
 

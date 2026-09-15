@@ -1,20 +1,17 @@
 ---
 name: engineering-database-optimizer
-title: 数据库优化师
-description: 数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale
-  等现代数据库。
-color: amber
+description: 数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。
 emoji: 🗄️
-category: engineering
+color: amber
 workbuddy:
   displayName:
-    en: engineering-database-optimizer
-    zh: 数据库优化师
+    en: "Engineering Database Optimizer"
+    zh: "engineering-database-optimizer"
   profession:
-    en: engineering-database-optimizer
-    zh: 数据库优化师
+    en: "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。 (auto-vendored by compose_team.py)"
+    zh: "数据库性能专家，专注于 Schema 设计、查询优化、索引策略和性能调优，精通 PostgreSQL、MySQL 及 Supabase、PlanetScale 等现代数据库。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 🗄️ 数据库优化师

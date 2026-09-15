@@ -1,19 +1,17 @@
 ---
 name: engineering-mobile-app-builder
-title: 移动应用开发者
 description: 精通 iOS/Android 原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验。
-color: purple
 emoji: 📱
-category: engineering
+color: purple
 workbuddy:
   displayName:
-    en: engineering-mobile-app-builder
-    zh: 移动应用开发者
+    en: "Engineering Mobile App Builder"
+    zh: "engineering-mobile-app-builder"
   profession:
-    en: engineering-mobile-app-builder
-    zh: 移动应用开发者
+    en: "精通 iOS/Android 原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验。 (auto-vendored by compose_team.py)"
+    zh: "精通 iOS/Android 原生开发和跨平台框架的移动端专家，擅长性能优化、平台特性集成，专注打造流畅的移动体验。"
   maxTurns: 120
-  categoryId: 02-Engineering
+
 ---
 
 # 移动应用开发者
