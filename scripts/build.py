@@ -91,10 +91,18 @@ _AGENT_INDEX: dict[str, Path] | None = None
 
 
 def agent_index() -> dict[str, Path]:
-    """构建/返回 agents/ 全树索引（不抛错）。"""
+    """构建/返回 agents/ 全树索引；同名 id 视为定义冲突，直接失败。"""
     global _AGENT_INDEX
     if _AGENT_INDEX is None:
-        _AGENT_INDEX = {p.stem: p for p in (ROOT / "agents").rglob("*.md")}
+        index: dict[str, Path] = {}
+        collisions = []
+        for path in sorted((ROOT / "agents").rglob("*.md")):
+            if path.stem in index:
+                collisions.append(f"{index[path.stem]} <-> {path}")
+            index[path.stem] = path
+        if collisions:
+            raise SystemExit("duplicate agent ids:\n" + "\n".join(collisions[:8]))
+        _AGENT_INDEX = index
     return _AGENT_INDEX
 
 

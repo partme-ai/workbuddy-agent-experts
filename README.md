@@ -5,13 +5,20 @@
 ## 目录约定
 
 ```
-agents/<id>.md     独立智能体（单一事实源）：frontmatter + 系统提示词
-teams/<name>.yaml  团队定义：成员组合、人设、技能、执行面来源
-skills/<name>/     本项目自写的调用/编排规范技能
-assets/logo.png    项目 logo（首次构建自动生成，可替换）
-scripts/build.py   组装器：agents + teams + 兄弟仓库执行面 → experts/
-experts/           构建产物（gitignored，确定性可重建）：完整 marketplace 树
-                   experts/.codebuddy-plugin/marketplace.json + experts/plugins/<插件>/
+agents/<域>/<id>.md     独立智能体（单一事实源）：frontmatter + 系统提示词
+                        自写智能体按生产域分组：3d-production/ stitch/ image-factory/
+                        video-factory/ processon/ dreamina-design/ dreamina-canvas/
+                        dreamina-3d/ short-drama/ team-leads/（7 个领域团队主理人）
+                        agency-agents-zh 导入的 263 个按原类目分组：engineering/ design/
+                        gis/ marketing/ ... 共 19 个类目目录
+                        （id 全局唯一，构建时同名冲突直接失败）
+teams/<name>.yaml       团队定义：成员组合（引用 agents 的 id，与所在目录无关）、
+                        人设、技能、执行面来源
+skills/<name>/          本项目自写的调用/编排规范技能
+assets/logo.png         项目 logo（首次构建自动生成，可替换）
+scripts/build.py        维护者组装器：agents + teams + 兄弟仓库执行面 → experts/
+scripts/install.py      使用者安装器（纯标准库，非破坏式，含 --uninstall）
+experts/                预构建 marketplace（已提交，克隆即用）
 ```
 
 **源 vs 产物（发行模式）**：`agents/ teams/ skills/ singles.yaml` 是手工编辑的源；
