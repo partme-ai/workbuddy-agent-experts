@@ -91,6 +91,67 @@ def copy_tree(src: Path, dst: Path, exclude: set[str] = {"__pycache__", ".DS_Sto
     return count
 
 
+# ---------------------------------------------------------------------------
+# Codex 特有内容中性化：技能改名 blender-<domain>，改写主体引用；
+# 白名单里保留的是"事实标识符"——线上协议串与 Blender 内真实 UI 面板名。
+# ---------------------------------------------------------------------------
+PROTO_STRING = "codex-blender/v1"
+CODEX_ALLOWLIST = (
+    PROTO_STRING,                       # 线上协议标识符（闭合契约校验，改动即断链）
+    "Sidebar → Codex",                  # Blender Connector 插件的真实面板路径
+    "Codex Live Session panel",         # 前台会话在 Blender 内创建的真实面板名
+    "Codex panel",                      # 同上（简写形态）
+    "codex-dreamina-3d",                # 兄弟插件的真实插件 id
+)
+
+_TEXT_RULES = (
+    ("Codex Blender Connector", "Blender Connector"),
+    ("Codex-launched", "agent-launched"),
+    ("wants Codex to", "wants to"),
+    ("asks Codex to", "asks to"),
+    ("before Codex designs", "before the agent designs"),
+    ("outside Codex", "outside the session"),
+    ("design session from Codex without", "design session without"),
+    ("from Codex without installing", "without installing"),
+    ("Connect Codex to a Blender window", "Connect to a Blender window"),
+    ("Codex Blender Router", "Blender Router"),
+    ("the Codex Maya and Dreamina 3D plugins", "the Maya and Dreamina 3D sibling plugins"),
+    ("codex-blender-", "blender-"),
+)
+
+
+def neutralize_skill_text(text: str) -> str:
+    token = "\x00PROTO\x00"
+    text = text.replace(PROTO_STRING, token)
+    for old, new in _TEXT_RULES:
+        text = text.replace(old, new)
+    return text.replace(token, PROTO_STRING)
+
+
+def vendor_neutral_skill(skill_dir: Path, target_root: Path) -> Path:
+    """vendor 单个 harness 技能：目录与 frontmatter name 去掉 codex- 前缀，正文中性化。"""
+    neutral_name = neutralize_skill_text(skill_dir.name)
+    target = target_root / neutral_name
+    copy_tree(skill_dir, target)
+    for md in target.rglob("*.md"):
+        md.write_text(neutralize_skill_text(md.read_text(encoding="utf-8")), encoding="utf-8")
+    return target
+
+
+def assert_no_codex_residue(plugin_dir: Path) -> None:
+    """白名单之外的 codex 残留直接让构建失败，逼着未来新增内容被处理。"""
+    problems = []
+    for md in plugin_dir.rglob("*.md"):
+        remaining = md.read_text(encoding="utf-8")
+        for allowed in CODEX_ALLOWLIST:
+            remaining = remaining.replace(allowed, "")
+        for i, line in enumerate(remaining.splitlines(), 1):
+            if "codex" in line.lower():
+                problems.append(f"{md}: {line.strip()[:110]}")
+    if problems:
+        raise SystemExit("codex residue outside allowlist:\n" + "\n".join(problems[:12]))
+
+
 def parse_skill_frontmatter(skill_md: Path) -> dict:
     """name + 单行 description（缺一即视为无效技能，构建失败）。"""
     text = skill_md.read_text(encoding="utf-8")
@@ -252,7 +313,7 @@ def build_team(team_path: Path, out: Path) -> dict:
         if vendor_rel == "skills":
             for skill_dir in sorted((harness / "skills").iterdir()):
                 if (skill_dir / "SKILL.md").is_file():
-                    copy_tree(skill_dir, plugin_dir / "skills" / skill_dir.name)
+                    vendor_neutral_skill(skill_dir, plugin_dir / "skills")
 
     # 能力目录（真实 registry 生成）+ 路由表（实际技能清单生成）
     catalog = generate_capability_catalog(plugin_dir, harness)
@@ -316,6 +377,8 @@ def build_team(team_path: Path, out: Path) -> dict:
     meta_dir.mkdir(parents=True, exist_ok=True)
     (meta_dir / "plugin.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    assert_no_codex_residue(plugin_dir)
 
     # marketplace 清单
     market_meta = out / marketplace / ".codebuddy-plugin"

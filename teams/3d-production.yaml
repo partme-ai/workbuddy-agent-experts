@@ -2,7 +2,7 @@
 # 由 scripts/build.py 消费；智能体正文一律引用 agents/ 下的单一事实源。
 
 id: blender-production-team
-version: 0.3.0
+version: 0.4.0
 marketplace: my-experts
 category: 01-ProductDesign
 
