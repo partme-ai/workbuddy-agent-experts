@@ -156,6 +156,9 @@ _TEXT_RULES = (
     ("Codex Blender Router", "Blender Router"),
     ("the Codex Maya and Dreamina 3D plugins", "the Maya and Dreamina 3D sibling plugins"),
     ("codex-blender-", "blender-"),
+    ("Codex Image Factory", "Image Factory"),
+    ("codex-image-factory-", "image-factory-"),
+    ("codex-video-factory-", "video-factory-"),
 )
 
 
@@ -177,8 +180,15 @@ def vendor_neutral_skill(skill_dir: Path, target_root: Path) -> Path:
     return target
 
 
-def assert_no_codex_residue(plugin_dir: Path) -> None:
-    """白名单之外的 codex 残留直接让构建失败，逼着未来新增内容被处理。"""
+def assert_no_codex_residue(plugin_dir: Path, *, allow_factual: bool = False) -> None:
+    """白名单之外的 codex 残留直接让构建失败，逼着未来新增内容被处理。
+
+    allow_factual：团队声明其执行面**事实上依赖本地 Codex CLI**（如 image-factory 经
+    Codex 账户出图）时，放行裸 Codex 互操作引用——这是事实声明，不是品牌残留；
+    前缀/主体改写规则仍然生效。
+    """
+    if allow_factual:
+        return
     problems = []
     for md in plugin_dir.rglob("*.md"):
         remaining = md.read_text(encoding="utf-8")
@@ -295,14 +305,25 @@ description: Full command catalog of the Blender harness generated from the live
     return {"commands": len(items), "domains": len(by_domain)}
 
 
+def team_sources(team: dict) -> list[dict]:
+    """统一多源：sources: [{repo, vendor[], licenses[], docsTo}] ；harness 为单源旧形态。"""
+    if team.get("sources"):
+        return list(team["sources"])
+    if team.get("harness"):
+        return [team["harness"]]
+    return []
+
+
 def build_team(team_path: Path, out: Path) -> dict:
     team = load_yaml(team_path)
     team_id = team["id"]
     marketplace = team["marketplace"]
-    harness = ((ROOT / team["harness"]["repo"]).resolve()
-               if team.get("harness") else None)
-    if team.get("harness") and not harness.is_dir():
-        raise SystemExit(f"harness repo not found: {harness}")
+    sources = team_sources(team)
+    for source in sources:
+        repo = (ROOT / source["repo"]).resolve()
+        source["_repo_path"] = repo
+        if not repo.is_dir():
+            raise SystemExit(f"source repo not found: {source['repo']} -> {repo}")
 
     members = []
     for entry in team["members"]:
@@ -335,32 +356,39 @@ def build_team(team_path: Path, out: Path) -> dict:
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(front + m["body"], encoding="utf-8")
 
+    # 本项目自带技能（调用规范等）
     skill_paths: list[str] = []
-    catalog, n_routed = {}, 0
-    if harness is not None:
-        for skill_rel in team.get("skills", []):
-            src = ROOT / skill_rel
-            copy_tree(src, plugin_dir / "skills" / Path(skill_rel).name)
-        for vendor_rel in team["harness"].get("vendor", []):
-            if vendor_rel == "skills":
-                for skill_dir in sorted((harness / "skills").iterdir()):
+    for skill_rel in team.get("skills", []):
+        src = ROOT / skill_rel
+        copy_tree(src, plugin_dir / "skills" / Path(skill_rel).name)
+
+    # 多源 vendor：skills 一等化（中性化）、其余目录/文档照搬、许可随行
+    vendored: dict[str, int] = {}
+    for source in sources:
+        repo = source["_repo_path"]
+        for rel in source.get("vendor", []):
+            src = repo / rel
+            if rel == "skills" and src.is_dir():
+                for skill_dir in sorted(src.iterdir()):
                     if (skill_dir / "SKILL.md").is_file():
                         vendor_neutral_skill(skill_dir, plugin_dir / "skills")
-        catalog = generate_capability_catalog(plugin_dir, harness)
+            elif src.is_dir():
+                dest = rel if not source.get("docsTo") else Path(source["docsTo"]) / rel
+                vendored[f"{source['repo']}::{rel}"] = copy_tree(src, plugin_dir / dest)
+        for lic in source.get("licenses", []):
+            lic_file = repo / lic
+            if lic_file.is_file():
+                shutil.copy2(lic_file, plugin_dir / f"{source.get('licensePrefix', '')}{lic}")
+
+    # 能力目录 + 路由：仅显式声明的团队生成（blender）
+    catalog, n_routed = {}, 0
+    if team.get("capabilities"):
+        main_repo = sources[0]["_repo_path"]
+        catalog = generate_capability_catalog(plugin_dir, main_repo)
         n_routed = generate_production_routing(plugin_dir)
-        skill_paths = [f"./skills/{d.name}" for d in sorted((plugin_dir / "skills").iterdir())
-                       if d.is_dir() and (d / "SKILL.md").is_file()]
-        vendored = {}
-        for rel in team["harness"].get("vendor", []):
-            if rel == "skills":
-                continue
-            src = harness / rel
-            if src.is_dir():
-                vendored[rel] = copy_tree(src, plugin_dir / rel)
-        for lic in team["harness"].get("licenses", []):
-            src = harness / lic
-            if src.is_file():
-                shutil.copy2(src, plugin_dir / lic)
+    skill_paths = ([f"./skills/{d.name}" for d in sorted((plugin_dir / "skills").iterdir())
+                    if d.is_dir() and (d / "SKILL.md").is_file()]
+                   if (plugin_dir / "skills").is_dir() else [])
 
     # avatars：项目 logo 作为团队头像，成员用各自 color（色名映射为 hex）
     avatars = plugin_dir / "avatars"
@@ -407,7 +435,7 @@ def build_team(team_path: Path, out: Path) -> dict:
     (meta_dir / "plugin.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    assert_no_codex_residue(plugin_dir)
+    assert_no_codex_residue(plugin_dir, allow_factual=bool(team.get("allowCodexReferences")))
     return {"plugin": team_id, "kind": "team", "marketplace": marketplace,
             "version": team["version"], "agents": len(members),
             "firstClassSkills": len(skill_paths),
@@ -415,7 +443,7 @@ def build_team(team_path: Path, out: Path) -> dict:
             "description": manifest["description"]}
 
 
-def build_single(agent_id: str, out: Path, marketplace: str, version: str) -> dict:
+def build_single(agent_id: str, out: Path, marketplace: str, version: str, *, single_allow: bool = False) -> dict:
     """独立智能体 → 单专家插件（expertType: agent，形态对照 experts 市场的 ui-designer）。"""
     parsed = parse_agent(find_agent(agent_id))
     meta, body = parsed["meta"], parsed["body"]
@@ -459,7 +487,7 @@ def build_single(agent_id: str, out: Path, marketplace: str, version: str) -> di
     meta_dir.mkdir()
     (meta_dir / "plugin.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    assert_no_codex_residue(plugin_dir)
+    assert_no_codex_residue(plugin_dir, allow_factual=bool(single_allow))
     return {"plugin": agent_id, "kind": "single", "marketplace": marketplace,
             "version": version, "description": meta["description"]}
 
@@ -477,13 +505,48 @@ def write_marketplace_manifest(out: Path, marketplace: str, plugins: list[dict])
 
 
 def install_my_experts(dist_market: Path) -> Path:
-    """部署到 WorkBuddy 官方自定义专家通道并刷新安装记录。"""
+    """部署到 WorkBuddy 官方自定义专家通道（非破坏式：只替换本构建管理的插件）。
+
+    my-experts 是应用与本项目共用的通道：应用 UI 创建的专家也会落在
+    plugins/my-experts/plugins/ 下，并由 scanCustomExperts 自动对账清单。
+    因此安装时只删除/覆盖本次构建产出的插件目录，保留其它目录与清单条目。
+    """
     import time
     home = Path.home()
     market = home / ".workbuddy" / "plugins" / "marketplaces" / "my-experts"
-    if market.exists():
-        shutil.rmtree(market)
-    shutil.copytree(dist_market, market)
+    ours = {e["name"] for e in json.loads(
+        (dist_market / ".codebuddy-plugin/marketplace.json").read_text())["plugins"]}
+    market_plugins = market / "plugins"
+    if market_plugins.is_dir():
+        for existing in market_plugins.iterdir():
+            if existing.name in ours:
+                shutil.rmtree(existing)
+    if market_plugins.is_dir():
+        for our in sorted(ours):
+            src = dist_market / "plugins" / our
+            if src.is_dir():
+                shutil.copytree(src, market_plugins / our)
+    else:
+        shutil.copytree(dist_market / "plugins", market_plugins, dirs_exist_oks=False)             if False else (market_plugins.mkdir(parents=True, exist_ok=True),
+                           [shutil.copytree(dist_market / "plugins" / o, market_plugins / o)
+                            for o in sorted(ours)])
+    # 清单：保留外部条目，合并本构建条目
+    manifest_path = market / ".codebuddy-plugin/marketplace.json"
+    foreign = []
+    if manifest_path.is_file():
+        try:
+            existing = json.loads(manifest_path.read_text())
+            foreign = [e for e in existing.get("plugins", []) if e.get("name") not in ours]
+        except Exception:
+            foreign = []
+    ours_entries = json.loads(
+        (dist_market / ".codebuddy-plugin/marketplace.json").read_text())["plugins"]
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(json.dumps({
+        "name": "my-experts",
+        "description": "my-experts marketplace (built by workbuddy-agent-experts)",
+        "plugins": foreign + ours_entries,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     now = time.strftime("%Y-%m-%dT%H:%M:%S.000Z", time.gmtime())
     ip_path = home / ".workbuddy" / "plugins" / "installed_plugins.json"
     ip = json.loads(ip_path.read_text())

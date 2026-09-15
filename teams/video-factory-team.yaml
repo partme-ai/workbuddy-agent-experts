@@ -1,0 +1,50 @@
+id: video-factory-team
+version: 1.0.0
+marketplace: my-experts
+allowCodexReferences: true   # references/ 方法论文档引用上游套件命令契约（codex-storyboard-* 等）为事实词汇
+category: 06-ContentCreative
+
+display:
+  name: {zh: "视频工厂专家团", en: "Video Factory Team"}
+  description:
+    zh: "视频工厂专家团：以CLI 驱动的多智能体协作团队，逐项核验、闭环交付。"
+    en: "Video Factory Team: a multi-agent team with verified, closed-loop delivery."
+
+lead: video-factory-lead
+members:
+  - id: video-factory-lead
+  - id: video-director
+  - id: video-screenwriter
+  - id: storyboard-artist
+  - id: video-production-operator
+  - id: video-delivery-judge
+
+skills:
+  - skills/video-factory-harness
+
+sources:
+  - repo: ../codex-video-factory-plugin
+    vendor: ["skills", "bin"]
+    licenses: ["LICENSE"]
+  - repo: ../codex-director-plugin
+    vendor: ["docs"]
+    docsTo: references
+    licensePrefix: director-
+  - repo: ../codex-script-plugin
+    vendor: ["docs"]
+    docsTo: references
+    licensePrefix: script-
+  - repo: ../codex-storyboard-plugin
+    vendor: ["docs"]
+    docsTo: references
+    licensePrefix: storyboard-
+
+quickPrompts:
+  - {zh: "把这本小说改编成 60 秒短剧并走完粗剪到终剪", en: "把这本小说改编成 60 秒短剧并走完粗剪到终剪"}
+  - {zh: "分析这批素材并给我一份粗剪计划与报价", en: "分析这批素材并给我一份粗剪计划与报价"}
+  - {zh: "对轨粗剪与镜头表并给出差异清单", en: "对轨粗剪与镜头表并给出差异清单"}
+
+tags:
+  - {zh: "短剧", en: "短剧"}
+  - {zh: "验证式合成", en: "验证式合成"}
+  - {zh: "视频生产", en: "视频生产"}

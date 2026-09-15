@@ -1,0 +1,37 @@
+id: image-factory-team
+version: 1.0.0
+marketplace: my-experts
+allowCodexReferences: true   # 执行面经本地 Codex CLI 出图，配额属 Codex 账户（事实性互操作）
+category: 06-ContentCreative
+
+display:
+  name: {zh: "图片工厂专家团", en: "Image Factory Team"}
+  description:
+    zh: "图片工厂专家团：以CLI 驱动的多智能体协作团队，逐项核验、闭环交付。"
+    en: "Image Factory Team: a multi-agent team with verified, closed-loop delivery."
+
+lead: image-factory-lead
+members:
+  - id: image-factory-lead
+  - id: image-prompt-engineer
+  - id: image-production-operator
+  - id: image-quality-judge
+  - id: image-recovery-engineer
+
+skills:
+  - skills/image-factory-harness
+
+sources:
+  - repo: ../codex-image-factory-plugin
+    vendor: ["skills", "bin", "scripts", "data"]
+    licenses: ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+
+quickPrompts:
+  - {zh: "给我们的新品生成一组符合品牌主色的营销图，带评测闭环", en: "给我们的新品生成一组符合品牌主色的营销图，带评测闭环"}
+  - {zh: "按这张构图重生成三版并给我评测对比", en: "按这张构图重生成三版并给我评测对比"}
+  - {zh: "恢复昨天中断的出图任务", en: "恢复昨天中断的出图任务"}
+
+tags:
+  - {zh: "图片生成", en: "图片生成"}
+  - {zh: "评测闭环", en: "评测闭环"}
+  - {zh: "预算门禁", en: "预算门禁"}

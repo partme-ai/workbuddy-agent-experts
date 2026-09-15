@@ -1,0 +1,37 @@
+id: stitch-design-team
+version: 1.0.0
+marketplace: my-experts
+allowCodexReferences: true   # 上游 setup/delivery 技能面向 Codex 宿主（凭据/OCR provider 为事实）；WorkBuddy 侧以 stitch-workbuddy 技能为准
+category: 01-ProductDesign
+
+display:
+  name: {zh: "Google Stitch 专家团", en: "Google Stitch Design Team"}
+  description:
+    zh: "Google Stitch 专家团：以MCP 驱动的多智能体协作团队，逐项核验、闭环交付。"
+    en: "Google Stitch Design Team: a multi-agent team with verified, closed-loop delivery."
+
+lead: stitch-team-lead
+members:
+  - id: stitch-team-lead
+  - id: stitch-ui-designer
+  - id: stitch-design-system-manager
+  - id: stitch-code-engineer
+  - id: stitch-delivery-engineer
+
+skills:
+  - skills/stitch-workbuddy
+
+sources:
+  - repo: ../codex-stitch-design-plugin
+    vendor: ["skills", "scripts"]
+    licenses: ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+
+quickPrompts:
+  - {zh: "为我的新产品在 Stitch 上生成一套 5 屏 App 界面设计", en: "为我的新产品在 Stitch 上生成一套 5 屏 App 界面设计"}
+  - {zh: "把这张参考页复刻成 Stitch 设计并导出静态 HTML", en: "把这张参考页复刻成 Stitch 设计并导出静态 HTML"}
+  - {zh: "给我一份多屏设计的一致性走查报告", en: "给我一份多屏设计的一致性走查报告"}
+
+tags:
+  - {zh: "Stitch", en: "Stitch"}
+  - {zh: "界面设计", en: "界面设计"}
+  - {zh: "设计交付", en: "设计交付"}

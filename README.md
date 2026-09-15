@@ -39,7 +39,12 @@ python3 scripts/build.py teams/3d-production.yaml --out dist
 产物：`dist/my-experts/{.codebuddy-plugin/marketplace.json, plugins/blender-production-team/}`
 （执行面 harness 在构建时从 `teams/*.yaml` 的 `harness.repo` 指向的 codex-blender-plugin 检出 vendor，26 份生产技能收进 `blender-production/references/`。）
 
-## 安装到 WorkBuddy
+## 安装到 WorkBuddy（非破坏式）
+
+`python3 scripts/build.py --install` 只替换本构建管理的插件，**保留** my-experts 里
+应用 UI 或他方创建的专家（目录与清单条目都保留；安装前实测外部标记幸存）。
+my-experts 是应用与本项目共用的通道：应用启动时 `scanCustomExperts` 会对账清单，
+所以手工放置的外部插件也会被自动并入。
 
 ```bash
 # my-experts 是 WorkBuddy 官方的自定义专家通道（应用源码 registerMarketplaceIfNeeded 只注册
@@ -74,6 +79,9 @@ cp -R dist/my-experts/plugins/blender-production-team ~/.workbuddy/plugins/marke
 | 质量与安全专家团 | 守拙 + API测试/性能/应用安全/威胁检测/应急 5 专家 | quality-security-team@my-experts |
 | 产品与策略专家团 | 明衡 + 产品/趋势/反馈/排期/战略 5 专家 | product-strategy-team@my-experts |
 | 财务经营专家团 | 持盈 + 分析/投资/税务/反欺诈/CFO 5 专家 | finance-operations-team@my-experts |
+| Google Stitch 专家团 | 织界 + 界面设计/设计系统/代码工程/交付验收 | stitch-design-team@my-experts |
+| 图片工厂专家团 | 画枢 + 提示词/生产/评审/恢复（经本地 Codex CLI 出图） | image-factory-team@my-experts |
+| 视频工厂专家团 | 影枢 + 导演/编剧/故事板/生产/评审（rough→批准→final） | video-factory-team@my-experts |
 
 单专家（expertType: agent）：`singles.yaml` 当前精选 16 个（AI 工程师/无障碍审计/渗透测试/港股合规审查等）；
 **改为 `singles: ['*']` 即可把全部 263+ 智能体逐一发布为单专家**。团队 lead 也是单专家发布的一员。
