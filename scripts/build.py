@@ -91,6 +91,110 @@ def copy_tree(src: Path, dst: Path, exclude: set[str] = {"__pycache__", ".DS_Sto
     return count
 
 
+def parse_skill_frontmatter(skill_md: Path) -> dict:
+    """name + 单行 description（缺一即视为无效技能，构建失败）。"""
+    text = skill_md.read_text(encoding="utf-8")
+    match = re.match(r"^---\n(.*?)\n---\n", text, re.S)
+    if not match:
+        return {}
+    meta = yaml.safe_load(match.group(1)) or {}
+    return meta if meta.get("name") and meta.get("description") else {}
+
+
+def generate_production_routing(plugin_dir: Path) -> int:
+    """blender-production/SKILL.md 的路由表从实际技能清单生成，不手写技能名。"""
+    skills_dir = plugin_dir / "skills"
+    rows = []
+    for skill_dir in sorted(skills_dir.iterdir()):
+        if not skill_dir.is_dir() or skill_dir.name in {"blender-production", "blender-capabilities"}:
+            continue
+        meta = parse_skill_frontmatter(skill_dir / "SKILL.md")
+        if not meta:
+            raise SystemExit(f"skill without valid frontmatter: {skill_dir}")
+        desc = " ".join(str(meta["description"]).split())
+        rows.append((skill_dir.name, desc))
+    table = "\n".join(f"| `{name}` | {desc} |" for name, desc in rows)
+    content = f"""---
+name: blender-production
+description: Domain reference library routing into every Blender production skill (modeling, retopology, UV, rigging, animation, hair, simulation, Grease Pencil, materials, render/compositing, VSE, export, jobs, recovery, connector, Jimeng upload). Read the routing table, then only the skill matching your task.
+---
+
+# Blender 生产参考库（路由）
+
+本技能是**按需阅读的路由**：先在下表找到你的领域，再去读对应的一等技能（`skills/` 目录内全部可用）。
+**动手前不读对应技能 = 大概率返工。** 命令参数与验收阈值以各技能文档为准。
+
+| 技能 | 覆盖 |
+|---|---|
+{table}
+
+## 通用纪律（所有领域共用）
+
+1. **闭合契约**：命令参数以技能文档的参数表为准；多余参数会被拒绝，这不是 bug。
+2. **回执审计**：产物核对存在性、非零大小、SHA-256、格式；模型格式要求隔离重导入验证，媒体走探测。
+3. **测量优先**：验收断言必须是测量值（计数、误差、比率、哈希），并配有能失败的对照。
+4. **成熟度门槛**：交付物只能来自 L3+ 命令；L1 输出仅供探索（查 `blender-capabilities`）。
+5. **revision 链**：快照 → 修改 → 导出的 `expectedSceneRevision` 链必须连贯，断链即重做。
+6. **如实申报**：没验证的写"未验证"，没跑的平台写"未运行"，阈值没触发的写"未触发"。
+"""
+    target = skills_dir / "blender-production"
+    target.mkdir(parents=True, exist_ok=True)
+    (target / "SKILL.md").write_text(content, encoding="utf-8")
+    return len(rows)
+
+
+def generate_capability_catalog(plugin_dir: Path, harness: Path) -> dict:
+    """从真实 registry 生成 blender-capabilities 技能（全命令目录 + 按领域分表）。"""
+    sys.path.insert(0, str(harness))
+    try:
+        from scripts.harness.runtime_catalog import _registration_only_bpy
+        from scripts.harness.runtime import build_registry
+        registry = build_registry(_registration_only_bpy(), runtime_mode="managed")
+        items, offset = [], 0
+        while True:
+            page = registry.list_capabilities({"offset": offset, "limit": 100})
+            items += page["items"]
+            if page.get("nextOffset") is None:
+                break
+            offset = page["nextOffset"]
+    finally:
+        sys.path.remove(str(harness))
+
+    by_domain: dict[str, list] = {}
+    for item in items:
+        by_domain.setdefault(item.get("domain") or "general", []).append(item)
+
+    skill_dir = plugin_dir / "skills" / "blender-capabilities"
+    refs = skill_dir / "references"
+    refs.mkdir(parents=True, exist_ok=True)
+    for domain, entries in sorted(by_domain.items()):
+        lines = [f"# {domain} 命令目录", "",
+                 "| 命令 | 成熟度 | 风险 |", "|---|---|---|"]
+        for entry in sorted(entries, key=lambda e: e["id"]):
+            lines.append(f"| `{entry['id']}` | {entry['maturity']} | {entry['risk']} |")
+        (refs / f"{domain}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    counts = {d: len(v) for d, v in sorted(by_domain.items())}
+    summary = "\n".join(f"| {d} | {c} |" for d, c in counts.items())
+    (skill_dir / "SKILL.md").write_text(f"""---
+name: blender-capabilities
+description: Full command catalog of the Blender harness generated from the live registry - every command grouped by domain with maturity (L1/L3/L4) and risk (read/standard/gated). Use this skill to check whether a command exists and whether its maturity is high enough for delivery.
+---
+
+# Blender 能力目录（构建时从真实 registry 生成）
+
+共 {len(items)} 条命令、{len(by_domain)} 个领域。**交付物只能来自 L3+ 命令**；L1 仅可查询。
+单命令详情用 `capability.describe` 查。
+
+| 领域 | 命令数 |
+|---|---|
+{summary}
+
+各领域明细：`references/<领域>.md`。
+""", encoding="utf-8")
+    return {"commands": len(items), "domains": len(by_domain)}
+
+
 def build_team(team_path: Path, out: Path) -> dict:
     team = load_yaml(team_path)
     team_id = team["id"]
@@ -139,24 +243,22 @@ def build_team(team_path: Path, out: Path) -> dict:
         target.write_text(front + m["body"], encoding="utf-8")
         n_agents += 1
 
-    # skills（本项目自带）+ harness 仓库的技能作为 references
-    n_refs = 0
-    skill_paths = []
+    # skills：本项目自带技能 + harness 仓库全部技能一等化（不再压成 references）
     for skill_rel in team["skills"]:
         src = ROOT / skill_rel
         skill_name = Path(skill_rel).name
-        dst = plugin_dir / "skills" / skill_name
-        copy_tree(src, dst)
-        skill_paths.append(f"./skills/{skill_name}")
+        copy_tree(src, plugin_dir / "skills" / skill_name)
     for vendor_rel in team["harness"]["vendor"]:
         if vendor_rel == "skills":
-            refs = plugin_dir / "skills" / "blender-production" / "references"
-            refs.mkdir(parents=True, exist_ok=True)
             for skill_dir in sorted((harness / "skills").iterdir()):
-                skill_md = skill_dir / "SKILL.md"
-                if skill_md.is_file():
-                    shutil.copy2(skill_md, refs / f"{skill_dir.name}.md")
-                    n_refs += 1
+                if (skill_dir / "SKILL.md").is_file():
+                    copy_tree(skill_dir, plugin_dir / "skills" / skill_dir.name)
+
+    # 能力目录（真实 registry 生成）+ 路由表（实际技能清单生成）
+    catalog = generate_capability_catalog(plugin_dir, harness)
+    n_routed = generate_production_routing(plugin_dir)
+    skill_paths = [f"./skills/{d.name}" for d in sorted((plugin_dir / "skills").iterdir())
+                   if d.is_dir() and (d / "SKILL.md").is_file()]
 
     # harness 扐产物（执行面 + 许可）
     vendored = {}
@@ -229,7 +331,8 @@ def build_team(team_path: Path, out: Path) -> dict:
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     return {"team": team_id, "marketplace": marketplace, "version": team["version"],
-            "agents": n_agents, "references": n_refs,
+            "agents": n_agents, "firstClassSkills": len(skill_paths),
+            "capabilities": catalog, "routingEntries": n_routed,
             **{f"vendor_{k}": v for k, v in vendored.items()}}
 
 
