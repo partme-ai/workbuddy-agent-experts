@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""workbuddy-agents 组装器：独立智能体 → WorkBuddy 智能体团队插件 → 本地 marketplace。
+"""workbuddy-agent-experts 组装器：独立智能体 → WorkBuddy 智能体团队插件 → 本地 marketplace。
 
 用法：
     python3 scripts/build.py [teams/3d-production.yaml ...] [--out dist]
@@ -385,7 +385,7 @@ def build_team(team_path: Path, out: Path) -> dict:
     market_meta.mkdir(parents=True, exist_ok=True)
     (market_meta / "marketplace.json").write_text(json.dumps({
         "name": marketplace,
-        "description": f"{marketplace} marketplace (built by workbuddy-agents)",
+        "description": f"{marketplace} marketplace (built by workbuddy-agent-experts)",
         "plugins": [{
             "name": team_id,
             "source": f"./plugins/{team_id}",

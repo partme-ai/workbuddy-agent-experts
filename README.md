@@ -1,4 +1,4 @@
-# workbuddy-agents
+# workbuddy-agent-experts
 
 独立智能体库 + WorkBuddy 组团器：**智能体以独立单元存在，脚本把智能体组装成团队插件**，产出本地 marketplace 供 WorkBuddy 安装。
 
