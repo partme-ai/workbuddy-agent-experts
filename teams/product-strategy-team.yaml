@@ -1,0 +1,29 @@
+id: product-strategy-team
+version: 1.0.0
+marketplace: my-experts
+category: 01-ProductDesign
+
+display:
+  name: {zh: "产品与策略专家团", en: "Product & Strategy Team"}
+  description:
+    zh: "产品与策略专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+    en: "Product & Strategy Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+
+lead: product-team-lead
+members:
+  - id: product-team-lead
+  - id: product-manager
+  - id: product-trend-researcher
+  - id: product-feedback-synthesizer
+  - id: product-sprint-prioritizer
+  - id: business-strategist
+
+quickPrompts:
+  - {zh: "为下一个季度做产品规划并排优先级", en: "为下一个季度做产品规划并排优先级"}
+  - {zh: "汇总近期用户反馈并提炼需求洞察", en: "汇总近期用户反馈并提炼需求洞察"}
+  - {zh: "做一份新市场进入策略分析", en: "做一份新市场进入策略分析"}
+
+tags:
+  - {zh: "产品规划", en: "产品规划"}
+  - {zh: "用户洞察", en: "用户洞察"}
+  - {zh: "战略", en: "战略"}

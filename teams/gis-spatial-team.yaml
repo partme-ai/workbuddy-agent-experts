@@ -1,0 +1,30 @@
+id: gis-spatial-team
+version: 1.0.0
+marketplace: my-experts
+category: 01-ProductDesign
+
+display:
+  name: {zh: "GIS 空间专家团", en: "GIS & Spatial Team"}
+  description:
+    zh: "GIS 空间专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+    en: "GIS & Spatial Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+
+lead: gis-team-lead
+members:
+  - id: gis-team-lead
+  - id: gis-solution-engineer
+  - id: gis-3d-scene-developer
+  - id: gis-spatial-data-scientist
+  - id: gis-web-gis-developer
+  - id: gis-bim-specialist
+  - id: gis-cartography-designer
+
+quickPrompts:
+  - {zh: "为城市级数据设计一个 Web 三维可视化方案", en: "为城市级数据设计一个 Web 三维可视化方案"}
+  - {zh: "处理一批无人机实景数据并产出正射成果", en: "处理一批无人机实景数据并产出正射成果"}
+  - {zh: "为空间分析任务选型并设计处理流水线", en: "为空间分析任务选型并设计处理流水线"}
+
+tags:
+  - {zh: "三维可视化", en: "三维可视化"}
+  - {zh: "空间数据", en: "空间数据"}
+  - {zh: "BIM", en: "BIM"}

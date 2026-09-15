@@ -1,0 +1,29 @@
+id: design-team
+version: 1.0.0
+marketplace: my-experts
+category: 01-ProductDesign
+
+display:
+  name: {zh: "设计专家团", en: "Design Team"}
+  description:
+    zh: "设计专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+    en: "Design Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+
+lead: design-team-lead
+members:
+  - id: design-team-lead
+  - id: design-ux-architect
+  - id: design-ui-designer
+  - id: design-ux-researcher
+  - id: design-brand-guardian
+  - id: design-visual-storyteller
+
+quickPrompts:
+  - {zh: "为新产品定义完整的体验架构与设计系统", en: "为新产品定义完整的体验架构与设计系统"}
+  - {zh: "做一次可用性走查并输出改进优先级", en: "做一次可用性走查并输出改进优先级"}
+  - {zh: "梳理品牌视觉规范并落到组件库", en: "梳理品牌视觉规范并落到组件库"}
+
+tags:
+  - {zh: "UX", en: "UX"}
+  - {zh: "设计系统", en: "设计系统"}
+  - {zh: "品牌", en: "品牌"}

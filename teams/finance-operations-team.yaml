@@ -1,0 +1,29 @@
+id: finance-operations-team
+version: 1.0.0
+marketplace: my-experts
+category: 12-IndustryConsultant
+
+display:
+  name: {zh: "财务经营专家团", en: "Finance & Operations Team"}
+  description:
+    zh: "财务经营专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+    en: "Finance & Operations Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+
+lead: finance-team-lead
+members:
+  - id: finance-team-lead
+  - id: finance-financial-analyst
+  - id: finance-investment-researcher
+  - id: finance-tax-strategist
+  - id: finance-fraud-detector
+  - id: chief-financial-officer
+
+quickPrompts:
+  - {zh: "分析这份财报并给出经营洞察", en: "分析这份财报并给出经营洞察"}
+  - {zh: "为一个跨境业务设计税务筹划方案", en: "为一个跨境业务设计税务筹划方案"}
+  - {zh: "搭建一套经营指标看板框架", en: "搭建一套经营指标看板框架"}
+
+tags:
+  - {zh: "财务分析", en: "财务分析"}
+  - {zh: "税务", en: "税务"}
+  - {zh: "经营", en: "经营"}

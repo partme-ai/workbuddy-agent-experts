@@ -1,0 +1,29 @@
+id: growth-marketing-team
+version: 1.0.0
+marketplace: my-experts
+category: 07-SalesCommerce
+
+display:
+  name: {zh: "增长营销专家团", en: "Growth & Marketing Team"}
+  description:
+    zh: "增长营销专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+    en: "Growth & Marketing Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+
+lead: growth-team-lead
+members:
+  - id: growth-team-lead
+  - id: marketing-content-creator
+  - id: marketing-douyin-strategist
+  - id: marketing-bilibili-strategist
+  - id: marketing-baidu-seo-specialist
+  - id: marketing-china-ecommerce-operator
+
+quickPrompts:
+  - {zh: "为新品上市制定一份小红书+抖音的组合投放方案", en: "为新品上市制定一份小红书+抖音的组合投放方案"}
+  - {zh: "优化我们的百度搜索自然流量策略", en: "优化我们的百度搜索自然流量策略"}
+  - {zh: "操盘一次电商大促并给出节奏表", en: "操盘一次电商大促并给出节奏表"}
+
+tags:
+  - {zh: "内容营销", en: "内容营销"}
+  - {zh: "短视频", en: "短视频"}
+  - {zh: "电商运营", en: "电商运营"}

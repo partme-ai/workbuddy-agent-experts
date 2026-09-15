@@ -55,13 +55,32 @@ cp -R dist/my-experts/plugins/blender-production-team ~/.workbuddy/plugins/marke
 > `my-experts/.codebuddy-plugin/marketplace.json` 必须存在且列出插件，否则 scanCustomExperts
 > 返回空；无 `experts/custom/<userId>/experts.json` 白名单文件时全部列出。
 
-## 已有团队
+## 已吸纳的智能体库（agency-agents-zh 全量）
 
-| 团队 | 成员 | 插件 |
+`python3 scripts/import_agency.py [--force]` 把 [agency-agents-zh] 的 **263 个智能体**导入
+`agents/<类目>/<id>.md`（19 个类目：engineering 50 / specialized 60 / marketing 42 / gis 13 / ...）。
+导入即转换：中文名→title、文件名→英文 id、描述压单行、色名保留（构建时映射 hex）、
+附 `workbuddy:` 适配块（含 categoryId 映射）。正文原样保留。
+
+## 已有团队与单专家
+
+| 团队 | 主理人 + 成员 | 插件 |
 |---|---|---|
-| Blender 3D 生产专家团 | 岚一(主理)/塑岩/骨风/彩澜/影流/核真 | blender-production-team@my-experts |
+| Blender 3D 生产专家团 | 岚一 + 塑岩/骨风/彩澜/影流/核真 | blender-production-team@my-experts |
+| 工程研发专家团 | 衡工 + 架构/后端/评审/数据库/DevOps/数据 6 专家 | engineering-team@my-experts |
+| 设计专家团 | 蕴美 + UX架构/UI/用研/品牌/叙事 5 专家 | design-team@my-experts |
+| GIS 空间专家团 | 图澜 + 方案/三维/空间数据/WebGIS/BIM/制图 6 专家 | gis-spatial-team@my-experts |
+| 增长营销专家团 | 燃野 + 内容/抖音/B站/SEO/电商 5 专家 | growth-marketing-team@my-experts |
+| 质量与安全专家团 | 守拙 + API测试/性能/应用安全/威胁检测/应急 5 专家 | quality-security-team@my-experts |
+| 产品与策略专家团 | 明衡 + 产品/趋势/反馈/排期/战略 5 专家 | product-strategy-team@my-experts |
+| 财务经营专家团 | 持盈 + 分析/投资/税务/反欺诈/CFO 5 专家 | finance-operations-team@my-experts |
+
+单专家（expertType: agent）：`singles.yaml` 当前精选 16 个（AI 工程师/无障碍审计/渗透测试/港股合规审查等）；
+**改为 `singles: ['*']` 即可把全部 263+ 智能体逐一发布为单专家**。团队 lead 也是单专家发布的一员。
 
 ## 新增一个智能体 / 一个团队
 
 - **加智能体**：`agents/<id>.md` 按上述格式写好即可（独立存在，可被任意团队引用）。
 - **加团队**：复制 `teams/3d-production.yaml` 改成员与来源，`python3 scripts/build.py` 后按上节安装。
+
+[agency-agents-zh]: https://github.com/wandl/agency-agents-zh

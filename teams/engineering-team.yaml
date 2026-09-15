@@ -1,0 +1,30 @@
+id: engineering-team
+version: 1.0.0
+marketplace: my-experts
+category: 02-Engineering
+
+display:
+  name: {zh: "工程研发专家团", en: "Engineering Team"}
+  description:
+    zh: "工程研发专家团：由领域专家组成的多智能体协作团队，按需分发、逐项核验、汇总交付。"
+    en: "Engineering Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+
+lead: eng-team-lead
+members:
+  - id: eng-team-lead
+  - id: engineering-ai-agent-architect
+  - id: engineering-backend-architect
+  - id: engineering-code-reviewer
+  - id: engineering-database-optimizer
+  - id: engineering-devops-automator
+  - id: engineering-data-engineer
+
+quickPrompts:
+  - {zh: "帮我设计一个可演进的后端服务架构并给出决策依据", en: "帮我设计一个可演进的后端服务架构并给出决策依据"}
+  - {zh: "评审这个仓库的代码并给出可执行的改进清单", en: "评审这个仓库的代码并给出可执行的改进清单"}
+  - {zh: "为这个数据管道设计 ETL 与可观测性方案", en: "为这个数据管道设计 ETL 与可观测性方案"}
+
+tags:
+  - {zh: "架构", en: "架构"}
+  - {zh: "代码质量", en: "代码质量"}
+  - {zh: "DevOps", en: "DevOps"}

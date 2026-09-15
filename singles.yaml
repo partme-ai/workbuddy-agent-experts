@@ -1,0 +1,20 @@
+# 单专家插件清单：每个 id 生成一个 expertType: agent 的独立插件。
+# 改为 ['*'] 可把 agents/ 下全部智能体（含 263 个导入智能体）都作为单专家发布。
+version: 1.0.0
+singles:
+  - engineering-ai-engineer
+  - engineering-codebase-onboarding-engineer
+  - engineering-code-style-checker
+  - design-image-prompt-engineer
+  - design-inclusive-visuals-specialist
+  - gis-geoai-ml-engineer
+  - gis-drone-reality-mapping
+  - marketing-app-store-optimizer
+  - marketing-aeo-foundations
+  - marketing-douyin-strategist
+  - testing-accessibility-auditor
+  - testing-embedded-qa-engineer
+  - security-penetration-tester
+  - security-cloud-security-architect
+  - finance-financial-forecaster
+  - finance-hk-stock-compliance-reviewer

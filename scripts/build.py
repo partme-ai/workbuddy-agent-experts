@@ -67,6 +67,45 @@ def init_logo() -> Path:
     return logo
 
 
+COLOR_NAME_HEX = {
+    "red": "#B91C1C", "blue": "#1D4ED8", "green": "#047857", "yellow": "#A16207",
+    "orange": "#C2410C", "purple": "#6D28D9", "pink": "#BE185D", "cyan": "#0E7490",
+    "teal": "#0F766E", "lime": "#4D7C0F", "amber": "#B45309", "indigo": "#4338CA",
+    "violet": "#7C3AED", "magenta": "#A21CAF", "crimson": "#9F1239", "brown": "#78350F",
+    "gray": "#4B5563", "grey": "#4B5563", "slate": "#334155", "black": "#111827",
+    "white": "#E5E7EB", "navy": "#1E3A5F", "olive": "#585D34", "sky": "#0369A1",
+    "emerald": "#065F46", "rose": "#9F1239", "fuchsia": "#A21CAF", "salmon": "#C2410C",
+    "turquoise": "#0E7490", "aqua": "#0E7490",
+}
+
+
+def resolve_color(colour) -> str:
+    """色名/hex/缺省 → 生成头像用的 hex。"""
+    colour = str(colour or "").strip().lower()
+    if colour.startswith("#") and len(colour) == 7:
+        return colour
+    return COLOR_NAME_HEX.get(colour, "#334155")
+
+
+_AGENT_INDEX: dict[str, Path] | None = None
+
+
+def agent_index() -> dict[str, Path]:
+    """构建/返回 agents/ 全树索引（不抛错）。"""
+    global _AGENT_INDEX
+    if _AGENT_INDEX is None:
+        _AGENT_INDEX = {p.stem: p for p in (ROOT / "agents").rglob("*.md")}
+    return _AGENT_INDEX
+
+
+def find_agent(agent_id: str) -> Path:
+    """在 agents/ 全树（含类目子目录）里找 <id>.md。"""
+    path = agent_index().get(agent_id)
+    if path is None:
+        raise SystemExit(f"agent not found: {agent_id}")
+    return path
+
+
 def parse_agent(agent_md: Path) -> dict:
     text = agent_md.read_text(encoding="utf-8")
     match = re.match(r"^---\n(.*?)\n---\n", text, re.S)
@@ -260,26 +299,18 @@ def build_team(team_path: Path, out: Path) -> dict:
     team = load_yaml(team_path)
     team_id = team["id"]
     marketplace = team["marketplace"]
-    harness = (ROOT / team["harness"]["repo"]).resolve()
-    if not harness.is_dir():
+    harness = ((ROOT / team["harness"]["repo"]).resolve()
+               if team.get("harness") else None)
+    if team.get("harness") and not harness.is_dir():
         raise SystemExit(f"harness repo not found: {harness}")
 
     members = []
-    agents_meta = {}
     for entry in team["members"]:
-        agent_md = ROOT / "agents" / f"{entry['id']}.md"
-        if not agent_md.is_file():
-            raise SystemExit(f"member agent missing: {agent_md}")
+        agent_md = find_agent(entry["id"])
         parsed = parse_agent(agent_md)
         meta = parsed["meta"]
-        agents_meta[entry["id"]] = parsed
         wb = meta.get("workbuddy", {})
-        members.append({
-            "entry": entry,
-            "meta": meta,
-            "wb": wb,
-            "body": parsed["body"],
-        })
+        members.append({"entry": entry, "meta": meta, "wb": wb, "body": parsed["body"]})
 
     lead = team["lead"]
     if lead not in {m["entry"]["id"] for m in members}:
@@ -290,56 +321,53 @@ def build_team(team_path: Path, out: Path) -> dict:
         shutil.rmtree(plugin_dir)
 
     # agents → WorkBuddy 格式（frontmatter：name/description/displayName/profession/maxTurns）
-    n_agents = 0
     for m in members:
         wb = m["wb"]
         front = (
             f"---\nname: {m['meta']['name']}\n"
-            f"description: {m['meta']['description']}\n"
-            f"displayName:\n  en: \"{wb['displayName']['en']}\"\n  zh: \"{wb['displayName']['zh']}\"\n"
-            f"profession:\n  en: \"{wb['profession']['en']}\"\n  zh: \"{wb['profession']['zh']}\"\n"
-            f"maxTurns: {wb['maxTurns']}\n---\n")
+            f"description: {json.dumps(m['meta']['description'], ensure_ascii=False)}\n"
+            f"displayName:\n  en: {json.dumps(wb['displayName']['en'], ensure_ascii=False)}\n"
+            f"  zh: {json.dumps(wb['displayName']['zh'], ensure_ascii=False)}\n"
+            f"profession:\n  en: {json.dumps(wb['profession']['en'], ensure_ascii=False)}\n"
+            f"  zh: {json.dumps(wb['profession']['zh'], ensure_ascii=False)}\n"
+            f"maxTurns: {wb.get('maxTurns', 120)}\n---\n")
         target = plugin_dir / "agents" / f"{m['meta']['name']}.md"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(front + m["body"], encoding="utf-8")
-        n_agents += 1
 
-    # skills：本项目自带技能 + harness 仓库全部技能一等化（不再压成 references）
-    for skill_rel in team["skills"]:
-        src = ROOT / skill_rel
-        skill_name = Path(skill_rel).name
-        copy_tree(src, plugin_dir / "skills" / skill_name)
-    for vendor_rel in team["harness"]["vendor"]:
-        if vendor_rel == "skills":
-            for skill_dir in sorted((harness / "skills").iterdir()):
-                if (skill_dir / "SKILL.md").is_file():
-                    vendor_neutral_skill(skill_dir, plugin_dir / "skills")
+    skill_paths: list[str] = []
+    catalog, n_routed = {}, 0
+    if harness is not None:
+        for skill_rel in team.get("skills", []):
+            src = ROOT / skill_rel
+            copy_tree(src, plugin_dir / "skills" / Path(skill_rel).name)
+        for vendor_rel in team["harness"].get("vendor", []):
+            if vendor_rel == "skills":
+                for skill_dir in sorted((harness / "skills").iterdir()):
+                    if (skill_dir / "SKILL.md").is_file():
+                        vendor_neutral_skill(skill_dir, plugin_dir / "skills")
+        catalog = generate_capability_catalog(plugin_dir, harness)
+        n_routed = generate_production_routing(plugin_dir)
+        skill_paths = [f"./skills/{d.name}" for d in sorted((plugin_dir / "skills").iterdir())
+                       if d.is_dir() and (d / "SKILL.md").is_file()]
+        vendored = {}
+        for rel in team["harness"].get("vendor", []):
+            if rel == "skills":
+                continue
+            src = harness / rel
+            if src.is_dir():
+                vendored[rel] = copy_tree(src, plugin_dir / rel)
+        for lic in team["harness"].get("licenses", []):
+            src = harness / lic
+            if src.is_file():
+                shutil.copy2(src, plugin_dir / lic)
 
-    # 能力目录（真实 registry 生成）+ 路由表（实际技能清单生成）
-    catalog = generate_capability_catalog(plugin_dir, harness)
-    n_routed = generate_production_routing(plugin_dir)
-    skill_paths = [f"./skills/{d.name}" for d in sorted((plugin_dir / "skills").iterdir())
-                   if d.is_dir() and (d / "SKILL.md").is_file()]
-
-    # harness 扐产物（执行面 + 许可）
-    vendored = {}
-    for rel in team["harness"]["vendor"]:
-        if rel == "skills":
-            continue
-        src = harness / rel
-        if src.is_dir():
-            vendored[rel] = copy_tree(src, plugin_dir / rel)
-    for lic in team["harness"].get("licenses", []):
-        src = harness / lic
-        if src.is_file():
-            shutil.copy2(src, plugin_dir / lic)
-
-    # avatars：项目 logo 作为团队头像，成员用各自 color
+    # avatars：项目 logo 作为团队头像，成员用各自 color（色名映射为 hex）
     avatars = plugin_dir / "avatars"
     avatars.mkdir(parents=True, exist_ok=True)
     shutil.copy2(init_logo(), avatars / "team.png")
     for m in members:
-        solid_png(avatars / f"{m['meta']['name']}.png", m["meta"].get("color", "#334155"))
+        solid_png(avatars / f"{m['meta']['name']}.png", resolve_color(m["meta"].get("color")))
 
     # plugin.json（对照 ai-content-creator-team 的团队插件形态）
     member_ids = [m["meta"]["name"] for m in members]
@@ -367,7 +395,8 @@ def build_team(team_path: Path, out: Path) -> dict:
         "tags": [{"en": t["en"], "zh": t["zh"]} for t in team["tags"]],
         "members": [{
             "id": m["meta"]["name"],
-            "name": {"en": m["entry"]["persona"]["en"], "zh": m["entry"]["persona"]["zh"]},
+            "name": {"en": m["entry"].get("persona", {}).get("en", m["meta"]["name"]),
+                     "zh": m["entry"].get("persona", {}).get("zh", m["meta"].get("title", m["meta"]["name"]))},
             "profession": {"en": m["wb"]["profession"]["en"], "zh": m["wb"]["profession"]["zh"]},
             "avatar": f"avatars/{m['meta']['name']}.png",
             "role": "lead" if m["meta"]["name"] == lead else "member",
@@ -379,36 +408,146 @@ def build_team(team_path: Path, out: Path) -> dict:
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     assert_no_codex_residue(plugin_dir)
+    return {"plugin": team_id, "kind": "team", "marketplace": marketplace,
+            "version": team["version"], "agents": len(members),
+            "firstClassSkills": len(skill_paths),
+            "capabilities": catalog, "routingEntries": n_routed,
+            "description": manifest["description"]}
 
-    # marketplace 清单
+
+def build_single(agent_id: str, out: Path, marketplace: str, version: str) -> dict:
+    """独立智能体 → 单专家插件（expertType: agent，形态对照 experts 市场的 ui-designer）。"""
+    parsed = parse_agent(find_agent(agent_id))
+    meta, body = parsed["meta"], parsed["body"]
+    wb = meta.get("workbuddy", {})
+    plugin_dir = out / marketplace / "plugins" / agent_id
+    if plugin_dir.exists():
+        shutil.rmtree(plugin_dir)
+
+    front = (
+        f"---\nname: {meta['name']}\n"
+        f"description: {json.dumps(meta['description'], ensure_ascii=False)}\n"
+        f"displayName:\n  en: {json.dumps(wb['displayName']['en'], ensure_ascii=False)}\n"
+        f"  zh: {json.dumps(wb['displayName']['zh'], ensure_ascii=False)}\n"
+        f"profession:\n  en: {json.dumps(wb['profession']['en'], ensure_ascii=False)}\n"
+        f"  zh: {json.dumps(wb['profession']['zh'], ensure_ascii=False)}\n"
+        f"maxTurns: {wb.get('maxTurns', 120)}\n---\n")
+    (plugin_dir / "agents").mkdir(parents=True)
+    (plugin_dir / "agents" / f"{agent_id}.md").write_text(front + body, encoding="utf-8")
+
+    avatars = plugin_dir / "avatars"
+    avatars.mkdir()
+    solid_png(avatars / "expert.png", resolve_color(meta.get("color")))
+
+    manifest = {
+        "name": agent_id,
+        "version": version,
+        "description": meta["description"],
+        "expertType": "agent",
+        "agentName": agent_id,
+        "agents": [f"./agents/{agent_id}.md"],
+        "displayName": {"en": wb["displayName"]["en"], "zh": wb["displayName"]["zh"]},
+        "profession": {"en": wb["profession"]["en"], "zh": wb["profession"]["zh"]},
+        "displayDescription": {"en": meta["description"], "zh": meta["description"]},
+        "avatar": "avatars/expert.png",
+        "categoryId": wb.get("categoryId", "12-IndustryConsultant"),
+        "defaultInitPrompt": {"zh": f"我是{wb['displayName']['zh']}，请介绍你的专业能力并开始协助我。",
+                              "en": f"I am {wb['displayName']['en']}. Introduce your expertise and help me."},
+        "tags": [{"en": meta.get("category", "agent"), "zh": meta.get("category", "agent")}],
+    }
+    meta_dir = plugin_dir / ".codebuddy-plugin"
+    meta_dir.mkdir()
+    (meta_dir / "plugin.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    assert_no_codex_residue(plugin_dir)
+    return {"plugin": agent_id, "kind": "single", "marketplace": marketplace,
+            "version": version, "description": meta["description"]}
+
+
+def write_marketplace_manifest(out: Path, marketplace: str, plugins: list[dict]) -> None:
+    """聚合清单：所有已构建插件一次写入（修掉逐团队覆盖的旧 bug）。"""
     market_meta = out / marketplace / ".codebuddy-plugin"
     market_meta.mkdir(parents=True, exist_ok=True)
     (market_meta / "marketplace.json").write_text(json.dumps({
         "name": marketplace,
         "description": f"{marketplace} marketplace (built by workbuddy-agent-experts)",
-        "plugins": [{
-            "name": team_id,
-            "source": f"./plugins/{team_id}",
-            "description": manifest["description"],
-        }],
+        "plugins": [{"name": p["plugin"], "source": f"./plugins/{p['plugin']}",
+                     "description": p["description"]} for p in plugins],
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    return {"team": team_id, "marketplace": marketplace, "version": team["version"],
-            "agents": n_agents, "firstClassSkills": len(skill_paths),
-            "capabilities": catalog, "routingEntries": n_routed,
-            **{f"vendor_{k}": v for k, v in vendored.items()}}
+
+def install_my_experts(dist_market: Path) -> Path:
+    """部署到 WorkBuddy 官方自定义专家通道并刷新安装记录。"""
+    import time
+    home = Path.home()
+    market = home / ".workbuddy" / "plugins" / "marketplaces" / "my-experts"
+    if market.exists():
+        shutil.rmtree(market)
+    shutil.copytree(dist_market, market)
+    now = time.strftime("%Y-%m-%dT%H:%M:%S.000Z", time.gmtime())
+    ip_path = home / ".workbuddy" / "plugins" / "installed_plugins.json"
+    ip = json.loads(ip_path.read_text())
+    manifest = json.loads((dist_market / ".codebuddy-plugin/marketplace.json").read_text())
+    cache_root = home / ".workbuddy" / "plugins" / "cache" / "my-experts"
+    for entry in manifest["plugins"]:
+        name, version = entry["name"], "1.0.0"
+        pj = dist_market / "plugins" / name / ".codebuddy-plugin" / "plugin.json"
+        if pj.is_file():
+            version = json.loads(pj.read_text()).get("version", "1.0.0")
+        cache = cache_root / name / version
+        if cache.exists():
+            shutil.rmtree(cache)
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copytree(dist_market / "plugins" / name, cache)
+        ip["plugins"][f"{name}@my-experts"] = [{
+            "scope": "user", "installPath": str(cache), "version": version,
+            "installedAt": now, "lastUpdated": now,
+        }]
+    ip_path.write_text(json.dumps(ip, ensure_ascii=False, indent=2) + "\n")
+    km_path = home / ".workbuddy" / "plugins" / "known_marketplaces.json"
+    km = json.loads(km_path.read_text())
+    if "my-experts" in km:
+        km["my-experts"]["lastUpdated"] = now
+        km_path.write_text(json.dumps(km, ensure_ascii=False, indent=2) + "\n")
+    return market
 
 
 def main(argv=None) -> int:
-    parser = argparse.ArgumentParser(description="Assemble independent agents into a WorkBuddy team plugin")
+    parser = argparse.ArgumentParser(description="Assemble agents into WorkBuddy team/single-expert plugins")
     parser.add_argument("teams", nargs="*", default=None)
     parser.add_argument("--out", default=str(ROOT / "dist"))
+    parser.add_argument("--install", action="store_true",
+                        help="deploy dist/my-experts into ~/.workbuddy (official custom-expert channel)")
     args = parser.parse_args(argv)
+    out = Path(args.out).resolve()
     team_paths = [Path(t) for t in args.teams] or sorted((ROOT / "teams").glob("*.yaml"))
     if not team_paths:
         raise SystemExit("no team definitions found under teams/")
-    summary = [build_team(p, Path(args.out).resolve()) for p in team_paths]
-    print(json.dumps(summary, ensure_ascii=False, indent=2))
+
+    results = [build_team(p, out) for p in team_paths]
+
+    singles_path = ROOT / "singles.yaml"
+    if singles_path.is_file():
+        singles = load_yaml(singles_path)
+        selector = singles.get("singles", [])
+        ids = sorted(agent_index()) if selector == "*" else list(selector)
+        version = singles.get("version", "1.0.0")
+        team_plugin_ids = {r["plugin"] for r in results}
+        for agent_id in ids:
+            if agent_id in team_plugin_ids:
+                continue
+            results.append(build_single(agent_id, out, "my-experts", version))
+
+    marketplaces = sorted({r["marketplace"] for r in results})
+    for marketplace in marketplaces:
+        write_marketplace_manifest(out, marketplace,
+                                   [r for r in results if r["marketplace"] == marketplace])
+
+    installed = None
+    if args.install:
+        installed = str(install_my_experts(out / "my-experts"))
+    print(json.dumps({"plugins": len(results), "installed": installed, "detail": results},
+                     ensure_ascii=False, indent=2))
     return 0
 
 
