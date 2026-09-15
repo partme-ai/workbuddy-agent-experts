@@ -68,7 +68,15 @@ def load_yaml(path: Path):
     return yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
-def solid_png(path: Path, colour: str, size: int = 128) -> None:
+def solid_png(path: Path, colour: str, size: int = 128) -> bool:
+    """Generate a solid-color PNG avatar at `path`.
+
+    Returns True if a new file was generated, False if the file already
+    existed and was left untouched (use case: a user supplied a custom
+    avatar/logo via a convention path; we never overwrite user assets).
+    """
+    if path.is_file():
+        return False
     rgb = tuple(int(colour[i:i + 2], 16) for i in (1, 3, 5))
     raw = b"".join(b"\x00" + bytes(rgb) * size for _ in range(size))
 
@@ -81,6 +89,7 @@ def solid_png(path: Path, colour: str, size: int = 128) -> None:
         + chunk(b"IHDR", struct.pack(">IIBBBBB", size, size, 8, 2, 0, 0, 0))
         + chunk(b"IDAT", zlib.compress(raw, 9))
         + chunk(b"IEND", b""))
+    return True
 
 
 def init_logo() -> Path:
@@ -437,12 +446,29 @@ def build_team(team_path: Path, out: Path) -> dict:
                     if d.is_dir() and (d / "SKILL.md").is_file()]
                    if (plugin_dir / "skills").is_dir() else [])
 
-    # avatars：项目 logo 作为团队头像，成员用各自 color（色名映射为 hex）
+    # avatars：先从仓内静态资产 teams/<id>/ 拷贝用户预生成的 logo/avatar
+    # （这是"团队与智能体提前准备好"的约定路径——build 只搬运，不生成）；
+    # 缺失的才回退为纯色 PNG 兜底。
     avatars = plugin_dir / "avatars"
     avatars.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(init_logo(), avatars / "team.png")
+    static_assets = ROOT / "teams" / team_id  # 用户静态资产约定目录
+
+    team_src_logo = static_assets / "logo.png"
+    team_logo = avatars / "team.png"
+    if team_src_logo.is_file():
+        shutil.copy2(team_src_logo, team_logo)
+        print(f"team logo: {team_logo} (from {team_src_logo})")
+    elif not team_logo.is_file():
+        shutil.copy2(init_logo(), team_logo)
+        print(f"team logo generated (fallback): {team_logo}")
+
     for m in members:
-        solid_png(avatars / f"{m['meta']['name']}.png", resolve_color(m["meta"].get("color")))
+        agent_png = avatars / f"{m['meta']['name']}.png"
+        src_avatar = static_assets / "avatars" / f"{m['meta']['name']}.png"
+        if src_avatar.is_file():
+            shutil.copy2(src_avatar, agent_png)
+        elif not agent_png.is_file():
+            solid_png(agent_png, resolve_color(m["meta"].get("color")))
 
     # plugin.json（对照 ai-content-creator-team 的团队插件形态）
     member_ids = [m["meta"]["name"] for m in members]
