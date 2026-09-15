@@ -22,8 +22,13 @@ skills:
   - skills/processon-workbuddy
 
 sources:
+  # 技能本体的单一事实源是 full-stack-skills/processon-skills 源仓（中性名、逐字 vendor）
+  - repo: ../../workspace-agent-skills/full-stack-skills-repositories/processon-skills
+    vendor: ["skills"]
+    licenses: ["LICENSE"]
+  # 宿主侧执行工具（MCP 代理、设置页）仍由插件仓提供
   - repo: ../codex-processon-plugin
-    vendor: ["skills", "scripts"]
+    vendor: ["scripts"]
     licenses: ["LICENSE", "NOTICE"]
 
 quickPrompts:
