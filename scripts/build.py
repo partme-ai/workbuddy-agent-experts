@@ -384,7 +384,9 @@ def build_team(team_path: Path, out: Path) -> dict:
                         vendor_neutral_skill(skill_dir, plugin_dir / "skills")
             elif src.is_dir():
                 dest = rel if not source.get("docsTo") else Path(source["docsTo"]) / rel
-                vendored[f"{source['repo']}::{rel}"] = copy_tree(src, plugin_dir / dest)
+                exclude = {"__pycache__", ".DS_Store", ".git"}
+                exclude.update(source.get("vendorIgnore", []) or [])
+                vendored[f"{source['repo']}::{rel}"] = copy_tree(src, plugin_dir / dest, exclude=exclude)
         for lic in source.get("licenses", []):
             lic_file = repo / lic
             if lic_file.is_file():

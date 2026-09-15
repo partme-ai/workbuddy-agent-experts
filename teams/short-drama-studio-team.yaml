@@ -22,19 +22,16 @@ skills:
   - skills/short-drama-pipeline
 
 sources:
-  - repo: ../codex-director-plugin
-    vendor: ["docs"]
+  - repo: repos/director-plugin
+    vendor: ["."]
+    vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references
     licensePrefix: director-
-  - repo: ../codex-script-plugin
-    vendor: ["docs"]
+  - repo: repos/script-plugin
+    vendor: ["."]
+    vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references
     licensePrefix: script-
-  - repo: ../codex-storyboard-plugin
-    vendor: ["docs"]
-    docsTo: references
-    licensePrefix: storyboard-
-
 quickPrompts:
   - {zh: "把这本小说做成 60 秒短剧，走完创作到成片全链路", en: "把这本小说做成 60 秒短剧，走完创作到成片全链路"}
   - {zh: "为这个品牌策划一支 3D 白模广告短片", en: "为这个品牌策划一支 3D 白模广告短片"}

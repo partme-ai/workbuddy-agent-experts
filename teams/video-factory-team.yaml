@@ -30,16 +30,19 @@ sources:
   - repo: ../codex-video-factory-plugin
     vendor: ["bin"]
     licenses: ["LICENSE"]
-  - repo: ../codex-director-plugin
-    vendor: ["docs"]
+  - repo: repos/director-plugin
+    vendor: ["."]
+    vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references
     licensePrefix: director-
-  - repo: ../codex-script-plugin
-    vendor: ["docs"]
+  - repo: repos/script-plugin
+    vendor: ["."]
+    vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references
     licensePrefix: script-
-  - repo: ../codex-storyboard-plugin
-    vendor: ["docs"]
+  - repo: repos/storyboard-plugin
+    vendor: ["."]
+    vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references
     licensePrefix: storyboard-
 
