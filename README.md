@@ -97,6 +97,7 @@ experts + my-experts 两个名字）；同时写 cache 镜像与安装记录（�
 
 | 团队 | 主理人 + 成员 | 插件 |
 |---|---|---|
+| 宝塔 Linux 面板运维专家团 | 塔卫 + DevOps/SRE/故障响应/ITSM/数据库/网络/安全/应用安全 8 专家（MCP 协议远程操作 98 个面板工具） | baota-ops-team@my-experts |
 | Blender 3D 生产专家团 | 岚一 + 塑岩/骨风/彩澜/影流/核真 | blender-production-team@my-experts |
 | 工程研发专家团 | 衡工 + 架构/后端/评审/数据库/DevOps/数据 6 专家 | engineering-team@my-experts |
 | 设计专家团 | 蕴美 + UX架构/UI/用研/品牌/叙事 5 专家 | design-team@my-experts |

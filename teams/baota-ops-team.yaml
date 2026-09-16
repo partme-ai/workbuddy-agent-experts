@@ -1,0 +1,39 @@
+id: baota-ops-team
+version: 1.0.0
+marketplace: my-experts
+allowCodexReferences: true   # MCP 接入文档事实上依赖本地 Codex CLI 作为 AI Agent 客户端
+category: 02-Engineering
+
+display:
+  name:
+    zh: "宝塔 Linux 面板运维专家团"
+    en: "Baota Linux Panel Ops Team"
+  description:
+    zh: "宝塔 Linux 面板运维专家团：整合 14 个内置 skill agents 的诊断要点 + 98 个 MCP 工具远程运维能力，由 Lead 综合调度与各工程/安全专项分工协作。"
+    en: "Baota Linux Panel Ops Team: consolidates the 14 built-in skill agents' diagnostic heuristics with remote access to 98 MCP tools; the Lead coordinates while engineering and security specialists handle focused work."
+
+lead: engineering-baota-panel-operator
+members:
+  - id: engineering-baota-panel-operator
+  - id: engineering-devops-automator
+  - id: engineering-sre
+  - id: engineering-incident-response-commander
+  - id: engineering-it-service-manager
+  - id: engineering-database-optimizer
+  - id: engineering-network-engineer-china
+  - id: engineering-security-engineer
+  - id: security-appsec-engineer
+
+skills:
+  - skills/baota-mcp-integration
+  - skills/baota-mcp-tools-reference
+
+quickPrompts:
+  - {zh: "用宝塔 MCP 协议诊断服务器问题，只读不改", en: "Diagnose the server via Baota MCP read-only (no changes)"}
+  - {zh: "帮我配置 Codex 接入宝塔面板 13.0", en: "Help me wire Codex into Baota Panel 13.0 via MCP"}
+  - {zh: "检查宝塔面板的 98 个 MCP 工具中我应该用哪个", en: "Pick the right Baota MCP tool for my task"}
+
+tags:
+  - {zh: "宝塔面板", en: "baota-panel"}
+  - {zh: "Linux 运维", en: "linux-ops"}
+  - {zh: "MCP 整合", en: "mcp-integration"}
