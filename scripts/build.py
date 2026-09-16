@@ -157,10 +157,18 @@ def parse_agent(agent_md: Path) -> dict:
     return {"meta": meta, "body": text[match.end():]}
 
 
-def copy_tree(src: Path, dst: Path, exclude: set[str] = {"__pycache__", ".DS_Store"}) -> int:
+MEDIA_EXCLUDE_EXT = {
+    ".mp3", ".mp4", ".mov", ".avi", ".mkv", ".wav", ".flac", ".webm",
+}
+
+
+def copy_tree(src: Path, dst: Path, exclude: set[str] = {"__pycache__", ".DS_Store"},
+              skip_media: bool = False) -> int:
     count = 0
     for item in src.rglob("*"):
         if any(part in exclude for part in item.parts):
+            continue
+        if skip_media and item.is_file() and item.suffix.lower() in MEDIA_EXCLUDE_EXT:
             continue
         target = dst / item.relative_to(src)
         if item.is_dir():
@@ -215,10 +223,14 @@ def neutralize_skill_text(text: str) -> str:
 
 
 def vendor_neutral_skill(skill_dir: Path, target_root: Path) -> Path:
-    """vendor 单个 harness 技能：目录与 frontmatter name 去掉 codex- 前缀，正文中性化。"""
+    """vendor 单个 harness 技能：目录与 frontmatter name 去掉 codex- 前缀，正文中性化。
+
+    媒体文件（mp3/mp4 等演示资源）不随技能 vendor——它们是教程/演示资产，
+    技能执行不需要，且会在多团队场景下成倍膨胀包体。
+    """
     neutral_name = neutralize_skill_text(skill_dir.name)
     target = target_root / neutral_name
-    copy_tree(skill_dir, target)
+    copy_tree(skill_dir, target, skip_media=True)
     for md in target.rglob("*.md"):
         md.write_text(neutralize_skill_text(md.read_text(encoding="utf-8")), encoding="utf-8")
     return target
