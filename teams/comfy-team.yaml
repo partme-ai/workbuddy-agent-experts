@@ -1,0 +1,39 @@
+id: comfy-team
+version: 1.0.0
+marketplace: my-experts
+allowCodexReferences: true   # 执行面经 comfy-cloud MCP 出图/出片，配额属 Comfy Cloud 账户（事实性互操作）
+category: 06-ContentCreative
+
+display:
+  name: {zh: "Comfy 创作专家团", en: "Comfy Team"}
+  description:
+    zh: "Comfy 创作专家团：直连 Comfy Cloud 的多智能体团队——模型选型、工作流装配、一次提交、产物验收全闭环。"
+    en: "Comfy Team: a multi-agent team wired to Comfy Cloud — model scouting, workflow assembly, submit-once execution, and output acceptance."
+
+lead: comfy-lead
+members:
+  - id: comfy-lead
+  - id: comfy-model-scout
+  - id: comfy-workflow-engineer
+  - id: comfy-generation-operator
+  - id: comfy-quality-judge
+
+skills:
+  - skills/comfy-harness
+
+sources:
+  # 命令与技能本体（12+12）从 partme-comfy-plugin vendor（单一事实源，MIT 上游钉锁）
+  - repo: https://github.com/partme-ai/partme-comfy-plugin.git
+    vendor: ["commands"]
+    docsTo: references
+    licenses: ["LICENSE", "NOTICE"]
+
+quickPrompts:
+  - {zh: "用 Flux 出一张 1024x1024 的赛博朋克城市夜景", en: "用 Flux 出一张 1024x1024 的赛博朋克城市夜景"}
+  - {zh: "把这张产品图去背景并放大到 4K", en: "把这张产品图去背景并放大到 4K"}
+  - {zh: "用 Seedance 生成一段 5 秒的蜂鸟悬停视频", en: "用 Seedance 生成一段 5 秒的蜂鸟悬停视频"}
+
+tags:
+  - {zh: "ComfyUI", en: "ComfyUI"}
+  - {zh: "文生图", en: "文生图"}
+  - {zh: "文生视频", en: "文生视频"}
