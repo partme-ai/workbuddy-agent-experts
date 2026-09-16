@@ -23,13 +23,14 @@ skills:
 
 sources:
   # docsTo 按源分目录：多源同名文档（plans/implementation.md 等）会互相覆盖，不能共用 references
-  - repo: https://github.com/partme-ai/codex-director-plugin.git
-    vendor: ["."]
+  # 三规格仓已合并为 partme-cine-planning（角色自包含子目录）
+  - repo: https://github.com/partme-ai/partme-cine-planning.git
+    vendor: ["director"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references/director
     licensePrefix: director-
-  - repo: https://github.com/partme-ai/codex-script-plugin.git
-    vendor: ["."]
+  - repo: https://github.com/partme-ai/partme-cine-planning.git
+    vendor: ["script"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references/script
     licensePrefix: script-

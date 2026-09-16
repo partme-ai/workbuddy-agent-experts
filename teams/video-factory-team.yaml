@@ -31,18 +31,19 @@ sources:
     vendor: ["bin"]
     licenses: ["LICENSE"]
   # docsTo 按源分目录：三份方法论文档同名（docs/superpowers/...），共用 references 会互相覆盖
-  - repo: https://github.com/partme-ai/codex-director-plugin.git
-    vendor: ["."]
+  # 三规格仓已合并为 partme-cine-planning（角色自包含子目录）
+  - repo: https://github.com/partme-ai/partme-cine-planning.git
+    vendor: ["director"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references/director
     licensePrefix: director-
-  - repo: https://github.com/partme-ai/codex-script-plugin.git
-    vendor: ["."]
+  - repo: https://github.com/partme-ai/partme-cine-planning.git
+    vendor: ["script"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references/script
     licensePrefix: script-
-  - repo: https://github.com/partme-ai/codex-storyboard-plugin.git
-    vendor: ["."]
+  - repo: https://github.com/partme-ai/partme-cine-planning.git
+    vendor: ["storyboard"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
     docsTo: references/storyboard
     licensePrefix: storyboard-
