@@ -1,0 +1,67 @@
+#!/bin/bash
+# WorkBuddy Experts — pkg postinstall (runs as root)
+# Installs the prebuilt marketplace into the console user's ~/.workbuddy,
+# preserving foreign plugins. Pure bash + macOS-bundled osascript (no python).
+set -euo pipefail
+
+CONSOLE_USER="${POSTINSTALL_USER:-$(stat -f %Su /dev/console)}"
+USER_HOME="${POSTINSTALL_HOME:-$(dscl . -read "/Users/$CONSOLE_USER" NFSHomeDirectory | awk '{print $2}')}"
+SUPPORT="${POSTINSTALL_SUPPORT:-/Library/Application Support/WorkBuddyExperts}"
+CONFIG="$USER_HOME/.workbuddy"
+TOOLS="$SUPPORT/tools"
+SRC="$SUPPORT/experts"
+MARKET="$CONFIG/plugins/marketplaces/my-experts"
+CACHE="$CONFIG/plugins/cache/my-experts"
+OSA=(/usr/bin/osascript -l JavaScript)
+
+echo "console user: $CONSOLE_USER ($USER_HOME)"
+[ -f "$SRC/.codebuddy-plugin/marketplace.json" ] || { echo "payload missing"; exit 1; }
+
+mkdir -p "$MARKET/plugins" "$CACHE"
+
+# 1. back up existing registries (non-destructive)
+for f in "$MARKET/.codebuddy-plugin/marketplace.json" \
+         "$CONFIG/plugins/installed_plugins.json" \
+         "$CONFIG/plugins/known_marketplaces.json"; do
+  [ -f "$f" ] && cp "$f" "$f.bak-workbuddy-experts" || true
+done
+
+# 2. replace only the plugins this build owns
+PLUGIN_NAMES=$("$OSA" -l JavaScript "$TOOLS/install.js" list-plugins "$SRC/.codebuddy-plugin/marketplace.json")
+for name in $PLUGIN_NAMES; do
+  rm -rf "$MARKET/plugins/$name"
+  rm -rf "$CACHE/$name"
+done
+for dir in "$SRC"/plugins/*; do
+  name=$(basename "$dir")
+  cp -R "$dir" "$MARKET/plugins/$name"
+done
+
+# 3. mirror the WorkBuddy plugin cache (name/version pairs from manifest)
+"$OSA" -l JavaScript "$TOOLS/install.js" list-versions "$SRC" | \
+while IFS=$'\t' read -r name version; do
+  [ -z "$name" ] && continue
+  tgt="$CACHE/$name/$version"
+  rm -rf "$tgt"
+  mkdir -p "$(dirname "$tgt")"
+  cp -R "$SRC/plugins/$name" "$tgt"
+done
+
+# 4. registries (market manifest copied raw; JSON merges via JXA)
+mkdir -p "$MARKET/.codebuddy-plugin"
+cp "$SRC/.codebuddy-plugin/marketplace.json" "$MARKET/.codebuddy-plugin/marketplace.json"
+"$OSA" -l JavaScript "$TOOLS/install.js" merge-known "$CONFIG/plugins/known_marketplaces.json" "my-experts" "$MARKET"
+VERSIONS=$("$OSA" -l JavaScript "$TOOLS/install.js" list-versions "$SRC")
+ARGS=("$CONFIG/plugins/installed_plugins.json" "my-experts" "$CACHE" "$SRC")
+while IFS=$'\t' read -r name version; do
+  [ -z "$name" ] && continue
+  ARGS+=("$name" "$version")
+done <<< "$VERSIONS"
+"$OSA" -l JavaScript "$TOOLS/install.js" merge-installed "${ARGS[@]}"
+
+# 5. hand ownership back to the user (pkg ran as root)
+chown -R "$CONSOLE_USER" "$CONFIG" 2>/dev/null || true
+
+echo "installed plugins into $MARKET"
+echo "请重启 WorkBuddy（或重开专家选择器）以加载 my-experts。"
+exit 0
