@@ -35,17 +35,17 @@ sources:
   - repo: https://github.com/partme-ai/partme-cine-planning.git
     vendor: ["director"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references/director
+    docsTo: references
     licensePrefix: director-
   - repo: https://github.com/partme-ai/partme-cine-planning.git
     vendor: ["script"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references/script
+    docsTo: references
     licensePrefix: script-
   - repo: https://github.com/partme-ai/partme-cine-planning.git
     vendor: ["storyboard"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references/storyboard
+    docsTo: references
     licensePrefix: storyboard-
 
 quickPrompts:

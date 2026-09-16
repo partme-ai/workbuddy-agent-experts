@@ -27,12 +27,12 @@ sources:
   - repo: https://github.com/partme-ai/partme-cine-planning.git
     vendor: ["director"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references/director
+    docsTo: references
     licensePrefix: director-
   - repo: https://github.com/partme-ai/partme-cine-planning.git
     vendor: ["script"]
     vendorIgnore: [".git", ".venv", "__pycache__"]
-    docsTo: references/script
+    docsTo: references
     licensePrefix: script-
   # 白模预演约定（镜头表 schema / 占位配色映射 / doesNotEncode 守卫 / 白模→Seedance 交接模板）
   - repo: https://github.com/partme-ai/codex-blender-plugin.git
