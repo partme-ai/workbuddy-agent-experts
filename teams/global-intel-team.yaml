@@ -1,21 +1,21 @@
 # AUTO-GENERATED framework, hand-tuned members — edit via team-compositions or by hand; re-run compose only for agent refresh.
 # 团队定义：全球平台舆情调研专家团（Reddit / X / YouTube / TikTok / HN / GitHub / LinkedIn / Instagram）
 
-id: last30days-global-team
+id: global-intel-team
 version: 1.0.0
 marketplace: my-experts
 allowCodexReferences: true   # 上游技能为第三方（mvanhorn/last30days-skill）事实引用
 category: 05-MarketingGrowth
 
 display:
-  name: {zh: "全球舆情调研专家团", en: "Global Listening Team"}
+  name: {zh: "全球情报专家团", en: "Global Intelligence Team"}
   description:
-    zh: "全球舆情调研专家团：基于 last30days 技能聚合 Reddit、X、YouTube、TikTok、Hacker News、GitHub、LinkedIn、Instagram 等平台近 30 天真实声量，按互动量与资金动向排序，产出带证据的调研简报与趋势报告。"
-    en: "Global Listening Team: aggregates the last 30 days of real community signals across Reddit, X, YouTube, TikTok, Hacker News, GitHub, LinkedIn, and Instagram via the last30days skill, ranked by engagement and money, delivered as evidence-backed briefings."
+    zh: "全球情报专家团：基于 last30days 技能聚合 Reddit、X、YouTube、TikTok、Hacker News、GitHub、LinkedIn、Instagram 等平台近 30 天真实声量，按互动量与资金动向排序，产出带证据的调研简报与趋势报告。"
+    en: "Global Intelligence Team: aggregates the last 30 days of real community signals across Reddit, X, YouTube, TikTok, Hacker News, GitHub, LinkedIn, and Instagram via the last30days skill, ranked by engagement and money, delivered as evidence-backed briefings."
 
-lead: last30days-global-team-lead
+lead: global-intel-team-lead
 members:
-  - id: last30days-global-team-lead
+  - id: global-intel-team-lead
   - id: marketing-x-twitter-intelligence-analyst
   - id: marketing-reddit-community-builder
   - id: marketing-tiktok-strategist
