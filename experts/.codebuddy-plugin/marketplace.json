@@ -23,6 +23,11 @@
       "description": "Angular Frontend Project Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
     },
     {
+      "name": "cn-intel-team",
+      "source": "./plugins/cn-intel-team",
+      "description": "Chinese Intelligence Team: aggregates the last 30 days of real signals across Weibo, Xiaohongshu, Bilibili, Zhihu, Douyin, WeChat, Baidu, and Toutiao via the last30days-cn skill, with Markdown/JSON/compact-context and Swiss-style HTML reports."
+    },
+    {
       "name": "design-product-team",
       "source": "./plugins/design-product-team",
       "description": "Design & Product Team: a multi-agent team auto-assembled by scripts/compose_team.py from team-compositions.yaml."
@@ -76,6 +81,11 @@
       "name": "gis-spatial-team",
       "source": "./plugins/gis-spatial-team",
       "description": "GIS & Spatial Team: a multi-agent expert team with per-task dispatch, verified outputs and consolidated delivery."
+    },
+    {
+      "name": "global-intel-team",
+      "source": "./plugins/global-intel-team",
+      "description": "Global Intelligence Team: aggregates the last 30 days of real community signals across Reddit, X, YouTube, TikTok, Hacker News, GitHub, LinkedIn, and Instagram via the last30days skill, ranked by engagement and money, delivered as evidence-backed briefings."
     },
     {
       "name": "go-project-team",

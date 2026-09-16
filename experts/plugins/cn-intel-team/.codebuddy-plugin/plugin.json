@@ -1,0 +1,217 @@
+{
+  "name": "cn-intel-team",
+  "version": "1.0.0",
+  "description": "Chinese Intelligence Team: aggregates the last 30 days of real signals across Weibo, Xiaohongshu, Bilibili, Zhihu, Douyin, WeChat, Baidu, and Toutiao via the last30days-cn skill, with Markdown/JSON/compact-context and Swiss-style HTML reports.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/cn-intel-team-lead.md",
+    "./agents/marketing-weibo-strategist.md",
+    "./agents/marketing-xiaohongshu-specialist.md",
+    "./agents/marketing-bilibili-strategist.md",
+    "./agents/marketing-zhihu-strategist.md",
+    "./agents/marketing-douyin-strategist.md",
+    "./agents/marketing-wechat-official-account.md",
+    "./agents/marketing-baidu-seo-specialist.md",
+    "./agents/marketing-daily-news-briefing.md",
+    "./agents/product-feedback-synthesizer.md"
+  ],
+  "skills": [
+    "./skills/last30days-cn"
+  ],
+  "expertType": "team",
+  "agentName": "cn-intel-team-lead",
+  "teamInfo": {
+    "leadAgent": "cn-intel-team-lead",
+    "memberAgents": [
+      "marketing-weibo-strategist",
+      "marketing-xiaohongshu-specialist",
+      "marketing-bilibili-strategist",
+      "marketing-zhihu-strategist",
+      "marketing-douyin-strategist",
+      "marketing-wechat-official-account",
+      "marketing-baidu-seo-specialist",
+      "marketing-daily-news-briefing",
+      "product-feedback-synthesizer"
+    ]
+  },
+  "displayName": {
+    "en": "Chinese Intelligence Team",
+    "zh": "中文情报专家团"
+  },
+  "profession": {
+    "en": "Chinese Intelligence Team",
+    "zh": "中文情报专家团"
+  },
+  "displayDescription": {
+    "en": "Chinese Intelligence Team: aggregates the last 30 days of real signals across Weibo, Xiaohongshu, Bilibili, Zhihu, Douyin, WeChat, Baidu, and Toutiao via the last30days-cn skill, with Markdown/JSON/compact-context and Swiss-style HTML reports.",
+    "zh": "中文情报专家团：基于 last30days-cn 技能聚合微博、小红书、B站、知乎、抖音、微信、百度、头条近 30 天真实声量，支持 Markdown/JSON/紧凑上下文与瑞士风格 HTML 报告输出。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "05-MarketingGrowth",
+  "defaultInitPrompt": {
+    "en": "last30 embodied AI — summarize CN platform buzz for the last 30 days",
+    "zh": "last30 具身智能 —— 汇总近 30 天中文平台的讨论与热度"
+  },
+  "quickPrompts": [
+    {
+      "en": "last30 embodied AI — summarize CN platform buzz for the last 30 days",
+      "zh": "last30 具身智能 —— 汇总近 30 天中文平台的讨论与热度"
+    },
+    {
+      "en": "Research real user feedback on our product across Xiaohongshu and Douyin (30 days)",
+      "zh": "调研最近 30 天小红书和抖音上对我们产品的真实反馈"
+    },
+    {
+      "en": "Generate a 30-day CN listening HTML report on AI coding assistants",
+      "zh": "生成一份近 30 天 AI 编程助手中文舆情 HTML 报告"
+    }
+  ],
+  "tags": [
+    {
+      "en": "social-listening",
+      "zh": "舆情调研"
+    },
+    {
+      "en": "cn-platforms",
+      "zh": "中文平台"
+    },
+    {
+      "en": "trend-briefing",
+      "zh": "趋势简报"
+    }
+  ],
+  "members": [
+    {
+      "id": "cn-intel-team-lead",
+      "name": {
+        "en": "cn-intel-team-lead",
+        "zh": "cn-intel-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated cn-intel-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated cn-intel-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/cn-intel-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "marketing-weibo-strategist",
+      "name": {
+        "en": "marketing-weibo-strategist",
+        "zh": "marketing-weibo-strategist"
+      },
+      "profession": {
+        "en": "专注新浪微博平台的全域运营专家，精通热搜机制、超话运营、舆情管理、粉丝经济与微博广告投放，助力品牌在微博生态实现声量爆发与长效增长。 (auto-vendored by compose_team.py)",
+        "zh": "专注新浪微博平台的全域运营专家，精通热搜机制、超话运营、舆情管理、粉丝经济与微博广告投放，助力品牌在微博生态实现声量爆发与长效增长。"
+      },
+      "avatar": "avatars/marketing-weibo-strategist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-xiaohongshu-specialist",
+      "name": {
+        "en": "marketing-xiaohongshu-specialist",
+        "zh": "marketing-xiaohongshu-specialist"
+      },
+      "profession": {
+        "en": "小红书营销专家，精通生活方式内容创作、趋势驱动策略和真实社区互动，擅长用审美叙事制造病毒式增长。 (auto-vendored by compose_team.py)",
+        "zh": "小红书营销专家，精通生活方式内容创作、趋势驱动策略和真实社区互动，擅长用审美叙事制造病毒式增长。"
+      },
+      "avatar": "avatars/marketing-xiaohongshu-specialist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-bilibili-strategist",
+      "name": {
+        "en": "marketing-bilibili-strategist",
+        "zh": "marketing-bilibili-strategist"
+      },
+      "profession": {
+        "en": "专注B站（哔哩哔哩）平台的中长视频内容策略专家，精通UP主运营、弹幕文化、社区生态、品牌合作、推荐算法，以及通过优质内容实现长期粉丝增长与商业变现。 (auto-vendored by compose_team.py)",
+        "zh": "专注B站（哔哩哔哩）平台的中长视频内容策略专家，精通UP主运营、弹幕文化、社区生态、品牌合作、推荐算法，以及通过优质内容实现长期粉丝增长与商业变现。"
+      },
+      "avatar": "avatars/marketing-bilibili-strategist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-zhihu-strategist",
+      "name": {
+        "en": "marketing-zhihu-strategist",
+        "zh": "marketing-zhihu-strategist"
+      },
+      "profession": {
+        "en": "知乎营销专家，擅长思想领袖建设、社区公信力打造和知识驱动型互动，通过高质量问答和专栏建立品牌权威。 (auto-vendored by compose_team.py)",
+        "zh": "知乎营销专家，擅长思想领袖建设、社区公信力打造和知识驱动型互动，通过高质量问答和专栏建立品牌权威。"
+      },
+      "avatar": "avatars/marketing-zhihu-strategist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-douyin-strategist",
+      "name": {
+        "en": "marketing-douyin-strategist",
+        "zh": "marketing-douyin-strategist"
+      },
+      "profession": {
+        "en": "专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。 (auto-vendored by compose_team.py)",
+        "zh": "专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。"
+      },
+      "avatar": "avatars/marketing-douyin-strategist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-wechat-official-account",
+      "name": {
+        "en": "marketing-wechat-official-account",
+        "zh": "marketing-wechat-official-account"
+      },
+      "profession": {
+        "en": "微信公众号运营专家，精通内容营销、用户互动和转化优化，擅长多格式内容和自动化工作流，把公众号做成品牌私域核心阵地。 (auto-vendored by compose_team.py)",
+        "zh": "微信公众号运营专家，精通内容营销、用户互动和转化优化，擅长多格式内容和自动化工作流，把公众号做成品牌私域核心阵地。"
+      },
+      "avatar": "avatars/marketing-wechat-official-account.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-baidu-seo-specialist",
+      "name": {
+        "en": "marketing-baidu-seo-specialist",
+        "zh": "marketing-baidu-seo-specialist"
+      },
+      "profession": {
+        "en": "专注百度搜索生态的SEO优化专家，精通百度算法规则、百度生态产品矩阵（百科、知道、贴吧、文库）、中文关键词研究、ICP备案规范、以及移动端搜索优化策略。 (auto-vendored by compose_team.py)",
+        "zh": "专注百度搜索生态的SEO优化专家，精通百度算法规则、百度生态产品矩阵（百科、知道、贴吧、文库）、中文关键词研究、ICP备案规范、以及移动端搜索优化策略。"
+      },
+      "avatar": "avatars/marketing-baidu-seo-specialist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-daily-news-briefing",
+      "name": {
+        "en": "marketing-daily-news-briefing",
+        "zh": "marketing-daily-news-briefing"
+      },
+      "profession": {
+        "en": "国内外多源新闻实时采集与结构化简报生成，为内容创作团队提供高质量新闻素材。支持按类型（科技/财经/社会/国际等）筛选，交叉验证信源，输出下游 agent 可直接使用的结构化简报。 (auto-vendored by compose_team.py)",
+        "zh": "国内外多源新闻实时采集与结构化简报生成，为内容创作团队提供高质量新闻素材。支持按类型（科技/财经/社会/国际等）筛选，交叉验证信源，输出下游 agent 可直接使用的结构化简报。"
+      },
+      "avatar": "avatars/marketing-daily-news-briefing.png",
+      "role": "member"
+    },
+    {
+      "id": "product-feedback-synthesizer",
+      "name": {
+        "en": "product-feedback-synthesizer",
+        "zh": "product-feedback-synthesizer"
+      },
+      "profession": {
+        "en": "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。 (auto-vendored by compose_team.py)",
+        "zh": "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。"
+      },
+      "avatar": "avatars/product-feedback-synthesizer.png",
+      "role": "member"
+    }
+  ]
+}

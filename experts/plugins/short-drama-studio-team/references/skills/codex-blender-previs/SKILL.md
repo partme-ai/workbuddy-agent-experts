@@ -38,12 +38,17 @@ to `codex-blender-render-compositing` and `codex-blender-character-animation`.
    color with another. Name every placeholder `previs_role_<roleId>` and record the
    full mapping as [previs-map.schema.json](references/previs-map.schema.json) content.
    Add a ground plane and one neutral scale reference.
-4. **Block, do not perform.** Keyframe only object location and orientation. Limb
-   articulation, facial performance, and physics are intentionally absent; say so in
-   the deliverable instead of approximating them.
+4. **Block, do not perform.** Keyframe only object location and orientation, with
+   **linear interpolation on every fcurve**: default bezier AUTO handles let a
+   neighboring key cliff (an explosion pop, a cut-boundary teleport) bend unrelated
+   segments and drag a tracked subject off-center. Limb articulation, facial
+   performance, and physics are intentionally absent; say so in the deliverable
+   instead of approximating them.
 5. **Camera per shot.** Follow `codex-blender-cinematography` for placement, lens
-   intent, and moves. Cuts are hard frame-range boundaries from the shot table; add a
-   transition only when the table explicitly requests one.
+   intent, and moves. A search/POV shot aims at what the character is looking for —
+   key the tracking target onto the subject being found, not at empty space. Cuts
+   are hard frame-range boundaries from the shot table; add a transition only when
+   the table explicitly requests one.
 6. **Render cheap, per shot.** Render each shot as its own frame-range job
    (`job.submit` with `RENDER_ANIMATION_FRAMES`, Workbench or low-sample EEVEE) so a
    rejected shot re-renders alone. Via `codex-blender-background-jobs`.

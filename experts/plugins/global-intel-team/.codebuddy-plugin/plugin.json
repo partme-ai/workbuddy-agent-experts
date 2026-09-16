@@ -1,0 +1,217 @@
+{
+  "name": "global-intel-team",
+  "version": "1.0.0",
+  "description": "Global Intelligence Team: aggregates the last 30 days of real community signals across Reddit, X, YouTube, TikTok, Hacker News, GitHub, LinkedIn, and Instagram via the last30days skill, ranked by engagement and money, delivered as evidence-backed briefings.",
+  "author": {
+    "name": "partme-ai"
+  },
+  "agents": [
+    "./agents/global-intel-team-lead.md",
+    "./agents/marketing-x-twitter-intelligence-analyst.md",
+    "./agents/marketing-reddit-community-builder.md",
+    "./agents/marketing-tiktok-strategist.md",
+    "./agents/marketing-linkedin-content-creator.md",
+    "./agents/marketing-instagram-curator.md",
+    "./agents/marketing-daily-news-briefing.md",
+    "./agents/product-trend-researcher.md",
+    "./agents/product-feedback-synthesizer.md",
+    "./agents/testing-evidence-collector.md"
+  ],
+  "skills": [
+    "./skills/last30days"
+  ],
+  "expertType": "team",
+  "agentName": "global-intel-team-lead",
+  "teamInfo": {
+    "leadAgent": "global-intel-team-lead",
+    "memberAgents": [
+      "marketing-x-twitter-intelligence-analyst",
+      "marketing-reddit-community-builder",
+      "marketing-tiktok-strategist",
+      "marketing-linkedin-content-creator",
+      "marketing-instagram-curator",
+      "marketing-daily-news-briefing",
+      "product-trend-researcher",
+      "product-feedback-synthesizer",
+      "testing-evidence-collector"
+    ]
+  },
+  "displayName": {
+    "en": "Global Intelligence Team",
+    "zh": "全球情报专家团"
+  },
+  "profession": {
+    "en": "Global Intelligence Team",
+    "zh": "全球情报专家团"
+  },
+  "displayDescription": {
+    "en": "Global Intelligence Team: aggregates the last 30 days of real community signals across Reddit, X, YouTube, TikTok, Hacker News, GitHub, LinkedIn, and Instagram via the last30days skill, ranked by engagement and money, delivered as evidence-backed briefings.",
+    "zh": "全球情报专家团：基于 last30days 技能聚合 Reddit、X、YouTube、TikTok、Hacker News、GitHub、LinkedIn、Instagram 等平台近 30 天真实声量，按互动量与资金动向排序，产出带证据的调研简报与趋势报告。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "05-MarketingGrowth",
+  "defaultInitPrompt": {
+    "en": "Research what developers really say about React 19 in the last 30 days, per platform",
+    "zh": "调研最近 30 天开发者对 React 19 的真实评价，按平台分列"
+  },
+  "quickPrompts": [
+    {
+      "en": "Research what developers really say about React 19 in the last 30 days, per platform",
+      "zh": "调研最近 30 天开发者对 React 19 的真实评价，按平台分列"
+    },
+    {
+      "en": "Track our competitor's 30-day mentions and sentiment across platforms",
+      "zh": "追踪我们竞品最近 30 天在各平台的声量与口碑变化"
+    },
+    {
+      "en": "Give me a 30-day trend briefing on the AI video tools space",
+      "zh": "给我一份 AI 视频工具赛道的近 30 天趋势简报"
+    }
+  ],
+  "tags": [
+    {
+      "en": "social-listening",
+      "zh": "舆情调研"
+    },
+    {
+      "en": "global-platforms",
+      "zh": "全球平台"
+    },
+    {
+      "en": "trend-briefing",
+      "zh": "趋势简报"
+    }
+  ],
+  "members": [
+    {
+      "id": "global-intel-team-lead",
+      "name": {
+        "en": "global-intel-team-lead",
+        "zh": "global-intel-team-lead"
+      },
+      "profession": {
+        "en": "Team lead agent for the auto-generated global-intel-team team. Routes work to members and verifies outputs.",
+        "zh": "Team lead agent for the auto-generated global-intel-team team. Routes work to members and verifies outputs."
+      },
+      "avatar": "avatars/global-intel-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "marketing-x-twitter-intelligence-analyst",
+      "name": {
+        "en": "marketing-x-twitter-intelligence-analyst",
+        "zh": "marketing-x-twitter-intelligence-analyst"
+      },
+      "profession": {
+        "en": "社交情报专家，负责 X/Twitter 调研、趋势识别、账号监测，并基于公开信号与结构化数据流程产出有证据支撑的受众洞察。 (auto-vendored by compose_team.py)",
+        "zh": "社交情报专家，负责 X/Twitter 调研、趋势识别、账号监测，并基于公开信号与结构化数据流程产出有证据支撑的受众洞察。"
+      },
+      "avatar": "avatars/marketing-x-twitter-intelligence-analyst.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-reddit-community-builder",
+      "name": {
+        "en": "marketing-reddit-community-builder",
+        "zh": "marketing-reddit-community-builder"
+      },
+      "profession": {
+        "en": "Reddit 营销专家，适合出海营销场景。深谙 Reddit 社区文化，通过真实参与、价值输出和长期关系建设来塑造品牌口碑。 (auto-vendored by compose_team.py)",
+        "zh": "Reddit 营销专家，适合出海营销场景。深谙 Reddit 社区文化，通过真实参与、价值输出和长期关系建设来塑造品牌口碑。"
+      },
+      "avatar": "avatars/marketing-reddit-community-builder.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-tiktok-strategist",
+      "name": {
+        "en": "marketing-tiktok-strategist",
+        "zh": "marketing-tiktok-strategist"
+      },
+      "profession": {
+        "en": "TikTok 营销专家，适合出海营销场景。擅长病毒式内容创作、算法优化和社区运营，精通 TikTok 独特的文化生态和玩法。 (auto-vendored by compose_team.py)",
+        "zh": "TikTok 营销专家，适合出海营销场景。擅长病毒式内容创作、算法优化和社区运营，精通 TikTok 独特的文化生态和玩法。"
+      },
+      "avatar": "avatars/marketing-tiktok-strategist.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-linkedin-content-creator",
+      "name": {
+        "en": "marketing-linkedin-content-creator",
+        "zh": "marketing-linkedin-content-creator"
+      },
+      "profession": {
+        "en": "专注于 LinkedIn 个人品牌打造和专业内容创作的策略师，深谙 LinkedIn 算法与社区文化，通过高质量内容为创始人、求职者、技术人和职场人带来真实的商业机会与人脉增长。 (auto-vendored by compose_team.py)",
+        "zh": "专注于 LinkedIn 个人品牌打造和专业内容创作的策略师，深谙 LinkedIn 算法与社区文化，通过高质量内容为创始人、求职者、技术人和职场人带来真实的商业机会与人脉增长。"
+      },
+      "avatar": "avatars/marketing-linkedin-content-creator.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-instagram-curator",
+      "name": {
+        "en": "marketing-instagram-curator",
+        "zh": "marketing-instagram-curator"
+      },
+      "profession": {
+        "en": "Instagram 营销专家，适合出海营销场景。擅长视觉叙事、社区运营和多格式内容优化，打造品牌美学体系，驱动真实互动。 (auto-vendored by compose_team.py)",
+        "zh": "Instagram 营销专家，适合出海营销场景。擅长视觉叙事、社区运营和多格式内容优化，打造品牌美学体系，驱动真实互动。"
+      },
+      "avatar": "avatars/marketing-instagram-curator.png",
+      "role": "member"
+    },
+    {
+      "id": "marketing-daily-news-briefing",
+      "name": {
+        "en": "marketing-daily-news-briefing",
+        "zh": "marketing-daily-news-briefing"
+      },
+      "profession": {
+        "en": "国内外多源新闻实时采集与结构化简报生成，为内容创作团队提供高质量新闻素材。支持按类型（科技/财经/社会/国际等）筛选，交叉验证信源，输出下游 agent 可直接使用的结构化简报。 (auto-vendored by compose_team.py)",
+        "zh": "国内外多源新闻实时采集与结构化简报生成，为内容创作团队提供高质量新闻素材。支持按类型（科技/财经/社会/国际等）筛选，交叉验证信源，输出下游 agent 可直接使用的结构化简报。"
+      },
+      "avatar": "avatars/marketing-daily-news-briefing.png",
+      "role": "member"
+    },
+    {
+      "id": "product-trend-researcher",
+      "name": {
+        "en": "product-trend-researcher",
+        "zh": "product-trend-researcher"
+      },
+      "profession": {
+        "en": "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。 (auto-vendored by compose_team.py)",
+        "zh": "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。"
+      },
+      "avatar": "avatars/product-trend-researcher.png",
+      "role": "member"
+    },
+    {
+      "id": "product-feedback-synthesizer",
+      "name": {
+        "en": "product-feedback-synthesizer",
+        "zh": "product-feedback-synthesizer"
+      },
+      "profession": {
+        "en": "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。 (auto-vendored by compose_team.py)",
+        "zh": "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。"
+      },
+      "avatar": "avatars/product-feedback-synthesizer.png",
+      "role": "member"
+    },
+    {
+      "id": "testing-evidence-collector",
+      "name": {
+        "en": "testing-evidence-collector",
+        "zh": "testing-evidence-collector"
+      },
+      "profession": {
+        "en": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。 (auto-vendored by compose_team.py)",
+        "zh": "专注测试证据链完整性的质量专家，确保每一个测试结论都有充分的证据支撑，让质量报告经得起任何质疑。"
+      },
+      "avatar": "avatars/testing-evidence-collector.png",
+      "role": "member"
+    }
+  ]
+}

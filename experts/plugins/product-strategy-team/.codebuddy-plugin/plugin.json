@@ -103,11 +103,11 @@
       "id": "product-trend-researcher",
       "name": {
         "en": "product-trend-researcher",
-        "zh": "趋势研究员"
+        "zh": "product-trend-researcher"
       },
       "profession": {
-        "en": "product-trend-researcher",
-        "zh": "趋势研究员"
+        "en": "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。 (auto-vendored by compose_team.py)",
+        "zh": "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。"
       },
       "avatar": "avatars/product-trend-researcher.png",
       "role": "member"
@@ -116,11 +116,11 @@
       "id": "product-feedback-synthesizer",
       "name": {
         "en": "product-feedback-synthesizer",
-        "zh": "反馈分析师"
+        "zh": "product-feedback-synthesizer"
       },
       "profession": {
-        "en": "product-feedback-synthesizer",
-        "zh": "反馈分析师"
+        "en": "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。 (auto-vendored by compose_team.py)",
+        "zh": "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。"
       },
       "avatar": "avatars/product-feedback-synthesizer.png",
       "role": "member"
