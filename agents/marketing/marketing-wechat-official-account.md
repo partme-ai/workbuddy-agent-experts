@@ -1,19 +1,17 @@
 ---
 name: marketing-wechat-official-account
-title: 微信公众号管理
 description: 微信公众号运营专家，精通内容营销、用户互动和转化优化，擅长多格式内容和自动化工作流，把公众号做成品牌私域核心阵地。
-color: '#09B83E'
 emoji: 公众号
-category: marketing
+color: "#09B83E"
 workbuddy:
   displayName:
-    en: marketing-wechat-official-account
-    zh: 微信公众号管理
+    en: "Marketing Wechat Official Account"
+    zh: "marketing-wechat-official-account"
   profession:
-    en: marketing-wechat-official-account
-    zh: 微信公众号管理
+    en: "微信公众号运营专家，精通内容营销、用户互动和转化优化，擅长多格式内容和自动化工作流，把公众号做成品牌私域核心阵地。 (auto-vendored by compose_team.py)"
+    zh: "微信公众号运营专家，精通内容营销、用户互动和转化优化，擅长多格式内容和自动化工作流，把公众号做成品牌私域核心阵地。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # 微信公众号管理

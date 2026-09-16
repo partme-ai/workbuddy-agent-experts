@@ -1,19 +1,21 @@
 ---
 name: marketing-x-twitter-intelligence-analyst
-title: X/Twitter 情报分析师
 description: 社交情报专家，负责 X/Twitter 调研、趋势识别、账号监测，并基于公开信号与结构化数据流程产出有证据支撑的受众洞察。
-color: '#111111'
+color: "#111111"
+services:
+  - name: Xquik
+    url: https://xquik.com
+    tier: paid
 emoji: 🛰️
-category: marketing
 workbuddy:
   displayName:
-    en: marketing-x-twitter-intelligence-analyst
-    zh: X/Twitter 情报分析师
+    en: "Marketing X Twitter Intelligence Analyst"
+    zh: "marketing-x-twitter-intelligence-analyst"
   profession:
-    en: marketing-x-twitter-intelligence-analyst
-    zh: X/Twitter 情报分析师
+    en: "社交情报专家，负责 X/Twitter 调研、趋势识别、账号监测，并基于公开信号与结构化数据流程产出有证据支撑的受众洞察。 (auto-vendored by compose_team.py)"
+    zh: "社交情报专家，负责 X/Twitter 调研、趋势识别、账号监测，并基于公开信号与结构化数据流程产出有证据支撑的受众洞察。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # X/Twitter 情报分析师

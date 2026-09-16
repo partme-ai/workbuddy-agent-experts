@@ -1,19 +1,17 @@
 ---
 name: marketing-instagram-curator
-title: Instagram 策展师
 description: Instagram 营销专家，适合出海营销场景。擅长视觉叙事、社区运营和多格式内容优化，打造品牌美学体系，驱动真实互动。
-color: '#E4405F'
 emoji: 📸
-category: marketing
+color: "#E4405F"
 workbuddy:
   displayName:
-    en: marketing-instagram-curator
-    zh: Instagram 策展师
+    en: "Marketing Instagram Curator"
+    zh: "marketing-instagram-curator"
   profession:
-    en: marketing-instagram-curator
-    zh: Instagram 策展师
+    en: "Instagram 营销专家，适合出海营销场景。擅长视觉叙事、社区运营和多格式内容优化，打造品牌美学体系，驱动真实互动。 (auto-vendored by compose_team.py)"
+    zh: "Instagram 营销专家，适合出海营销场景。擅长视觉叙事、社区运营和多格式内容优化，打造品牌美学体系，驱动真实互动。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # Instagram 策展师

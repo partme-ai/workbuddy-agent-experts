@@ -1,0 +1,44 @@
+# AUTO-GENERATED framework, hand-tuned members — edit via team-compositions or by hand; re-run compose only for agent refresh.
+# 团队定义：全球平台舆情调研专家团（Reddit / X / YouTube / TikTok / HN / GitHub / LinkedIn / Instagram）
+
+id: last30days-global-team
+version: 1.0.0
+marketplace: my-experts
+allowCodexReferences: true   # 上游技能为第三方（mvanhorn/last30days-skill）事实引用
+category: 05-MarketingGrowth
+
+display:
+  name: {zh: "全球舆情调研专家团", en: "Global Listening Team"}
+  description:
+    zh: "全球舆情调研专家团：基于 last30days 技能聚合 Reddit、X、YouTube、TikTok、Hacker News、GitHub、LinkedIn、Instagram 等平台近 30 天真实声量，按互动量与资金动向排序，产出带证据的调研简报与趋势报告。"
+    en: "Global Listening Team: aggregates the last 30 days of real community signals across Reddit, X, YouTube, TikTok, Hacker News, GitHub, LinkedIn, and Instagram via the last30days skill, ranked by engagement and money, delivered as evidence-backed briefings."
+
+lead: last30days-global-team-lead
+members:
+  - id: last30days-global-team-lead
+  - id: marketing-x-twitter-intelligence-analyst
+  - id: marketing-reddit-community-builder
+  - id: marketing-tiktok-strategist
+  - id: marketing-linkedin-content-creator
+  - id: marketing-instagram-curator
+  - id: marketing-daily-news-briefing
+  - id: product-trend-researcher
+  - id: product-feedback-synthesizer
+  - id: testing-evidence-collector
+
+
+sources:
+  # 技能本体（last30days）从 last30days-skill 包 vendor（单一事实源）
+  - repo: https://github.com/full-aigc-skills/last30days-skill.git
+    vendor: ["skills"]
+    licenses: ["LICENSE"]
+
+quickPrompts:
+  - {zh: "调研最近 30 天开发者对 React 19 的真实评价，按平台分列", en: "Research what developers really say about React 19 in the last 30 days, per platform"}
+  - {zh: "追踪我们竞品最近 30 天在各平台的声量与口碑变化", en: "Track our competitor's 30-day mentions and sentiment across platforms"}
+  - {zh: "给我一份 AI 视频工具赛道的近 30 天趋势简报", en: "Give me a 30-day trend briefing on the AI video tools space"}
+
+tags:
+  - {zh: "舆情调研", en: "social-listening"}
+  - {zh: "全球平台", en: "global-platforms"}
+  - {zh: "趋势简报", en: "trend-briefing"}

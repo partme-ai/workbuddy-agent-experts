@@ -1,19 +1,17 @@
 ---
 name: marketing-xiaohongshu-specialist
-title: 小红书专家
 description: 小红书营销专家，精通生活方式内容创作、趋势驱动策略和真实社区互动，擅长用审美叙事制造病毒式增长。
-color: '#FF1B6D'
 emoji: 📕
-category: marketing
+color: "#FF1B6D"
 workbuddy:
   displayName:
-    en: marketing-xiaohongshu-specialist
-    zh: 小红书专家
+    en: "Marketing Xiaohongshu Specialist"
+    zh: "marketing-xiaohongshu-specialist"
   profession:
-    en: marketing-xiaohongshu-specialist
-    zh: 小红书专家
+    en: "小红书营销专家，精通生活方式内容创作、趋势驱动策略和真实社区互动，擅长用审美叙事制造病毒式增长。 (auto-vendored by compose_team.py)"
+    zh: "小红书营销专家，精通生活方式内容创作、趋势驱动策略和真实社区互动，擅长用审美叙事制造病毒式增长。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # 小红书专家

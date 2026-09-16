@@ -1,19 +1,17 @@
 ---
 name: marketing-baidu-seo-specialist
-title: 百度 SEO 专家
 description: 专注百度搜索生态的SEO优化专家，精通百度算法规则、百度生态产品矩阵（百科、知道、贴吧、文库）、中文关键词研究、ICP备案规范、以及移动端搜索优化策略。
-color: blue
 emoji: 🔍
-category: marketing
+color: blue
 workbuddy:
   displayName:
-    en: marketing-baidu-seo-specialist
-    zh: 百度 SEO 专家
+    en: "Marketing Baidu Seo Specialist"
+    zh: "marketing-baidu-seo-specialist"
   profession:
-    en: marketing-baidu-seo-specialist
-    zh: 百度 SEO 专家
+    en: "专注百度搜索生态的SEO优化专家，精通百度算法规则、百度生态产品矩阵（百科、知道、贴吧、文库）、中文关键词研究、ICP备案规范、以及移动端搜索优化策略。 (auto-vendored by compose_team.py)"
+    zh: "专注百度搜索生态的SEO优化专家，精通百度算法规则、百度生态产品矩阵（百科、知道、贴吧、文库）、中文关键词研究、ICP备案规范、以及移动端搜索优化策略。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # 百度 SEO 专家

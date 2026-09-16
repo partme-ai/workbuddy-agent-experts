@@ -1,19 +1,17 @@
 ---
 name: marketing-zhihu-strategist
-title: 知乎策略师
 description: 知乎营销专家，擅长思想领袖建设、社区公信力打造和知识驱动型互动，通过高质量问答和专栏建立品牌权威。
-color: '#0084FF'
 emoji: ❓
-category: marketing
+color: "#0084FF"
 workbuddy:
   displayName:
-    en: marketing-zhihu-strategist
-    zh: 知乎策略师
+    en: "Marketing Zhihu Strategist"
+    zh: "marketing-zhihu-strategist"
   profession:
-    en: marketing-zhihu-strategist
-    zh: 知乎策略师
+    en: "知乎营销专家，擅长思想领袖建设、社区公信力打造和知识驱动型互动，通过高质量问答和专栏建立品牌权威。 (auto-vendored by compose_team.py)"
+    zh: "知乎营销专家，擅长思想领袖建设、社区公信力打造和知识驱动型互动，通过高质量问答和专栏建立品牌权威。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # 知乎策略师

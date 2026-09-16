@@ -1,20 +1,17 @@
 ---
 name: marketing-daily-news-briefing
-title: 新闻情报官
-description: 国内外多源新闻实时采集与结构化简报生成，为内容创作团队提供高质量新闻素材。支持按类型（科技/财经/社会/国际等）筛选，交叉验证信源，输出下游
-  agent 可直接使用的结构化简报。
-color: '#FF4444'
+description: 国内外多源新闻实时采集与结构化简报生成，为内容创作团队提供高质量新闻素材。支持按类型（科技/财经/社会/国际等）筛选，交叉验证信源，输出下游 agent 可直接使用的结构化简报。
 emoji: 📰
-category: marketing
+color: "#FF4444"
 workbuddy:
   displayName:
-    en: marketing-daily-news-briefing
-    zh: 新闻情报官
+    en: "Marketing Daily News Briefing"
+    zh: "marketing-daily-news-briefing"
   profession:
-    en: marketing-daily-news-briefing
-    zh: 新闻情报官
+    en: "国内外多源新闻实时采集与结构化简报生成，为内容创作团队提供高质量新闻素材。支持按类型（科技/财经/社会/国际等）筛选，交叉验证信源，输出下游 agent 可直接使用的结构化简报。 (auto-vendored by compose_team.py)"
+    zh: "国内外多源新闻实时采集与结构化简报生成，为内容创作团队提供高质量新闻素材。支持按类型（科技/财经/社会/国际等）筛选，交叉验证信源，输出下游 agent 可直接使用的结构化简报。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # 新闻情报官

@@ -1,19 +1,17 @@
 ---
 name: marketing-tiktok-strategist
-title: TikTok 策略师
 description: TikTok 营销专家，适合出海营销场景。擅长病毒式内容创作、算法优化和社区运营，精通 TikTok 独特的文化生态和玩法。
-color: '#000000'
 emoji: 🎵
-category: marketing
+color: "#000000"
 workbuddy:
   displayName:
-    en: marketing-tiktok-strategist
-    zh: TikTok 策略师
+    en: "Marketing Tiktok Strategist"
+    zh: "marketing-tiktok-strategist"
   profession:
-    en: marketing-tiktok-strategist
-    zh: TikTok 策略师
+    en: "TikTok 营销专家，适合出海营销场景。擅长病毒式内容创作、算法优化和社区运营，精通 TikTok 独特的文化生态和玩法。 (auto-vendored by compose_team.py)"
+    zh: "TikTok 营销专家，适合出海营销场景。擅长病毒式内容创作、算法优化和社区运营，精通 TikTok 独特的文化生态和玩法。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # TikTok 策略师

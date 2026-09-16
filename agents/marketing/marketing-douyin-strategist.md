@@ -1,19 +1,17 @@
 ---
 name: marketing-douyin-strategist
-title: 抖音策略师
 description: 专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。
-color: '#000000'
 emoji: 🎵
-category: marketing
+color: "#000000"
 workbuddy:
   displayName:
-    en: marketing-douyin-strategist
-    zh: 抖音策略师
+    en: "Marketing Douyin Strategist"
+    zh: "marketing-douyin-strategist"
   profession:
-    en: marketing-douyin-strategist
-    zh: 抖音策略师
+    en: "专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。 (auto-vendored by compose_team.py)"
+    zh: "专注抖音平台的短视频营销专家，精通算法推荐机制、爆款视频策划、直播带货流程、以及通过内容矩阵实现品牌在抖音生态的全链路增长。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # 抖音策略师

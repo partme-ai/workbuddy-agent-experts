@@ -1,0 +1,44 @@
+# AUTO-GENERATED framework, hand-tuned members — edit via team-compositions or by hand; re-run compose only for agent refresh.
+# 团队定义：中文平台舆情调研专家团（微博 / 小红书 / B站 / 知乎 / 抖音 / 微信 / 百度 / 头条）
+
+id: last30days-cn-team
+version: 1.0.0
+marketplace: my-experts
+allowCodexReferences: true   # 上游技能为社区衍生（Jesse/last30days-skill-cn）事实引用
+category: 05-MarketingGrowth
+
+display:
+  name: {zh: "中文舆情调研专家团", en: "Chinese Listening Team"}
+  description:
+    zh: "中文舆情调研专家团：基于 last30days-cn 技能聚合微博、小红书、B站、知乎、抖音、微信、百度、头条近 30 天真实声量，支持 Markdown/JSON/紧凑上下文与瑞士风格 HTML 报告输出。"
+    en: "Chinese Listening Team: aggregates the last 30 days of real signals across Weibo, Xiaohongshu, Bilibili, Zhihu, Douyin, WeChat, Baidu, and Toutiao via the last30days-cn skill, with Markdown/JSON/compact-context and Swiss-style HTML reports."
+
+lead: last30days-cn-team-lead
+members:
+  - id: last30days-cn-team-lead
+  - id: marketing-weibo-strategist
+  - id: marketing-xiaohongshu-specialist
+  - id: marketing-bilibili-strategist
+  - id: marketing-zhihu-strategist
+  - id: marketing-douyin-strategist
+  - id: marketing-wechat-official-account
+  - id: marketing-baidu-seo-specialist
+  - id: marketing-daily-news-briefing
+  - id: product-feedback-synthesizer
+
+
+sources:
+  # 技能本体（last30days-cn）从 last30days-skill-cn 包 vendor（单一事实源）
+  - repo: https://github.com/full-aigc-skills/last30days-skill-cn.git
+    vendor: ["skills"]
+    licenses: ["LICENSE"]
+
+quickPrompts:
+  - {zh: "last30 具身智能 —— 汇总近 30 天中文平台的讨论与热度", en: "last30 embodied AI — summarize CN platform buzz for the last 30 days"}
+  - {zh: "调研最近 30 天小红书和抖音上对我们产品的真实反馈", en: "Research real user feedback on our product across Xiaohongshu and Douyin (30 days)"}
+  - {zh: "生成一份近 30 天 AI 编程助手中文舆情 HTML 报告", en: "Generate a 30-day CN listening HTML report on AI coding assistants"}
+
+tags:
+  - {zh: "舆情调研", en: "social-listening"}
+  - {zh: "中文平台", en: "cn-platforms"}
+  - {zh: "趋势简报", en: "trend-briefing"}

@@ -1,19 +1,17 @@
 ---
 name: marketing-bilibili-strategist
-title: B站内容策略师
 description: 专注B站（哔哩哔哩）平台的中长视频内容策略专家，精通UP主运营、弹幕文化、社区生态、品牌合作、推荐算法，以及通过优质内容实现长期粉丝增长与商业变现。
-color: pink
 emoji: 📺
-category: marketing
+color: pink
 workbuddy:
   displayName:
-    en: marketing-bilibili-strategist
-    zh: B站内容策略师
+    en: "Marketing Bilibili Strategist"
+    zh: "marketing-bilibili-strategist"
   profession:
-    en: marketing-bilibili-strategist
-    zh: B站内容策略师
+    en: "专注B站（哔哩哔哩）平台的中长视频内容策略专家，精通UP主运营、弹幕文化、社区生态、品牌合作、推荐算法，以及通过优质内容实现长期粉丝增长与商业变现。 (auto-vendored by compose_team.py)"
+    zh: "专注B站（哔哩哔哩）平台的中长视频内容策略专家，精通UP主运营、弹幕文化、社区生态、品牌合作、推荐算法，以及通过优质内容实现长期粉丝增长与商业变现。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # B站内容策略师

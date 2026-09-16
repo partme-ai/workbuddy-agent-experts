@@ -1,19 +1,17 @@
 ---
 name: product-trend-researcher
-title: 趋势研究员
 description: 专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。
-color: violet
 emoji: 🔭
-category: product
+color: violet
 workbuddy:
   displayName:
-    en: product-trend-researcher
-    zh: 趋势研究员
+    en: "Product Trend Researcher"
+    zh: "product-trend-researcher"
   profession:
-    en: product-trend-researcher
-    zh: 趋势研究员
+    en: "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。 (auto-vendored by compose_team.py)"
+    zh: "专注行业趋势分析和技术前瞻的研究专家，帮团队看清未来 6-18 个月的方向，在正确的时间做正确的事。"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # 趋势研究员

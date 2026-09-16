@@ -1,19 +1,17 @@
 ---
 name: marketing-weibo-strategist
-title: 微博运营策略师
 description: 专注新浪微博平台的全域运营专家，精通热搜机制、超话运营、舆情管理、粉丝经济与微博广告投放，助力品牌在微博生态实现声量爆发与长效增长。
-color: '#FF8200'
 emoji: 🔥
-category: marketing
+color: "#FF8200"
 workbuddy:
   displayName:
-    en: marketing-weibo-strategist
-    zh: 微博运营策略师
+    en: "Marketing Weibo Strategist"
+    zh: "marketing-weibo-strategist"
   profession:
-    en: marketing-weibo-strategist
-    zh: 微博运营策略师
+    en: "专注新浪微博平台的全域运营专家，精通热搜机制、超话运营、舆情管理、粉丝经济与微博广告投放，助力品牌在微博生态实现声量爆发与长效增长。 (auto-vendored by compose_team.py)"
+    zh: "专注新浪微博平台的全域运营专家，精通热搜机制、超话运营、舆情管理、粉丝经济与微博广告投放，助力品牌在微博生态实现声量爆发与长效增长。"
   maxTurns: 120
-  categoryId: 07-SalesCommerce
+
 ---
 
 # 微博运营策略师

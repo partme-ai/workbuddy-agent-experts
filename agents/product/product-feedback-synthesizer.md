@@ -1,19 +1,17 @@
 ---
 name: product-feedback-synthesizer
-title: 反馈分析师
 description: 专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。
-color: amber
 emoji: 📊
-category: product
+color: amber
 workbuddy:
   displayName:
-    en: product-feedback-synthesizer
-    zh: 反馈分析师
+    en: "Product Feedback Synthesizer"
+    zh: "product-feedback-synthesizer"
   profession:
-    en: product-feedback-synthesizer
-    zh: 反馈分析师
+    en: "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。 (auto-vendored by compose_team.py)"
+    zh: "专注用户反馈收集、分类和洞察提炼的产品分析专家，把碎片化的用户声音变成可执行的产品改进建议。"
   maxTurns: 120
-  categoryId: 01-ProductDesign
+
 ---
 
 # 反馈分析师
