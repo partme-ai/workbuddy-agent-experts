@@ -19,13 +19,14 @@ members:
   - id: video-production-operator
   - id: video-delivery-judge
 
-skills:
-  - skills/video-factory-harness
 
 sources:
   # 技能本体（5 个）从 video-factory-skills 包 vendor（单一事实源）
   - repo: https://github.com/full-aigc-skills/video-factory-skills.git
     vendor: ["skills"]
+  # 调用规范（harness）单一事实源在插件仓
+  - repo: https://github.com/partme-ai/partme-video-factory.git
+    vendor: ["skills/video-factory-harness"]
   # 宿主执行面（bin）从插件仓 vendor
   - repo: https://github.com/partme-ai/codex-video-factory-plugin.git
     vendor: ["bin"]

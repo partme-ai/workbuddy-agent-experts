@@ -58,7 +58,7 @@ INPUT="${POSITIONAL[0]}"
 
 if [ -z "$INPUT" ] || [ ! -f "$INPUT" ]; then
   echo "Usage: bash add-music.sh <input.mp4> [--mood=<name>] [--music=<path>] [--out=<path>]" >&2
-  echo "Moods available: $(ls "$ASSETS_DIR" | grep -E '^bgm-.*\.mp3$' | sed 's/^bgm-//;s/\.mp3$//' | tr '\n' ' ')" >&2
+  echo "Moods available: $(find "$ASSETS_DIR" -maxdepth 1 -name 'bgm-*.mp3' -exec basename {} .mp3 \; | sed 's/^bgm-//' | sort | tr '\n' ' ')" >&2
   exit 1
 fi
 
@@ -73,7 +73,7 @@ fi
 
 if [ ! -f "$MUSIC" ]; then
   echo "✗ Music not found: $MUSIC" >&2
-  echo "  Available moods: $(ls "$ASSETS_DIR" | grep -E '^bgm-.*\.mp3$' | sed 's/^bgm-//;s/\.mp3$//' | tr '\n' ' ')" >&2
+  echo "  Available moods: $(find "$ASSETS_DIR" -maxdepth 1 -name 'bgm-*.mp3' -exec basename {} .mp3 \; | sed 's/^bgm-//' | sort | tr '\n' ' ')" >&2
   exit 1
 fi
 

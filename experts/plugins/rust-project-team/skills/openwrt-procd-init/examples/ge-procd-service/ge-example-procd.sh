@@ -5,8 +5,11 @@
 #   procd_set_param (command array, respawn, env, file), service_triggers.
 # See SKILL.md §rc-common-api.md + §procd-instance.md for the contract.
 
+# shellcheck disable=SC2034  # procd init config, read by OpenWrt's init system
 START=80
+# shellcheck disable=SC2034  # procd init config, read by OpenWrt's init system
 STOP=20
+# shellcheck disable=SC2034  # procd init config, read by OpenWrt's init system
 USE_PROCD=1
 
 SERVICE_NAME="ge-example-procd"

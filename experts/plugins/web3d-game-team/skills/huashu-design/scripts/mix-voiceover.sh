@@ -70,7 +70,14 @@ if [ -z "$BGM" ] && [ -n "$BGM_MOOD" ]; then
 fi
 if [ -n "$BGM" ] && [ ! -f "$BGM" ]; then
   echo "✗ BGM 文件不存在: $BGM" >&2
-  echo "  可用 mood: $(ls "$ASSETS_DIR" 2>/dev/null | grep -E '^bgm-.*\.mp3$' | sed 's/^bgm-//;s/\.mp3$//' | tr '\n' ' ')" >&2
+  moods=""
+  for bgm_file in "$ASSETS_DIR"/bgm-*.mp3; do
+    [ -f "$bgm_file" ] || continue
+    name=${bgm_file##*/}
+    moods="$moods ${name#bgm-}"
+    moods=${moods%.mp3}
+  done
+  echo "  可用 mood:$moods" >&2
   exit 1
 fi
 

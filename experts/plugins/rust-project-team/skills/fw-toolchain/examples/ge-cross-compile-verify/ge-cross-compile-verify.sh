@@ -9,7 +9,8 @@ set -u
 TOTAL=0; PASS=0; SKIP=0; FAIL=0
 
 check() {
-    NAME="$1"; CC="$2"; TARGET="$3"
+    # TARGET (3rd arg) is accepted for signature symmetry but unused by this check.
+    NAME="$1"; CC="$2"
     TOTAL=$((TOTAL+1))
     if command -v "$CC" >/dev/null 2>&1; then
         VER=$($CC --version 2>/dev/null | head -1)

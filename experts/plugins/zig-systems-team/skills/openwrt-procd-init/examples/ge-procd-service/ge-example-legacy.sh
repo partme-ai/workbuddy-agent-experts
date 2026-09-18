@@ -5,7 +5,9 @@
 # Use USE_PROCD=1 whenever possible; legacy mode only when procd is not suitable.
 # See SKILL.md §Capability Boundaries for when to choose legacy vs procd.
 
+# shellcheck disable=SC2034  # procd init config, read by OpenWrt's init system
 START=70
+# shellcheck disable=SC2034  # procd init config, read by OpenWrt's init system
 STOP=30
 PROG="/usr/bin/ge-example-batch-worker"
 

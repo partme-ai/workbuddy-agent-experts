@@ -18,11 +18,11 @@ members:
   - id: image-quality-judge
   - id: image-recovery-engineer
 
-skills:
-  - skills/image-factory-harness
 
 sources:
-  # 技能本体（4 个）从 image-factory-skills 包 vendor（单一事实源）
+  # 调用规范（harness）单一事实源在插件仓
+  - repo: https://github.com/partme-ai/partme-image-factory.git
+    vendor: ["skills/image-factory-harness"]  # 技能本体（4 个）从 image-factory-skills 包 vendor（单一事实源）
   - repo: https://github.com/full-aigc-skills/image-factory-skills.git
     vendor: ["skills"]
   # 宿主执行面（bin/scripts/data）从插件仓 vendor

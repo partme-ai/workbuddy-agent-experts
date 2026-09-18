@@ -70,7 +70,7 @@ if [ -z "$BGM" ] && [ -n "$BGM_MOOD" ]; then
 fi
 if [ -n "$BGM" ] && [ ! -f "$BGM" ]; then
   echo "✗ BGM 文件不存在: $BGM" >&2
-  echo "  可用 mood: $(ls "$ASSETS_DIR" 2>/dev/null | grep -E '^bgm-.*\.mp3$' | sed 's/^bgm-//;s/\.mp3$//' | tr '\n' ' ')" >&2
+  echo "  可用 mood: $(find "$ASSETS_DIR" -maxdepth 1 -name 'bgm-*.mp3' -exec basename {} .mp3 \; | sed 's/^bgm-//' | sort | tr '\n' ' ')" >&2
   exit 1
 fi
 

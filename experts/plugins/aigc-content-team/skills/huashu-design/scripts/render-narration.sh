@@ -32,7 +32,6 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SKILL_ROOT="$SCRIPT_DIR/.."
 
 HTML=""
 TIMELINE=""
