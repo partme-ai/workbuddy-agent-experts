@@ -39,5 +39,5 @@ tags:
   - {zh: "MCP 整合", en: "mcp-integration"}
 sources:
   # 调用规范（harness）单一事实源在插件仓
-  - repo: https://github.com/partme-ai/partme-processon-plugin.git
-    vendor: ["skills/processon-harness"]
+  - repo: https://github.com/partme-ai/partme-bt-plugin.git
+    vendor: ["skills/bt-harness"]
