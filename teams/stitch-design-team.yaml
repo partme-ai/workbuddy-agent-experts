@@ -22,6 +22,9 @@ skills:
   - skills/stitch-workbuddy
 
 sources:
+  # 调用规范（harness）单一事实源在插件仓
+  - repo: https://github.com/partme-ai/partme-stitch-plugin.git
+    vendor: ["skills/stitch-harness"]
   # 技能本体的单一事实源是 full-stack-skills/stitch-skills（v1.1.0，43 个技能，逐字 vendor）
   - repo: https://github.com/full-stack-skills/stitch-skills.git
     vendor: ["skills"]

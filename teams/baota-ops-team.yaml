@@ -37,3 +37,7 @@ tags:
   - {zh: "宝塔面板", en: "baota-panel"}
   - {zh: "Linux 运维", en: "linux-ops"}
   - {zh: "MCP 整合", en: "mcp-integration"}
+sources:
+  # 调用规范（harness）单一事实源在插件仓
+  - repo: https://github.com/partme-ai/partme-processon-plugin.git
+    vendor: ["skills/processon-harness"]
