@@ -18,10 +18,11 @@ members:
   - id: comfy-generation-operator
   - id: comfy-quality-judge
 
-skills:
-  - skills/comfy-harness
 
 sources:
+  # 调用规范（harness）单一事实源在插件仓
+  - repo: https://github.com/partme-ai/partme-comfy-plugin.git
+    vendor: ["skills/comfy-harness"]
   # 命令与技能本体（12+12）从 partme-comfy-plugin vendor（单一事实源，MIT 上游钉锁）
   - repo: https://github.com/partme-ai/partme-comfy-plugin.git
     vendor: ["commands"]

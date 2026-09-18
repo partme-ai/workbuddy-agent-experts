@@ -18,10 +18,11 @@ members:
   - id: dreamina-video-evaluator
   - id: dreamina-design-gatekeeper
 
-skills:
-  - skills/dreamina-design-harness
 
 sources:
+  # 调用规范（harness）单一事实源在插件仓
+  - repo: https://github.com/partme-ai/partme-dreamina-design.git
+    vendor: ["skills/dreamina-design-harness"]
   # 技能本体（17 个）从 dreamina-skills 包 vendor（单一事实源）
   - repo: https://github.com/full-aigc-skills/dreamina-skills.git
     vendor: ["skills"]

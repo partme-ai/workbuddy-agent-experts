@@ -12,12 +12,24 @@ fail() { echo "  ❌ $1"; FAIL=1; }
 IMG="${1:?usage: $0 <firmware.img.gz>}"
 
 echo "── 1. 产物存在 ──"
-[ -f "$IMG" ] && pass "$IMG exists" || fail "$IMG not found"
-[ -f "${IMG}.sha256" ] && pass "sha256 present" || fail "sha256 missing"
+if [ -f "$IMG" ]; then
+  pass "$IMG exists"
+else
+  fail "$IMG not found"
+fi
+if [ -f "${IMG}.sha256" ]; then
+  pass "sha256 present"
+else
+  fail "sha256 missing"
+fi
 
 echo "── 2. 校验和 ──"
 if [ -f "${IMG}.sha256" ]; then
-    sha256sum -c "${IMG}.sha256" >/dev/null 2>&1 && pass "sha256 OK" || fail "sha256 mismatch"
+    if sha256sum -c "${IMG}.sha256" >/dev/null 2>&1; then
+      pass "sha256 OK"
+    else
+      fail "sha256 mismatch"
+    fi
 fi
 
 echo "── 3. 命名规范（五段式）──"
@@ -31,12 +43,20 @@ echo "── 4. 外链扫描（零外链）──"
 # 如果产物目录下有 www/，扫描外链
 if [ -d "${IMG%/*}/www" ]; then
     HITS=$(grep -rlE '(src|href)="https?://' "${IMG%/*}/www" 2>/dev/null | wc -l)
-    [ "$HITS" -eq 0 ] && pass "zero external links" || fail "found $HITS files with external links"
+    if [ "$HITS" -eq 0 ]; then
+      pass "zero external links"
+else
+      fail "found $HITS files with external links"
+fi
 fi
 
 echo "── 5. 密钥泄露扫描 ──"
 HITS=$(grep -rlE '(PRIVATE KEY|SECRET=)' "$IMG" 2>/dev/null | wc -l)
-[ "$HITS" -eq 0 ] && pass "no private keys in artifact" || fail "potential key leak in artifact"
+if [ "$HITS" -eq 0 ]; then
+  pass "no private keys in artifact"
+else
+  fail "potential key leak in artifact"
+fi
 
 echo "══════════════"
 [ "$FAIL" -eq 0 ] && echo "✅ Release gate passed" || echo "❌ Release gate failed"

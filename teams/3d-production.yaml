@@ -31,9 +31,6 @@ members:
   - id: blender-qc-delivery
     persona: {zh: 核真, en: Hezhen}
 
-skills:
-  - skills/blender-harness
-  - skills/blender-production
 
 # 运行时来源：构建时从 codex-blender-plugin 检出目录 vendor（harness 单一事实源仍在该仓库）
 harness:
@@ -57,3 +54,11 @@ tags:
   - {zh: Blender, en: Blender}
   - {zh: 3D 生产, en: 3D Production}
   - {zh: 回执核验交付, en: Receipt-Verified Delivery}
+
+skills:
+  - skills/blender-production
+
+sources:
+  # 调用规范（harness）单一事实源在插件仓
+  - repo: https://github.com/partme-ai/partme-blender-plugin.git
+    vendor: ["skills/blender-harness"]

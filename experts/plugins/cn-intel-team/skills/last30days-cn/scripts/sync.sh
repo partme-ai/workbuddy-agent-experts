@@ -28,7 +28,7 @@ for t in "${TARGETS[@]}"; do
     rsync -a "$SRC/fixtures/" "$t/fixtures/"
   fi
 
-  mod_count=$(ls "$t/scripts/lib/"*.py 2>/dev/null | wc -l | tr -d ' ')
+  mod_count=$(find "$t/scripts/lib" -maxdepth 1 -name "*.py" 2>/dev/null | wc -l | tr -d ' ')
   echo "  已复制 $mod_count 个模块"
 done
 

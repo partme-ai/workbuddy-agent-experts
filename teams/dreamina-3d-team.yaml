@@ -25,9 +25,10 @@ sources:
   # 技能本体（6 个）从 dreamina-skills 包 vendor（3d 层，单一事实源）
   - repo: https://github.com/full-aigc-skills/dreamina-skills.git
     vendor: ["skills"]
-  # 宿主执行面（scripts）从插件仓 vendor
-  - repo: https://github.com/partme-ai/codex-dreamina-3d-plugin.git
-    vendor: ["scripts"]
+  # codex-dreamina-3d 插件已解散：编排脚本迁至 partme-dreamina-design 的
+  # scripts/seedance_pipeline，DCC 侧入口技能归 blender/maya 插件
+  - repo: https://github.com/partme-ai/partme-dreamina-design.git
+    vendor: ["scripts/seedance_pipeline"]
     licenses: ["LICENSE", "NOTICE"]
 
 quickPrompts:

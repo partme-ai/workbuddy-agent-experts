@@ -18,10 +18,11 @@ members:
   - id: dreamina-canvas-timeline-editor
   - id: dreamina-canvas-operator
 
-skills:
-  - skills/dreamina-canvas-harness
 
 sources:
+  # 调用规范（harness）单一事实源在插件仓
+  - repo: https://github.com/partme-ai/partme-dreamina-canvas.git
+    vendor: ["skills/dreamina-canvas-harness"]
   - repo: https://github.com/partme-ai/codex-dreamina-canvas-plugin.git
     vendor: ["skills", "scripts"]
     licenses: ["LICENSE"]
